@@ -1,0 +1,177 @@
+/*Global style*/
+
+$color: (
+  primary: #070520,
+  accent: #58bfd3,
+  universal: white,
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: map-get($color, primary);
+}
+
+/*Header*/
+
+.header {
+  --text: #fff;
+  --background: transparent;
+
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem 6.5rem 0 1.5rem;
+  background-color: var(--background);
+
+  .logo {
+    width: 40px;
+    cursor: pointer;
+  }
+
+  a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--text);
+    font-family: "Helvetica", sans-serif;
+    font-weight: 100;
+    letter-spacing: 0;
+    &:hover {
+      color: map-get($color, accent);
+    }
+  }
+
+  .nav-link {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      bottom: 0;
+      padding: 0px 10px;
+    }
+  }
+}
+
+.header-scrolled {
+  --text: #070520;
+}
+
+/*Side-bar*/
+
+.sidebar {
+  top: 4rem;
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav1 {
+  order: 1;
+  flex-grow: 1;
+}
+
+.nav2 {
+  order: 2;
+  flex-grow: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  .bar {
+    position: relative;
+    background: map-get($color, universal);
+    width: 2px;
+    height: 200px;
+  }
+  .handler {
+    position: absolute;
+    z-index: 10;
+    margin-top: -9rem;
+    -webkit-box-shadow: -1px 10px 25px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 10px 25px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 10px 25px -13px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.nav3 {
+  order: 3;
+  flex-grow: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    list-style: none;
+  }
+
+  .icon {
+    fill: map-get($color, universal);
+    width: 1rem;
+    margin: 0.8rem 0px;
+    bottom: 4rem;
+    transition: 0.5s ease;
+    &:hover {
+      fill: map-get($color, accent);
+    }
+  }
+}
+/*main content*/
+
+.s1 {
+  .hero-line {
+    width: 562px;
+    top: 15rem;
+    left: 10rem;
+    position: absolute;
+    color: #fff;
+    position: 100px;
+    z-index: 100;
+
+    .title {
+      font-family: Crimson-Bold;
+      font-size: 3.5rem;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-family: "Helvetica-Light", "Helvetica Neue Light", "Helvetica Neue",
+        Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 100;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+  }
+  .parallex-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      position: absolute;
+      top: -20rem;
+      left: 0rem;
+      z-index: -2;
+      object-fit: cover;
+    }
+  }
+}
+
+.s2 {
+  background-color: grey;
+}
+.s3 {
+  background-color: green;
+}
+.s4 {
+  background-color: blue;
+}

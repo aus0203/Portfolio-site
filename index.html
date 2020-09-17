@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio ver3</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
     <link rel="stylesheet" href="./style/main.css">
 </head>
@@ -14,7 +17,17 @@
 <body>
     <div class="header">
         <a href="#">
-            <img class="logo" src="./img/logo_white.png" alt="logo">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363.33 398.39">
+                <title>MainLogo</title>
+                <g class="circle">
+                    <circle cx="244" cy="119.33" r="119.33" fill="#4ab5ca" />
+                </g>
+                <g class="signature">
+                    <path
+                        d="M287.94,82l7.22-19.58L281.88,79.69a10.18,10.18,0,0,0-6.29,3.12l-.47.49c-18.76,21.83-33.7,43.72-44.39,65.07a481.89,481.89,0,0,0-26.82,64.89c-7.15,21.73-13.64,44.25-19.3,67-5.55,22.3-12.63,45.87-21,70-.25.7-.49,1.33-.71,1.89-1.08-2.77-2.2-5.72-3.41-9a305,305,0,0,1-8.16-30.9c-2.72-12.52-5.23-24.8-7.47-36.51-2.3-12-4.67-23-7-32.58-2.67-10.76-5.45-17.58-8.74-21.43-5.93-7.35-11.7-6.86-14.63-5.9-3.71,1.22-7,3.93-10,8.29l-.32.46-.24.51A89.31,89.31,0,0,0,99,234.44a290.4,290.4,0,0,0-11.43,42.5c-2.86,14.76-5.64,29.42-8.28,43.57-2.56,13.77-5.21,26.49-7.88,37.82-3.09,13.06-6.38,19.31-8.6,22.24l-.15.21-.23.32a22.56,22.56,0,0,1-2-3.19,109.83,109.83,0,0,1-6.91-17.74A418.52,418.52,0,0,1,39.64,277a337,337,0,0,1,4.3-83.65,8.61,8.61,0,0,0-1.87-7.66c-1.31-1.47-3.75-3.14-7.9-2.78-6.16.58-8.79,4.61-9.25,8.12a319.18,319.18,0,0,0-4.15,84.37,439.85,439.85,0,0,0,14.62,82.75,128.62,128.62,0,0,0,9.27,26.62c4.44,8.92,10,13.93,16.46,14.88l.6.09.61,0a14.68,14.68,0,0,0,10-3.87A29.82,29.82,0,0,0,77.4,389c4.22-7.37,7.7-16.72,10.65-28.59,2.76-11.13,5.44-23.21,8-35.92s4.87-25.37,7-37.89a255.07,255.07,0,0,1,7.61-32.52l2.06-7a75.44,75.44,0,0,1,2.53-7.14c.45,1.46,1,3.24,1.56,5.43,2,7.41,4,15.35,5.93,23.58,2,8.43,3.91,16.38,5.7,23.63,2.18,8.85,2.85,11.92,3,12.94.34,1.89,1,4.63,2,8.37s2,7.72,3.12,12c1.16,4.65,2.56,9.57,4.14,14.61s3.09,9.71,4.5,13.83l.07.18c3.93,10.51,8.4,16.67,14.06,19.37a10.47,10.47,0,0,0,8.68.22c4.87-2.06,8.63-7.65,12.16-18.05,8.11-23.12,15-45.66,20.36-67,5.32-21,11.19-42,17.46-62.31a478.48,478.48,0,0,1,23.11-60,308.13,308.13,0,0,1,28.61-48.49,8.87,8.87,0,0,0,12.1-8.53c.23-.68.78-2.17,2.09-5.15A56.18,56.18,0,0,1,289,95.16c1.76-2.51,2.13-5.65,1.1-9.35A8.87,8.87,0,0,0,287.94,82Z"
+                        transform="translate(-19.67 -1.33)" />
+                </g>
+            </svg>
         </a>
         <nav>
             <ul class="nav-link">
@@ -24,20 +37,20 @@
         </nav>
     </div>
 
-<!--Sidebar section-->
+    <!--Sidebar section-->
 
     <div class="sidebar">
         <div class="nav1"></div>
         <div class="nav2">
             <div class="bar"></div>
-            <svg class="handler" width="20px" height="20px">
-                <circle r="10" cx="10" cy="10" fill="#ffff" />
+            <svg id="handler" width="12px" height="12px">
+                <circle r="6" cx="6" cy="6" />
             </svg>
         </div>
         <div class="nav3">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/wei-lun-chen/">
                         <svg class="icon linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <title>linkedin</title>
                             <path
@@ -47,13 +60,16 @@
                     </a></li>
                 <li>
                     <a href="#">
-                        <svg class="icon resume" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612">
-                            <title>contact_page-24px (1)</title>
-                            <rect width="612" height="612" fill="none" />
+                        <svg class="icon resume" data-name="resume" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <title>resume</title>
                             <path
-                                d="M307,1H103A51.15,51.15,0,0,0,52,52V460a51.15,51.15,0,0,0,51,51H409a51.15,51.15,0,0,0,51-51V154ZM256,205a51,51,0,1,1-51,51A51.15,51.15,0,0,1,256,205ZM358,409H154V394.47a51.28,51.28,0,0,1,31.11-47.18,177.29,177.29,0,0,1,141.78,0A51.28,51.28,0,0,1,358,394.47Z"
-                                transform="translate(50 50)" />
+                                d="M501.29,120.43,391.57,10.71A36.58,36.58,0,0,0,365.71,0H36.57A36.57,36.57,0,0,0,0,36.57V475.43A36.56,36.56,0,0,0,36.57,512H475.43A36.56,36.56,0,0,0,512,475.43V146.29a36.58,36.58,0,0,0-10.72-25.86ZM256,146.29a73.14,73.14,0,1,1-73.14,73.14A73.21,73.21,0,0,1,256,146.29Zm128,256H128V365.71c0-25.34,17.57-47.36,47-58.91,47.32-18.61,114.63-18.61,162,0,29.43,11.55,47,33.57,47,58.91v36.57Zm18.29-256a36.57,36.57,0,0,1-36.57-36.57V36.57L475.43,146.29Z"
+                                transform="translate(0 0)" />
                         </svg>
+
+                        </svg>
+
                     </a></li>
                 <li>
                     <a href="#">
@@ -68,43 +84,214 @@
         </div>
     </div>
 
-<!--Main content section-->
+    <!--Main content section-->
 
     <div id="fullpage">
-        <div class="section s1">
-            <!-- <div class="hero-line">
+        <section class="section section1">
+            <div id="hero-line" class="hero-line">
                 <h1 class="title">
                     Hi! I’m Wei. <br>
                     A designer/dev,<br>
                     based in Rotterdam,<h1>
-                    <p class="subtitle">
-                        with a focus on user experience, customer research and business innovation.
-                    </p>
+                        <p class="subtitle">
+                            with a focus on user experience, customer research and business innovation.
+                        </p>
             </div>
             <div id="scene" class="parallex-section">
-                <img class="layer" data-speed="-3" src="./img/Parallax/ob10.png" alt="landing">
-                <img class="layer" data-speed="-3" src="./img/Parallax/ob9.png" alt="landing">
-                <img class="layer" data-speed="-2" src="./img/Parallax/ob8.png" alt="landing">
-                <img class="layer" data-speed="1" src="./img/Parallax/ob7.png" alt="landing">
-                <img class="layer" data-speed="1" src="./img/Parallax/ob6.png" alt="landing">
-                <img class="layer" data-speed="1" src="./img/Parallax/ob5.png" alt="landing">
-                <img class="layer" data-speed="-2" src="./img/Parallax/main.png" alt="landing">
-                <img class="layer" data-speed="2" src="./img/Parallax/ob4.png" alt="landing">
-                <img class="layer" data-speed="3" src="./img/Parallax/ob3.png" alt="landing">
-                <img class="layer" data-speed="4" src="./img/Parallax/ob2.png" alt="landing">
-                <img class="layer" data-speed="5" src="./img/Parallax/ob1.png" alt="landing">
-            </div> -->
-        </div>
+                <img class="layer back" data-speed="-3" src="./img/Parallax/ob10.png" alt="landing">
+                <img class="layer farback" data-speed="-3" src="./img/Parallax/ob9.png" alt="landing">
+                <img class="layer farback" data-speed="-4" src="./img/Parallax/ob8.png" alt="landing">
+                <img class="layer back" data-speed="1" src="./img/Parallax/ob7.png" alt="landing">
+                <img class="layer farback" data-speed="1" src="./img/Parallax/ob6.png" alt="landing">
+                <img class="layer back" data-speed="1" src="./img/Parallax/ob5.png" alt="landing">
+                <img class="layer maincharactor" data-speed="-2" src="./img/Parallax/main.png" alt="landing">
+                <img class="layer front" data-speed="2" src="./img/Parallax/ob4.png" alt="landing">
+                <img class="layer front" data-speed="3" src="./img/Parallax/ob3.png" alt="landing">
+                <img class="layer front" data-speed="4" src="./img/Parallax/ob2.png" alt="landing">
+                <img class="layer front" data-speed="5" src="./img/Parallax/ob1.png" alt="landing">
+            </div>
+        </section>
+
+    <!--Section 2-->
+
+        <section class="section section2">            
+            <div id="projectsection1">
+                <div class="projectpart1">
+                    <div class="foto">
+                        <img class="projectfoto projectfoto1 photo-zoom" src="./img/project-01.jpg" alt="project photo">
+                        <div class="projectfoto-overlay">
+                            <p>+ Read more<p>
+                        </div>
+                    </div>
+                    <div class="intro">
+                        <div class="intro-number">
+                            <p>Project</p>
+                            <div>
+                                <hr class="number-line">
+                            </div>
+                            <p>01</p>
+                        </div>
+                        <h2>SUPPER</h2>
+                        <p>Brand strategy | Website design</p>
+                    </div>
+                </div>
+                <div class="projectpart1">
+                    <div class="intro">
+                        <div class="intro-number">
+                            <p>Project</p>
+                            <div>
+                                <hr class="number-line">
+                            </div>
+                            <p>02</p>
+                        </div>
+                        <h2>WE BRING EUROPE TO YOU</h2>
+                        <p>Brand strategy | Business innovation | Service design</p>
+                    </div>
+                    <div class="foto">
+                        <img class="projectfoto projectfoto1 photo-zoom" src="./img/project-02.png" alt="project photo">
+                        <div class="projectfoto-overlay">
+                            <p>+ Read more<p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-background">
+                <img class="background-object objectback" data-speed="-4" src="./img/Single-object/single-ob2.png" alt="object">
+                <img class="background-object objectback" data-speed="-2" src="./img/Single-object/single-ob3.png" alt="object">
+                <img class="background-object objectfront" data-speed="1" src="./img/Single-object/single-ob1.png" alt="object">
+                <img class="background-object objectfront" data-speed="1" src="./img/Single-object/single-ob4.png" alt="object">
+                <img class="background-object objectfarfront" data-speed="2" src="./img/Single-object/single-ob1.png" alt="object">
+                <img class="background-object objectfarfront" data-speed="3" src="./img/Single-object/single-ob4.png" alt="object">
+            </div>
+        </section>
+
         
-        <div class="section s2">
-        </div>
-        <div class="section s3">
+        <!--Section 3-->
 
-        </div>
-        <div class="section s4">
+        <section class="section section3">
+            <div id="projectsection2">
+                <div class="projectpart2">
+                    <div class="foto">
+                        <img class="projectfoto projectfoto2 photo-zoom" src="./img/project-03.jpg" alt="project photo">
+                        <div class="projectfoto-overlay">
+                            <p>+ Read more<p>
+                        </div>
+                    </div>
+                    <div class="intro">
+                        <div class="intro-number">
+                            <p>Project</p>
+                            <div>
+                                <hr class="number-line">
+                            </div>
+                            <p>03</p>
+                        </div>
+                        <h2>VX</h2>
+                        <p>Organization transformation | Business innovation</p>
+                    </div>
+                </div>
+                <div class="projectpart2">
+                    <div class="intro">
+                        <div class="intro-number">
+                            <p>Project</p>
+                            <div>
+                                <hr class="number-line">
+                            </div>
+                            <p>04</p>
+                        </div>
+                        <h2>MY HEALTH JOURNEY</h2>
+                        <p>Brand strategy | Service design | Motion design</p>
+                    </div>
+                    <div class="foto">
+                        <img class="projectfoto projectfoto2 photo-zoom" src="./img/project-02.png" alt="project photo">
+                        <div class="projectfoto-overlay">
+                            <p>+ Read more<p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-background">
+                <img class="background-object objectback" data-speed="-4" src="./img/Single-object/single-ob2.png" alt="object">
+                <img class="background-object objectback" data-speed="-2" src="./img/Single-object/single-ob3.png" alt="object">
+                <img class="background-object objectfront" data-speed="1" src="./img/Single-object/single-ob1.png" alt="object">
+                <img class="background-object objectfront" data-speed="1" src="./img/Single-object/single-ob4.png" alt="object">
+                <img class="background-object objectfarfront" data-speed="2" src="./img/Single-object/single-ob1.png" alt="object">
+                <img class="background-object objectfarfront" data-speed="3" src="./img/Single-object/single-ob4.png" alt="object">
+            </div>
+        </section>
 
-        </div>
+        <!--Section 4-->
 
+        <section class="section section4">
+
+            <div id="prjoectsection3">
+                <div class="projectpart3">
+                    <div class="foto">
+                        <img class="projectfoto photo-zoom" src="./img/project-03.jpg" alt="project photo">
+                        <div class="projectfoto-overlay">
+                            <p>+ Read more<p>
+                        </div>
+                    </div>
+                    <div class="intro">
+                        <div class="intro-number">
+                            <p>Project</p>
+                            <div>
+                                <hr class="number-line">
+                            </div>
+                            <p>05</p>
+                        </div>
+                        <h2>Ultimaker</h2>
+                        <p>Product Roadmapping | Strategic Roadmapping</p>
+                    </div>
+                </div>
+                <div class="projectpart3">
+                    <div class="intro">
+                        <div class="intro-number">
+                            <p>Project</p>
+                            <div>
+                                <hr class="number-line">
+                            </div>
+                            <p>06</p>
+                        </div>
+                        <h2>GMC</h2>
+                        <p>Brand strategy | Website design</p>
+                    </div>
+                    <div class="foto">
+                        <img class="projectfoto photo-zoom" src="./img/project-02.png" alt="project photo">
+                        <div class="projectfoto-overlay">
+                            <p>+ Read more<p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            
+            <div class="section-background">
+                <img class="background-object objectback" data-speed="-4" src="./img/Single-object/single-ob2.png" alt="object">
+                <img class="background-object objectback" data-speed="-2" src="./img/Single-object/single-ob3.png" alt="object">
+                <img class="background-object objectfront" data-speed="1" src="./img/Single-object/single-ob1.png" alt="object">
+                <img class="background-object objectfront" data-speed="1" src="./img/Single-object/single-ob4.png" alt="object">
+                <img class="background-object objectfarfront" data-speed="2" src="./img/Single-object/single-ob1.png" alt="object">
+                <img class="background-object objectfarfront" data-speed="3" src="./img/Single-object/single-ob4.png" alt="object">
+            </div>
+        </section>
+
+        <!--Section 5 Footer-->
+        <section class="section section5">
+            <div id="contact-line" class="contact-line">
+                <h1 class="title">
+                    Need more <br>
+                    information?<h1>
+                        <p class="subtitle">
+                            Let's get in touch.
+                        </p>
+            </div>
+            <div class="footer">
+                <hr class="footer-line">
+                </hr>
+                <p class="footer-claim">
+                    © 2020 created by Wei Lun Chen
+                </p>
+            </div>
+        </section>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>

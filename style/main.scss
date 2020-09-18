@@ -308,29 +308,24 @@ a {
   }
 }
 
-.scrolldown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
+.button {
+  display: inline-block;
   position: relative;
-  bottom: -40%;
-  width:inherit;
-  flex-direction: column;
-  margin: auto;
-  .button {
-    cursor: pointer;
-    p{
-      font-weight: 400;
-    }
+  margin-left: calc(50% - 66px);
+  bottom:-20rem;
+  z-index: 100;
+  cursor: pointer;
+  p{
+    font-weight: 400;
   }
 }
+
 .guideline{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: -42%;
+  bottom: -45%;
   z-index: 10;
   transition: .5s ease;
   div{
@@ -341,8 +336,8 @@ a {
     background-color: map-get($color, universal);
   }
 }
-.scrolldown:hover + .guideline{
-  bottom: -45%;
+.button:hover + .guideline{
+  bottom: -48%;
 }
 
 /*Section02*/

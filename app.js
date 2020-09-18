@@ -1,20 +1,20 @@
 /*Variables*/
 const header = document.querySelector(".header");
 const sidebar = document.querySelector(".sidebar");
-const front = document.querySelectorAll(".front")
-const back = document.querySelectorAll(".back")
-const farBack = document.querySelectorAll(".farback")
-const mainCharactor = document.querySelector(".maincharactor")
+const front = document.querySelectorAll(".front");
+const back = document.querySelectorAll(".back");
+const farBack = document.querySelectorAll(".farback");
+const mainCharactor = document.querySelector(".maincharactor");
 const handler = document.getElementById("handler");
-const heroLine = document.querySelector(".hero-line")
-const footerLine = document.querySelector(".contact-line")
-const sectionObjectBack = document.querySelectorAll(".objectback")
-const sectionObjectFront = document.querySelectorAll(".objectfront")
-const sectionObjectFarFront = document.querySelectorAll(".objectfarfront")
-const projectSection1 = document.getElementById("projectsection1")
-const projectSection2 = document.getElementById("projectsection2")
-const projectSection3 = document.getElementById("prjoectsection3")
-
+const heroLine = document.querySelector(".hero-line");
+const footerLine = document.querySelector(".contact-line");
+const sectionObjectBack = document.querySelectorAll(".objectback");
+const sectionObjectFront = document.querySelectorAll(".objectfront");
+const sectionObjectFarFront = document.querySelectorAll(".objectfarfront");
+const callOfAction = document.querySelector(".call-of-action");
+const projectSection1 = document.getElementById("projectsection1");
+const projectSection2 = document.getElementById("projectsection2");
+const projectSection3 = document.getElementById("prjoectsection3");
 
 
 /*fullpage transition effect*/
@@ -35,7 +35,7 @@ new fullpage("#fullpage", {
       x.style.bottom = (0 - (destination.index * 850)) + "px";
     });
     mainCharactor.style.bottom = 0 - destination.index * 900 + "px";
-    heroLine.style.top = (128 + (destination.index * 700)) + "px";
+    heroLine.style.top = (128 + (destination.index * 1300)) + "px";
 
     /*Footer*/
     if(origin.index===3){
@@ -69,6 +69,7 @@ new fullpage("#fullpage", {
 
     if(destination.index === 1){
       projectSection1.style.top = 0;
+      callOfAction.style.marginTop = 100 + "rem";
     }else if(destination.index===2){
       projectSection1.style.top = -80 +"rem";
       projectSection2.style.top = 0 + "rem";
@@ -81,6 +82,7 @@ new fullpage("#fullpage", {
       projectSection1.style.top = 100 + "rem";
       projectSection2.style.top = 100 + "rem";
       projectSection3.style.top = 100 + "rem";
+      callOfAction.style.marginTop = 15 + "%";
     }
 
   }

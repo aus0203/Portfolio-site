@@ -333,12 +333,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   top: 0;
   right: 0;
   z-index: 2;
@@ -355,7 +349,7 @@ a {
   position: 100px;
   -webkit-transition: 1s ease;
   transition: 1s ease;
-  z-index: 4;
+  z-index: 100;
 }
 
 .section1 .hero-line .title {
@@ -386,46 +380,33 @@ a {
   z-index: 3;
 }
 
-.button {
+.call-of-action {
   display: inline-block;
-  position: relative;
-  margin-left: calc(50% - 66px);
-  bottom: -20rem;
-  z-index: 100;
+  position: absolute;
+  z-index: 500;
+  margin-left: calc(50% - 62px);
+  margin-top: 15%;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.call-of-action .scrollbutton p {
+  font-weight: 400;
   cursor: pointer;
 }
 
-.button p {
-  font-weight: 400;
-}
-
-.guideline {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  bottom: -45%;
-  z-index: 10;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.guideline div {
-  position: relative;
-  width: 1.5px;
-  height: 100px;
-  bottom: -50%;
+.call-of-action .guideline {
   background-color: #f0f0f0;
+  width: 1px;
+  height: 30rem;
+  margin: auto;
+  margin-top: 1rem;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
-.button:hover + .guideline {
-  bottom: -48%;
+.scrollbutton:hover + .guideline {
+  margin-top: 3rem;
 }
 
 /*Section02*/

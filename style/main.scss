@@ -28,8 +28,13 @@ h2 {
 p {
   font-weight: 300;
   font-size: 1rem;
+  color: map-get($color, universal);
 }
 
+a {
+  color: map-get($color, universal);
+  text-decoration: none;
+}
 /*Header*/
 
 .header {
@@ -52,9 +57,7 @@ p {
   }
 
   a {
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: map-get($color, universal);
+    font-size: 1rem;
     letter-spacing: 0;
     transition: 0.5s ease;
     &:hover {
@@ -118,9 +121,9 @@ p {
 
     .icon {
       fill: map-get($color, universal);
-      width: 0.9rem;
+      width: 1rem;
       height: 100%;
-      margin: 0.8rem 0px;
+      margin: 1.2rem 0px;
       transition: 0.5s ease;
       &:hover {
         fill: map-get($color, accent);
@@ -263,13 +266,15 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  top: 0;
+  right: 0;
+  z-index: 2;
 
   /*Section01 title*/
   .hero-line {
-    width: 562px;
-    top: 12rem;
-    left: 10rem;
+    width: 56rem;
+    top: 8rem;
+    left: 13rem;
     position: absolute;
     color: map-get($color, universal);
     position: 100px;
@@ -278,14 +283,14 @@ p {
 
     .title {
       font-family: "Gordita", sans-serif;
-      font-size: 3rem;
+      font-size: 4.5rem;
       letter-spacing: 0;
       font-weight: 500;
     }
     .subtitle {
-      font-size: 1rem;
       letter-spacing: 0;
       width: 50rem;
+      display: none;
     }
   }
 
@@ -299,14 +304,52 @@ p {
     object-fit: cover;
     object-position: center;
     transition: 1s ease;
+    z-index: 3;
   }
+}
+
+.scrolldown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+  bottom: -40%;
+  width:inherit;
+  flex-direction: column;
+  margin: auto;
+  .button {
+    cursor: pointer;
+    p{
+      font-weight: 400;
+    }
+  }
+}
+.guideline{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -42%;
+  z-index: 10;
+  transition: .5s ease;
+  div{
+    position: relative;
+    width: 1.5px;
+    height: 100px;
+    bottom: -50%;
+    background-color: map-get($color, universal);
+  }
+}
+.scrolldown:hover + .guideline{
+  bottom: -45%;
 }
 
 /*Section02*/
 
 .section2 {
   background-color: map-get($color, dark);
-  z-index: 4;
+  z-index: 7;
   color: map-get($color, universal);
   display: flex;
   justify-content: center;
@@ -333,7 +376,7 @@ p {
     .foto {
       position: relative;
       order: 1;
-      max-width: 55%;
+      width: 55%;
       overflow: hidden;
     }
     .intro {
@@ -404,7 +447,7 @@ p {
   &:nth-child(1) {
     .foto {
       order: 1;
-      max-width: 55%;
+      width: 55%;
       overflow: hidden;
       position: relative;
     }
@@ -477,7 +520,7 @@ p {
   &:nth-child(1) {
     .foto {
       order: 1;
-      max-width: 55%;
+      width: 55%;
       overflow: hidden;
       position: relative;
     }
@@ -547,7 +590,7 @@ p {
       line-height: 72px;
     }
     .subtitle {
-      font-family: "Gordita-Regular";
+      font-family: "Gordita", sans-serif;
       font-size: 1.5rem;
       letter-spacing: 1px;
       line-height: 35px;

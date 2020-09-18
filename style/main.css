@@ -22,6 +22,12 @@ h2 {
 p {
   font-weight: 300;
   font-size: 1rem;
+  color: #f0f0f0;
+}
+
+a {
+  color: #f0f0f0;
+  text-decoration: none;
 }
 
 /*Header*/
@@ -54,9 +60,7 @@ p {
 }
 
 .header a {
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: #f0f0f0;
+  font-size: 1rem;
   letter-spacing: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -154,9 +158,9 @@ p {
 
 .sidebar .nav3 .icon {
   fill: #f0f0f0;
-  width: 0.9rem;
+  width: 1rem;
   height: 100%;
-  margin: 0.8rem 0px;
+  margin: 1.2rem 0px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
@@ -335,15 +339,17 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 3;
+  top: 0;
+  right: 0;
+  z-index: 2;
   /*Section01 title*/
   /*Parallex effect*/
 }
 
 .section1 .hero-line {
-  width: 562px;
-  top: 12rem;
-  left: 10rem;
+  width: 56rem;
+  top: 8rem;
+  left: 13rem;
   position: absolute;
   color: #f0f0f0;
   position: 100px;
@@ -354,15 +360,15 @@ p {
 
 .section1 .hero-line .title {
   font-family: "Gordita", sans-serif;
-  font-size: 3rem;
+  font-size: 4.5rem;
   letter-spacing: 0;
   font-weight: 500;
 }
 
 .section1 .hero-line .subtitle {
-  font-size: 1rem;
   letter-spacing: 0;
   width: 50rem;
+  display: none;
 }
 
 .section1 .layer {
@@ -377,12 +383,71 @@ p {
      object-position: center;
   -webkit-transition: 1s ease;
   transition: 1s ease;
+  z-index: 3;
+}
+
+.scrolldown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  position: relative;
+  bottom: -40%;
+  width: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+.scrolldown .button {
+  cursor: pointer;
+}
+
+.scrolldown .button p {
+  font-weight: 400;
+}
+
+.guideline {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: -42%;
+  z-index: 10;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.guideline div {
+  position: relative;
+  width: 1.5px;
+  height: 100px;
+  bottom: -50%;
+  background-color: #f0f0f0;
+}
+
+.scrolldown:hover + .guideline {
+  bottom: -45%;
 }
 
 /*Section02*/
 .section2 {
   background-color: #0a0a0a;
-  z-index: 4;
+  z-index: 7;
   color: #f0f0f0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,7 +485,7 @@ p {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  max-width: 55%;
+  width: 55%;
   overflow: hidden;
 }
 
@@ -513,7 +578,7 @@ p {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  max-width: 55%;
+  width: 55%;
   overflow: hidden;
   position: relative;
 }
@@ -607,7 +672,7 @@ p {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  max-width: 55%;
+  width: 55%;
   overflow: hidden;
   position: relative;
 }
@@ -689,7 +754,7 @@ p {
 }
 
 .section5 .contact-line .subtitle {
-  font-family: "Gordita-Regular";
+  font-family: "Gordita", sans-serif;
   font-size: 1.5rem;
   letter-spacing: 1px;
   line-height: 35px;

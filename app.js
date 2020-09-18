@@ -19,7 +19,7 @@ const projectSection3 = document.getElementById("prjoectsection3")
 
 /*fullpage transition effect*/
 new fullpage("#fullpage", {
-  scrollingSpeed: 1600,  
+  scrollingSpeed: 1800,  
 
   onLeave: function(origin, destination, direction){
     var loadedSection = this;
@@ -35,7 +35,7 @@ new fullpage("#fullpage", {
       x.style.bottom = (0 - (destination.index * 850)) + "px";
     });
     mainCharactor.style.bottom = 0 - destination.index * 900 + "px";
-    heroLine.style.top = (192 + (destination.index * 600)) + "px";
+    heroLine.style.top = (128 + (destination.index * 700)) + "px";
 
     /*Footer*/
     if(origin.index===3){

@@ -385,7 +385,7 @@ a {
   position: absolute;
   z-index: 500;
   margin-left: calc(50% - 62px);
-  margin-top: 15%;
+  margin-top: 18%;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }

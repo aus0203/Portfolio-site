@@ -82,7 +82,7 @@ new fullpage("#fullpage", {
       projectSection1.style.top = 100 + "rem";
       projectSection2.style.top = 100 + "rem";
       projectSection3.style.top = 100 + "rem";
-      callOfAction.style.marginTop = 15 + "%";
+      callOfAction.style.marginTop = 18 + "%";
     }
 
   }

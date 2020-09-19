@@ -275,7 +275,7 @@ a {
     color: map-get($color, universal);
     position: 100px;
     transition: 1s ease;
-    z-index: 300;
+    z-index: 100;
 
     .title {
       font-family: "Gordita", sans-serif;
@@ -317,7 +317,7 @@ a {
   position: absolute;
   z-index: 500;
   margin-left:calc(50% - 62px);
-  margin-top: 18%;
+  margin-top: 8%;
   transition: 1s ease;
   .scrollbutton{
     p{
@@ -336,9 +336,12 @@ a {
 }
 
 .scrollbutton:hover + .guideline{
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 
+.maincharactor{
+  display: none;
+}
 
 /*Section02*/
 

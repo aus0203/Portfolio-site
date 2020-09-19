@@ -19,7 +19,10 @@ const projectSection3 = document.getElementById("prjoectsection3");
 
 /*fullpage transition effect*/
 new fullpage("#fullpage", {
-  scrollingSpeed: 1800,  
+
+  scrollingSpeed: 1000,  
+
+  anchors: ['Home', 'Project1', 'Project2', 'Project2', 'Contact'],
 
   onLeave: function(origin, destination, direction){
     var loadedSection = this;
@@ -35,7 +38,8 @@ new fullpage("#fullpage", {
       x.style.bottom = (0 - (destination.index * 850)) + "px";
     });
     mainCharactor.style.bottom = 0 - destination.index * 900 + "px";
-    heroLine.style.top = (128 + (destination.index * 1300)) + "px";
+
+    heroLine.style.top = destination.index * 1300 + "px";
 
     /*Footer*/
     if(origin.index===3){
@@ -110,6 +114,4 @@ function parallax(e) {
     backgroundObject.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });
 }
-
-
 

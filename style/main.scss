@@ -3,15 +3,18 @@
 $color: (
   primary: #070520,
   accent: #58bfd3,
-  universal: #f0f0f0,
+  universal: #E0E0E0,
+  enable:#828282,
   dark: #0a0a0a,
 );
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Gordita", sans-serif;
+  color: map-get($color, universal);
 }
 
 ::-webkit-scrollbar {
@@ -60,9 +63,6 @@ a {
     font-size: 1rem;
     letter-spacing: 0;
     transition: 0.5s ease;
-    &:hover {
-      color: map-get($color, accent);
-    }
   }
 
   .nav-link {
@@ -73,6 +73,9 @@ a {
       bottom: 0;
       padding: 0px 10px;
     }
+  }
+  .work-state{
+    color:map-get($color, enable)
   }
 }
 
@@ -255,41 +258,44 @@ a {
 /*Section01*/
 
 .section1 {
-  background: rgb(2, 105, 105);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 105, 105, 1) 0%,
-    rgba(1, 60, 84, 1) 19%,
-    rgba(1, 11, 50, 1) 48%,
-    rgba(10, 10, 10, 1) 100%
-  );
+  background: #0a0a0a;
   display: flex;
   top: 0;
   right: 0;
   z-index: 2;
+  justify-content: center;
+  align-items: center;
 
   /*Section01 title*/
   .hero-line {
-    width: 56rem;
-    top: 8rem;
+    width: 22rem;
+    top: 0rem;
     left: 13rem;
-    position: absolute;
+    position: relative;
     color: map-get($color, universal);
     position: 100px;
     transition: 1s ease;
-    z-index: 100;
+    z-index: 500;
 
     .title {
       font-family: "Gordita", sans-serif;
-      font-size: 4.5rem;
+      font-size: 2rem;
       letter-spacing: 0;
       font-weight: 500;
+      line-height: 3rem;
+    }
+    .divide{
+      margin: 1.5rem 0;
+      border-bottom: 1px solid white;
+      width: inherit;
     }
     .subtitle {
       letter-spacing: 0;
-      width: 50rem;
-      display: none;
+      font-size: 1rem;
+      width:25rem;
+      line-height: 1.5rem;
     }
+    
   }
 
   /*Parallex effect*/
@@ -315,7 +321,7 @@ a {
   transition: 1s ease;
   .scrollbutton{
     p{
-      font-weight: 400;
+      font-weight: 500;
       cursor: pointer;
     }
   }
@@ -331,6 +337,10 @@ a {
 
 .scrollbutton:hover + .guideline{
   margin-top: 3rem;
+}
+
+.maincharactor{
+  display: none;
 }
 
 /*Section02*/
@@ -552,14 +562,8 @@ a {
 
 /*Contact Section*/
 .section5 {
-  background: rgb(2, 105, 105);
-  background: linear-gradient(
-    0deg,
-    rgba(2, 105, 105, 1) 0%,
-    rgba(1, 60, 84, 1) 19%,
-    rgba(1, 11, 50, 1) 48%,
-    rgba(10, 10, 10, 1) 100%
-  );
+  
+  background-color: map-get($color , dark );
   z-index: 8;
   .contact-line {
     width: 562px;
@@ -589,6 +593,20 @@ a {
     position: absolute;
     left: 10rem;
     bottom: 1.5rem;
+    .footer-link{
+      display: inline-block;
+      margin-bottom: .8rem;
+      p{
+        display: inline;
+        font-size: 1.2rem;
+        margin-right: 2rem;
+        font-weight: 400;
+        transition: 0.3s ease;
+        &:hover{
+          color:map-get($color, accent)
+        }
+      }
+    }
     .footer-line {
       border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
       width: 80vw;

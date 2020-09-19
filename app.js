@@ -20,7 +20,7 @@ const projectSection3 = document.getElementById("prjoectsection3");
 /*fullpage transition effect*/
 new fullpage("#fullpage", {
 
-  scrollingSpeed: 1000,  
+  scrollingSpeed: 1200,  
 
   anchors: ['Home', 'Project1', 'Project2', 'Project2', 'Contact'],
 

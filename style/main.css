@@ -354,7 +354,7 @@ a {
   position: 100px;
   -webkit-transition: 1s ease;
   transition: 1s ease;
-  z-index: 500;
+  z-index: 300;
 }
 
 .section1 .hero-line .title {
@@ -420,10 +420,6 @@ a {
 
 .scrollbutton:hover + .guideline {
   margin-top: 3rem;
-}
-
-.maincharactor {
-  display: none;
 }
 
 /*Section02*/

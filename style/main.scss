@@ -275,7 +275,7 @@ a {
     color: map-get($color, universal);
     position: 100px;
     transition: 1s ease;
-    z-index: 500;
+    z-index: 300;
 
     .title {
       font-family: "Gordita", sans-serif;
@@ -339,9 +339,6 @@ a {
   margin-top: 3rem;
 }
 
-.maincharactor{
-  display: none;
-}
 
 /*Section02*/
 

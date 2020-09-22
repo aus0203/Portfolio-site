@@ -1,8 +1,8 @@
+const scrollButton = document.querySelector(".scrollbutton");
+
 /*fullpage transition effect*/
 new fullpage("#fullpage", {
     scrollingSpeed: 1250,
-  
-    anchors: ["Home", "Project1", "Project2", "Project2", "Contact"],
   
     onLeave: function (origin, destination, direction) {
       var loadedSection = this;

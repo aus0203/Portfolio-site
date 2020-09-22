@@ -133,4 +133,77 @@ li {
   bottom: 0;
   padding: 0px 10px;
 }
-/*# sourceMappingURL=main.css.map */
+
+body {
+  background-color: #0a0a0a;
+}
+
+/*Header*/
+.about-state {
+  cursor: none;
+}
+
+.work-state {
+  color: #3D3D3D;
+}
+
+.work-state:hover {
+  color: #e0e0e0;
+}
+
+/*Section1*/
+.section1 {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section1 .hero-line {
+  top: calc(50% - 180px);
+  left: 13rem;
+  position: absolute;
+  color: #e0e0e0;
+  position: 100px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  z-index: 50;
+}
+
+.section1 .hero-line .title {
+  font-family: "Gordita", sans-serif;
+  font-size: 10rem;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.section1 .hero-line .subtitle {
+  letter-spacing: 0;
+  font-size: 1.5rem;
+}
+
+.section1 .intro-image {
+  position: absolute;
+  width: auto;
+  height: auto;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  z-index: 100;
+  opacity: .8;
+}
+
+.section2 {
+  background-color: white;
+}
+/*# sourceMappingURL=about.css.map */

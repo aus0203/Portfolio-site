@@ -9,14 +9,15 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 
-<!--header section-->
 
 <body>
+    <!--Gloabl html-->
+    <div class="cursor"></div>
     <div class="header">
-        <a href="#">
+        <a class="anchor" href="/index.html">
             <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363.33 398.39">
                 <title>MainLogo</title>
                 <g class="circle">
@@ -32,25 +33,24 @@
         <nav>
             <ul class="nav-link">
                 <li><a class="work-state" href="#">Works</a></li>
-                <li><a class="about-state" href="#">About</a></li>
+                <li><a class="anchor about-state" href="/about.html">About</a></li>
             </ul>
         </nav>
     </div>
 
-    <!--Sidebar section-->
 
+    
+    <!--Sidebar section-->
     <div class="sidebar">
         <div class="nav1"></div>
         <div class="nav2">
             <div class="bar"></div>
-            <svg id="handler" width="12px" height="12px">
-                <circle r="6" cx="6" cy="6" />
-            </svg>
+            <div id="handler"></div>
         </div>
         <div class="nav3">
             <ul>
                 <li>
-                    <a href="https://www.linkedin.com/in/wei-lun-chen/">
+                    <a class="anchor" href="https://www.linkedin.com/in/wei-lun-chen/">
                         <svg class="icon linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <title>linkedin</title>
                             <path
@@ -59,7 +59,7 @@
 
                     </a></li>
                 <li>
-                    <a href="#">
+                    <a class="anchor" href="#">
                         <svg class="icon resume" data-name="resume" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512">
                             <title>resume</title>
@@ -72,7 +72,7 @@
 
                     </a></li>
                 <li>
-                    <a href="#">
+                    <a class="anchor" href="#">
                         <svg class="icon email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <title>email</title>
                             <path
@@ -84,8 +84,8 @@
         </div>
     </div>
 
-    <!--Main content section-->
 
+    <!--Main content section-->
     <div id="fullpage">
 
         <!--Section 1-->
@@ -116,7 +116,7 @@
             </div>
 
             <div class="call-of-action">
-                <div class="scrollbutton"><a href="#Project1">
+                <div class="scrollbutton"><a class="anchor" href="#Project1">
                         <p>Scroll Down</p>
                     </a></div>
                 <div class="guideline"></div>
@@ -131,9 +131,11 @@
                 <div class="projectpart1">
                     <div class="foto">
                         <img class="projectfoto projectfoto1 photo-zoom" src="./img/project-01.jpg" alt="project photo">
-                        <div class="projectfoto-overlay">
-                            <p>+ Read more
-                            <p>
+                        <div class="anchor projectfoto-overlay">
+                            <a href="#">
+                                <p>+ Read more
+                                    <p>
+                            </a>
                         </div>
                     </div>
                     <div class="intro">
@@ -144,7 +146,7 @@
                             </div>
                             <p>01</p>
                         </div>
-                        <h2>SUPPER</h2>
+                        <h2 class="anchor-project">SUPPER</h2>
                         <p>Brand strategy | Website design</p>
                     </div>
                 </div>
@@ -157,14 +159,16 @@
                             </div>
                             <p>02</p>
                         </div>
-                        <h2>WE BRING EUROPE TO YOU</h2>
+                        <h2 class="anchor-project">WE BRING EUROPE TO YOU</h2>
                         <p>Brand strategy | Business innovation | Service design</p>
                     </div>
                     <div class="foto">
                         <img class="projectfoto projectfoto1 photo-zoom" src="./img/project-02.jpg" alt="project photo">
-                        <div class="projectfoto-overlay">
-                            <p>+ Read more
-                            <p>
+                        <div class="anchor projectfoto-overlay">
+                            <a href="#">
+                                <p>+ Read more
+                                    <p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -193,9 +197,11 @@
                 <div class="projectpart2">
                     <div class="foto">
                         <img class="projectfoto projectfoto2 photo-zoom" src="./img/project-03.jpg" alt="project photo">
-                        <div class="projectfoto-overlay">
-                            <p>+ Read more
-                            <p>
+                        <div class="anchor projectfoto-overlay">
+                            <a href="#">
+                                <p>+ Read more
+                                    <p>
+                            </a>
                         </div>
                     </div>
                     <div class="intro">
@@ -206,7 +212,7 @@
                             </div>
                             <p>03</p>
                         </div>
-                        <h2>VX</h2>
+                        <h2 class="anchor-project">VX</h2>
                         <p>Organization transformation | Business innovation</p>
                     </div>
                 </div>
@@ -219,12 +225,12 @@
                             </div>
                             <p>04</p>
                         </div>
-                        <h2>MY HEALTH JOURNEY</h2>
+                        <h2 class="anchor-project">MY HEALTH JOURNEY</h2>
                         <p>Brand strategy | Service design | Motion design</p>
                     </div>
                     <div class="foto">
-                        <img class="projectfoto projectfoto2 photo-zoom" src="./img/project-02.jpg" alt="project photo">
-                        <div class="projectfoto-overlay">
+                        <img class="projectfoto projectfoto2 photo-zoom" src="./img/project-04.jpg" alt="project photo">
+                        <div class="anchor projectfoto-overlay">
                             <p>+ Read more
                             <p>
                         </div>
@@ -254,8 +260,8 @@
             <div id="prjoectsection3">
                 <div class="projectpart3">
                     <div class="foto">
-                        <img class="projectfoto photo-zoom" src="./img/project-03.jpg" alt="project photo">
-                        <div class="projectfoto-overlay">
+                        <img class="projectfoto photo-zoom" src="./img/project-05.png" alt="project photo">
+                        <div class="anchor projectfoto-overlay">
                             <p>+ Read more
                             <p>
                         </div>
@@ -268,7 +274,7 @@
                             </div>
                             <p>05</p>
                         </div>
-                        <h2>Ultimaker</h2>
+                        <h2 class="anchor-project">Ultimaker</h2>
                         <p>Product Roadmapping | Strategic Roadmapping</p>
                     </div>
                 </div>
@@ -281,12 +287,12 @@
                             </div>
                             <p>06</p>
                         </div>
-                        <h2>GMC</h2>
+                        <h2 class="anchor-project">GMC</h2>
                         <p>Brand strategy | Website design</p>
                     </div>
                     <div class="foto">
                         <img class="projectfoto photo-zoom" src="./img/project-02.jpg" alt="project photo">
-                        <div class="projectfoto-overlay">
+                        <div class="anchor projectfoto-overlay">
                             <p>+ Read more
                             <p>
                         </div>
@@ -322,9 +328,17 @@
             </div>
             <div class="footer">
                 <div class="footer-link">
-                    <a href=""><p>Lnkedin</p></a>  
-                    <a href=""><p>Resume</p></a>
-                    <a href=""><p>Contact</p></a>
+                    <ul class="anchor">
+                        <li><a href="">
+                                <p>Lnkedin</p>
+                            </a></li>
+                        <li><a href="">
+                                <p>Resume</p>
+                            </a></li>
+                        <li><a href="">
+                                <p>Contact</p>
+                            </a></li>
+                    </ul>
                 </div>
                 <hr class="footer-line">
                 </hr>
@@ -335,9 +349,13 @@
         </section>
     </div>
 
+    <!--Javascripts-->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
-    <script src="./app.js"></script>
-    </script>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/index.js"></script>
+
+
 </body>
 
 </html>

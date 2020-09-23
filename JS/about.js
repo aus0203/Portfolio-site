@@ -1,22 +1,64 @@
 /*Variables*/
+const backIntro = document.querySelectorAll(".backintro");
+const frontIntro = document.querySelectorAll(".frontintro");
+const farFrontIntro = document.querySelectorAll(".farfrontintro");
 
-/**/
+/*Fullpage*/
 new fullpage("#fullpage", {
-    scrollingSpeed: 1250,
+  scrollingSpeed: 1250,
+  onLeave: function (origin, destination, direction) {
+    if (destination.index === 1) {
+      backIntro.forEach((x) => {
+        x.style.marginTop = 100 + "rem";
+      });
+      frontIntro.forEach((x) => {
+        x.style.marginTop = 200 + "rem";
+      });
+      farFrontIntro.forEach((x) => {
+        x.style.marginTop = 300 + "rem";
+      });
+    } else {
+      backIntro.forEach((x) => {
+        x.style.marginTop = 0;
+      });
+      frontIntro.forEach((x) => {
+        x.style.marginTop = 0;
+      });
+      farFrontIntro.forEach((x) => {
+        x.style.marginTop = 0;
+      });
+    }
+
+
+    /*Footer section background*/
+    if (destination.index === 2) {
+      backFooterObject.forEach((x) => {
+        x.style.marginBottom = 0;
+      });
+      frontFooterObject.style.marginBottom = 0;
+      farFrontFooterObject.style.marginBottom = 0;
+      footerLine.style.top = 15 + "rem";
+    } else {
+      backFooterObject.forEach((x) => {
+        x.style.marginBottom = -150 + "rem";
+      });
+      frontFooterObject.style.marginBottom = -200 + "rem";
+      farFrontFooterObject.style.marginBottom = -300 + "rem";
+      footerLine.style.top = 100 + "rem";
+    }
+  },
 });
 
 /*Parallax effect*/
 
 document.addEventListener("mousemove", parallax);
 function parallax(e) {
-  this.querySelectorAll(".intro-object").forEach(
-    (introObjects) => {
-      const speed = introObjects.getAttribute("data-speed");
+  this.querySelectorAll(".intro-object").forEach((introObjects) => {
+    const speed = introObjects.getAttribute("data-speed");
 
-      const x = (window.innerWidth - e.pageX * speed) / 70;
-      const y = (window.innerHeight - e.pageY * speed) / 70;
+    const x = (window.innerWidth - e.pageX * speed) / 70;
+    const y = (window.innerHeight - e.pageY * speed) / 70;
 
-      introObjects.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    }
-  );
+    introObjects.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  });
 }

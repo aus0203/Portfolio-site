@@ -1,21 +1,4 @@
-const scrollButton = document.querySelector(".scrollbutton");
-const front = document.querySelectorAll(".front");
-const back = document.querySelectorAll(".back");
-const farBack = document.querySelectorAll(".farback");
-const mainCharactor = document.querySelector(".maincharactor");
-const handler = document.querySelector(".handler");
-const heroLine = document.querySelector(".hero-line");
-const footerLine = document.querySelector(".contact-line");
-const callOfAction = document.querySelector(".call-of-action");
-const sectionObjectBack = document.querySelectorAll(".objectback");
-const sectionObjectFront = document.querySelectorAll(".objectfront");
-const sectionObjectFarFront = document.querySelectorAll(".objectfarfront");
-const projectSection1 = document.getElementById("projectsection1");
-const projectSection2 = document.getElementById("projectsection2");
-const projectSection3 = document.getElementById("prjoectsection3");
-const backFooterObject = document.querySelectorAll(".backfooterobject");
-const frontFooterObject = document.querySelector(".frontfooterobject");
-const farFrontFooterObject = document.querySelector(".farfrontfooterobject");
+
 
 
 /*fullpage transition effect*/
@@ -43,12 +26,6 @@ new fullpage("#fullpage", {
 
     heroLine.style.top = destination.index * 1300 + "px";
 
-    /*Footer*/
-    if (origin.index === 3) {
-      footerLine.style.top = 15 + "rem";
-    } else {
-      footerLine.style.top = 100 + "rem";
-    }
 
     /*Project section background*/
     if (destination.index >= 1 && destination.index <= 3) {
@@ -90,6 +67,13 @@ new fullpage("#fullpage", {
       projectSection2.style.top = 100 + "rem";
       projectSection3.style.top = 100 + "rem";
       callOfAction.style.marginTop = 8 + "%";
+    }
+
+    /*Footer*/
+    if (origin.index === 3) {
+      footerLine.style.top = 15 + "rem";
+    } else {
+      footerLine.style.top = 100 + "rem";
     }
 
     /*Footer section background*/

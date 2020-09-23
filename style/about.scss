@@ -3,6 +3,10 @@
 body {
   color: map-get($color, dark);
 }
+
+a {
+  color: map-get($color, dark);
+}
 /*Header*/
 
 .about-state {
@@ -23,7 +27,6 @@ body {
 }
 
 .logo:hover {
-
   circle {
     stroke: transparent;
     fill: map-get($color, accent);
@@ -32,10 +35,10 @@ body {
 
 /*Side Bar*/
 
-.nav2{
+.nav2 {
   height: 200px;
 }
-.icon{
+.icon {
   fill: map-get($color, dark);
 }
 
@@ -51,26 +54,23 @@ body {
   align-items: center;
 
   .hero-line {
-    top: calc(50% - 50px);
+    top: calc(50% - 100px);
     left: 13rem;
     position: absolute;
     color: map-get($color, dark);
     position: 100px;
     transition: 1s ease;
     z-index: 10;
-
     .title {
       color: map-get($color, dark);
       font-size: 4rem;
       letter-spacing: 0;
       font-weight: 700;
     }
-    .subtitle{
-      width:28rem;
+    .subtitle {
+      width: 28rem;
     }
-
   }
-
 }
 
 .intro-background {
@@ -83,60 +83,119 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 5;
-  .intro-main{
+
+  img {
+    transition: 1s ease;
+  }
+
+  .intro-main {
     position: absolute;
     width: auto;
     height: auto;
-    right:10rem;
+    right: 10rem;
     bottom: 0;
     object-fit: cover;
     object-position: center;
     z-index: 5;
     filter: grayscale(1);
   }
-  .intro-object{
+  .intro-object {
     position: relative;
-    &:nth-child(2){
+    &:nth-child(2) {
       width: 4rem;
-      bottom:13rem;
-      left:9rem;
+      bottom: 13rem;
+      left: 9rem;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       width: 10rem;
-      bottom:-15rem;
-      left:43rem;
-      z-index:6;
+      bottom: -15rem;
+      left: 43rem;
+      z-index: 6;
     }
-    &:nth-child(4){
+    &:nth-child(4) {
       width: 1rem;
-      bottom:-4rem;
-      right:-20rem;
+      bottom: -4rem;
+      right: -20rem;
     }
-    &:nth-child(5){
-      bottom:22rem;
-      left:-25rem;
+    &:nth-child(5) {
+      bottom: 22rem;
+      left: -25rem;
     }
-    &:nth-child(6){
-      bottom:18rem;
-      left:-20rem;
+    &:nth-child(6) {
+      bottom: 18rem;
+      left: -20rem;
     }
-    &:nth-child(7){
+    &:nth-child(7) {
       width: 5rem;
-      bottom:8rem;
-      left:5rem;
+      bottom: 8rem;
+      left: 7rem;
     }
-    &:nth-child(8){
+    &:nth-child(8) {
       width: 10rem;
-      bottom:4rem;
-      left:-15rem;
-      z-index:6;
-
+      bottom: 4rem;
+      left: -15rem;
+      z-index: 6;
     }
   }
 }
 
+/*Scroll down Call of action*/
+
+.call-of-action {
+  margin-top: 16.8%;
+}
+
+.guideline {
+  background-color: map-get($color, dark);
+}
+
+/*Section2*/
 
 .section2 {
-  background-color: map-get($color, dark);
-  z-index: 10;
+  background-color: map-get($color, universal);
+  z-index: 20;
+  .cv-section {
+    top:2rem;
+    margin: 0 auto;
+    display: flex;
+    width: 70vw;
+    position: relative;
+  }
+  .cv-exp{
+    margin-bottom:2rem;
+    .cv-exp-col1{
+      width:30%;
+    }
+    .cv-exp-col2{
+      width:70%;
+    }
+  }
+
+  .cv-cap {
+    .cv-cap-col1 {
+      width:30%;
+    }
+    .cv-cap-col2 {
+      width:29%;
+    }
+    .cv-cap-col3 {
+      width:41%;
+    }
+  }
+  
+}
+
+.cv-exp-list{
+  display: flex;
+  margin-bottom:10px;
+  .cv-exp-list-title{
+    width:30%;
+  }
+  .cv-exp-list-content{
+    margin-left: 5rem;
+  }
+}
+
+.section5 {
+  background-color: map-get($color, universal);
 }

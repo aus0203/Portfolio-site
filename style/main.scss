@@ -9,6 +9,8 @@ $color: (
 
 );
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -22,10 +24,20 @@ $color: (
   background: transparent; /* make scrollbar transparent */
 }
 
+h1{
+  font-size: 4rem;
+}
+
 h2 {
   font-size: 2.5rem;
   font-weight: 200;
   font-family: "Gordita", sans-serif;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 
 p {
@@ -51,7 +63,7 @@ li {
   border-radius: 50%;
   position: absolute;
   z-index: 1000;
-  transition: 200ms ease-out;
+  transition: 100ms ease-out;
   transform:translate(-50%,-50%);
   transform-origin: 100% 100%;
   pointer-events: none;
@@ -90,7 +102,7 @@ li {
   justify-content: space-between;
   align-items: flex-end;
   z-index: 999;
-  padding: 1rem 6.5rem 0 1rem;
+  padding: 1rem 5rem 0 1rem;
   background-color: transparent;
 
   .logo {
@@ -158,7 +170,7 @@ li {
       width: 1rem;
       height: 100%;
       margin: 1.2rem 0px;
-      transition: 0.5s ease;
+      transition: 0.3s ease;
       &:hover {
         fill: map-get($color, accent);
         transform: scale(1.5);
@@ -180,3 +192,127 @@ li {
   align-items: center;
 }
 
+/*Scroll down Call of action*/
+
+.call-of-action {
+  display: inline-block;
+  position: absolute;
+  z-index: 900;
+  margin-left: calc(50% - 62px);
+  margin-top: 8%;
+  transition: 1s ease;
+  .scrollbutton {
+    p {
+      font-weight: 400;
+    }
+  }
+  .guideline {
+    width: 1px;
+    height: 30rem;
+    margin: auto;
+    margin-top: 1rem;
+    transition: 0.4s ease;
+  }
+}
+
+.scrollbutton:hover + .guideline {
+  margin-top: 2.5rem;
+}
+
+
+/*Contact Section*/
+.section5 {
+  background-color: map-get($color, dark);
+  z-index: 8;
+  .contact-line {
+    width: 70vw;
+    margin: 0 auto;
+    transition: 1.2s ease;
+    z-index: 100;
+    .title {
+      font-family: "Gordita", sans-serif;
+      font-size: 3rem;
+      letter-spacing: 0;
+      font-weight: 500;
+      line-height: 72px;
+    }
+    .subtitle {
+      font-family: "Gordita", sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      line-height: 35px;
+      margin-top: 1rem;
+    }
+  }
+  .footer {
+    position: relative;
+    margin: 0 auto;
+    bottom:calc(-20% - 100px);
+    width:70vw;
+    z-index: 100;
+    .footer-link {
+      margin-bottom: 0.8rem;
+      li {
+        display: inline-block;
+        margin-right: 2rem;
+        p {
+          font-size: 1.2rem;
+          font-weight: 400;
+          transition: 0.5s ease;
+        }
+        p:hover {
+          color: map-get($color, accent);
+        }
+      }
+    }
+    .footer-line {
+      border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
+      width: 70vw;
+    }
+    .footer-claim {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.footerBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  .footerBackgroundObject {
+    position: relative;
+    transition: 1s ease;
+    &:nth-child(1) {
+      width: 7rem;
+      bottom: 10rem;
+      margin-bottom: -150rem;
+      left: 25rem;
+    }
+    &:nth-child(2) {
+      width: 4rem;
+      left: 10rem;
+      margin-bottom: -150rem;
+    }
+    &:nth-child(3) {
+      width: 0.8rem;
+      bottom: 15rem;
+      left: 3rem;
+      margin-bottom: -200rem;
+    }
+    &:nth-child(4) {
+      position: absolute;
+      bottom: -5rem;
+      right: -5rem;
+      transform: rotate(-20deg);
+      margin-bottom: -300rem;
+    }
+  }
+}

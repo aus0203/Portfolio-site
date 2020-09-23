@@ -5,7 +5,8 @@ $color: (
   accent: #58bfd3,
   universal: #e0e0e0,
   dark: #0a0a0a,
-  enable: #3D3D3D,
+  disable: #3D3D3D,
+
 );
 
 * {
@@ -13,8 +14,8 @@ $color: (
   padding: 0;
   box-sizing: border-box;
   font-family: "Gordita", sans-serif;
-  color: map-get($color, universal);
 }
+
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -30,11 +31,9 @@ h2 {
 p {
   font-weight: 300;
   font-size: 1rem;
-  color: map-get($color, universal);
 }
 
 a {
-  color: map-get($color, universal);
   text-decoration: none;
 }
 
@@ -51,9 +50,8 @@ li {
   background-color: map-get($color, accent);
   border-radius: 50%;
   position: absolute;
-  z-index: 900;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
+  z-index: 1000;
+  transition: 200ms ease-out;
   transform:translate(-50%,-50%);
   transform-origin: 100% 100%;
   pointer-events: none;
@@ -64,10 +62,6 @@ li {
   border-color: map-get($color, accent);
   height: 50px;
   width: 50px;
-}
-.click{
-  height: 15px;
-  width: 15px;
 }
 
 .expand-project{
@@ -94,18 +88,15 @@ li {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   z-index: 999;
-  padding: 1rem 6.5rem 0 1.5rem;
+  padding: 1rem 6.5rem 0 1rem;
   background-color: transparent;
 
   .logo {
-    width: 2rem;
-    cursor: pointer;
-  }
-  .signature {
-    fill: map-get($color, universal);
-    transition: 0.5s ease;
+    margin-top: 1rem;
+    width: 3rem;
+    transition: .5s ease;
   }
 
   a {
@@ -116,7 +107,76 @@ li {
 
   li {
     display: inline-block;
-    bottom: 0;
+    margin-bottom: 0;
     padding: 0px 10px;
   }
 }
+
+/*Side-bar*/
+
+.sidebar {
+  top: 4rem;
+  width: 4rem;
+  height: 100vh;
+  position: fixed;
+  z-index: 800;
+  display: flex;
+  flex-direction: column;
+  .nav1 {
+    order: 1;
+    flex-grow: 1;
+  }
+
+  .nav2 {
+    order: 2;
+    flex-grow: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    .bar {
+      position: relative;
+      background: map-get($color, universal);
+      width: 1px;
+      height: 12rem;
+      border-radius: 50px;
+      transition: 0.5s ease;
+    }
+  }
+
+  .nav3 {
+    order: 3;
+    flex-grow: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      margin-bottom: 1rem;
+    }
+
+    .icon {
+      width: 1rem;
+      height: 100%;
+      margin: 1.2rem 0px;
+      transition: 0.5s ease;
+      &:hover {
+        fill: map-get($color, accent);
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.handler {
+  background-color: map-get($color, universal);
+  position: absolute;
+  height: 40px;
+  width: 4px;
+  z-index: 10;
+  margin-top: -10rem;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

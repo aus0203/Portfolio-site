@@ -1,64 +1,142 @@
 @import "main";
 
 body {
-  background-color: map-get($color, dark);
+  color: map-get($color, dark);
 }
-
 /*Header*/
 
-.about-state  {
+.about-state {
   cursor: none;
+  color: map-get($color, dark);
 }
+
 .work-state {
-  color: map-get($color, enable);
+  color: #b8b8b8;
   &:hover {
-    color: map-get($color, universal);
+    color: map-get($color, dark);
   }
+}
+.logo {
+  circle {
+    transition: 0.5s ease;
+  }
+}
+
+.logo:hover {
+
+  circle {
+    stroke: transparent;
+    fill: map-get($color, accent);
+  }
+}
+
+/*Side Bar*/
+
+.nav2{
+  height: 200px;
+}
+.icon{
+  fill: map-get($color, dark);
 }
 
 /*Section1*/
 
 .section1 {
-  background-color: black;
+  background-color: map-get($color, universal);
   display: flex;
-  align-items: center;
+  top: 0;
+  right: 0;
+  z-index: 2;
   justify-content: center;
+  align-items: center;
 
   .hero-line {
-    top: calc(50% - 180px);
+    top: calc(50% - 50px);
     left: 13rem;
     position: absolute;
-    color: map-get($color, universal);
+    color: map-get($color, dark);
     position: 100px;
     transition: 1s ease;
-    z-index: 50;
+    z-index: 10;
 
     .title {
-      font-family: "Gordita", sans-serif;
-      font-size: 10rem;
+      color: map-get($color, dark);
+      font-size: 4rem;
       letter-spacing: 0;
-      font-weight: 500;
+      font-weight: 700;
     }
-  
-    .subtitle {
-      letter-spacing: 0;
-      font-size: 1.5rem;
+    .subtitle{
+      width:28rem;
     }
+
   }
 
-  .intro-image {
+}
+
+.intro-background {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  .intro-main{
     position: absolute;
     width: auto;
     height: auto;
+    right:10rem;
     bottom: 0;
     object-fit: cover;
     object-position: center;
-    transition: 1s ease;
-    z-index: 100;
-    opacity: .8;
+    z-index: 5;
+    filter: grayscale(1);
+  }
+  .intro-object{
+    position: relative;
+    &:nth-child(2){
+      width: 4rem;
+      bottom:13rem;
+      left:9rem;
+    }
+    &:nth-child(3){
+      width: 10rem;
+      bottom:-15rem;
+      left:43rem;
+      z-index:6;
+    }
+    &:nth-child(4){
+      width: 1rem;
+      bottom:-4rem;
+      right:-20rem;
+    }
+    &:nth-child(5){
+      bottom:22rem;
+      left:-25rem;
+    }
+    &:nth-child(6){
+      bottom:18rem;
+      left:-20rem;
+    }
+    &:nth-child(7){
+      width: 5rem;
+      bottom:8rem;
+      left:5rem;
+    }
+    &:nth-child(8){
+      width: 10rem;
+      bottom:4rem;
+      left:-15rem;
+      z-index:6;
+
+    }
   }
 }
 
+
 .section2 {
-  background-color: white;
+  background-color: map-get($color, dark);
+  z-index: 10;
 }

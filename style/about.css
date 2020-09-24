@@ -175,7 +175,6 @@ li {
 
 .sidebar .nav2 .bar {
   position: relative;
-  background: #e0e0e0;
   width: 1px;
   height: 12rem;
   border-radius: 50px;
@@ -220,23 +219,10 @@ li {
 }
 
 .handler {
-  background-color: #e0e0e0;
   position: absolute;
-  height: 40px;
-  width: 4px;
   z-index: 10;
-  margin-top: -10rem;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 /*Scroll down Call of action*/
@@ -300,7 +286,7 @@ li {
 .section5 .footer {
   position: relative;
   margin: 0 auto;
-  bottom: -12rem;
+  bottom: calc(-15% - 80px);
   width: 70vw;
   z-index: 100;
 }
@@ -323,6 +309,8 @@ li {
 
 .section5 .footer .footer-link li p:hover {
   color: #58bfd3;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .section5 .footer .footer-line {
@@ -421,12 +409,19 @@ a {
 }
 
 /*Side Bar*/
-.nav2 {
-  height: 200px;
-}
-
 .icon {
   fill: #0a0a0a;
+}
+
+.bar {
+  background: #0a0a0a;
+}
+
+.handler {
+  background-color: #0a0a0a;
+  height: 80px;
+  width: 4px;
+  margin-top: -8rem;
 }
 
 /*Section1*/
@@ -575,6 +570,8 @@ a {
   display: flex;
   width: 70vw;
   position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .section2 .cv-exp {
@@ -582,38 +579,36 @@ a {
 }
 
 .section2 .cv-exp .cv-exp-col1 {
-  width: 30%;
-}
-
-.section2 .cv-exp .cv-exp-col2 {
-  width: 70%;
+  width: 15rem;
 }
 
 .section2 .cv-cap .cv-cap-col1 {
-  width: 30%;
+  width: 15rem;
 }
 
 .section2 .cv-cap .cv-cap-col2 {
-  width: 29%;
+  width: 20rem;
 }
 
 .section2 .cv-cap .cv-cap-col3 {
-  width: 41%;
+  margin-left: 2rem;
 }
 
 .cv-exp-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
 .cv-exp-list .cv-exp-list-title {
-  width: 30%;
+  width: 20rem;
 }
 
 .cv-exp-list .cv-exp-list-content {
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 .section5 {

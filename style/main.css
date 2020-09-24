@@ -175,7 +175,6 @@ li {
 
 .sidebar .nav2 .bar {
   position: relative;
-  background: #e0e0e0;
   width: 1px;
   height: 12rem;
   border-radius: 50px;
@@ -220,23 +219,10 @@ li {
 }
 
 .handler {
-  background-color: #e0e0e0;
   position: absolute;
-  height: 40px;
-  width: 4px;
   z-index: 10;
-  margin-top: -10rem;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 /*Scroll down Call of action*/
@@ -300,7 +286,7 @@ li {
 .section5 .footer {
   position: relative;
   margin: 0 auto;
-  bottom: calc(-20% - 100px);
+  bottom: calc(-15% - 80px);
   width: 70vw;
   z-index: 100;
 }
@@ -323,6 +309,8 @@ li {
 
 .section5 .footer .footer-link li p:hover {
   color: #58bfd3;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .section5 .footer .footer-line {

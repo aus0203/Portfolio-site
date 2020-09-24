@@ -147,7 +147,6 @@ li {
     align-items: center;
     .bar {
       position: relative;
-      background: map-get($color, universal);
       width: 1px;
       height: 12rem;
       border-radius: 50px;
@@ -179,17 +178,10 @@ li {
   }
 }
 
-.handler {
-  background-color: map-get($color, universal);
+.handler { 
   position: absolute;
-  height: 40px;
-  width: 4px;
   z-index: 10;
-  margin-top: -10rem;
   transition: 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /*Scroll down Call of action*/
@@ -224,6 +216,7 @@ li {
 .section5 {
   background-color: map-get($color, dark);
   z-index: 8;
+  
   .contact-line {
     width: 70vw;
     margin: 0 auto;
@@ -247,7 +240,7 @@ li {
   .footer {
     position: relative;
     margin: 0 auto;
-    bottom:calc(-20% - 100px);
+    bottom:calc(-15% - 80px);
     width:70vw;
     z-index: 100;
     .footer-link {
@@ -262,6 +255,7 @@ li {
         }
         p:hover {
           color: map-get($color, accent);
+          transform: scale(1.1);
         }
       }
     }

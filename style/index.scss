@@ -37,6 +37,18 @@ a {
   fill: map-get($color, universal);
 }
 
+.bar{
+  background: map-get($color, universal);
+}
+
+.handler{
+  background-color: map-get($color, universal);
+  height: 40px;
+  width: 4px; 
+  margin-top: -10rem;
+}
+
+
 /*Project intro numbering*/
 .intro-number {
   display: flex;

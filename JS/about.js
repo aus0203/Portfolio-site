@@ -6,7 +6,13 @@ const farFrontIntro = document.querySelectorAll(".farfrontintro");
 /*Fullpage*/
 new fullpage("#fullpage", {
   scrollingSpeed: 1250,
+  responsiveWidth: 900,
+  
   onLeave: function (origin, destination, direction) {
+
+    handler.style.marginTop = -8 + destination.index * 8 + "rem";
+
+
     if (destination.index === 1) {
       backIntro.forEach((x) => {
         x.style.marginTop = 100 + "rem";
@@ -29,7 +35,6 @@ new fullpage("#fullpage", {
       });
     }
 
-
     /*Footer section background*/
     if (destination.index === 2) {
       backFooterObject.forEach((x) => {
@@ -37,28 +42,15 @@ new fullpage("#fullpage", {
       });
       frontFooterObject.style.marginBottom = 0;
       farFrontFooterObject.style.marginBottom = 0;
-      footerLine.style.top = 15 + "rem";
+      footerLine.style.marginTop = 0;
     } else {
       backFooterObject.forEach((x) => {
         x.style.marginBottom = -150 + "rem";
       });
       frontFooterObject.style.marginBottom = -200 + "rem";
       farFrontFooterObject.style.marginBottom = -300 + "rem";
-      footerLine.style.top = 100 + "rem";
+      footerLine.style.marginTop = 300 + "rem";
     }
   },
 });
 
-/*Parallax effect*/
-
-document.addEventListener("mousemove", parallax);
-function parallax(e) {
-  this.querySelectorAll(".intro-object").forEach((introObjects) => {
-    const speed = introObjects.getAttribute("data-speed");
-
-    const x = (window.innerWidth - e.pageX * speed) / 70;
-    const y = (window.innerHeight - e.pageY * speed) / 70;
-
-    introObjects.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  });
-}

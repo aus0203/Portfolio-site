@@ -35,12 +35,22 @@ a {
 
 /*Side Bar*/
 
-.nav2 {
-  height: 200px;
-}
 .icon {
   fill: map-get($color, dark);
 }
+.bar{
+  background: map-get($color, dark);
+}
+
+.handler{
+  background-color: map-get($color, dark);
+  height: 80px;
+  width: 4px; 
+  margin-top: -8rem;
+}
+
+
+
 
 /*Section1*/
 
@@ -160,26 +170,24 @@ a {
     display: flex;
     width: 70vw;
     position: relative;
+    flex-wrap: wrap;
   }
   .cv-exp{
     margin-bottom:2rem;
     .cv-exp-col1{
-      width:30%;
-    }
-    .cv-exp-col2{
-      width:70%;
+      width:15rem;
     }
   }
 
   .cv-cap {
     .cv-cap-col1 {
-      width:30%;
+      width:15rem;
     }
     .cv-cap-col2 {
-      width:29%;
+      width:20rem;
     }
     .cv-cap-col3 {
-      width:41%;
+      margin-left:  2rem;
     }
   }
   
@@ -187,12 +195,13 @@ a {
 
 .cv-exp-list{
   display: flex;
+  flex-wrap: wrap;
   margin-bottom:10px;
   .cv-exp-list-title{
-    width:30%;
+    width:20rem;
   }
   .cv-exp-list-content{
-    margin-left: 5rem;
+    margin-left: 2rem;
   }
 }
 

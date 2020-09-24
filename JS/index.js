@@ -5,7 +5,7 @@
 
 new fullpage("#fullpage", {
   scrollingSpeed: 1250,
-
+  responsiveWidth: 900,
   onLeave: function (origin, destination, direction) {
     var loadedSection = this;
     
@@ -69,13 +69,6 @@ new fullpage("#fullpage", {
       callOfAction.style.marginTop = 8 + "%";
     }
 
-    /*Footer*/
-    if (origin.index === 3) {
-      footerLine.style.top = 15 + "rem";
-    } else {
-      footerLine.style.top = 100 + "rem";
-    }
-
     /*Footer section background*/
     if (destination.index === 4) {
       backFooterObject.forEach((x) => {
@@ -83,46 +76,16 @@ new fullpage("#fullpage", {
       });
       frontFooterObject.style.marginBottom = 0;
       farFrontFooterObject.style.marginBottom = 0;
+      footerLine.style.marginTop = 0;
     } else {
       backFooterObject.forEach((x) => {
         x.style.marginBottom = -150 + "rem";
       });
       frontFooterObject.style.marginBottom = -200 + "rem";
       farFrontFooterObject.style.marginBottom = -300 + "rem";
+      footerLine.style.marginTop = 300 + "rem";
     }
   },
   
 });
-
-/*parallax effect*/
-
-document.addEventListener("mousemove", parallax);
-function parallax(e) {
-  this.querySelectorAll(".layer").forEach((layer) => {
-    const speed = layer.getAttribute("data-speed");
-
-    const x = (window.innerWidth - e.pageX * speed) / 100;
-    const y = (window.innerHeight - e.pageY * speed) / 100;
-
-    layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  });
-  this.querySelectorAll(".background-object").forEach((backgroundObject) => {
-    const speed = backgroundObject.getAttribute("data-speed");
-
-    const x = (window.innerWidth - e.pageX * speed) / 70;
-    const y = (window.innerHeight - e.pageY * speed) / 70;
-
-    backgroundObject.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  });
-  this.querySelectorAll(".footerBackgroundObject").forEach(
-    (footerBackgroundObject) => {
-      const speed = footerBackgroundObject.getAttribute("data-speed");
-
-      const x = (window.innerWidth - e.pageX * speed) / 70;
-      const y = (window.innerHeight - e.pageY * speed) / 70;
-
-      footerBackgroundObject.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    }
-  );
-}
 

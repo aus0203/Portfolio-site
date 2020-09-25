@@ -3,6 +3,8 @@ const screen = document.querySelector(".screen");
 const projectHeadline = document.querySelector(".project-headline");
 const projectNav = document.querySelector(".project-nav");
 
+
+/*Project topscreen*/
 function onScroll(event) {
   if (window.pageYOffset > 96) {
     topScreen.style.height = Math.max(400, 576 - window.pageYOffset * 1) + "px";
@@ -10,10 +12,13 @@ function onScroll(event) {
   } else {
     screen.style.marginTop = 0;
   }
-  // projectHeadline.style.marginTop = Math.max(40, 80 - (window.pageYOffset * 5)) + "px";
 }
 
-const topScreenOptions = {};
+
+/*Project navigation*/
+const topScreenOptions = {
+  rootMargin : "-200px 0px 0px 0px",
+};
 
 const topScreenObserver = new IntersectionObserver(function (
   entries,
@@ -31,3 +36,4 @@ const topScreenObserver = new IntersectionObserver(function (
 topScreenOptions);
 
 topScreenObserver.observe(topScreen);
+

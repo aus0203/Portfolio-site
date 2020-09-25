@@ -584,6 +584,10 @@ p {
   width: 22rem;
 }
 
+.project-content .team p {
+  width: 15rem;
+}
+
 .project-content h3 {
   margin-bottom: 0.5rem;
 }

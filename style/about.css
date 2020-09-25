@@ -94,6 +94,7 @@ li {
 
 /*Header*/
 .header {
+  top: 0;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;

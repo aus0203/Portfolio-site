@@ -1,0 +1,30 @@
+@import "project";
+
+/*Project nav*/
+
+.left-button:hover > .nav-button-col2 > a > p {
+    right: 0rem;
+    margin-top: 3rem;
+    transform: rotate(0deg);
+    span {
+      display: none;
+    }
+    &::after {
+      content: "SUPPER";
+      font-size: 1.2rem;
+    }
+  }
+  
+  .right-button:hover > .nav-button-col1 > a > p {
+    right: 0rem;
+    margin-top: 3rem;
+    transform: rotate(0deg);
+    span {
+      display: none;
+    }
+    &::after {
+      content: "VX";
+      font-size: 1.2rem;
+    }
+  }
+  

@@ -9,17 +9,6 @@ a {
 }
 /*Header*/
 
-.about-state {
-  cursor: none;
-  color: map-get($color, dark);
-}
-
-.work-state {
-  color: #b8b8b8;
-  &:hover {
-    color: map-get($color, dark);
-  }
-}
 .logo {
   circle {
     transition: 0.5s ease;
@@ -31,6 +20,18 @@ a {
     stroke: transparent;
     fill: map-get($color, accent);
   }
+}
+
+.about-state {
+  cursor: none;
+}
+
+.work-state:hover{
+  transform: scale(1.2);
+}
+
+.current{
+  background-color: map-get($color, dark);
 }
 
 /*Side Bar*/
@@ -50,8 +51,6 @@ a {
 }
 
 
-
-
 /*Section1*/
 
 .section1 {
@@ -62,6 +61,18 @@ a {
   z-index: 2;
   justify-content: center;
   align-items: center;
+
+  .smalltitle {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    .titleLine {
+      margin-left: .5rem;
+      height: 1px;
+      width: 5rem;
+      background-color: map-get($color, dark);
+    }
+  }
 
   .hero-line {
     top: calc(50% - 100px);
@@ -204,6 +215,19 @@ a {
   }
 }
 
+/*Contact section*/
+
+
 .section5 {
   background-color: map-get($color, universal);
 }
+
+.arrow{
+  padding-left: 1rem;
+  transform: rotate(180deg);
+}
+
+.page-cta:hover > .arrow{
+  transform: rotate(180deg) translateX(10px);
+
+} 

@@ -20,15 +20,16 @@ a {
     stroke: map-get($color, accent);
   }
 }
-
 .work-state {
   cursor: none;
 }
-.about-state {
-  color: map-get($color, disable);
-  &:hover {
-    color: map-get($color, universal);
-  }
+
+.about-state:hover {
+    transform: scale(1.2);
+}
+
+.current {
+  background-color: map-get($color, universal);
 }
 
 /*Side Bar*/
@@ -37,17 +38,16 @@ a {
   fill: map-get($color, universal);
 }
 
-.bar{
+.bar {
   background: map-get($color, universal);
 }
 
-.handler{
+.handler {
   background-color: map-get($color, universal);
   height: 40px;
-  width: 4px; 
+  width: 4px;
   margin-top: -10rem;
 }
-
 
 /*Project intro numbering*/
 .intro-number {
@@ -369,7 +369,6 @@ a {
 .section4 {
   background-color: map-get($color, dark);
   z-index: 7;
-
 }
 
 #prjoectsection3 {
@@ -437,3 +436,13 @@ a {
   }
 }
 
+
+/*Contact section*/
+
+.arrow{
+  padding-right: 1rem;
+}
+
+.page-cta:hover > .arrow{
+  transform: translateX(10px);
+} 

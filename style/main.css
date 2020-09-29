@@ -88,7 +88,7 @@ li {
 
 .expand-project::after {
   content: "+Read";
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #0a0a0a;
 }
 
@@ -114,11 +114,12 @@ li {
 .header .logo {
   margin-top: 1rem;
   width: 3rem;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .header a {
+  display: inline-block;
   font-size: 1rem;
   letter-spacing: 0;
   -webkit-transition: 0.5s ease;
@@ -131,10 +132,17 @@ li {
   padding: 0px 10px;
 }
 
+.current {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  margin: 0 auto 0.3rem;
+}
+
 /*Side-bar*/
 .sidebar {
   top: 4rem;
-  width: 4rem;
+  width: 5rem;
   height: 100vh;
   position: fixed;
   z-index: 800;
@@ -237,6 +245,11 @@ li {
   transition: 1s ease;
 }
 
+.call-of-action .scrollbutton {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
 .call-of-action .scrollbutton p {
   font-weight: 400;
 }
@@ -250,6 +263,11 @@ li {
   transition: 0.4s ease;
 }
 
+.scrollbutton:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .scrollbutton:hover + .guideline {
   margin-top: 2.5rem;
 }
@@ -260,7 +278,8 @@ li {
   z-index: 8;
 }
 
-.section5 .contact-line {
+.contact-line {
+  position: relative;
   width: 70vw;
   margin: 0 auto;
   -webkit-transition: 1.2s ease;
@@ -268,7 +287,7 @@ li {
   z-index: 100;
 }
 
-.section5 .contact-line .title {
+.contact-line .title {
   font-family: "Gordita", sans-serif;
   font-size: 3rem;
   letter-spacing: 0;
@@ -276,7 +295,7 @@ li {
   line-height: 72px;
 }
 
-.section5 .contact-line .subtitle {
+.contact-line .subtitle {
   font-family: "Gordita", sans-serif;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -284,42 +303,60 @@ li {
   margin-top: 1rem;
 }
 
-.section5 .footer {
+.page-cta {
+  margin-top: 1.5rem;
+  height: 2rem;
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-cta .arrow {
+  width: 100px;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.footer {
   position: relative;
   margin: 0 auto;
-  bottom: calc(-15% - 80px);
+  bottom: calc(-10% - 80px);
   width: 70vw;
   z-index: 100;
 }
 
-.section5 .footer .footer-link {
+.footer .footer-link {
   margin-bottom: 0.8rem;
 }
 
-.section5 .footer .footer-link li {
+.footer .footer-link li {
   display: inline-block;
   margin-right: 2rem;
 }
 
-.section5 .footer .footer-link li p {
+.footer .footer-link li p {
   font-size: 1.2rem;
   font-weight: 400;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
-.section5 .footer .footer-link li p:hover {
+.footer .footer-link li p:hover {
   color: #58bfd3;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.section5 .footer .footer-line {
+.footer .footer-line {
   border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
   width: 70vw;
 }
 
-.section5 .footer .footer-claim {
+.footer .footer-claim {
   font-size: 0.8rem;
   margin-top: 1rem;
 }
@@ -328,7 +365,7 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

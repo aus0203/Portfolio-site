@@ -5,9 +5,7 @@ $color: (
   accent: #58bfd3,
   universal: #e0e0e0,
   dark: #0a0a0a,
-  disable: #3D3D3D,
-  supper:#0f1e31,
-
+  supper: #0f1e31,
 );
 
 * {
@@ -17,13 +15,12 @@ $color: (
   font-family: "Gordita", sans-serif;
 }
 
-
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
 }
 
-h1{
+h1 {
   font-size: 4rem;
 }
 
@@ -33,7 +30,7 @@ h2 {
   font-family: "Gordita", sans-serif;
 }
 
-h3{
+h3 {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5rem;
@@ -63,7 +60,7 @@ li {
   position: absolute;
   z-index: 1000;
   transition: 100ms ease-out;
-  transform:translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   transform-origin: 100% 100%;
   pointer-events: none;
 }
@@ -75,27 +72,27 @@ li {
   width: 50px;
 }
 
-.expand-project{
+.expand-project {
   height: 70px;
-  width:70px;
-  background-color:rgba(255, 255, 255, 0.91);
-  z-index:980;
+  width: 70px;
+  background-color: rgba(255, 255, 255, 0.91);
+  z-index: 980;
   position: absolute;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  &::after{
+  &::after {
     content: "+Read";
-    font-size: .8rem;
-    color:map-get($color, dark )
+    font-size: 0.8rem;
+    color: map-get($color, dark);
   }
 }
 
 /*Header*/
 
 .header {
-  top:0;
+  top: 0;
   position: fixed;
   display: flex;
   width: 100%;
@@ -108,10 +105,11 @@ li {
   .logo {
     margin-top: 1rem;
     width: 3rem;
-    transition: .5s ease;
+    transition: 0.5s ease;
   }
 
   a {
+    display: inline-block;
     font-size: 1rem;
     letter-spacing: 0;
     transition: 0.5s ease;
@@ -124,11 +122,18 @@ li {
   }
 }
 
+.current {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  margin: 0 auto 0.3rem;
+}
+
 /*Side-bar*/
 
 .sidebar {
   top: 4rem;
-  width: 4rem;
+  width: 5rem;
   height: 100vh;
   position: fixed;
   z-index: 800;
@@ -178,7 +183,7 @@ li {
   }
 }
 
-.handler { 
+.handler {
   position: absolute;
   z-index: 10;
   transition: 0.3s ease;
@@ -194,6 +199,7 @@ li {
   margin-top: 8%;
   transition: 1s ease;
   .scrollbutton {
+    transition: 0.4s ease;
     p {
       font-weight: 400;
     }
@@ -207,74 +213,97 @@ li {
   }
 }
 
+.scrollbutton:hover {
+  transform: scale(1.2);
+}
+
 .scrollbutton:hover + .guideline {
   margin-top: 2.5rem;
 }
-
 
 /*Contact Section*/
 .section5 {
   background-color: map-get($color, dark);
   z-index: 8;
-  
-  .contact-line {
-    width: 70vw;
-    margin: 0 auto;
-    transition: 1.2s ease;
-    z-index: 100;
-    .title {
-      font-family: "Gordita", sans-serif;
-      font-size: 3rem;
-      letter-spacing: 0;
-      font-weight: 500;
-      line-height: 72px;
-    }
-    .subtitle {
-      font-family: "Gordita", sans-serif;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-      line-height: 35px;
-      margin-top: 1rem;
-    }
+}
+
+.contact-line {
+  position: relative;
+  width: 70vw;
+  margin: 0 auto;
+  transition: 1.2s ease;
+  z-index: 100;
+  .title {
+    font-family: "Gordita", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0;
+    font-weight: 500;
+    line-height: 72px;
   }
-  .footer {
-    position: relative;
-    margin: 0 auto;
-    bottom:calc(-15% - 80px);
-    width:70vw;
-    z-index: 100;
-    .footer-link {
-      margin-bottom: 0.8rem;
-      li {
-        display: inline-block;
-        margin-right: 2rem;
-        p {
-          font-size: 1.2rem;
-          font-weight: 400;
-          transition: 0.5s ease;
-        }
-        p:hover {
-          color: map-get($color, accent);
-          transform: scale(1.1);
-        }
-      }
-    }
-    .footer-line {
-      border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-      width: 70vw;
-    }
-    .footer-claim {
-      font-size: 0.8rem;
-      margin-top: 1rem;
-    }
+  .subtitle {
+    font-family: "Gordita", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 35px;
+    margin-top: 1rem;
   }
 }
+
+
+.page-cta {
+  margin-top: 1.5rem;
+  height: 2rem;
+  width:20rem;
+  display: flex;
+  align-items: center;
+  .arrow {
+    width: 100px;
+    transition: .4s ease;
+  }
+}
+
+
+
+.footer {
+  position: relative;
+  margin: 0 auto;
+  bottom:calc(-10% - 80px);
+  width: 70vw;
+  z-index: 100;
+  .footer-link {
+    margin-bottom: 0.8rem;
+    li {
+      display: inline-block;
+      margin-right: 2rem;
+      p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        transition: 0.5s ease;
+      }
+      p:hover {
+        color: map-get($color, accent);
+        transform: scale(1.1);
+      }
+    }
+  }
+  .footer-line {
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
+    width: 70vw;
+  }
+  .footer-claim {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+}
+
+
+
 
 .footerBackground {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 9;
   display: flex;
   justify-content: center;
   align-items: center;

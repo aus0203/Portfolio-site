@@ -2,7 +2,6 @@
 
 /*Project nav*/
 
-
 .left-button:hover > .nav-button-col2 > a > p {
   right: 0rem;
   margin-top: 3rem;
@@ -27,4 +26,61 @@
     content: "KLM";
     font-size: 1.2rem;
   }
+}
+
+.framework {
+  width: 65vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 55vw;
+  }
+  .framework1 {
+    position: absolute;
+
+  }
+  .framework2 {
+    transition: 0.5s ease;
+    p{
+      font-size: .8rem;
+      text-align: center;
+    }
+  }
+}
+
+.logo-strip{
+  width: 65vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .logo-sec{
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo1{
+    width: 15rem;
+  }
+  .logo2{
+    height: 7.5rem;
+  }
+  p{
+    font-size: .8rem;
+  }
+
+}
+
+.cj-strip{
+  width: 80vw;
+}
+
+#communication_journey{
+  width: 70vw;
+  margin: 0 auto;
 }

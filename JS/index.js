@@ -5,7 +5,7 @@
 
 new fullpage("#fullpage", {
   scrollingSpeed: 1250,
-  responsiveWidth: 900,
+  responsiveWidth: 700,
   onLeave: function (origin, destination, direction) {
     var loadedSection = this;
     

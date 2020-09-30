@@ -4,8 +4,6 @@ const projectHeadline = document.querySelector(".project-headline");
 const projectNav = document.querySelector(".project-nav");
 const popUp = document.querySelector(".pop-up");
 const banner = document.querySelector(".banner");
-const frameworkTop = document.querySelector(".framework1");
-const frameworkBottom = document.querySelector(".framework2");
 
 /*Project topscreen*/
 function onScroll(event) {
@@ -58,21 +56,9 @@ bannerOptions);
 
 bannerObserver.observe(banner);
 
-/*framework slide*/
+/*Scroll up*/
 
-const frameworkOptions = {
-  rootMargin:"-512px 0px 0px 0px",};
-
-const frameworkObserver = new IntersectionObserver(function (
-  entries,
-  frameworkObserver
-) {entries.forEach((entry)=>{
-  if(!entry.isIntersecting){
-    frameworkBottom.style.marginTop = 50 + "%";
-  }else{
-    frameworkBottom.style.marginTop = 0;
-  }
-})},
-frameworkOptions);
-
-frameworkObserver.observe(frameworkTop);
+function topFunction(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

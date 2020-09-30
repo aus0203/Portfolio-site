@@ -28,35 +28,14 @@
   }
 }
 
-.framework {
-  width: 65vw;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  img {
-    width: 55vw;
-  }
-  .framework1 {
-    position: absolute;
-
-  }
-  .framework2 {
-    transition: 0.5s ease;
-    p{
-      font-size: .8rem;
-      text-align: center;
-    }
-  }
-}
-
-.logo-strip{
+.logo-strip {
   width: 65vw;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .logo-sec{
+  .logo-sec {
     width: 60vw;
     margin: 0 auto;
     display: flex;
@@ -64,23 +43,55 @@
     align-items: center;
     justify-content: space-between;
   }
-  .logo1{
+  .logo1 {
     width: 15rem;
   }
-  .logo2{
+  .logo2 {
     height: 7.5rem;
   }
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.download {
+  display: flex;
+  align-items: flex-end;
+  width: 40rem;
+  .download-button{
+    fill:map-get($color, universal);
+    width:2rem;
+  }
   p{
-    font-size: .8rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-decoration: underline;
+    font-weight: 500;
   }
 
 }
 
-.cj-strip{
+.full-image-strip {
+  background-image: url(../img/Project/SUPPER/supper-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 40vh;
+  margin: 5rem 0;
+}
+
+.cj-strip {
   width: 80vw;
 }
 
-#communication_journey{
+#communication_journey {
   width: 70vw;
   margin: 0 auto;
+}
+
+#finnalbanner {
+  background-color: map-get($color, dark);
 }

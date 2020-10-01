@@ -5,6 +5,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Gordita", sans-serif;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -109,6 +110,8 @@ li {
   z-index: 999;
   padding: 1rem 5rem 0 1rem;
   background-color: transparent;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .header .logo {
@@ -116,6 +119,10 @@ li {
   width: 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.header .nav-link {
+  margin-bottom: .5rem;
 }
 
 .header a {
@@ -319,6 +326,10 @@ li {
   width: 100px;
   -webkit-transition: .4s ease;
   transition: .4s ease;
+}
+
+.page-cta p {
+  font-weight: 500;
 }
 
 .footer {

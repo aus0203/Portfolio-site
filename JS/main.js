@@ -1,5 +1,6 @@
 /*Variables*/
 const cursor = document.querySelector(".cursor");
+const header = document.querySelector(".header");
 const anchors = document.querySelectorAll(".anchor");
 const anchorsProject = document.querySelectorAll(".anchor-project");
 const front = document.querySelectorAll(".front");

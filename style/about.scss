@@ -26,11 +26,11 @@ a {
   cursor: none;
 }
 
-.work-state:hover{
+.work-state:hover {
   transform: scale(1.2);
 }
 
-.current{
+.current {
   background-color: map-get($color, dark);
 }
 
@@ -39,58 +39,51 @@ a {
 .icon {
   fill: map-get($color, dark);
 }
-.bar{
+.bar {
   background: map-get($color, dark);
 }
 
-.handler{
+.handler {
   background-color: map-get($color, dark);
   height: 80px;
-  width: 4px; 
+  width: 4px;
   margin-top: -8rem;
 }
-
 
 /*Section1*/
 
 .section1 {
   background-color: map-get($color, universal);
-  display: flex;
-  top: 0;
-  right: 0;
   z-index: 2;
-  justify-content: center;
+}
+
+.smalltitle {
+  display: flex;
   align-items: center;
-
-  .smalltitle {
-    display: flex;
-    align-items: center;
-    padding-bottom: 1rem;
-    .titleLine {
-      margin-left: .5rem;
-      height: 1px;
-      width: 5rem;
-      background-color: map-get($color, dark);
-    }
+  padding-bottom: 1rem;
+  .titleLine {
+    margin-left: 0.5rem;
+    height: 1px;
+    width: 5rem;
+    background-color: map-get($color, dark);
   }
+}
 
-  .hero-line {
-    top: calc(50% - 100px);
-    left: 13rem;
-    position: absolute;
+.hero-line {
+  position: relative;
+  width: 70vw;
+  margin: 0 auto;
+  color: map-get($color, dark);
+  transition: 1s ease;
+  z-index: 10;
+  .title {
     color: map-get($color, dark);
-    position: 100px;
-    transition: 1s ease;
-    z-index: 10;
-    .title {
-      color: map-get($color, dark);
-      font-size: 4rem;
-      letter-spacing: 0;
-      font-weight: 700;
-    }
-    .subtitle {
-      width: 28rem;
-    }
+    font-size: 4rem;
+    letter-spacing: 0;
+    font-weight: 700;
+  }
+  .subtitle {
+    width: 28rem;
   }
 }
 
@@ -161,11 +154,6 @@ a {
 }
 
 /*Scroll down Call of action*/
-
-.call-of-action {
-  margin-top: 16.8%;
-}
-
 .guideline {
   background-color: map-get($color, dark);
 }
@@ -176,58 +164,92 @@ a {
   background-color: map-get($color, universal);
   z-index: 20;
   .cv-section {
-    top:2rem;
+    top: 2rem;
     margin: 0 auto;
     display: flex;
     width: 70vw;
     position: relative;
   }
-  .cv-exp{
-    margin-bottom:2rem;
-    .cv-exp-col1{
-      width:13rem;
+  .cv-exp {
+    margin-bottom: 2rem;
+    .cv-exp-col1 {
+      width: 13rem;
     }
   }
 
   .cv-cap {
     .cv-cap-col1 {
-      width:13rem;
+      width: 13rem;
     }
     .cv-cap-col2 {
-      width:20rem;
+      width: 20rem;
     }
     .cv-cap-col3 {
-      margin-left:  2rem;
+      margin-left: 2rem;
     }
   }
-  
 }
 
-.cv-exp-list{
+.cv-exp-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom:10px;
-  .cv-exp-list-title{
-    width:20rem;
+  margin-bottom: 10px;
+  .cv-exp-list-title {
+    width: 20rem;
   }
-  .cv-exp-list-content{
+  .cv-exp-list-content {
     margin-left: 2rem;
   }
 }
 
 /*Contact section*/
 
-
 .section5 {
   background-color: map-get($color, universal);
 }
 
-.arrow{
+.arrow {
   padding-left: 1rem;
   transform: rotate(180deg);
 }
 
-.page-cta:hover > .arrow{
+.page-cta:hover > .arrow {
   transform: rotate(180deg) translateX(10px);
+}
 
-} 
+
+/*Responsive*/
+
+@media screen and (max-width: 800px) {
+
+  p{
+    font-size: 14px;
+  }
+
+  .hamburger-line {
+    background-color: map-get($color, dark);
+  }
+
+  .nav-link {
+    background-color: map-get($color, universal);
+  }
+
+  /*Intro*/
+
+  .hero-line{
+    width: 65vw;
+    .title{
+      font-size: 3rem;
+    }
+    .subtitle{
+      width:50vw;
+    }
+  }
+  
+
+  /*Intro background*/
+
+  .intro-main {
+    display: none;
+  }
+}

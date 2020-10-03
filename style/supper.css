@@ -19,9 +19,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: 200;
-  font-family: "Gordita", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 h3 {
@@ -110,8 +109,8 @@ li {
   z-index: 999;
   padding: 1rem 5rem 0 1rem;
   background-color: transparent;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .header .logo {
@@ -119,10 +118,6 @@ li {
   width: 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-
-.header .nav-link {
-  margin-bottom: .5rem;
 }
 
 .header a {
@@ -324,8 +319,8 @@ li {
 
 .page-cta .arrow {
   width: 100px;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .page-cta p {
@@ -425,6 +420,71 @@ li {
   margin-bottom: -300rem;
 }
 
+@media screen and (max-width: 800px) {
+  nav {
+    position: relative;
+    right: -3rem;
+  }
+  .hamburger {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: .6rem;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  .hamburger .hamburger-line {
+    width: 1.8rem;
+    height: 2px;
+    margin-top: .5rem;
+    -webkit-transition: .8s ease;
+    transition: .8s ease;
+  }
+  .hamburger-line1-toggle {
+    margin-right: 0.5rem;
+  }
+  .hamburger-line2-toggle {
+    margin-left: 0.5rem;
+  }
+  .nav-link {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 0;
+    right: -100rem;
+    width: 85vw;
+    height: 100vh;
+    -webkit-transition: all .6s ease-out;
+    transition: all .6s ease-out;
+  }
+  .nav-link .current {
+    display: none;
+  }
+  .nav-link .work-state {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+  }
+  .nav-link a {
+    font-size: 1.5rem;
+  }
+  .nav-link-scroll {
+    right: 0;
+  }
+}
+
 /*Global style*/
 body {
   background-color: #0a0a0a;
@@ -461,9 +521,16 @@ p {
 }
 
 /*Header*/
-.logo circle {
+.logo-g {
+  fill: #0a0a0a;
+  stroke: #0a0a0a;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.log-g-scroll {
+  fill: #e0e0e0;
+  stroke: #e0e0e0;
 }
 
 .logo:hover circle {
@@ -501,7 +568,7 @@ p {
 }
 
 .project-nav .nav-col {
-  width: 8rem;
+  width: 6rem;
   height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,19 +576,18 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .project-nav .nav-col .nav-button {
-  width: 3rem;
+  width: 2rem;
   height: 8rem;
-  display: block;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   pointer-events: all;
 }
 
@@ -531,8 +597,8 @@ p {
 
 .left-button .nav-button-col2 p {
   position: relative;
-  right: 1rem;
   margin-top: 3rem;
+  right: 1rem;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   -webkit-transition: 0.5s ease;
@@ -631,7 +697,7 @@ p {
 /*Project Intro*/
 .project-brief {
   width: 75vw;
-  padding: 6rem 0;
+  padding: 6rem 0 0;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -666,6 +732,10 @@ p {
   padding-bottom: 2rem;
 }
 
+.project-intro p {
+  padding-bottom: 2rem;
+}
+
 /*Content Section*/
 .seperate-section {
   padding: 2rem 0;
@@ -673,9 +743,26 @@ p {
 }
 
 /*text*/
+.smalltitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+}
+
+.smalltitle .titleLine {
+  margin-left: 0.5rem;
+  height: 1px;
+  width: 5rem;
+  background-color: #e0e0e0;
+}
+
 .text-with-photo {
   width: 75vw;
-  padding: 5rem 0 1rem;
+  padding: 4rem 0 1rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -703,33 +790,16 @@ p {
 .text-with-photo .photo-sec {
   width: 30rem;
   height: 100%;
-  margin: 0 3rem;
+  margin: 0 2rem;
 }
 
 .text-with-photo p {
   margin-bottom: 1rem;
 }
 
-.smalltitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 1rem;
-}
-
-.smalltitle .titleLine {
-  margin-left: 0.5rem;
-  height: 1px;
-  width: 5rem;
-  background-color: #e0e0e0;
-}
-
 .text-with-photo-2 {
   width: 75vw;
-  padding: 5rem 0 1rem;
+  padding: 4rem 0 1rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -751,6 +821,87 @@ p {
 
 .text-with-photo-2 .text-sec h2 {
   padding: 1rem 0 2rem;
+}
+
+.text-with-photo-2 .text-sec p {
+  padding-bottom: 2rem;
+}
+
+.quote-sec {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quote-sec .quote {
+  width: 75vw;
+  text-align: center;
+}
+
+.quote-sec .quote h2 {
+  margin-bottom: 1rem;
+}
+
+.quote-sec .quote p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.thumbnail-sec {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.thumbnail-sec .thumbnail {
+  max-width: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.thumbnail-sec .thumbnail img {
+  max-width: 12rem;
+  max-height: 14rem;
+  margin-bottom: 2rem;
+}
+
+.thumbnail-sec .thumbnail p {
+  width: 12rem;
+  line-height: 1.5rem;
 }
 
 /*Media*/
@@ -820,14 +971,74 @@ p {
   margin-bottom: 1rem;
 }
 
+.demo-strip .demo-title p {
+  margin-bottom: 1rem;
+}
+
 .demo-strip img {
   width: 60%;
+}
+
+.download-report {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.download-report a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 40rem;
+}
+
+.download-report .download-button {
+  width: 2rem;
+  fill: #e0e0e0;
+  margin-bottom: 0;
+}
+
+.download-report p {
+  display: inline;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-left: 1rem;
+}
+
+.poster-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.poster-sec img {
+  max-height: 30rem;
 }
 
 /*Footer*/
 .footer {
   width: 75vw;
   padding: 4rem 0;
+}
+
+@media screen and (max-width: 800px) {
+  .hamburger-line {
+    background-color: #e0e0e0;
+  }
+  .nav-link {
+    background-color: #292929;
+  }
 }
 
 /*Header*/
@@ -873,30 +1084,8 @@ p {
   background-image: url(../img/project-01.jpg);
 }
 
-.download {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.download .download-button {
-  fill: #e0e0e0;
-  width: 2rem;
-}
-
-.download p {
-  margin-left: 1rem;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-decoration: underline;
-  font-weight: 500;
-}
-
 .define-sec {
-  background-color: #0E1C2E;
+  background-color: #0e1c2e;
   padding-bottom: 5rem;
 }
 
@@ -932,7 +1121,7 @@ p {
 }
 
 .video-strip {
-  background-color: #cae4e4;
+  background-color: #e0e0e0;
 }
 
 #communication_journey {
@@ -941,7 +1130,7 @@ p {
 }
 
 .eleva-sec {
-  background-color: #cae4e4;
+  background-color: #e0e0e0;
   color: #0a0a0a;
 }
 

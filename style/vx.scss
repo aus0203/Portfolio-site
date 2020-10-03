@@ -1,0 +1,92 @@
+@import "project";
+
+.left-button:hover > .nav-button-col2 > a > p {
+    right: 0rem;
+    margin-top: 3rem;
+    transform: rotate(0deg);
+    span {
+        display: none;
+    }
+    &::after {
+        content: "KLM";
+        font-size: 1.2rem;
+    }
+}
+
+.right-button:hover > .nav-button-col1 > a > p {
+    right: 0rem;
+    margin-top: 3rem;
+    transform: rotate(0deg);
+    span {
+        display: none;
+    }
+    &::after {
+        content: "Philips";
+        font-size: 1.2rem;
+    }
+}
+
+/*Main-content*/
+
+.top-screen {
+    background-image: url(../img/project-03.jpg);
+}
+
+.define-sec {
+    background-color: #c16312;
+}
+
+.photo-sec {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .thumbnail {
+        width: 12rem;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            margin: 0 auto;
+            max-width: 10rem;
+            height: 7rem;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+#problem-sec {
+    width: 50rem;
+    margin-right: 0;
+}
+
+.quote-sec {
+    background-color: map-get($color, dark);
+    margin: 2rem 0;
+}
+
+.thumbnail-sec {
+    margin-top: 3rem;
+    .thumbnail {
+        width: 15rem;
+        p {
+            width: 15rem;
+        }
+    }
+}
+
+#roadmap{
+    width: 70vw;
+    margin-top: 2rem;
+}
+
+.mockup{
+    width: 70vw;
+    margin-bottom: 2rem;
+    img{
+    width: 30rem;
+    }
+}

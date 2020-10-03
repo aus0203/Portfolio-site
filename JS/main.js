@@ -1,6 +1,10 @@
 /*Variables*/
 const cursor = document.querySelector(".cursor");
 const header = document.querySelector(".header");
+const hamburger = document.querySelector(".hamburger");
+const hamburgerLine1 = document.querySelector(".hamburger-line1");
+const hamburgerLine2 = document.querySelector(".hamburger-line2");
+const navLinks = document.querySelector('.nav-link');
 const anchors = document.querySelectorAll(".anchor");
 const anchorsProject = document.querySelectorAll(".anchor-project");
 const front = document.querySelectorAll(".front");
@@ -11,12 +15,6 @@ const handler = document.querySelector(".handler");
 const heroLine = document.querySelector(".hero-line");
 const footerLine = document.querySelector(".contact-line");
 const callOfAction = document.querySelector(".call-of-action");
-const sectionObjectBack = document.querySelectorAll(".objectback");
-const sectionObjectFront = document.querySelectorAll(".objectfront");
-const sectionObjectFarFront = document.querySelectorAll(".objectfarfront");
-const projectSection1 = document.getElementById("projectsection1");
-const projectSection2 = document.getElementById("projectsection2");
-const projectSection3 = document.getElementById("prjoectsection3");
 const backFooterObject = document.querySelectorAll(".backfooterobject");
 const frontFooterObject = document.querySelector(".frontfooterobject");
 const farFrontFooterObject = document.querySelector(".farfrontfooterobject");
@@ -47,6 +45,16 @@ anchorsProject.forEach(link =>{
     cursor.classList.remove("expand-project");
   });
 })
+
+/*Header*/
+/*Responsive nav*/
+
+hamburger.addEventListener('click', ()=>{
+  navLinks.classList.toggle("nav-link-scroll");
+  hamburgerLine1.classList.toggle("hamburger-line1-toggle");
+  hamburgerLine2.classList.toggle("hamburger-line2-toggle");
+})
+
 
 /*parallax effect*/
 

@@ -5,7 +5,7 @@ $color: (
   accent: #58bfd3,
   universal: #e0e0e0,
   dark: #0a0a0a,
-  grey: #292929,
+  seconddark: #292929,
   supper: #0f1e31,
 );
 
@@ -14,7 +14,7 @@ $color: (
   padding: 0;
   box-sizing: border-box;
   font-family: "Gordita", sans-serif;
-  scroll-behavior:smooth;  
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -27,9 +27,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: 200;
-  font-family: "Gordita", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 h3 {
@@ -103,16 +102,12 @@ li {
   z-index: 999;
   padding: 1rem 5rem 0 1rem;
   background-color: transparent;
-  transition: .5s ease;
+  transition: 0.5s ease;
 
   .logo {
     margin-top: 1rem;
     width: 3rem;
     transition: 0.5s ease;
-  }
-
-  .nav-link{
-    margin-bottom: .5rem;
   }
 
   a {
@@ -256,28 +251,25 @@ li {
   }
 }
 
-
 .page-cta {
   margin-top: 1.5rem;
   height: 2rem;
-  width:20rem;
+  width: 20rem;
   display: flex;
   align-items: center;
   .arrow {
     width: 100px;
-    transition: .4s ease;
+    transition: 0.4s ease;
   }
-  p{
+  p {
     font-weight: 500;
   }
 }
 
-
-
 .footer {
   position: relative;
   margin: 0 auto;
-  bottom:calc(-10% - 80px);
+  bottom: calc(-10% - 80px);
   width: 70vw;
   z-index: 100;
   .footer-link {
@@ -305,9 +297,6 @@ li {
     margin-top: 1rem;
   }
 }
-
-
-
 
 .footerBackground {
   position: absolute;
@@ -347,5 +336,70 @@ li {
       transform: rotate(-20deg);
       margin-bottom: -300rem;
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  
+  /*Responsive header*/
+  nav{
+   position: relative;
+   right: -3rem; 
+  }
+  
+  .hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .6rem;
+    z-index: 1000;
+    cursor: pointer;
+    .hamburger-line {
+      width: 1.8rem;
+      height: 2px;
+      margin-top:.5rem;
+      transition: .8s ease;
+    }
+  }
+
+  .hamburger-line1-toggle{
+    margin-right: 0.5rem;
+  }
+
+  .hamburger-line2-toggle{
+    margin-left: 0.5rem;
+  }
+
+
+  .nav-link {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    right: -100rem;
+    
+    width: 85vw;
+    height: 100vh;
+    transition: all .6s ease-out;
+    .current {
+      display: none;
+    }
+    .work-state {
+      margin-top: 10rem;
+      margin-bottom: 2rem;
+    }
+    a {
+      font-size: 1.5rem;
+    }
+  }
+
+  .nav-link-scroll{
+    right: 0;
+  }
+
+
+  .call-of-action{
+    display: none;
   }
 }

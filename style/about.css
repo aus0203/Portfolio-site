@@ -5,6 +5,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Gordita", sans-serif;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -18,9 +19,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: 200;
-  font-family: "Gordita", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 h3 {
@@ -109,8 +109,8 @@ li {
   z-index: 999;
   padding: 1rem 5rem 0 1rem;
   background-color: transparent;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .header .logo {
@@ -118,10 +118,6 @@ li {
   width: 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-
-.header .nav-link {
-  margin-bottom: .5rem;
 }
 
 .header a {
@@ -323,8 +319,8 @@ li {
 
 .page-cta .arrow {
   width: 100px;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .page-cta p {
@@ -424,6 +420,71 @@ li {
   margin-bottom: -300rem;
 }
 
+@media screen and (max-width: 800px) {
+  nav {
+    position: relative;
+    right: -3rem;
+  }
+  .hamburger {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: .6rem;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  .hamburger .hamburger-line {
+    width: 1.8rem;
+    height: 2px;
+    margin-top: .5rem;
+    -webkit-transition: .8s ease;
+    transition: .8s ease;
+  }
+  .hamburger-line1-toggle {
+    margin-right: 0.5rem;
+  }
+  .hamburger-line2-toggle {
+    margin-left: 0.5rem;
+  }
+  .nav-link {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 0;
+    right: -100rem;
+    width: 85vw;
+    height: 100vh;
+    -webkit-transition: all .6s ease-out;
+    transition: all .6s ease-out;
+  }
+  .nav-link .current {
+    display: none;
+  }
+  .nav-link .work-state {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+  }
+  .nav-link a {
+    font-size: 1.5rem;
+  }
+  .nav-link-scroll {
+    right: 0;
+  }
+}
+
 body {
   color: #0a0a0a;
 }
@@ -475,21 +536,10 @@ a {
 /*Section1*/
 .section1 {
   background-color: #e0e0e0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  right: 0;
   z-index: 2;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.section1 .smalltitle {
+.smalltitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,32 +549,31 @@ a {
   padding-bottom: 1rem;
 }
 
-.section1 .smalltitle .titleLine {
-  margin-left: .5rem;
+.smalltitle .titleLine {
+  margin-left: 0.5rem;
   height: 1px;
   width: 5rem;
   background-color: #0a0a0a;
 }
 
-.section1 .hero-line {
-  top: calc(50% - 100px);
-  left: 13rem;
-  position: absolute;
+.hero-line {
+  position: relative;
+  width: 70vw;
+  margin: 0 auto;
   color: #0a0a0a;
-  position: 100px;
   -webkit-transition: 1s ease;
   transition: 1s ease;
   z-index: 10;
 }
 
-.section1 .hero-line .title {
+.hero-line .title {
   color: #0a0a0a;
   font-size: 4rem;
   letter-spacing: 0;
   font-weight: 700;
 }
 
-.section1 .hero-line .subtitle {
+.hero-line .subtitle {
   width: 28rem;
 }
 
@@ -613,10 +662,6 @@ a {
 }
 
 /*Scroll down Call of action*/
-.call-of-action {
-  margin-top: 16.8%;
-}
-
 .guideline {
   background-color: #0a0a0a;
 }
@@ -688,5 +733,32 @@ a {
 .page-cta:hover > .arrow {
   -webkit-transform: rotate(180deg) translateX(10px);
           transform: rotate(180deg) translateX(10px);
+}
+
+/*Responsive*/
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 14px;
+  }
+  .hamburger-line {
+    background-color: #0a0a0a;
+  }
+  .nav-link {
+    background-color: #e0e0e0;
+  }
+  /*Intro*/
+  .hero-line {
+    width: 65vw;
+  }
+  .hero-line .title {
+    font-size: 3rem;
+  }
+  .hero-line .subtitle {
+    width: 50vw;
+  }
+  /*Intro background*/
+  .intro-main {
+    display: none;
+  }
 }
 /*# sourceMappingURL=about.css.map */

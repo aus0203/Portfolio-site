@@ -1,14 +1,29 @@
-
+const sectionAll = document.querySelectorAll(".section");
+const sectionObjectBack = document.querySelectorAll(".objectback");
+const sectionObjectFront = document.querySelectorAll(".objectfront");
+const sectionObjectFarFront = document.querySelectorAll(".objectfarfront");
+const projectSection1 = document.getElementById("projectsection1");
+const projectSection2 = document.getElementById("projectsection2");
+const projectSection3 = document.getElementById("projectsection3");
 
 
 /*fullpage transition effect*/
 
 new fullpage("#fullpage", {
   scrollingSpeed: 1250,
-  responsiveWidth: 700,
+  // responsiveWidth: 800,
+
+  afterResize: function (width, height) {
+   if(width > 800){
+     sectionAll.forEach(x=>{
+       x.style.height = 100 +"vh";
+     })
+   }
+  },
+
   onLeave: function (origin, destination, direction) {
     var loadedSection = this;
-    
+
     /*Handler*/
     handler.style.marginTop = -10 + destination.index * 5 + "rem";
 
@@ -24,7 +39,7 @@ new fullpage("#fullpage", {
     });
     mainCharactor.style.bottom = 0 - destination.index * 900 + "px";
 
-    heroLine.style.top = destination.index * 1300 + "px";
+
 
 
     /*Project section background*/
@@ -38,6 +53,7 @@ new fullpage("#fullpage", {
       sectionObjectFarFront.forEach((x) => {
         x.style.marginTop = 0;
       });
+      heroLine.style.top = 1300 + "px";
     } else {
       sectionObjectBack.forEach((x) => {
         x.style.marginTop = 100 + "rem";
@@ -48,24 +64,26 @@ new fullpage("#fullpage", {
       sectionObjectFarFront.forEach((x) => {
         x.style.marginTop = 200 + "rem";
       });
+      heroLine.style.top = 0 + "px";
+
     }
 
     /*Project section content*/
     if (destination.index === 1) {
-      projectSection1.style.top = 0;
+      projectSection1.style.marginTop = 0;
       callOfAction.style.marginTop = 100 + "rem";
     } else if (destination.index === 2) {
-      projectSection1.style.top = -80 + "rem";
-      projectSection2.style.top = 0 + "rem";
+      projectSection1.style.marginTop = -80 + "rem";
+      projectSection2.style.marginTop = 0 + "rem";
     } else if (destination.index === 3) {
-      projectSection2.style.top = -80 + "rem";
-      projectSection3.style.top = 0 + "rem";
+      projectSection2.style.marginTop = -80 + "rem";
+      projectSection3.style.marginTop = 0 + "rem";
     } else if (destination.index === 4) {
-      projectSection3.style.top = -80 + "rem";
+      projectSection3.style.marginTop = -80 + "rem";
     } else {
-      projectSection1.style.top = 100 + "rem";
-      projectSection2.style.top = 100 + "rem";
-      projectSection3.style.top = 100 + "rem";
+      projectSection1.style.marginTop = 100 + "rem";
+      projectSection2.style.marginTop = 100 + "rem";
+      projectSection3.style.marginTop = 100 + "rem";
       callOfAction.style.marginTop = 8 + "%";
     }
 
@@ -86,6 +104,7 @@ new fullpage("#fullpage", {
       footerLine.style.marginTop = 300 + "rem";
     }
   },
-  
+
+
 });
 

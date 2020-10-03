@@ -3,28 +3,63 @@
 /*Project nav*/
 
 .left-button:hover > .nav-button-col2 > a > p {
-    right: 0rem;
-    margin-top: 3rem;
-    transform: rotate(0deg);
-    span {
-      display: none;
-    }
-    &::after {
-      content: "SUPPER";
-      font-size: 1.2rem;
-    }
+  right: 0rem;
+  margin-top: 3rem;
+  transform: rotate(0deg);
+  span {
+    display: none;
   }
-  
-  .right-button:hover > .nav-button-col1 > a > p {
-    right: 0rem;
-    margin-top: 3rem;
-    transform: rotate(0deg);
-    span {
-      display: none;
-    }
-    &::after {
-      content: "VX";
-      font-size: 1.2rem;
-    }
+  &::after {
+    content: "SUPPER";
+    font-size: 1.2rem;
   }
-  
+}
+
+.right-button:hover > .nav-button-col1 > a > p {
+  right: 0rem;
+  margin-top: 3rem;
+  transform: rotate(0deg);
+  span {
+    display: none;
+  }
+  &::after {
+    content: "VX";
+    font-size: 1.2rem;
+  }
+}
+
+/*Main-content*/
+
+.top-screen {
+  background-image: url(../img/project-02.jpg);
+}
+
+.define-sec {
+  background-color: #286c80;
+}
+
+#why {
+  width: 35rem;
+}
+
+#reason {
+  margin-left: 0;
+}
+
+.quote-sec {
+  background-image: url(../img/Project/KLM/quote.png);
+}
+
+
+.result-sec {
+  background-color: #4b9aaa;
+  padding-bottom: 5rem;
+}
+
+.demo-strip {
+  img {
+    width: 50%;
+    margin-right: 2rem;
+  }
+}
+

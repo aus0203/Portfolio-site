@@ -25,7 +25,7 @@ a {
 }
 
 .about-state:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .current {
@@ -47,54 +47,6 @@ a {
   height: 40px;
   width: 4px;
   margin-top: -10rem;
-}
-
-/*Project intro numbering*/
-.intro-number {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-.number-line {
-  border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-  width: 10rem;
-  margin: 0 0.5rem;
-}
-
-/*Project Photo with hover effect*/
-.projectfoto {
-  width: 100%;
-  height: 13rem;
-  object-fit: cover;
-}
-
-.photo-zoom {
-  transform: scale(1);
-  transition: 0.3s ease-in-out;
-}
-
-.projectfoto-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: 0.4s ease;
-  p {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-}
-.foto:hover > .photo-zoom {
-  transform: scale(1.2);
-}
-.foto:hover > .projectfoto-overlay {
-  opacity: 1;
 }
 
 /*Project background*/
@@ -160,23 +112,18 @@ a {
 /*Section01*/
 
 .section1 {
-  display: flex;
-  top: 0;
-  right: 0;
   z-index: 2;
-  justify-content: center;
-  align-items: center;
-
   /*Section01 title*/
   .hero-line {
-    width: 22rem;
-    top: 0rem;
-    left: 13rem;
     position: relative;
+    width: 70vw;
+    top: 0;
+    margin: 0 auto;
     transition: 1s ease;
     z-index: 100;
 
     .title {
+      width: 22rem;
       font-family: "Gordita", sans-serif;
       font-size: 2rem;
       letter-spacing: 0;
@@ -184,9 +131,9 @@ a {
       line-height: 3rem;
     }
     .divide {
+      width: 22rem;
       margin: 1.5rem 0;
       border-bottom: 1px solid white;
-      width: inherit;
     }
     .subtitle {
       letter-spacing: 0;
@@ -220,229 +167,153 @@ a {
   background-color: map-get($color, universal);
 }
 
-/*Section02*/
-
-.section2 {
-  background-color: map-get($color, dark);
-  z-index: 7;
-}
-
-#projectsection1 {
-  position: relative;
-  top: 100rem;
-  transition: 1s ease;
-}
-
-.projectpart1 {
-  width: 70vw;
-  height: 13rem;
-  top: -2rem;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+/*Project intro numbering*/
+.intro-number {
   display: flex;
-  z-index: 500;
-
-  &:nth-child(1) {
-    .foto {
-      position: relative;
-      order: 1;
-      width: 55%;
-      overflow: hidden;
-    }
-    .intro {
-      order: 2;
-      width: 45%;
-      margin: 1.5rem 0 0 3rem;
-
-      h2 {
-        display: inline-block;
-        font-size: 5rem;
-        font-weight: 700;
-        line-height: 6rem;
-        cursor: none;
-      }
-    }
-  }
-
-  &:nth-child(2) {
-    top: 3rem;
-    .foto {
-      order: 2;
-      width: 55%;
-      overflow: hidden;
-      position: relative;
-    }
-    .intro {
-      order: 1;
-      width: 45%;
-      margin: 0.5rem 3rem 0 0;
-      text-align: right;
-      .intro-number {
-        justify-content: flex-end;
-      }
-      h2 {
-        position: relative;
-        font-size: 2.5rem;
-        line-height: 4rem;
-        font-weight: 700;
-        cursor: none;
-      }
-    }
-  }
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.number-line {
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
+  width: 10rem;
+  margin: 0 0.5rem;
 }
 
-/*Section03*/
-
-.section3 {
-  background-color: map-get($color, dark);
-  z-index: 7;
-}
-#projectsection2 {
-  position: relative;
-  top: 100rem;
-  transition: 1s ease;
+/*Project Photo with hover effect*/
+.project-photo {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
 }
 
-.projectpart2 {
-  width: 70vw;
-  height: 13rem;
-  top: -2rem;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 10;
+.photo-zoom {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  width:100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
   display: flex;
-
-  &:nth-child(1) {
-    .foto {
-      order: 1;
-      width: 55%;
-      overflow: hidden;
-      position: relative;
-    }
-    .intro {
-      order: 2;
-      width: 45%;
-      margin: 1.5rem 0 0 3rem;
-
-      h2 {
-        display: inline-block;
-        font-size: 5rem;
-        font-weight: 700;
-        line-height: 6rem;
-        cursor: none;
-      }
-    }
-  }
-
-  &:nth-child(2) {
-    top: 3rem;
-    .foto {
-      order: 2;
-      width: 55%;
-      overflow: hidden;
-      position: relative;
-    }
-    .intro {
-      order: 1;
-      width: 45%;
-      margin: 0.5rem 3rem 0 0;
-      text-align: right;
-      .intro-number {
-        justify-content: flex-end;
-      }
-      h2 {
-        display: inline-block;
-        position: relative;
-        font-size: 3rem;
-        line-height: 4rem;
-        font-weight: 700;
-        cursor: none;
-      }
-    }
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: .4s ease;
+  p{
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 }
 
-/*Section04*/
+.photo:hover > .photo-zoom {
+  transform: scale(1.2);
+}
+.photo:hover > a >.overlay{
+  opacity: 1;
+}
 
+/*Project section*/
+
+.section2,
+.section3,
 .section4 {
   background-color: map-get($color, dark);
   z-index: 7;
 }
 
-#prjoectsection3 {
-  position: relative;
-  top: 100rem;
+.project-section{
+  margin-top: 100rem;
   transition: 1s ease;
 }
 
-.projectpart3 {
+.project-strip {
   width: 70vw;
-  height: 13rem;
-  top: -2rem;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 10;
+  height: 32vh;
+  margin: 2rem auto 3rem;
   display: flex;
-
-  &:nth-child(1) {
-    .foto {
-      order: 1;
-      width: 55%;
-      overflow: hidden;
-      position: relative;
-    }
-    .intro {
-      order: 2;
-      width: 45%;
-      margin: 1.5rem 0 0 3rem;
-
-      h2 {
-        display: inline-block;
-        font-size: 5rem;
-        font-weight: 700;
-        line-height: 6rem;
-        cursor: none;
-      }
-    }
+  flex-basis: content;
+  .intro {
+    width: 45%;
+    height: inherit;
+    margin: 1.5rem 3rem;
   }
+  .photo {
+    width: 55%;
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+  } 
+}
 
-  &:nth-child(2) {
-    top: 3rem;
-    .foto {
-      order: 2;
-      width: 55%;
-      overflow: hidden;
-      position: relative;
-    }
-    .intro {
-      order: 1;
-      width: 45%;
-      margin: 0.5rem 3rem 0 0;
-      text-align: right;
-      .intro-number {
-        justify-content: flex-end;
-      }
-      h2 {
-        display: inline-block;
-        font-size: 5rem;
-        line-height: 6rem;
-        font-weight: 700;
-        cursor: none;
-      }
+.overlay{
+  position: absolute;
+  top: 0;
+  width:100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: .4s ease;
+  p{
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.project-strip2 {
+  justify-content: flex-end;
+  .intro {
+    text-align: right;
+    .intro-number {
+      justify-content: flex-end;
     }
   }
 }
 
+/*Project title size*/
+.project-title1{
+  font-size: 5rem;
+}
+.project-title2{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
+.project-title4{
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin-bottom: 1rem;
+}
 /*Contact section*/
 
-.arrow{
+.arrow {
   padding-right: 1rem;
 }
 
-.page-cta:hover > .arrow{
+.page-cta:hover > .arrow {
   transform: translateX(10px);
-} 
+}
+
+@media screen and (max-width: 800px) {
+  .hamburger-line {
+    background-color: map-get($color, universal);
+  }
+  .nav-link {
+    background-color: map-get($color, seconddark);
+  }
+
+  .layer {
+    display: none;
+  }
+
+  .projectpart1 {
+    flex-wrap: wrap;
+  }
+}

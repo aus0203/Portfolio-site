@@ -36,10 +36,15 @@ p {
 
 /*Header*/
 
-.logo {
-  circle {
-    transition: 0.5s ease;
-  }
+.logo-g{
+  fill: map-get($color, dark);
+  stroke: map-get($color, dark);
+  transition: 0.5s ease;
+}
+
+.log-g-scroll{
+  fill: map-get($color, universal);
+  stroke: map-get($color, universal);
 }
 
 .logo:hover {
@@ -48,6 +53,8 @@ p {
     stroke: map-get($color, accent);
   }
 }
+
+
 
 .work-state:hover {
   transform: scale(1.2);
@@ -70,17 +77,16 @@ p {
   opacity: 0;
   pointer-events: none;
   .nav-col {
-    width: 8rem;
+    width: 6rem;
     height: inherit;
     display: flex;
     align-items: center;
-    justify-content: center;
     .nav-button {
-      width: 3rem;
+      width: 2rem;
       height: 8rem;
-      display: block;
       margin: 0 auto;
       display: flex;
+      justify-content: space-between;
       pointer-events: all;
     }
   }
@@ -91,8 +97,8 @@ p {
     height: 8rem;
     p {
       position: relative;
-      right: 1rem;
       margin-top: 3rem;
+      right:1rem ;
       transform: rotate(90deg);
       transition: 0.5s ease;
     }
@@ -173,7 +179,7 @@ p {
 
 .project-brief {
   width: 75vw;
-  padding: 6rem 0;
+  padding: 6rem 0 0;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -195,6 +201,9 @@ p {
   h1 {
     padding-bottom: 2rem;
   }
+  p{
+    padding-bottom: 2rem;
+  }
 }
 
 /*Content Section*/
@@ -205,9 +214,22 @@ p {
 }
 
 /*text*/
+
+.smalltitle {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  .titleLine {
+    margin-left: 0.5rem;
+    height: 1px;
+    width: 5rem;
+    background-color: map-get($color, universal);
+  }
+}
+
 .text-with-photo {
   width: 75vw;
-  padding: 5rem 0 1rem;
+  padding: 4rem 0 1rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -222,28 +244,16 @@ p {
   .photo-sec {
     width: 30rem;
     height: 100%;
-    margin: 0 3rem;
+    margin: 0 2rem;
   }
   p{
     margin-bottom: 1rem;
   }
 }
 
-.smalltitle {
-  display: flex;
-  align-items: center;
-  padding-bottom: 1rem;
-  .titleLine {
-    margin-left: 0.5rem;
-    height: 1px;
-    width: 5rem;
-    background-color: map-get($color, universal);
-  }
-}
-
 .text-with-photo-2{
   width: 75vw;
-  padding: 5rem 0 1rem;
+  padding: 4rem 0 1rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -256,8 +266,61 @@ p {
     h2 {
       padding: 1rem 0 2rem;
     }
+    p{
+      padding-bottom: 2rem;
+    }
   }
 }
+
+.quote-sec {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .quote {
+    width: 75vw;
+    text-align: center;
+    h2 {
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.thumbnail-sec {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+  .thumbnail {
+    max-width: 15rem;
+    display: flex;
+    justify-items: baseline;
+    align-items: center;
+    background-color: transparent;
+    flex-direction: column;
+    text-align: center;
+    img {
+      max-width: 12rem;
+      max-height: 14rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      width: 12rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
 
 
 
@@ -310,14 +373,60 @@ p {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+    p{
+      margin-bottom: 1rem;
+    }
   }
   img {
     width: 60%;
   }
 }
 
+.download-report {
+  width: 75vw;
+  margin: 0 auto;
+  a{
+    display: flex;
+    align-items: flex-end;
+    width: 40rem;
+  }
+  .download-button {
+    width: 2rem;
+    fill:map-get($color, universal);
+    margin-bottom: 0;
+  }
+  p{
+    display: inline;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin-left: 1rem;
+  }
+}
+
+.poster-sec {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 75vw;
+  margin: 0 auto;
+  img {
+    max-height: 30rem;
+  }
+}
+
+
 /*Footer*/
 .footer {
   width: 75vw;
   padding: 4rem 0;
+}
+
+@media screen and (max-width: 800px) {
+  .hamburger-line {
+    background-color: map-get($color, universal);
+  }
+  .nav-link {
+    background-color: map-get($color, seconddark);
+  }
+
 }

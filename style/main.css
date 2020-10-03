@@ -19,9 +19,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: 200;
-  font-family: "Gordita", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 h3 {
@@ -110,8 +109,8 @@ li {
   z-index: 999;
   padding: 1rem 5rem 0 1rem;
   background-color: transparent;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .header .logo {
@@ -119,10 +118,6 @@ li {
   width: 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-
-.header .nav-link {
-  margin-bottom: .5rem;
 }
 
 .header a {
@@ -324,8 +319,8 @@ li {
 
 .page-cta .arrow {
   width: 100px;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .page-cta p {
@@ -423,5 +418,74 @@ li {
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
   margin-bottom: -300rem;
+}
+
+@media screen and (max-width: 800px) {
+  /*Responsive header*/
+  nav {
+    position: relative;
+    right: -3rem;
+  }
+  .hamburger {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: .6rem;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  .hamburger .hamburger-line {
+    width: 1.8rem;
+    height: 2px;
+    margin-top: .5rem;
+    -webkit-transition: .8s ease;
+    transition: .8s ease;
+  }
+  .hamburger-line1-toggle {
+    margin-right: 0.5rem;
+  }
+  .hamburger-line2-toggle {
+    margin-left: 0.5rem;
+  }
+  .nav-link {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 0;
+    right: -100rem;
+    width: 85vw;
+    height: 100vh;
+    -webkit-transition: all .6s ease-out;
+    transition: all .6s ease-out;
+  }
+  .nav-link .current {
+    display: none;
+  }
+  .nav-link .work-state {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+  }
+  .nav-link a {
+    font-size: 1.5rem;
+  }
+  .nav-link-scroll {
+    right: 0;
+  }
+  .call-of-action {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

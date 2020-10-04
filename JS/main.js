@@ -1,4 +1,5 @@
 /*Variables*/
+const windowWidth = window.innerWidth;
 const cursor = document.querySelector(".cursor");
 const header = document.querySelector(".header");
 const hamburger = document.querySelector(".hamburger");
@@ -59,6 +60,7 @@ hamburger.addEventListener('click', ()=>{
 /*parallax effect*/
 
 document.addEventListener("mousemove", parallax);
+
 function parallax(e) {
   this.querySelectorAll(".layer").forEach((layer) => {
     const speed = layer.getAttribute("data-speed");

@@ -268,9 +268,9 @@ li {
 
 .footer {
   position: relative;
-  margin: 0 auto;
   bottom: calc(-10% - 80px);
   width: 70vw;
+  margin: 0 auto;
   z-index: 100;
   .footer-link {
     margin-bottom: 0.8rem;
@@ -340,36 +340,68 @@ li {
 }
 
 @media screen and (max-width: 800px) {
-  
-  /*Responsive header*/
-  nav{
-   position: relative;
-   right: -3rem; 
+  body {
+    overflow-x: hidden;
   }
-  
+
+  p {
+    font-size: 14px;
+  }
+
+  /*Customize Scrollbar*/
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: map-get($color, seconddark);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: map-get($color, accent);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /*Responsive header*/
+  .header {
+    .logo {
+      width: 2.5rem;
+    }
+  }
+  nav {
+    position: relative;
+    right: -3rem;
+  }
+
   .hamburger {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
     z-index: 1000;
     cursor: pointer;
     .hamburger-line {
       width: 1.8rem;
       height: 2px;
-      margin-top:.5rem;
-      transition: .8s ease;
+      margin-top: 0.5rem;
+      transition: 0.8s ease;
     }
   }
 
-  .hamburger-line1-toggle{
+  .hamburger-line1-toggle {
     margin-right: 0.5rem;
   }
 
-  .hamburger-line2-toggle{
+  .hamburger-line2-toggle {
     margin-left: 0.5rem;
   }
-
 
   .nav-link {
     position: fixed;
@@ -378,10 +410,9 @@ li {
     align-items: center;
     top: 0;
     right: -100rem;
-    
     width: 85vw;
     height: 100vh;
-    transition: all .6s ease-out;
+    transition: all 0.6s ease-out;
     .current {
       display: none;
     }
@@ -394,12 +425,35 @@ li {
     }
   }
 
-  .nav-link-scroll{
+  .nav-link-scroll {
     right: 0;
   }
 
-
-  .call-of-action{
+  /*SideBar*/
+  .sidebar {
+    width: 4rem;
+    .nav2 {
+      flex-grow: 2;
+      .bar {
+        display: none;
+      }
+    }
+  }
+  .handler {
     display: none;
   }
+
+  .call-of-action {
+    display: none;
+  }
+
+  /*Contact Section*/
+
+  .footer{
+    display: none;
+  }
+  .footerBackground{
+    display: none;
+  } 
+
 }

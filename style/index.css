@@ -420,7 +420,7 @@ li {
   margin-bottom: -300rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   body {
     overflow-x: hidden;
   }
@@ -900,7 +900,7 @@ a {
 }
 
 /*Responsive*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .hamburger-line {
     background-color: #e0e0e0;
   }
@@ -978,8 +978,12 @@ a {
     margin: .5rem 0;
   }
   /*Contact Section*/
+  .section-background {
+    display: none;
+  }
   .layer {
     left: -500px;
+    position: fixed;
   }
 }
 /*# sourceMappingURL=index.css.map */

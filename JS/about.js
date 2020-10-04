@@ -5,7 +5,7 @@ const farFrontIntro = document.querySelectorAll(".farfrontintro");
 
 /*Fullpage*/
 
-if(windowWidth > 800){
+if(windowWidth > 600){
   new fullpage("#fullpage", {
     scrollingSpeed: 1250,
     

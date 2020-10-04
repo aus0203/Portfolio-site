@@ -306,7 +306,7 @@ a {
 
 /*Responsive*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .hamburger-line {
     background-color: map-get($color, universal);
   }
@@ -381,10 +381,12 @@ a {
 
   /*Contact Section*/
 
-
+  .section-background{
+    display: none;
+  } 
  
-  .layer{
-    left: -500px;
-  }
-
+ .layer{
+   left: -500px;
+   position: fixed;
+ }
 }

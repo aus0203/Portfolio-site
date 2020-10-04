@@ -537,6 +537,19 @@ li {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .section1 .hero-line .divide {
+    width: 100%;
+  }
+  .section1 .hero-line .subtitle {
+    width: 100%;
+  }
+  .contact-line .title {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}
+
 body {
   color: #e0e0e0;
   background-color: #0a0a0a;
@@ -681,7 +694,6 @@ a {
 }
 
 .section1 .hero-line .title {
-  width: 22rem;
   font-family: "Gordita", sans-serif;
   font-size: 2rem;
   letter-spacing: 0;
@@ -775,8 +787,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .overlay p {
@@ -848,8 +860,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .overlay p {
@@ -971,19 +983,32 @@ a {
   }
   .project-title1 {
     font-size: 2.5rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
-  .project-title2, .project-title4 {
+  .project-title2,
+  .project-title4 {
     font-size: 2rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
   /*Contact Section*/
   .section-background {
     display: none;
   }
   .layer {
-    left: -500px;
     position: fixed;
+    top: -800px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section1 .hero-line .divide {
+    width: 100%;
+  }
+  .section1 .hero-line .subtitle {
+    width: 100%;
+  }
+  .layer {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

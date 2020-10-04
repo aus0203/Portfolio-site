@@ -537,6 +537,19 @@ li {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .section1 .hero-line .divide {
+    width: 100%;
+  }
+  .section1 .hero-line .subtitle {
+    width: 100%;
+  }
+  .contact-line .title {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}
+
 body {
   color: #0a0a0a;
 }
@@ -862,6 +875,15 @@ a {
   }
   /*Intro background*/
   .intro-main {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cv-exp-list .cv-exp-list-title {
+    width: 100%;
+  }
+  .intro-background {
     display: none;
   }
 }

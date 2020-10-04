@@ -440,10 +440,6 @@ li {
   ::-webkit-scrollbar-thumb {
     background: #58bfd3;
   }
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
   /*Responsive header*/
   .header .logo {
     width: 2.5rem;
@@ -534,6 +530,19 @@ li {
   }
   .footerBackground {
     display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section1 .hero-line .divide {
+    width: 100%;
+  }
+  .section1 .hero-line .subtitle {
+    width: 100%;
+  }
+  .contact-line .title {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

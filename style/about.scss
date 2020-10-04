@@ -302,3 +302,17 @@ a {
     display: none;
   }
 }
+
+
+@media screen and (max-width: 375px) {
+  
+  .cv-exp-list{
+    .cv-exp-list-title{
+      width: 100%;
+    }
+  } 
+
+  .intro-background{
+    display: none;
+  }
+}

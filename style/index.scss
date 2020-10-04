@@ -123,7 +123,6 @@ a {
     z-index: 100;
 
     .title {
-      width: 22rem;
       font-family: "Gordita", sans-serif;
       font-size: 2rem;
       letter-spacing: 0;
@@ -191,19 +190,19 @@ a {
   transition: 0.3s ease-in-out;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.6);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: .4s ease;
-  p{
+  transition: 0.4s ease;
+  p {
     font-size: 1.5rem;
     font-weight: 400;
   }
@@ -212,7 +211,7 @@ a {
 .photo:hover > .photo-zoom {
   transform: scale(1.2);
 }
-.photo:hover > a >.overlay{
+.photo:hover > a > .overlay {
   opacity: 1;
 }
 
@@ -225,7 +224,7 @@ a {
   z-index: 7;
 }
 
-.project-section{
+.project-section {
   margin-top: 100rem;
   transition: 1s ease;
 }
@@ -246,22 +245,22 @@ a {
     height: inherit;
     overflow: hidden;
     position: relative;
-  } 
+  }
 }
 
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.6);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: .4s ease;
-  p{
+  transition: 0.4s ease;
+  p {
     font-size: 1.5rem;
     font-weight: 400;
   }
@@ -279,15 +278,15 @@ a {
 
 /*Project title size*/
 
-.project-title1{
+.project-title1 {
   font-size: 5rem;
 }
-.project-title2{
+.project-title2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.project-title4{
+.project-title4 {
   font-size: 3rem;
   line-height: 3.5rem;
   margin-bottom: 1rem;
@@ -302,11 +301,10 @@ a {
   transform: translateX(10px);
 }
 
-
-
 /*Responsive*/
 
 @media screen and (max-width: 600px) {
+
   .hamburger-line {
     background-color: map-get($color, universal);
   }
@@ -315,7 +313,7 @@ a {
   }
 
   /*All section*/
-  .section{
+  .section {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -324,43 +322,43 @@ a {
   }
   /*Landing section*/
 
-  .section1{
+  .section1 {
     overflow: hidden;
   }
 
-  .line-star{
+  .line-star {
     display: none;
   }
 
   /*Project Section*/
- 
-  .project-section{
-    margin-top: 0;
-  }  
 
-  .project-strip{
+  .project-section {
+    margin-top: 0;
+  }
+
+  .project-strip {
     flex-wrap: wrap;
     margin: 5rem auto 6rem;
-    .photo{
+    .photo {
       width: 100%;
       height: 150px;
     }
-    .intro{
+    .intro {
       width: 100%;
-    margin: 1.5rem 0
+      margin: 1.5rem 0;
     }
   }
-  .intro-number{
+  .intro-number {
     margin-bottom: 0;
   }
-  
+
   .project-strip2 {
     justify-content: flex-start;
-    .photo{
-      order:1;
+    .photo {
+      order: 1;
     }
     .intro {
-      order:2;
+      order: 2;
       text-align: left;
       .intro-number {
         justify-content: flex-start;
@@ -368,25 +366,43 @@ a {
     }
   }
 
-  .project-title1{
+  .project-title1 {
     font-size: 2.5rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
-  .project-title2, .project-title4{
+  .project-title2,
+  .project-title4 {
     font-size: 2rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
-
-
 
   /*Contact Section*/
 
-  .section-background{
+  .section-background {
     display: none;
-  } 
- 
- .layer{
-   left: -500px;
-   position: fixed;
- }
+  }
+
+  .layer {
+    position: fixed;
+    top: -800px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  
+  .section1{
+    .hero-line{
+      .divide{
+        width: 100%;
+      }
+      .subtitle{
+        width: 100%;
+      }
+    }
+  }
+
+  .layer {
+    display: none;
+  }
+
 }

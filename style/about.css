@@ -420,12 +420,12 @@ li {
   margin-bottom: -300rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
   }
   p {
-    font-size: 14px;
+    font-size: 12px;
   }
   /*Customize Scrollbar*/
   /* width */
@@ -439,10 +439,6 @@ li {
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #58bfd3;
-  }
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
   }
   /*Responsive header*/
   .header .logo {
@@ -803,7 +799,7 @@ a {
 }
 
 /*Responsive*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .hamburger-line {
     background-color: #0a0a0a;
   }
@@ -874,7 +870,7 @@ a {
     margin-left: 0;
   }
   /*Intro background*/
-  .intro-main {
+  .intro-background {
     display: none;
   }
 }
@@ -882,9 +878,6 @@ a {
 @media screen and (max-width: 375px) {
   .cv-exp-list .cv-exp-list-title {
     width: 100%;
-  }
-  .intro-background {
-    display: none;
   }
 }
 /*# sourceMappingURL=about.css.map */

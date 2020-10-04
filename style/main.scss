@@ -339,13 +339,9 @@ li {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
-  }
-
-  p {
-    font-size: 14px;
   }
 
   /*Customize Scrollbar*/
@@ -363,8 +359,6 @@ li {
   ::-webkit-scrollbar-thumb {
     background: map-get($color, accent);
   }
-
-
 
   /*Responsive header*/
   .header {
@@ -457,6 +451,9 @@ li {
 
 
 @media screen and (max-width: 375px) {
+  p {
+    font-size: 12px;
+  }
   
   .section1{
     .hero-line{
@@ -468,6 +465,7 @@ li {
       }
     }
   }
+  
 
   .contact-line{
     .title{

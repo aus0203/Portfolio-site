@@ -420,12 +420,9 @@ li {
   margin-bottom: -300rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
-  }
-  p {
-    font-size: 14px;
   }
   /*Customize Scrollbar*/
   /* width */
@@ -534,6 +531,9 @@ li {
 }
 
 @media screen and (max-width: 375px) {
+  p {
+    font-size: 12px;
+  }
   .section1 .hero-line .divide {
     width: 100%;
   }

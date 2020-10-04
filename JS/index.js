@@ -9,7 +9,7 @@ const projectSection3 = document.getElementById("projectsection3");
 
 /*fullpage transition effect*/
 
-if (windowWidth > 600) {
+if (windowWidth > 800) {
   new fullpage("#fullpage", {
     scrollingSpeed: 1250,
 

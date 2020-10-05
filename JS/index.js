@@ -29,7 +29,6 @@ if (windowWidth > 800) {
       farBack.forEach((x) => {
         x.style.bottom = 0 - destination.index * 850 + "px";
       });
-      mainCharactor.style.bottom = 0 - destination.index * 900 + "px";
 
       /*Project section background*/
       if (destination.index >= 1 && destination.index <= 3) {
@@ -42,7 +41,7 @@ if (windowWidth > 800) {
         sectionObjectFarFront.forEach((x) => {
           x.style.marginTop = 0;
         });
-        heroLine.style.top = 1300 + "px";
+        // heroLine.style.top = 1300 + "px";
       } else {
         sectionObjectBack.forEach((x) => {
           x.style.marginTop = 100 + "rem";
@@ -53,14 +52,14 @@ if (windowWidth > 800) {
         sectionObjectFarFront.forEach((x) => {
           x.style.marginTop = 200 + "rem";
         });
-        heroLine.style.top = 0 + "px";
+        // heroLine.style.top = 0 + "px";
 
       }
 
       /*Project section content*/
       if (destination.index === 1) {
         projectSection1.style.marginTop = 0;
-        callOfAction.style.marginTop = 100 + "rem";
+        // callOfAction.style.marginTop = 100 + "rem";
       } else if (destination.index === 2) {
         projectSection1.style.marginTop = -80 + "rem";
         projectSection2.style.marginTop = 0 + "rem";
@@ -73,7 +72,7 @@ if (windowWidth > 800) {
         projectSection1.style.marginTop = 100 + "rem";
         projectSection2.style.marginTop = 100 + "rem";
         projectSection3.style.marginTop = 100 + "rem";
-        callOfAction.style.marginTop = 8 + "%";
+        // callOfAction.style.marginTop = 8 + "%";
       }
 
       /*Footer section background*/
@@ -93,27 +92,6 @@ if (windowWidth > 800) {
         footerLine.style.marginTop = 300 + "rem";
       }
     },
-
-    afterResize: function(width, height){
-      if(width < 800){
-        var pluginContainer = this;
-        /*Handler*/
-      handler.style.marginTop = -10 + "rem";
-
-      /*Intro section*/
-      front.forEach((x) => {
-        x.style.bottom = 0 + "px";
-      });
-      back.forEach((x) => {
-        x.style.bottom = 0 + "px";
-      });
-      farBack.forEach((x) => {
-        x.style.bottom = 0 + "px";
-      });
-      mainCharactor.style.bottom = 0 + "px";
-
-      }
-    }
 
   });
 

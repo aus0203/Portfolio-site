@@ -29,6 +29,11 @@ h3 {
   line-height: 1.5rem;
 }
 
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 p {
   font-weight: 300;
   font-size: 1rem;
@@ -332,6 +337,7 @@ li {
   bottom: calc(-10% - 80px);
   width: 70vw;
   margin: 0 auto;
+  padding-bottom: 4rem;
   z-index: 100;
 }
 
@@ -423,6 +429,15 @@ li {
 @media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 14px;
+  }
+  .cursor {
+    display: none;
   }
   /*Customize Scrollbar*/
   /* width */
@@ -521,16 +536,41 @@ li {
   .call-of-action {
     display: none;
   }
-  /*Contact Section*/
-  .footer {
-    display: none;
+  /*Contect section*/
+  .page-cta {
+    width: 100%;
+  }
+  .footer .footer-link ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer-link li {
+    margin-bottom: 1rem;
+  }
+  /*Contact section*/
+  .section5 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footerBackground {
     display: none;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
+  h4 {
+    font-size: 12px;
+  }
   p {
     font-size: 12px;
   }
@@ -679,37 +719,6 @@ a {
   /*Parallex effect*/
 }
 
-.section1 .hero-line {
-  position: relative;
-  width: 70vw;
-  top: 0;
-  margin: 0 auto;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-  z-index: 100;
-}
-
-.section1 .hero-line .title {
-  font-family: "Gordita", sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0;
-  font-weight: 500;
-  line-height: 3rem;
-}
-
-.section1 .hero-line .divide {
-  width: 22rem;
-  margin: 1.5rem 0;
-  border-bottom: 1px solid white;
-}
-
-.section1 .hero-line .subtitle {
-  letter-spacing: 0;
-  font-size: 1rem;
-  width: 25rem;
-  line-height: 1.5rem;
-}
-
 .section1 .layer {
   position: absolute;
   width: auto;
@@ -725,8 +734,11 @@ a {
   z-index: 3;
 }
 
-.maincharactor {
-  display: none;
+.heroline {
+  position: relative;
+  width: 75vw;
+  margin: 0 auto;
+  z-index: 5;
 }
 
 /*Scroll down Call of action*/
@@ -913,7 +925,7 @@ a {
     background-color: #e0e0e0;
   }
   .nav-link {
-    background-color: #292929;
+    background-color: #0a0a0a;
   }
   /*All section*/
   .section {
@@ -996,7 +1008,7 @@ a {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
   .section1 .hero-line .divide {
     width: 100%;
   }
@@ -1012,6 +1024,10 @@ a {
     margin: 0.5rem 0;
   }
   .layer {
+    display: none;
+  }
+  /*Contact Section*/
+  .footerBackground {
     display: none;
   }
 }

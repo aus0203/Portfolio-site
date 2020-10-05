@@ -50,7 +50,6 @@
   background-image: url(../img/Project/KLM/quote.png);
 }
 
-
 .result-sec {
   background-color: #4b9aaa;
   padding-bottom: 5rem;
@@ -63,3 +62,20 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  #why {
+    width: 100%;
+  }
+  .thumbnail-sec {
+    .thumbnail {
+      margin-bottom: 2rem;
+    }
+  }
+  .poster-sec {
+    flex-direction: column;
+    img{
+      width: 100%;
+
+    }
+  }
+}

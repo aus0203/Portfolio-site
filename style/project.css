@@ -29,6 +29,11 @@ h3 {
   line-height: 1.5rem;
 }
 
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 p {
   font-weight: 300;
   font-size: 1rem;
@@ -329,9 +334,10 @@ li {
 
 .footer {
   position: relative;
-  margin: 0 auto;
   bottom: calc(-10% - 80px);
   width: 70vw;
+  margin: 0 auto;
+  padding-bottom: 4rem;
   z-index: 100;
 }
 
@@ -421,6 +427,35 @@ li {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 14px;
+  }
+  .cursor {
+    display: none;
+  }
+  /*Customize Scrollbar*/
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #292929;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #58bfd3;
+  }
+  /*Responsive header*/
+  .header .logo {
+    width: 2.5rem;
+  }
   nav {
     position: relative;
     right: -3rem;
@@ -434,16 +469,16 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
     z-index: 1000;
     cursor: pointer;
   }
   .hamburger .hamburger-line {
     width: 1.8rem;
     height: 2px;
-    margin-top: .5rem;
-    -webkit-transition: .8s ease;
-    transition: .8s ease;
+    margin-top: 0.5rem;
+    -webkit-transition: 0.8s ease;
+    transition: 0.8s ease;
   }
   .hamburger-line1-toggle {
     margin-right: 0.5rem;
@@ -467,8 +502,8 @@ li {
     right: -100rem;
     width: 85vw;
     height: 100vh;
-    -webkit-transition: all .6s ease-out;
-    transition: all .6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
   }
   .nav-link .current {
     display: none;
@@ -482,6 +517,72 @@ li {
   }
   .nav-link-scroll {
     right: 0;
+  }
+  /*SideBar*/
+  .sidebar {
+    width: 4rem;
+  }
+  .sidebar .nav2 {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+  .sidebar .nav2 .bar {
+    display: none;
+  }
+  .handler {
+    display: none;
+  }
+  .call-of-action {
+    display: none;
+  }
+  /*Contect section*/
+  .page-cta {
+    width: 100%;
+  }
+  .footer .footer-link ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer-link li {
+    margin-bottom: 1rem;
+  }
+  /*Contact section*/
+  .section5 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footerBackground {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h4 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .section1 .hero-line .divide {
+    width: 100%;
+  }
+  .section1 .hero-line .subtitle {
+    width: 100%;
+  }
+  .contact-line .title {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
   }
 }
 
@@ -503,11 +604,6 @@ h2 {
 h3 {
   font-size: 1rem;
   line-height: 2.2rem;
-  font-weight: 500;
-}
-
-h4 {
-  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -536,6 +632,10 @@ p {
 .logo:hover circle {
   fill: #58bfd3;
   stroke: #58bfd3;
+}
+
+.menu {
+  color: #0a0a0a;
 }
 
 .work-state:hover {
@@ -830,6 +930,7 @@ p {
 .quote-sec {
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   width: 100%;
   height: 60vh;
@@ -1028,16 +1129,92 @@ p {
 
 /*Footer*/
 .footer {
+  padding-top: 4rem;
   width: 75vw;
-  padding: 4rem 0;
 }
 
 @media screen and (max-width: 800px) {
+  /*Global*/
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  /*Header*/
   .hamburger-line {
     background-color: #e0e0e0;
   }
   .nav-link {
-    background-color: #292929;
+    background-color: #0a0a0a;
+  }
+  /*Main section*/
+  /*Intro section*/
+  .project-brief {
+    padding: 3rem 0 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .project-content {
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+  .project-content .content-col {
+    width: 10rem;
+  }
+  .project-intro {
+    margin-top: 2rem;
+  }
+  /*Main content*/
+  /*Text section*/
+  .text-with-photo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .text-with-photo .photo-sec {
+    width: 95%;
+    margin: 1rem 0;
+  }
+  .text-with-photo-2 .text-sec {
+    width: inherit;
+    margin-top: 2rem;
+  }
+  .text-with-photo-2 .photo-sec {
+    width: 100%;
+  }
+  .quote-sec h2 {
+    font-size: 1rem;
+  }
+  /*Media*/
+  .download-report a {
+    width: 100%;
+  }
+  .download-report p {
+    width: 50vw;
+    font-size: 14px;
+    line-height: 1.2rem;
+  }
+  .demo-strip {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .demo-strip img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .project-nav .nav-col {
+    width: 4rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project-content .content-col {
+    width: 8rem;
+  }
+  .project-content h2 {
+    font-size: 1.2rem;
   }
 }
 /*# sourceMappingURL=project.css.map */

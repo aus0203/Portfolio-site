@@ -90,3 +90,36 @@
     width: 30rem;
     }
 }
+@media screen and (max-width: 800px) {
+
+    .thumbnail-sec {
+      .thumbnail {
+        margin-bottom: 2rem;
+      }
+    }
+    .poster-sec {
+      flex-direction: column;
+      img{
+        width: 100%;
+  
+      }
+    }
+  }
+  
+@media screen and (max-width: 450px) {
+
+    .photo-sec{
+        .thumbnail{
+            width: 8rem;
+        }
+        .problem-thumbnail-1{
+            width: 12rem;
+            img{
+                width: 12rem;
+                height: auto;
+            }
+ 
+        }
+    }
+    
+  }

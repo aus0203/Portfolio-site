@@ -29,6 +29,11 @@ h3 {
   line-height: 1.5rem;
 }
 
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 p {
   font-weight: 300;
   font-size: 1rem;
@@ -332,6 +337,7 @@ li {
   bottom: calc(-10% - 80px);
   width: 70vw;
   margin: 0 auto;
+  padding-bottom: 4rem;
   z-index: 100;
 }
 
@@ -423,6 +429,15 @@ li {
 @media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 14px;
+  }
+  .cursor {
+    display: none;
   }
   /*Customize Scrollbar*/
   /* width */
@@ -521,16 +536,41 @@ li {
   .call-of-action {
     display: none;
   }
-  /*Contact Section*/
-  .footer {
-    display: none;
+  /*Contect section*/
+  .page-cta {
+    width: 100%;
+  }
+  .footer .footer-link ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer-link li {
+    margin-bottom: 1rem;
+  }
+  /*Contact section*/
+  .section5 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footerBackground {
     display: none;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
+  h4 {
+    font-size: 12px;
+  }
   p {
     font-size: 12px;
   }

@@ -114,33 +114,6 @@ a {
 .section1 {
   z-index: 2;
   /*Section01 title*/
-  .hero-line {
-    position: relative;
-    width: 70vw;
-    top: 0;
-    margin: 0 auto;
-    transition: 1s ease;
-    z-index: 100;
-
-    .title {
-      font-family: "Gordita", sans-serif;
-      font-size: 2rem;
-      letter-spacing: 0;
-      font-weight: 500;
-      line-height: 3rem;
-    }
-    .divide {
-      width: 22rem;
-      margin: 1.5rem 0;
-      border-bottom: 1px solid white;
-    }
-    .subtitle {
-      letter-spacing: 0;
-      font-size: 1rem;
-      width: 25rem;
-      line-height: 1.5rem;
-    }
-  }
 
   /*Parallex effect*/
   .layer {
@@ -156,9 +129,40 @@ a {
   }
 }
 
-.maincharactor {
-  display: none;
+.heroline {
+  position: relative;
+  width: 75vw;
+  margin: 0 auto;
+  z-index: 5;
 }
+
+// .hero-line {
+//   position: relative;
+//   width: 70vw;
+//   top: 0;
+//   margin: 0 auto;
+//   transition: 1s ease;
+//   z-index: 100;
+
+//   .title {
+//     font-family: "Gordita", sans-serif;
+//     font-size: 2rem;
+//     letter-spacing: 0;
+//     font-weight: 500;
+//     line-height: 3rem;
+//   }
+//   .divide {
+//     width: 22rem;
+//     margin: 1.5rem 0;
+//     border-bottom: 1px solid white;
+//   }
+//   .subtitle {
+//     letter-spacing: 0;
+//     font-size: 1rem;
+//     width: 25rem;
+//     line-height: 1.5rem;
+//   }
+// }
 
 /*Scroll down Call of action*/
 
@@ -304,12 +308,11 @@ a {
 /*Responsive*/
 
 @media screen and (max-width: 800px) {
-
   .hamburger-line {
     background-color: map-get($color, universal);
   }
   .nav-link {
-    background-color: map-get($color, seconddark);
+    background-color: map-get($color, dark);
   }
 
   /*All section*/
@@ -388,23 +391,22 @@ a {
   }
 }
 
-@media screen and (max-width: 375px) {
-  
-  .section1{
-    .hero-line{
-      .divide{
+@media screen and (max-width: 450px) {
+  .section1 {
+    .hero-line {
+      .divide {
         width: 100%;
       }
-      .subtitle{
+      .subtitle {
         width: 100%;
       }
     }
   }
 
-  .project-strip{
+  .project-strip {
     margin-top: 7rem;
   }
-  
+
   .project-title2,
   .project-title4 {
     font-size: 1.5rem;
@@ -414,4 +416,9 @@ a {
     display: none;
   }
 
+  /*Contact Section*/
+
+  .footerBackground {
+    display: none;
+  }
 }

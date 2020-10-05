@@ -36,6 +36,7 @@ h4 {
 
 p {
   font-weight: 300;
+  line-height: 2rem;
   font-size: 1rem;
 }
 
@@ -430,6 +431,9 @@ li {
   body {
     overflow-x: hidden;
   }
+  h1 {
+    font-size: 2.5rem;
+  }
   h4 {
     font-size: 1rem;
   }
@@ -568,17 +572,24 @@ li {
 }
 
 @media screen and (max-width: 450px) {
+  h1 {
+    font-size: 2rem;
+  }
   h4 {
     font-size: 12px;
   }
   p {
     font-size: 12px;
+    line-height: 1.5rem;
   }
   .section1 .hero-line .divide {
     width: 100%;
   }
   .section1 .hero-line .subtitle {
     width: 100%;
+  }
+  .contact-line {
+    top: 3rem;
   }
   .contact-line .title {
     font-size: 2.5rem;
@@ -612,7 +623,6 @@ a {
 }
 
 p {
-  line-height: 2rem;
   font-weight: 400;
 }
 
@@ -1139,7 +1149,7 @@ p {
     font-size: 2rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   /*Header*/
   .hamburger-line {
@@ -1198,8 +1208,19 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .demo-strip .demo-title {
+    width: inherit;
+    margin-bottom: 1.5rem;
+  }
+  .demo-strip .demo-title h3 {
+    font-size: 1.5rem;
+  }
+  .demo-strip .demo-title p {
+    margin-bottom: 0;
+  }
   .demo-strip img {
     width: 100%;
+    height: 100%;
   }
 }
 

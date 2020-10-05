@@ -55,12 +55,6 @@
   padding-bottom: 5rem;
 }
 
-.demo-strip {
-  img {
-    width: 50%;
-    margin-right: 2rem;
-  }
-}
 
 @media screen and (max-width: 800px) {
   #why {
@@ -75,7 +69,6 @@
     flex-direction: column;
     img{
       width: 100%;
-
     }
   }
 }

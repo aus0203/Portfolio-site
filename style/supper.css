@@ -1206,6 +1206,7 @@ p {
   width: 75vw;
 }
 
+/*Reponsive*/
 @media screen and (max-width: 800px) {
   /*Global*/
   h1 {
@@ -1290,6 +1291,10 @@ p {
 @media screen and (max-width: 450px) {
   .project-nav .nav-col {
     width: 4rem;
+  }
+  .right-button .nav-button-col1 {
+    position: relative;
+    left: .5rem;
   }
 }
 

@@ -448,6 +448,9 @@ p {
   width: 75vw;
 }
 
+
+/*Reponsive*/
+
 @media screen and (max-width: 800px) {
   /*Global*/
 
@@ -542,6 +545,10 @@ p {
     .nav-col {
       width: 4rem;
     }
+  }
+  .right-button .nav-button-col1{
+    position: relative;
+    left: .5rem;
   }
 }
 

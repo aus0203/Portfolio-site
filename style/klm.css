@@ -144,7 +144,7 @@ li {
   width: 0.3rem;
   height: 0.3rem;
   border-radius: 50%;
-  margin: 0 auto 0.3rem;
+  margin: 0 auto .3rem;
 }
 
 /*Side-bar*/
@@ -509,15 +509,28 @@ li {
     -webkit-transition: all 0.6s ease-out;
     transition: all 0.6s ease-out;
   }
-  .nav-link .current {
-    display: none;
-  }
   .nav-link .work-state {
     margin-top: 10rem;
     margin-bottom: 2rem;
   }
   .nav-link a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.5rem;
+  }
+  .current {
+    width: 2rem;
+    height: 1px;
+    border-radius: 0;
+    margin-left: -2.5rem;
+    margin-right: .5rem;
   }
   .nav-link-scroll {
     right: 0;
@@ -788,16 +801,66 @@ p {
   transition: 0.5s ease;
 }
 
-.top-screen .scrollicon {
+.scrollicon {
+  width: 36px;
+  height: 60px;
+  border: 3px solid #0a0a0a;
+  border-radius: 25px;
   margin-bottom: 3rem;
-  width: 3.5rem;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
 
-.top-screen .scrollicon .st1 {
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+.scrollicon:before {
+  content: "";
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
 }
 
 .scrollicon:hover {

@@ -5,7 +5,6 @@ const navText = document.querySelectorAll(".nav-text");
 const topScreen = document.querySelector(".top-screen");
 const projectNav = document.querySelector(".project-nav");
 const scrollIcon = document.querySelector(".scrollicon");
-const iconLine = document.querySelector(".st1");
 const menu = document.querySelectorAll(".menu");
 const elevaSec = document.querySelector(".eleva-sec");
 const videoStrip = document.querySelector(".video-strip");
@@ -13,14 +12,6 @@ const videoStrip = document.querySelector(".video-strip");
 
 /*Project topscreen*/
 
-scrollIcon.addEventListener('mouseover', () => {
-  iconLine.setAttribute("y1", "10");
-  iconLine.setAttribute("y2", "16");
-});
-scrollIcon.addEventListener('mouseleave', () => {
-  iconLine.setAttribute("y1", "8");
-  iconLine.setAttribute("y2", "14");
-});
 
 function onScroll(event) {
   if (window.pageYOffset > 0) {

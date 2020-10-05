@@ -21,7 +21,6 @@ h3 {
   font-weight: 500;
 }
 
-
 a {
   color: map-get($color, universal);
 }
@@ -32,13 +31,13 @@ p {
 
 /*Header*/
 
-.logo-g{
+.logo-g {
   fill: map-get($color, dark);
   stroke: map-get($color, dark);
   transition: 0.5s ease;
 }
 
-.log-g-scroll{
+.log-g-scroll {
   fill: map-get($color, universal);
   stroke: map-get($color, universal);
 }
@@ -53,7 +52,6 @@ p {
 .menu {
   color: map-get($color, dark);
 }
-
 
 .work-state:hover {
   transform: scale(1.2);
@@ -97,7 +95,7 @@ p {
     p {
       position: relative;
       margin-top: 3rem;
-      right:1rem ;
+      right: 1rem;
       transform: rotate(90deg);
       transition: 0.5s ease;
     }
@@ -161,15 +159,48 @@ p {
   justify-content: center;
   align-items: flex-end;
   transition: 0.5s ease;
-  .scrollicon {
-    margin-bottom: 3rem;
-    width: 3.5rem;
-    transition: 1s ease;
-    .st1 {
-      transition: 0.5s ease;
-    }
+}
+
+.scrollicon {
+  width: 36px;
+  height: 60px;
+  border:3px solid map-get($color, dark);
+  border-radius: 25px;
+  margin-bottom: 3rem;
+  transition: 1s ease;
+}
+
+.scrollicon:before {
+  content: "";
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: map-get($color, dark);
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(30px);
   }
 }
+
 .scrollicon:hover {
   margin-bottom: 2rem;
 }
@@ -200,14 +231,14 @@ p {
   h1 {
     padding-bottom: 2rem;
   }
-  p{
+  p {
     padding-bottom: 2rem;
   }
 }
 
 /*Content Section*/
 
-.seperate-section{
+.seperate-section {
   padding: 2rem 0;
   margin: 4rem 0 0;
 }
@@ -245,27 +276,27 @@ p {
     height: 100%;
     margin: 0 2rem;
   }
-  p{
+  p {
     margin-bottom: 1rem;
   }
 }
 
-.text-with-photo-2{
+.text-with-photo-2 {
   width: 75vw;
   padding: 4rem 0 1rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  .photo-sec{
+  .photo-sec {
     margin: 0 auto;
-    width:50vw;
+    width: 50vw;
   }
   .text-sec {
     width: 50rem;
     h2 {
       padding: 1rem 0 2rem;
     }
-    p{
+    p {
       padding-bottom: 2rem;
     }
   }
@@ -321,9 +352,6 @@ p {
   }
 }
 
-
-
-
 /*Media*/
 
 .video-strip {
@@ -373,7 +401,7 @@ p {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    p{
+    p {
       margin-bottom: 1rem;
     }
   }
@@ -385,17 +413,17 @@ p {
 .download-report {
   width: 75vw;
   margin: 0 auto;
-  a{
+  a {
     display: flex;
     align-items: flex-end;
     width: 40rem;
   }
   .download-button {
     width: 2rem;
-    fill:map-get($color, universal);
+    fill: map-get($color, universal);
     margin-bottom: 0;
   }
-  p{
+  p {
     display: inline;
     font-size: 1.5rem;
     text-decoration: underline;
@@ -414,24 +442,23 @@ p {
   }
 }
 
-
 /*Footer*/
 .footer {
-  padding-top:4rem;
+  padding-top: 4rem;
   width: 75vw;
 }
 
 @media screen and (max-width: 800px) {
   /*Global*/
 
-  h1{
+  h1 {
     font-size: 2rem;
   }
 
-  h2{
+  h2 {
     font-size: 1.2rem;
   }
-  
+
   /*Header*/
   .hamburger-line {
     background-color: map-get($color, universal);
@@ -440,92 +467,90 @@ p {
     background-color: map-get($color, dark);
   }
 
- /*Main section*/
- /*Intro section*/
-   .project-brief{
-     padding: 3rem 0 0;
-     flex-wrap: wrap;
-   }
-   .project-content{
-     padding-right: 0;
-     padding-bottom: 2rem;
-     .content-col{
-       width: 10rem;
-     }
-   }
-   .project-intro{
-     margin-top: 2rem;
-   }
+  /*Main section*/
+  /*Intro section*/
+  .project-brief {
+    padding: 3rem 0 0;
+    flex-wrap: wrap;
+  }
+  .project-content {
+    padding-right: 0;
+    padding-bottom: 2rem;
+    .content-col {
+      width: 10rem;
+    }
+  }
+  .project-intro {
+    margin-top: 2rem;
+  }
   /*Main content*/
   /*Text section*/
   .text-with-photo {
     flex-wrap: wrap;
-    .photo-sec{
+    .photo-sec {
       width: 95%;
       margin: 1rem 0;
     }
   }
-  .text-with-photo-2{
-    .text-sec{
+  .text-with-photo-2 {
+    .text-sec {
       width: inherit;
       margin-top: 2rem;
     }
-    .photo-sec{
+    .photo-sec {
       width: 100%;
     }
   }
-  .quote-sec{
-    h2{
-     font-size: 1rem;
+  .quote-sec {
+    h2 {
+      font-size: 1rem;
     }
   }
   /*Media*/
-  .download-report{
-    a{
+  .download-report {
+    a {
       width: 100%;
     }
-    p{
+    p {
       width: 50vw;
       font-size: 14px;
       line-height: 1.2rem;
     }
   }
 
-  .demo-strip{
+  .demo-strip {
     flex-wrap: wrap;
-    .demo-title{
-      width:inherit;
+    .demo-title {
+      width: inherit;
       margin-bottom: 1.5rem;
-      h3{
+      h3 {
         font-size: 1.5rem;
       }
-      p{
+      p {
         margin-bottom: 0;
       }
     }
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
   }
-  
 }
-
 
 @media screen and (max-width: 450px) {
   .project-nav {
-    .nav-col{
+    .nav-col {
       width: 4rem;
     }
   }
 }
 
 @media screen and (max-width: 320px) {
-  .project-content{
-    .content-col{
+  .project-content {
+    .content-col {
       width: 8rem;
     }
-    h2{
+    h2 {
       font-size: 1.2rem;
     }
   }

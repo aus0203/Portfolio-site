@@ -1,6 +1,7 @@
 @import "main";
 
 body {
+  background-color: map-get($color, universal);
   color: map-get($color, dark);
 }
 

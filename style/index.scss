@@ -392,15 +392,9 @@ a {
 }
 
 @media screen and (max-width: 450px) {
-  .section1 {
-    .hero-line {
-      .divide {
-        width: 100%;
-      }
-      .subtitle {
-        width: 100%;
-      }
-    }
+  
+  .heroline{
+    width: 60vw;
   }
 
   .project-strip {

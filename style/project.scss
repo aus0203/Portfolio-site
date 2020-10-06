@@ -25,9 +25,6 @@ a {
   color: map-get($color, universal);
 }
 
-p {
-  font-weight: 400;
-}
 
 /*Header*/
 
@@ -548,7 +545,7 @@ p {
   }
   .right-button .nav-button-col1{
     position: relative;
-    left: .5rem;
+    left: .6rem;
   }
 }
 

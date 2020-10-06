@@ -8,6 +8,10 @@ body {
 a {
   color: map-get($color, dark);
 }
+
+p {
+  line-height: 1.5rem;
+}
 /*Header*/
 
 .logo {
@@ -49,6 +53,21 @@ a {
   height: 80px;
   width: 4px;
   margin-top: -8rem;
+}
+
+/*Main section*/
+.section1,
+.section2,
+.section3,
+.section5 {
+  background-color: map-get($color, universal);
+}
+.section1 {
+  z-index: 2;
+}
+.section2,
+.section3 {
+  z-index: 20;
 }
 
 /*Section1*/
@@ -154,55 +173,40 @@ a {
   }
 }
 
-/*Scroll down Call of action*/
-.guideline {
-  background-color: map-get($color, dark);
+/*Main section*/
+
+.cv-section {
+  width: 75vw;
+  margin: 1.5rem auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-/*Section2*/
-
-.section2 {
-  background-color: map-get($color, universal);
-  z-index: 20;
-  .cv-section {
-    top: 2rem;
-    margin: 0 auto;
-    display: flex;
-    width: 70vw;
-    position: relative;
-  }
-  .cv-exp {
-    margin-bottom: 2rem;
-    .cv-exp-col1 {
-      width: 13rem;
+.cv-col-list {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  margin-bottom: 2rem;
+  .cv-list-img {
+    margin-right: 2rem;
+    img {
+      width: 4rem;
+      filter: saturate(0%);
+      transition: 0.5s ease;
+      &:hover {
+        filter: saturate(100%);
+        opacity: 1;
+      }
     }
   }
-}
-
-/*Eep Edu*/
-.cv-exp-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-  .cv-exp-list-title {
-    width: 20rem;
-  }
-  .cv-exp-list-content {
-    margin-left: 2rem;
+  p {
+    font-size: 14px;
   }
 }
 
-/*Cap*/
-.cv-cap {
-  .cv-cap-col1 {
-    width: 13rem;
-  }
-  .cv-cap-col2 {
-    width: 20rem;
-  }
-  .cv-cap-col3 {
-    margin-left: 2rem;
-  }
+.dark-logo {
+  opacity: 0.5;
 }
 
 /*Contact section*/
@@ -221,6 +225,21 @@ a {
 }
 
 /*Responsive*/
+
+@media screen and (max-width: 1280px){
+
+  .cv-col-list {
+    width: 17rem;
+    margin-bottom: 2rem;
+    .cv-list-img {
+      margin-right:1rem;
+      img {
+        width: 3rem;
+      }
+    }
+  }
+
+}
 
 @media screen and (max-width: 800px) {
   .hamburger-line {
@@ -259,59 +278,40 @@ a {
     }
   }
 
-  /*CV section*/
-  .section2 {
-    flex-wrap: wrap;
-    .cv-section {
-      width: 65vw;
-    }
-  }
-  .cv-section {
-    flex-wrap: wrap;
-  }
-
-  .cv-exp-col1,
-  .cv-cap-col1 {
-    margin-bottom: 1.5rem;
-  }
-  .cv-exp-list {
-    margin-bottom: 2rem;
-    .cv-exp-list-title {
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-    .cv-exp-list-content {
-      margin-left: 0;
-    }
-  }
-
-  .cv-cap {
-    line-height: 1.5rem;
-    .cv-cap-col2 {
-    
-      margin-bottom: 2rem;
-    }
-    .cv-cap-col3 {
-      
-      margin-left: 0;
-    }
-  }
-
   /*Intro background*/
 
-  .intro-background{
+  .intro-background {
     display: none;
   }
-  /*Contact Section*/
- 
+
+
+  /*Main CV Section*/
+
+  .cv-section {
+    width: 60vw;
+    flex-direction: column;
+  }
+
 }
 
 
-@media screen and (max-width: 375px) {
-  
-  .cv-exp-list{
-    .cv-exp-list-title{
-      width: 100%;
+@media screen and (max-width: 450px) {
+
+  .cv-col-list {
+    width: 15rem;
+    margin-bottom: 2rem;
+    .cv-list-img {
+      margin-right:1rem;
+      img {
+        width: 3rem;
+        filter: saturate(0%);
+        transition: 0.5s ease;
+      }
     }
-  } 
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.5rem;
+  }
 }

@@ -36,7 +36,7 @@ h4 {
 
 p {
   font-weight: 300;
-  line-height: 2rem;
+  line-height: 1.8rem;
   font-size: 1rem;
 }
 
@@ -298,7 +298,6 @@ li {
 .contact-line .title {
   font-family: "Gordita", sans-serif;
   font-size: 3rem;
-  letter-spacing: 0;
   font-weight: 500;
   line-height: 72px;
 }
@@ -306,7 +305,6 @@ li {
 .contact-line .subtitle {
   font-family: "Gordita", sans-serif;
   font-size: 1.5rem;
-  letter-spacing: 1px;
   line-height: 35px;
   margin-top: 1rem;
 }
@@ -457,6 +455,9 @@ li {
     background: #58bfd3;
   }
   /*Responsive header*/
+  .header {
+    padding-bottom: .5rem;
+  }
   .header .logo {
     width: 2.5rem;
   }
@@ -633,10 +634,6 @@ h3 {
 
 a {
   color: #e0e0e0;
-}
-
-p {
-  font-weight: 400;
 }
 
 /*Header*/
@@ -1294,7 +1291,7 @@ p {
   }
   .right-button .nav-button-col1 {
     position: relative;
-    left: .5rem;
+    left: .6rem;
   }
 }
 

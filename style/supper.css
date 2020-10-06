@@ -457,6 +457,9 @@ li {
     background: #58bfd3;
   }
   /*Responsive header*/
+  .header {
+    padding-bottom: .5rem;
+  }
   .header .logo {
     width: 2.5rem;
   }
@@ -1294,7 +1297,7 @@ p {
   }
   .right-button .nav-button-col1 {
     position: relative;
-    left: .5rem;
+    left: .6rem;
   }
 }
 

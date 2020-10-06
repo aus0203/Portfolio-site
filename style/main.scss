@@ -44,7 +44,7 @@ h4 {
 
 p {
   font-weight: 300;
-  line-height: 2rem;
+  line-height: 1.8rem;
   font-size: 1rem;
 }
 
@@ -244,14 +244,12 @@ li {
   .title {
     font-family: "Gordita", sans-serif;
     font-size: 3rem;
-    letter-spacing: 0;
     font-weight: 500;
     line-height: 72px;
   }
   .subtitle {
     font-family: "Gordita", sans-serif;
     font-size: 1.5rem;
-    letter-spacing: 1px;
     line-height: 35px;
     margin-top: 1rem;
   }
@@ -346,13 +344,14 @@ li {
   }
 }
 
-@media screen and (max-width: 800px) {
-  body {
-    overflow-x: hidden;
-  }
+@media screen and (max-width: 1280px){
 
   h1{
     font-size: 2.5rem;
+  }
+
+  h3{
+    font-size: 1.2rem;
   }
 
   h4{
@@ -363,6 +362,14 @@ li {
     font-size: 14px;
   }
 
+}
+
+
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
   .cursor {
     display: none;
   }
@@ -385,6 +392,7 @@ li {
 
   /*Responsive header*/
   .header {
+    padding-bottom: .5rem;
     .logo {
       width: 2.5rem;
     }

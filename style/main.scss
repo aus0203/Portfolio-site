@@ -546,6 +546,7 @@ li {
 }
 
 @media screen and (max-width: 450px) {
+  /*Gloabal style*/
   h1 {
     font-size: 2rem;
   }
@@ -559,17 +560,18 @@ li {
     line-height: 1.5rem;
   }
 
-  .section1 {
-    .hero-line {
-      .divide {
-        width: 100%;
-      }
-      .subtitle {
-        width: 100%;
-      }
+  /*Header*/
+  .header{
+    padding-right: 4rem;
+    .logo {
+      width: 2rem;
     }
   }
+  
+  /*Main section*/
+  
 
+  /*Footer*/
   .contact-line {
     top: 4rem;
     .title {

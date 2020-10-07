@@ -1260,7 +1260,7 @@ a {
   }
   .right-button .nav-button-col1 {
     position: relative;
-    left: 8px;
+    left: 7px;
   }
   /*Main section*/
   /*Intro section*/
@@ -1332,6 +1332,10 @@ a {
   /*Project nav*/
   .project-nav .nav-col {
     width: 3.5rem;
+  }
+  .right-button .nav-button-col1 {
+    position: relative;
+    left: 9px;
   }
 }
 

@@ -25,7 +25,6 @@ a {
   color: map-get($color, universal);
 }
 
-
 /*Header*/
 
 .logo-g {
@@ -158,48 +157,13 @@ a {
   transition: 0.5s ease;
 }
 
+/*Scroll Icon*/
 .scrollicon {
-  width: 36px;
-  height: 60px;
-  border:3px solid map-get($color, dark);
-  border-radius: 25px;
-  margin-bottom: 3rem;
-  transition: 1s ease;
+  border: 3px solid map-get($color, dark);
 }
 
 .scrollicon:before {
-  content: "";
-  margin: 0 auto;
-  position: relative;
-  top: 10px;
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
   background-color: map-get($color, dark);
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-name: scroll;
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-}
-
-.scrollicon:hover {
-  margin-bottom: 2rem;
 }
 
 /*Project Intro*/
@@ -359,6 +323,7 @@ a {
   align-items: center;
   padding: 2rem 0;
   .video-title {
+    width: 70vw;
     padding: 2rem 0;
     text-align: center;
   }
@@ -409,7 +374,7 @@ a {
 
 .download-report {
   width: 75vw;
-  margin: 0 auto;
+  margin: 1.5rem auto;
   a {
     display: flex;
     align-items: flex-end;
@@ -445,7 +410,6 @@ a {
   width: 75vw;
 }
 
-
 /*Reponsive*/
 
 @media screen and (max-width: 800px) {
@@ -461,12 +425,31 @@ a {
 
   /*Header*/
   .hamburger-line {
+    background-color: map-get($color, dark);
+  }
+
+  .hamburger-line-scroll {
     background-color: map-get($color, universal);
   }
+
   .nav-link {
     background-color: map-get($color, dark);
   }
 
+  .menu {
+    color: map-get($color, universal);
+  }
+
+  /*Project nav*/
+  .project-nav {
+    .nav-col {
+      width: 4rem;
+    }
+  }
+  .right-button .nav-button-col1 {
+    position: relative;
+    left: 7px;
+  }
   /*Main section*/
   /*Intro section*/
   .project-brief {
@@ -481,7 +464,7 @@ a {
     }
   }
   .project-intro {
-    margin-top: 2rem;
+    margin: 2rem 0 3rem;
   }
   /*Main content*/
   /*Text section*/
@@ -538,14 +521,11 @@ a {
 }
 
 @media screen and (max-width: 450px) {
+  /*Project nav*/
   .project-nav {
     .nav-col {
-      width: 4rem;
+      width: 3.5rem;
     }
-  }
-  .right-button .nav-button-col1{
-    position: relative;
-    left: .6rem;
   }
 }
 

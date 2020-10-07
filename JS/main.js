@@ -8,6 +8,7 @@ const hamburgerLine2 = document.querySelector(".hamburger-line2");
 const navLinks = document.querySelector('.nav-link');
 const anchors = document.querySelectorAll(".anchor");
 const anchorsProject = document.querySelectorAll(".anchor-project");
+const scrollIcon = document.querySelector(".scrollicon")
 const front = document.querySelectorAll(".front");
 const back = document.querySelectorAll(".back");
 const farBack = document.querySelectorAll(".farback");

@@ -136,6 +136,27 @@ a {
   z-index: 5;
 }
 
+.cover-pic {
+  width: 0.01px;
+  height: 400px;
+  background-color: map-get($color, universal);
+  transform-origin: center left;
+  margin: 0 auto;
+  transition: 2s ease;
+  animation-name: dark;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dark {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(300px);
+  }
+}
 
 /*Scroll down Call of action*/
 
@@ -190,6 +211,20 @@ a {
 }
 .photo:hover > a > .overlay {
   opacity: 1;
+}
+
+/*Scroll Icon*/
+
+.scrollicon {
+  position: absolute;
+  left: 50%;
+  bottom: -2%;
+  border: 3px solid map-get($color, universal);
+  z-index: 5;
+}
+
+.scrollicon:before {
+  background-color: map-get($color, universal);
 }
 
 /*Project section*/
@@ -294,12 +329,13 @@ a {
     height: 100vh;
   }
 
-  .section1, .section5{
+  .section1,
+  .section5 {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   /*Landing section*/
 
   .line-star {
@@ -368,11 +404,10 @@ a {
 }
 
 @media screen and (max-width: 450px) {
-
-  .heroline{
+  .heroline {
     width: 60vw;
   }
-  .project-strip1{
+  .project-strip1 {
     margin-top: 2rem;
   }
   .project-strip2 {

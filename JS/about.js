@@ -15,6 +15,7 @@ if(windowWidth > 800){
   
   
       if (destination.index === 1) {
+        scrollIcon.style.opacity = 0;
         backIntro.forEach((x) => {
           x.style.marginTop = 100 + "rem";
         });
@@ -25,6 +26,7 @@ if(windowWidth > 800){
           x.style.marginTop = 300 + "rem";
         });
       } else {
+        scrollIcon.style.opacity = 1;
         backIntro.forEach((x) => {
           x.style.marginTop = 0;
         });

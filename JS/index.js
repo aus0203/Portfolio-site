@@ -32,6 +32,7 @@ if (windowWidth > 800) {
 
       /*Project section background*/
       if (destination.index >= 1 && destination.index <= 3) {
+        scrollIcon.style.opacity = 0;
         sectionObjectBack.forEach((x) => {
           x.style.marginTop = 0;
         });
@@ -43,6 +44,7 @@ if (windowWidth > 800) {
         });
         // heroLine.style.top = 1300 + "px";
       } else {
+        scrollIcon.style.opacity = 1;
         sectionObjectBack.forEach((x) => {
           x.style.marginTop = 100 + "rem";
         });
@@ -97,3 +99,4 @@ if (windowWidth > 800) {
 
 }
 
+/*Scroll icon*/

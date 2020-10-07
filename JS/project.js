@@ -4,11 +4,13 @@ const line = document.querySelectorAll(".line");
 const navText = document.querySelectorAll(".nav-text");
 const topScreen = document.querySelector(".top-screen");
 const projectNav = document.querySelector(".project-nav");
-const scrollIcon = document.querySelector(".scrollicon");
 const menu = document.querySelectorAll(".menu");
 const elevaSec = document.querySelector(".eleva-sec");
 const videoStrip = document.querySelector(".video-strip");
-
+const windowMedia = window.matchMedia('(min-width: 800px)');
+/*Touch media responsive*/
+const touchMedia = window.matchMedia('(max-width:800px)')
+const hamburgurLine = document.querySelectorAll(".hamburger-line")
 
 /*Project topscreen*/
 
@@ -19,9 +21,16 @@ function onScroll(event) {
     logoG.forEach(x => {
       x.classList.add("log-g-scroll");
     });
-    menu.forEach(x => {
-      x.style.color = "#e0e0e0";
-    });
+    if(windowMedia.matches){
+      menu.forEach(x => {
+        x.style.color = "#e0e0e0";
+      });
+    };
+    if(touchMedia.matches){
+      hamburgurLine.forEach(x=>{
+        x.classList.add('hamburger-line-scroll');
+      })
+    }
     if (window.pageYOffset > 100) {
       scrollIcon.style.opacity = 0;
     };
@@ -30,9 +39,16 @@ function onScroll(event) {
     logoG.forEach(x => {
       x.classList.remove("log-g-scroll");
     });
-    menu.forEach(x => {
-      x.style.color = "#0a0a0a";
-    });
+    if(windowMedia.matches){
+      menu.forEach(x => {
+        x.style.color = "#0a0a0a";
+      });
+    };
+    if(touchMedia.matches){
+      hamburgurLine.forEach(x=>{
+        x.classList.remove('hamburger-line-scroll');
+      })
+    }
     scrollIcon.style.opacity = 1;
   }
 };

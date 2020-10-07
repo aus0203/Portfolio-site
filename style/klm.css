@@ -36,7 +36,7 @@ h4 {
 
 p {
   font-weight: 300;
-  line-height: 2rem;
+  line-height: 1.8rem;
   font-size: 1rem;
 }
 
@@ -113,7 +113,7 @@ li {
       -ms-flex-align: end;
           align-items: flex-end;
   z-index: 999;
-  padding: 1rem 5rem 0 1rem;
+  padding: 1rem 5rem 0.5rem 1rem;
   background-color: transparent;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -144,7 +144,7 @@ li {
   width: 0.3rem;
   height: 0.3rem;
   border-radius: 50%;
-  margin: 0 auto .3rem;
+  margin: 0 auto 0.3rem;
 }
 
 /*Side-bar*/
@@ -242,42 +242,79 @@ li {
   transition: 0.3s ease;
 }
 
-/*Scroll down Call of action*/
-.call-of-action {
-  display: inline-block;
-  position: absolute;
-  z-index: 900;
-  margin-left: calc(50% - 62px);
-  margin-top: 8%;
+/*Scroll Icon*/
+.scrollicon {
+  width: 32px;
+  height: 54px;
+  border: 3px solid #0a0a0a;
+  border-radius: 25px;
+  margin-bottom: 3rem;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
 
-.call-of-action .scrollbutton {
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
+.scrollicon:before {
+  content: "";
+  margin: 0 auto;
+  position: relative;
+  top: 6px;
+  display: block;
+  width: 3px;
+  height: 12px;
+  border-radius: 25%;
+  background-color: #0a0a0a;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
 }
 
-.call-of-action .scrollbutton p {
-  font-weight: 400;
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    height: 22px;
+  }
+  75% {
+    top: 20px;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 0;
+  }
 }
 
-.call-of-action .guideline {
-  width: 1px;
-  height: 30rem;
-  margin: auto;
-  margin-top: 1rem;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    height: 22px;
+  }
+  75% {
+    top: 20px;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 0;
+  }
 }
 
-.scrollbutton:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.scrollbutton:hover + .guideline {
-  margin-top: 2.5rem;
+.scrollicon:hover {
+  margin-bottom: 2rem;
 }
 
 /*Contact Section*/
@@ -298,7 +335,6 @@ li {
 .contact-line .title {
   font-family: "Gordita", sans-serif;
   font-size: 3rem;
-  letter-spacing: 0;
   font-weight: 500;
   line-height: 72px;
 }
@@ -306,7 +342,6 @@ li {
 .contact-line .subtitle {
   font-family: "Gordita", sans-serif;
   font-size: 1.5rem;
-  letter-spacing: 1px;
   line-height: 35px;
   margin-top: 1rem;
 }
@@ -427,18 +462,24 @@ li {
   margin-bottom: -300rem;
 }
 
-@media screen and (max-width: 800px) {
-  body {
-    overflow-x: hidden;
-  }
+@media screen and (max-width: 1280px) {
   h1 {
     font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
   }
   h4 {
     font-size: 1rem;
   }
   p {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
   }
   .cursor {
     display: none;
@@ -458,7 +499,7 @@ li {
   }
   /*Responsive header*/
   .header {
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .header .logo {
     width: 2.5rem;
@@ -533,7 +574,7 @@ li {
     height: 1px;
     border-radius: 0;
     margin-left: -2.5rem;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
   .nav-link-scroll {
     right: 0;
@@ -553,8 +594,50 @@ li {
   .handler {
     display: none;
   }
-  .call-of-action {
-    display: none;
+  /*Scroll Icon*/
+  .scrollicon {
+    width: 24px;
+    height: 48px;
+  }
+  .scrollicon:before {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #0a0a0a;
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+            animation-name: scroll;
+  }
+  @-webkit-keyframes scroll {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(22px);
+              transform: translateY(22px);
+      opacity: 0;
+    }
+  }
+  @keyframes scroll {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(22px);
+              transform: translateY(22px);
+      opacity: 0;
+    }
   }
   /*Contect section*/
   .page-cta {
@@ -636,10 +719,6 @@ h3 {
 
 a {
   color: #e0e0e0;
-}
-
-p {
-  font-weight: 400;
 }
 
 /*Header*/
@@ -804,70 +883,13 @@ p {
   transition: 0.5s ease;
 }
 
+/*Scroll Icon*/
 .scrollicon {
-  width: 36px;
-  height: 60px;
   border: 3px solid #0a0a0a;
-  border-radius: 25px;
-  margin-bottom: 3rem;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
 }
 
 .scrollicon:before {
-  content: "";
-  margin: 0 auto;
-  position: relative;
-  top: 10px;
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
   background-color: #0a0a0a;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: scroll;
-          animation-name: scroll;
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-  }
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-  }
-}
-
-.scrollicon:hover {
-  margin-bottom: 2rem;
 }
 
 /*Project Intro*/
@@ -1099,6 +1121,7 @@ p {
 }
 
 .video-strip .video-title {
+  width: 70vw;
   padding: 2rem 0;
   text-align: center;
 }
@@ -1158,7 +1181,7 @@ p {
 
 .download-report {
   width: 75vw;
-  margin: 0 auto;
+  margin: 1.5rem auto;
 }
 
 .download-report a {
@@ -1220,10 +1243,24 @@ p {
   }
   /*Header*/
   .hamburger-line {
+    background-color: #0a0a0a;
+  }
+  .hamburger-line-scroll {
     background-color: #e0e0e0;
   }
   .nav-link {
     background-color: #0a0a0a;
+  }
+  .menu {
+    color: #e0e0e0;
+  }
+  /*Project nav*/
+  .project-nav .nav-col {
+    width: 4rem;
+  }
+  .right-button .nav-button-col1 {
+    position: relative;
+    left: 8px;
   }
   /*Main section*/
   /*Intro section*/
@@ -1240,7 +1277,7 @@ p {
     width: 10rem;
   }
   .project-intro {
-    margin-top: 2rem;
+    margin: 2rem 0 3rem;
   }
   /*Main content*/
   /*Text section*/
@@ -1292,12 +1329,9 @@ p {
 }
 
 @media screen and (max-width: 450px) {
+  /*Project nav*/
   .project-nav .nav-col {
-    width: 4rem;
-  }
-  .right-button .nav-button-col1 {
-    position: relative;
-    left: .6rem;
+    width: 3.5rem;
   }
 }
 

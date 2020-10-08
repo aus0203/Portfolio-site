@@ -8,11 +8,12 @@ const farFrontIntro = document.querySelectorAll(".farfrontintro");
 if(windowMedia.matches){
   new fullpage("#fullpage", {
     scrollingSpeed: 1250,
-    
+
+    anchors: ['aboutpage', 'cv', 'footer'],   
+
     onLeave: function (origin, destination, direction) {
   
       handler.style.marginTop = -8 + destination.index * 8 + "rem";
-  
   
       if (destination.index === 1) {
         scrollIcon.style.opacity = 0;

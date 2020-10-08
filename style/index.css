@@ -572,7 +572,7 @@ li {
   }
   /*Responsive header*/
   .header {
-    padding: 0.5rem 0 0.5rem 1rem;
+    padding: 0.5rem 4.5rem 0.5rem 1rem;
   }
   .header .logo {
     width: 2.5rem;
@@ -1153,8 +1153,13 @@ a {
     padding-bottom: 2rem;
   }
   /*Landing section*/
-  .line-star {
-    display: none;
+  .heroline {
+    width: 60vw;
+  }
+  .heroline h1 {
+    font-size: 2.3rem;
+    width: 100%;
+    margin-left: 0rem;
   }
   /*Project Section*/
   .project-section {
@@ -1216,20 +1221,12 @@ a {
     display: none;
   }
   .layer {
-    position: fixed;
-    top: -800px;
+    display: none;
   }
 }
 
 @media screen and (max-width: 450px) {
-  /*Heroline*/
-  .heroline {
-    width: 60vw;
-  }
-  .heroline h1 {
-    width: 100%;
-    margin-left: 0rem;
-  }
+  /*Landing section*/
   .sphere-cover {
     width: 20rem;
     height: 20rem;
@@ -1240,9 +1237,6 @@ a {
     font-size: 1.5rem;
     line-height: 2.2rem;
     margin: 0.5rem 0;
-  }
-  .layer {
-    display: none;
   }
   /*Contact Section*/
   .footerBackground {

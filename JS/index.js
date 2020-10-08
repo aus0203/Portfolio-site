@@ -13,6 +13,8 @@ if (windowMedia.matches) {
   new fullpage("#fullpage", {
     scrollingSpeed: 1250,
 
+    anchors: ['homepage', 'initial', 'section3', 'section4'],
+
     onLeave: function (origin, destination, direction) {
       var loadedSection = this;
 

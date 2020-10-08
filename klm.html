@@ -11,6 +11,25 @@
 
 <body onscroll="onScroll(event)">
     <!--Gloabl html-->
+    <!--loading effect-->
+    <div class="loading-wrapper">
+        <svg class="loading-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.21 350">
+            <title>Main logo</title>
+            <path
+                d="M-692.55,294.24s143.19-80.34,168.72,22.15l41.2,165.35s20.23,111.59,77.76,93c-140.41,45.48-159.44-66.5-159.44-66.5l-41.2-165.35C-620.49,282.71-692.55,294.24-692.55,294.24Z"
+                transform="translate(700.53 -256.3)" fill="#0a0a0a" stroke="#0a0a0a" stroke-linejoin="round"
+                stroke-width="15.97" />
+            <path
+                d="M-501.24,294.24s143.19-80.34,168.72,22.15l41.2,165.35s20.23,111.59,77.76,93C-354,620.17-373,508.19-373,508.19l-41.2-165.35C-429.18,282.71-501.24,294.24-501.24,294.24Z"
+                transform="translate(700.53 -256.3)" fill="#0a0a0a" stroke="#0a0a0a" stroke-linejoin="round"
+                stroke-width="15.97" />
+            <circle class="logo-circle" cx="490.36" cy="71.43" r="63.45" fill="#0a0a0a" stroke="#0a0a0a"
+                stroke-linejoin="round" stroke-width="15.97" />
+        </svg>
+        <div class="loading-sphere">
+
+        </div>
+    </div>
     <div class="cursor"></div>
     <!--Header-->
     <div class="header">
@@ -77,14 +96,14 @@
     <!--Main content section-->
     <!--Top Screen-->
     <div class="top-screen">
-        <a class="anchor" href="#initial">
+        <a class="anchor" href="#project_brief">
             <div class="scrollicon"></div>
         </a>
     </div>
 
     <!--Project intro-->
 
-    <div id="initial" class="project-brief">
+    <div id="project_brief" class="project-brief">
         <div class="project-content">
             <div class="content-col">
                 <div class="content-row">
@@ -211,9 +230,11 @@
                 <p>Improve brand visibility</p>
             </div>
             <div class="thumbnail"><img src="./img/Project/KLM/op2@300x.png" alt="op1">
-                <p>Create seamless connectivity in terms of grounds services</p></div>
+                <p>Create seamless connectivity in terms of grounds services</p>
+            </div>
             <div class="thumbnail"><img src="./img/Project/KLM/op3@300x.png" alt="op1">
-                <p>Attract more Asian tourists to NL & improve customer intimacy</p></div>
+                <p>Attract more Asian tourists to NL & improve customer intimacy</p>
+            </div>
             <div class="thumbnail"><img src="./img/Project/KLM/op4@300x.png" alt="op1">
                 <p>Emphasize on the heritage and USP’s of KLM</p>
             </div>
@@ -231,10 +252,18 @@
                     experiences and services. </h2>
             </div>
             <div class="thumbnail-sec">
-                <div class="thumbnail"><img src="./img/Project/KLM/rd1@300x.png" alt="rd1"><p>2022 <br>Implement "KLM experience" in Asia</p></div>
-                <div class="thumbnail"><img src="./img/Project/KLM/rd2@300x.png" alt="rd2"><p>2022 <br>Introduce ‘First aid’ kits</p></div>
-                <div class="thumbnail"><img src="./img/Project/KLM/rd3@300x.png" alt="rd3"><p>2025 <br>Partnerships for seamless multi-modal transportation</p></div>
-                <div class="thumbnail"><img src="./img/Project/KLM/rd4@300x.png" alt="rd4"><p>2030 <br>Duplicate model golbally</p></div>
+                <div class="thumbnail"><img src="./img/Project/KLM/rd1@300x.png" alt="rd1">
+                    <p>2022 <br>Implement "KLM experience" in Asia</p>
+                </div>
+                <div class="thumbnail"><img src="./img/Project/KLM/rd2@300x.png" alt="rd2">
+                    <p>2022 <br>Introduce ‘First aid’ kits</p>
+                </div>
+                <div class="thumbnail"><img src="./img/Project/KLM/rd3@300x.png" alt="rd3">
+                    <p>2025 <br>Partnerships for seamless multi-modal transportation</p>
+                </div>
+                <div class="thumbnail"><img src="./img/Project/KLM/rd4@300x.png" alt="rd4">
+                    <p>2030 <br>Duplicate model golbally</p>
+                </div>
             </div>
         </div>
 
@@ -318,9 +347,10 @@
         </p>
     </div>
 
+    <!--Javascripts-->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="./JS/main.js"></script>
     <script src="./JS/project.js"></script>
-    <script src="./JS/klm.js"></script>
 </body>
 
 </html>

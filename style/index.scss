@@ -129,24 +129,22 @@ a {
   }
 }
 
-
 /*Cover-pic*/
 
-.heroline{
+.heroline {
   position: relative;
   z-index: 5;
   margin: 0 auto;
   width: 70vw;
-  h1{
-    width:670px;
+  h1 {
+    width: 670px;
     margin-left: 3rem;
   }
 }
 
-
-.sphere-cover{
+.sphere-cover {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -158,9 +156,6 @@ a {
   mix-blend-mode: difference;
   z-index: 6;
 }
-
-
-
 
 /*Scroll down Call of action*/
 /*Scroll Icon*/
@@ -225,7 +220,6 @@ a {
 .photo:hover > a > .overlay {
   opacity: 1;
 }
-
 
 /*Project section*/
 
@@ -297,9 +291,9 @@ a {
 
 /*Responsive*/
 
-@media screen and (max-width:1280px){
-  .sphere-cover{
-    width:18rem;
+@media screen and (max-width: 1280px) {
+  .sphere-cover {
+    width: 18rem;
     height: 18rem;
   }
 }
@@ -323,16 +317,21 @@ a {
     justify-content: center;
     align-items: center;
   }
-  .section2{
+  .section2 {
     padding-top: 5rem;
   }
-  .section4{
+  .section4 {
     padding-bottom: 2rem;
   }
   /*Landing section*/
 
-  .line-star {
-    display: none;
+  .heroline {
+    width: 60vw;
+    h1 {
+      font-size: 2.3rem;
+      width: 100%;
+      margin-left: 0rem;
+    }
   }
 
   /*Project Section*/
@@ -383,7 +382,7 @@ a {
     margin: 0.3rem 0;
   }
 
-  .klm-strip{
+  .klm-strip {
     margin-bottom: 8rem;
   }
 
@@ -394,22 +393,14 @@ a {
   }
 
   .layer {
-    position: fixed;
-    top: -800px;
+    display: none;
   }
 }
 
 @media screen and (max-width: 450px) {
-  /*Heroline*/
-  .heroline {
-    width: 60vw;
-    h1{
-      width:100%;
-      margin-left: 0rem;
-    }
-  }
-  .sphere-cover{
-    width:20rem;
+  /*Landing section*/
+  .sphere-cover {
+    width: 20rem;
     height: 20rem;
   }
 
@@ -420,9 +411,7 @@ a {
     line-height: 2.2rem;
     margin: 0.5rem 0;
   }
-  .layer {
-    display: none;
-  }
+  
 
   /*Contact Section*/
 

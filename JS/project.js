@@ -7,12 +7,7 @@ const projectNav = document.querySelector(".project-nav");
 const menu = document.querySelectorAll(".menu");
 const elevaSec = document.querySelector(".eleva-sec");
 const videoStrip = document.querySelector(".video-strip");
-const windowMedia = window.matchMedia('(min-width: 800px)');
-/*Touch media responsive*/
-const touchMedia = window.matchMedia('(max-width:800px)')
-const hamburgurLine = document.querySelectorAll(".hamburger-line")
 
-/*Project topscreen*/
 
 
 function onScroll(event) {

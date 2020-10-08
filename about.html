@@ -12,6 +12,26 @@
 
 <body>
     <!--Gloabl html-->
+     <!--loading effect-->
+     <div class="loading-wrapper">
+        <svg class="loading-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.21 350">
+            <title>Main logo</title>
+            <path
+                d="M-692.55,294.24s143.19-80.34,168.72,22.15l41.2,165.35s20.23,111.59,77.76,93c-140.41,45.48-159.44-66.5-159.44-66.5l-41.2-165.35C-620.49,282.71-692.55,294.24-692.55,294.24Z"
+                transform="translate(700.53 -256.3)" fill="#0a0a0a" stroke="#0a0a0a" stroke-linejoin="round"
+                stroke-width="15.97" />
+            <path
+                d="M-501.24,294.24s143.19-80.34,168.72,22.15l41.2,165.35s20.23,111.59,77.76,93C-354,620.17-373,508.19-373,508.19l-41.2-165.35C-429.18,282.71-501.24,294.24-501.24,294.24Z"
+                transform="translate(700.53 -256.3)" fill="#0a0a0a" stroke="#0a0a0a" stroke-linejoin="round"
+                stroke-width="15.97" />
+            <circle class="logo-circle" cx="490.36" cy="71.43" r="63.45" fill="#0a0a0a" stroke="#0a0a0a"
+                stroke-linejoin="round" stroke-width="15.97" />
+        </svg>
+        <div class="loading-sphere">
+
+        </div>
+    </div>
+    
     <div class="cursor"></div>
 
     <!--Header-->
@@ -38,9 +58,9 @@
                 <div class="hamburger-line hamburger-line2"></div>
             </div>
             <ul class="nav-link">
-                <li><a class="anchor work-state" href="/index.html">Works</a></li>
+                <li><a onclick="shiftToIndex()" class="anchor menu work-state" href="#">Works</a></li>
                 <li>
-                    <a class="about-state" href="#">
+                    <a class="menu about-state" href="#">
                         <div class="current"></div>About
                     </a>
                 </li>
@@ -94,229 +114,234 @@
 
 
     <!--Main content section-->
-    <div id="fullpage">
-        <section class="section section1">
-            <div class="hero-line">
-                <div class="smalltitle">
-                    <h4>About me</h4>
-                    <div class="titleLine"></div>
+    <main data-barba="container" data-barba-namespace="home">
+
+        <div id="fullpage">
+            <section class="section section1">
+                <div class="hero-line">
+                    <div class="smalltitle">
+                        <h4>About me</h4>
+                        <div class="titleLine"></div>
+                    </div>
+                    <h1 class="title">
+                        Wei Lun Chen<h1>
+                            <p class="subtitle">I apply design and code as a boundless form of language which can help
+                                people communicate and connect with one another.</p>
                 </div>
-                <h1 class="title">
-                    Wei Lun Chen<h1>
-                        <p class="subtitle">I apply design and code as a boundless form of language which can help
-                            people communicate and connect with one another.</p>
-            </div>
-
-            <a class="anchor" href="#initial"><div class="scrollicon"></div></a>
-
-            <div class="intro-background">
-                <img class="intro-main" src="./img/About/Main.png" alt="">
-                <img class="intro-object backintro" data-speed="-3" src="./img/Single-object/single-ob1.png"
-                    alt="intro_Object">
-                <img class="intro-object backintro" data-speed="-2" src="./img/Single-object/single-ob1.png"
-                    alt="intro_Object">
-                <img class="intro-object backintro" data-speed="-1" src="./img/Single-object/single-ob4.png"
-                    alt="intro_Object">
-                <img class="intro-object frontintro" data-speed="1" src="./img/Single-object/single-ob2.png"
-                    alt="intro_Object">
-                <img class="intro-object frontintro" data-speed="1.2" src="./img/Single-object/single-ob4.png"
-                    alt="intro_Object">
-                <img class="intro-object farfrontintro" data-speed="1.5" src="./img/Single-object/single-ob3.png"
-                    alt="intro_Object">
-                <img class="intro-object farfrontintro" data-speed="2" src="./img/Single-object/single-ob6.png"
-                    alt="intro_Object">
-            </div>
-
-        </section>
-        <!--Main section-->
-        <!--Experience/Education section-->
-
-        <section id="initial" class="section section2">
-            <div class="cv-section">
-                <div class="cv-sec-col">
-                    <div class="cv-col-title">
-                        <div class="smalltitle">
-                            <h4>Experience</h4>
-                            <div class="titleLine"></div>
-                        </div>
-                    </div>
-                    <div class="cv-col-content">
-                        <div class="cv-col-list">
-                            <div class="cv-list-img">
-                                <img class="dark-logo" src="./img/About/WDF-logo.png" alt="">
-                            </div>
-
-                            <div class="cv-list-info">
-                                <h4>WeDesignFood</h4>
-                                <p>Amsterdam, Netherlands</p>
-                                <p>Graduation intern</p>
-                                <p>Sep. 2019 - Apr. 2020</p>
-                            </div>
-                        </div>
-                        <div class="cv-col-list">
-                            <div class="cv-list-img">
-                                <img src="./img/About/KLM-logo.png" alt="">
-                            </div>
-                            <div class="cv-list-info">
-                                <h4>KLM Royal Dutch Airlines</h4>
-                                <p>Amsterdam, Netherlands</p>
-                                <p>Service design intern</p>
-                                <p>Mar. 2019 - Aug. 2019</p>
-                            </div>
-                        </div>
-
-                        <div class="cv-col-list">
-                            <div class="cv-list-img">
-                                <img src="./img/About/DFI-logo.png" alt="">
-                            </div>
-                            <div class="cv-list-info">
-                                <h4>DFI-ITOX</h4>
-                                <p>Taipei, Taiwan</p>
-                                <p>Design & Marketing intern</p>
-                                <p>Sep. 2017 – Nov. 2017</p>
-                            </div>
-                        </div>
-
-                        <div class="cv-col-list">
-                            <div class="cv-list-img">
-                                <img src="./img/About/Moai-lofo.png" alt="">
-                            </div>
-                            <div class="cv-list-info">
-                                <h4>MOAI Electronics Corp</h4>
-                                <p>Taipei, Taiwan</p>
-                                <p>Product designer</p>
-                                <p>Dec. 2015 – Dec. 2016</p>
-                            </div>
-                        </div>
-                    </div>
+    
+                <a class="anchor" href="#initial"><div class="scrollicon"></div></a>
+    
+                <div class="intro-background">
+                    <img class="intro-main" src="./img/About/Main.png" alt="">
+                    <img class="intro-object backintro" data-speed="-3" src="./img/Single-object/single-ob1.png"
+                        alt="intro_Object">
+                    <img class="intro-object backintro" data-speed="-2" src="./img/Single-object/single-ob1.png"
+                        alt="intro_Object">
+                    <img class="intro-object backintro" data-speed="-1" src="./img/Single-object/single-ob4.png"
+                        alt="intro_Object">
+                    <img class="intro-object frontintro" data-speed="1" src="./img/Single-object/single-ob2.png"
+                        alt="intro_Object">
+                    <img class="intro-object frontintro" data-speed="1.2" src="./img/Single-object/single-ob4.png"
+                        alt="intro_Object">
+                    <img class="intro-object farfrontintro" data-speed="1.5" src="./img/Single-object/single-ob3.png"
+                        alt="intro_Object">
+                    <img class="intro-object farfrontintro" data-speed="2" src="./img/Single-object/single-ob6.png"
+                        alt="intro_Object">
                 </div>
-
-
-                <div class="cv-sec-col">
-                    <div class="cv-col-title">
-                        <div class="smalltitle">
-                            <h4>Education</h4>
-                            <div class="titleLine"></div>
+    
+            </section>
+            <!--Main section-->
+            <!--Experience/Education section-->
+    
+            <section id="initial" class="section section2">
+                <div class="cv-section">
+                    <div class="cv-sec-col">
+                        <div class="cv-col-title">
+                            <div class="smalltitle">
+                                <h4>Experience</h4>
+                                <div class="titleLine"></div>
+                            </div>
+                        </div>
+                        <div class="cv-col-content">
+                            <div class="cv-col-list">
+                                <div class="cv-list-img">
+                                    <img class="dark-logo" src="./img/About/WDF-logo.png" alt="">
+                                </div>
+    
+                                <div class="cv-list-info">
+                                    <h4>WeDesignFood</h4>
+                                    <p>Amsterdam, Netherlands</p>
+                                    <p>Graduation intern</p>
+                                    <p>Sep. 2019 - Apr. 2020</p>
+                                </div>
+                            </div>
+                            <div class="cv-col-list">
+                                <div class="cv-list-img">
+                                    <img src="./img/About/KLM-logo.png" alt="">
+                                </div>
+                                <div class="cv-list-info">
+                                    <h4>KLM Royal Dutch Airlines</h4>
+                                    <p>Amsterdam, Netherlands</p>
+                                    <p>Service design intern</p>
+                                    <p>Mar. 2019 - Aug. 2019</p>
+                                </div>
+                            </div>
+    
+                            <div class="cv-col-list">
+                                <div class="cv-list-img">
+                                    <img src="./img/About/DFI-logo.png" alt="">
+                                </div>
+                                <div class="cv-list-info">
+                                    <h4>DFI-ITOX</h4>
+                                    <p>Taipei, Taiwan</p>
+                                    <p>Design & Marketing intern</p>
+                                    <p>Sep. 2017 – Nov. 2017</p>
+                                </div>
+                            </div>
+    
+                            <div class="cv-col-list">
+                                <div class="cv-list-img">
+                                    <img src="./img/About/Moai-lofo.png" alt="">
+                                </div>
+                                <div class="cv-list-info">
+                                    <h4>MOAI Electronics Corp</h4>
+                                    <p>Taipei, Taiwan</p>
+                                    <p>Product designer</p>
+                                    <p>Dec. 2015 – Dec. 2016</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="cv-col-content">
-                        <div class="cv-col-list">
-                            <div class="cv-list-img">
-                                <img class="dark-logo" src="./img/About/TUD-logo.png" alt="">
-                            </div>
-
-                            <div class="cv-list-info">
-                                <h4>Delft University of Technology</h4>
-                                <p>Master of Science, Strategic Product Design</p>
-                                <p>Feb. 2018 - Apr. 2020</p>
+    
+    
+                    <div class="cv-sec-col">
+                        <div class="cv-col-title">
+                            <div class="smalltitle">
+                                <h4>Education</h4>
+                                <div class="titleLine"></div>
                             </div>
                         </div>
-                        <div class="cv-col-list">
-                            <div class="cv-list-img">
-                                <img class="dark-logo" src="./img/About/TUA-logo.png" alt="">
+                        <div class="cv-col-content">
+                            <div class="cv-col-list">
+                                <div class="cv-list-img">
+                                    <img class="dark-logo" src="./img/About/TUD-logo.png" alt="">
+                                </div>
+    
+                                <div class="cv-list-info">
+                                    <h4>Delft University of Technology</h4>
+                                    <p>Master of Science, Strategic Product Design</p>
+                                    <p>Feb. 2018 - Apr. 2020</p>
+                                </div>
                             </div>
-                            <div class="cv-list-info">
-                                <h4>National Taiwan University of Arts</h4>
-                                <p>Bachelor of Fine Arts, Crafts and Design</p>
-                                <p>Sep. 2010 - Jun. 2014</p>
+                            <div class="cv-col-list">
+                                <div class="cv-list-img">
+                                    <img class="dark-logo" src="./img/About/TUA-logo.png" alt="">
+                                </div>
+                                <div class="cv-list-info">
+                                    <h4>National Taiwan University of Arts</h4>
+                                    <p>Bachelor of Fine Arts, Crafts and Design</p>
+                                    <p>Sep. 2010 - Jun. 2014</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+    
+                    <div class="cv-sec-col">
+                        <div class="cv-col-title">
+                            <div class="smalltitle">
+                                <h4>Capabilities</h4>
+                                <div class="titleLine"></div>
+                            </div>
+                        </div>
+                        <div class="cv-col-content">
+                            <div class="cv-col-list">
+                                <div class="cv-list-info">
+                                    <p>Market/User research</p>
+                                    <p>Brand strategy</p>
+                                    <p>Strategy design</p>
+                                    <p>UX/UI Design</p>
+                                    <p>Visual communication</p>
+                                    <p>Front-end Development</p>
+                                </div>
+                            </div>
+                            <div class="cv-col-list">
+                                <div class="cv-list-info">
+                                    <p>Adobe Creative Suite</p>
+                                    <p>Sketch/Figma</p>
+                                    <p>Invision</p>
+                                    <p>HTML5/CSS3</p>
+                                    <p>Javascript/React.js</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
-
-                <div class="cv-sec-col">
-                    <div class="cv-col-title">
-                        <div class="smalltitle">
-                            <h4>Capabilities</h4>
-                            <div class="titleLine"></div>
-                        </div>
-                    </div>
-                    <div class="cv-col-content">
-                        <div class="cv-col-list">
-                            <div class="cv-list-info">
-                                <p>Market/User research</p>
-                                <p>Brand strategy</p>
-                                <p>Strategy design</p>
-                                <p>UX/UI Design</p>
-                                <p>Visual communication</p>
-                                <p>Front-end Development</p>
+    
+    
+            </section>
+    
+    
+            <!--Contact Section-->
+    
+            <section class="section section5">
+                <div id="contact-line" class="contact-line">
+                    <h1 class="title">
+                        Need more <br>
+                        information?<h1>
+                            <p class="subtitle">
+                                Let's get in touch.
+                            </p>
+                            <div class="page-cta">
+                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.83 8.96">
+                                    <title>Arrow</title>
+                                    <line y1="4.48" x2="96" y2="4.48" fill="none" stroke="#0a0a0a" stroke-miterlimit="10"
+                                        stroke-width="0.98" />
+                                    <rect x="92.35" y="21.33" width="6.33" height="6.33"
+                                        transform="translate(45.14 -80.39) rotate(45)" fill="#0a0a0a" />
+                                </svg>
+                                <a class="anchor" href="./index.html">
+                                    <p>Check my works</p>
+                                </a>
                             </div>
-                        </div>
-                        <div class="cv-col-list">
-                            <div class="cv-list-info">
-                                <p>Adobe Creative Suite</p>
-                                <p>Sketch/Figma</p>
-                                <p>Invision</p>
-                                <p>HTML5/CSS3</p>
-                                <p>Javascript/React.js</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="footer">
+                    <div class="footer-link">
+                        <ul>
+                            <li><a class="anchor" href="">
+                                    <p>Linkedin</p>
+                                </a></li>
+                            <li><a class="anchor" href="">
+                                    <p>Resume</p>
+                                </a></li>
+                            <li><a class="anchor" href="">
+                                    <p>Contact</p>
+                                </a></li>
+                        </ul>
                     </div>
+                    <hr class="footer-line">
+                    </hr>
+                    <p class="footer-claim">
+                        © 2020 created by Wei Lun Chen
+                    </p>
                 </div>
-
-            </div>
-
-
-        </section>
-
-
-        <!--Contact Section-->
-
-        <section class="section section5">
-            <div id="contact-line" class="contact-line">
-                <h1 class="title">
-                    Need more <br>
-                    information?<h1>
-                        <p class="subtitle">
-                            Let's get in touch.
-                        </p>
-                        <div class="page-cta">
-                            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.83 8.96">
-                                <title>Arrow</title>
-                                <line y1="4.48" x2="96" y2="4.48" fill="none" stroke="#0a0a0a" stroke-miterlimit="10"
-                                    stroke-width="0.98" />
-                                <rect x="92.35" y="21.33" width="6.33" height="6.33"
-                                    transform="translate(45.14 -80.39) rotate(45)" fill="#0a0a0a" />
-                            </svg>
-                            <a class="anchor" href="./index.html">
-                                <p>Check my works</p>
-                            </a>
-                        </div>
-            </div>
-            <div class="footer">
-                <div class="footer-link">
-                    <ul>
-                        <li><a class="anchor" href="">
-                                <p>Linkedin</p>
-                            </a></li>
-                        <li><a class="anchor" href="">
-                                <p>Resume</p>
-                            </a></li>
-                        <li><a class="anchor" href="">
-                                <p>Contact</p>
-                            </a></li>
-                    </ul>
+                <div class="footerBackground">
+                    <img class="footerBackgroundObject backfooterobject" data-speed="-5"
+                        src="./img/Single-object/single-ob2.png" alt="object">
+                    <img class="footerBackgroundObject backfooterobject" data-speed="-2"
+                        src="./img/Single-object/single-ob1.png" alt="object">
+                    <img class="footerBackgroundObject frontfooterobject" data-speed="1"
+                        src="./img/Single-object/single-ob4.png" alt="object">
+                    <img class="footerBackgroundObject farfrontfooterobject" data-speed="4"
+                        src="./img/Single-object/single-ob5.png" alt="object">
                 </div>
-                <hr class="footer-line">
-                </hr>
-                <p class="footer-claim">
-                    © 2020 created by Wei Lun Chen
-                </p>
-            </div>
-            <div class="footerBackground">
-                <img class="footerBackgroundObject backfooterobject" data-speed="-5"
-                    src="./img/Single-object/single-ob2.png" alt="object">
-                <img class="footerBackgroundObject backfooterobject" data-speed="-2"
-                    src="./img/Single-object/single-ob1.png" alt="object">
-                <img class="footerBackgroundObject frontfooterobject" data-speed="1"
-                    src="./img/Single-object/single-ob4.png" alt="object">
-                <img class="footerBackgroundObject farfrontfooterobject" data-speed="4"
-                    src="./img/Single-object/single-ob5.png" alt="object">
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
+    </main>
+    
 
     <!--Javascripts-->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
     <script src="./JS/main.js"></script>
     <script src="./JS/about.js"></script>

@@ -129,38 +129,51 @@ a {
   }
 }
 
-.heroline {
+
+/*Cover-pic*/
+
+.heroline{
   position: relative;
-  width: 75vw;
+  z-index: 5;
   margin: 0 auto;
+  width: 70vw;
+  h1{
+    width:670px;
+    margin-left: 3rem;
+  }
+}
+
+
+.sphere-cover{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background-color: map-get($color, universal);
+  mix-blend-mode: difference;
+  z-index: 6;
+}
+
+
+
+
+/*Scroll down Call of action*/
+/*Scroll Icon*/
+
+.scrollicon {
+  position: absolute;
+  left: 50%;
+  bottom: -2%;
+  border: 2px solid map-get($color, universal);
   z-index: 5;
 }
 
-.cover-pic {
-  width: 0.01px;
-  height: 400px;
-  background-color: map-get($color, universal);
-  transform-origin: center left;
-  margin: 0 auto;
-  transition: 2s ease;
-  animation-name: dark;
-  animation-delay: 2s;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes dark {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(300px);
-  }
-}
-
-/*Scroll down Call of action*/
-
-.guideline {
+.scrollicon:before {
   background-color: map-get($color, universal);
 }
 
@@ -213,19 +226,6 @@ a {
   opacity: 1;
 }
 
-/*Scroll Icon*/
-
-.scrollicon {
-  position: absolute;
-  left: 50%;
-  bottom: -2%;
-  border: 3px solid map-get($color, universal);
-  z-index: 5;
-}
-
-.scrollicon:before {
-  background-color: map-get($color, universal);
-}
 
 /*Project section*/
 
@@ -257,24 +257,6 @@ a {
     height: inherit;
     overflow: hidden;
     position: relative;
-  }
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: 0.4s ease;
-  p {
-    font-size: 1.5rem;
-    font-weight: 400;
   }
 }
 
@@ -315,7 +297,15 @@ a {
 
 /*Responsive*/
 
+@media screen and (max-width:1280px){
+  .sphere-cover{
+    width:18rem;
+    height: 18rem;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  /*Header*/
   .hamburger-line {
     background-color: map-get($color, universal);
   }
@@ -410,9 +400,20 @@ a {
 }
 
 @media screen and (max-width: 450px) {
+  /*Heroline*/
   .heroline {
     width: 60vw;
+    h1{
+      width:100%;
+      margin-left: 0rem;
+    }
   }
+  .sphere-cover{
+    width:20rem;
+    height: 20rem;
+  }
+
+  /*Main section*/
   .project-title2,
   .project-title4 {
     font-size: 1.5rem;

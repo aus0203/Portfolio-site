@@ -56,6 +56,61 @@ li {
   list-style: none;
 }
 
+/*Page transition*/
+
+.loading-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: map-get($color, dark);
+  display: flex;
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  transition: .3s ease;
+  pointer-events: none;
+}
+
+.loading-logo{
+  position: relative;
+  margin-top: 3px;
+  margin-right: 2px;
+  width:3.5rem;
+  overflow: none;
+  z-index: 100;
+}
+
+.loading-sphere{
+  position: absolute;
+  width:7rem;
+  height:7rem;
+  border:2px solid map-get($color, universal);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.loading-sphere::after{
+  content: '';
+  width: 9rem;
+  height: 9rem;
+  display: block;
+  background-color:map-get($color, universal);
+  position: absolute;
+  border-radius: 45%;
+  bottom: -20%;
+  left: -20%;
+  animation: spin 1.5s ease-in-out forwards;
+}
+
+@keyframes spin {
+  0%{
+    transform: translateY(100%) rotate(0deg);
+  }
+  100%{
+    transform: translateY(0) rotate(500deg);
+  }
+}
+
 /*Cursor*/
 .cursor {
   height: 10px;
@@ -106,20 +161,18 @@ li {
   justify-content: space-between;
   align-items: flex-end;
   z-index: 999;
-  padding: 1rem 5rem 0.5rem 1rem;
+  padding: 2rem 6rem 0.5rem 3rem;
   background-color: transparent;
   transition: 0.5s ease;
 
   .logo {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     width: 3rem;
     transition: 0.5s ease;
   }
 
   a {
     display: inline-block;
-    font-size: 1rem;
-    letter-spacing: 0;
     transition: 0.5s ease;
   }
 
@@ -140,8 +193,8 @@ li {
 /*Side-bar*/
 
 .sidebar {
-  top: 4rem;
-  width: 5rem;
+  top: 5rem;
+  width: 9rem;
   height: 100vh;
   position: fixed;
   z-index: 800;
@@ -154,7 +207,7 @@ li {
 
   .nav2 {
     order: 2;
-    flex-grow: 1;
+    flex-grow: 2;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -169,13 +222,13 @@ li {
 
   .nav3 {
     order: 3;
-    flex-grow: 1;
+    flex-grow: 2;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
     ul {
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
 
     .icon {
@@ -204,7 +257,7 @@ li {
   border: 3px solid map-get($color, dark);
   border-radius: 25px;
   margin-bottom: 3rem;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 .scrollicon:before {
@@ -213,9 +266,10 @@ li {
   position: relative;
   top: 6px;
   display: block;
-  width: 3px;
+  width: 2px;
   height: 12px;
   border-radius: 25%;
+
   background-color: map-get($color, dark);
   transform-origin: center bottom;
   animation-duration: 2s;
@@ -405,7 +459,7 @@ li {
 
   /*Responsive header*/
   .header {
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0 0.5rem 1rem;
     .logo {
       width: 2.5rem;
     }
@@ -481,6 +535,9 @@ li {
       .bar {
         display: none;
       }
+    }
+    .nav3 {
+      flex-grow: 1;
     }
   }
   .handler {
@@ -561,15 +618,14 @@ li {
   }
 
   /*Header*/
-  .header{
+  .header {
     padding-right: 4rem;
     .logo {
       width: 2rem;
     }
   }
-  
+
   /*Main section*/
-  
 
   /*Footer*/
   .contact-line {

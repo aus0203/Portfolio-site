@@ -9,7 +9,7 @@ const projectSection3 = document.getElementById("projectsection3");
 
 /*fullpage transition effect*/
 
-if (windowWidth > 800) {
+if (windowMedia.matches) {
   new fullpage("#fullpage", {
     scrollingSpeed: 1250,
 
@@ -42,7 +42,6 @@ if (windowWidth > 800) {
         sectionObjectFarFront.forEach((x) => {
           x.style.marginTop = 0;
         });
-        // heroLine.style.top = 1300 + "px";
       } else {
         scrollIcon.style.opacity = 1;
         sectionObjectBack.forEach((x) => {
@@ -54,20 +53,18 @@ if (windowWidth > 800) {
         sectionObjectFarFront.forEach((x) => {
           x.style.marginTop = 200 + "rem";
         });
-        // heroLine.style.top = 0 + "px";
-
       }
 
       /*Project section content*/
       if (destination.index === 1) {
-        projectSection1.style.marginTop = 0;
+        projectSection1.style.marginTop = 4 + "rem";
         // callOfAction.style.marginTop = 100 + "rem";
       } else if (destination.index === 2) {
         projectSection1.style.marginTop = -80 + "rem";
-        projectSection2.style.marginTop = 0 + "rem";
+        projectSection2.style.marginTop = 4 + "rem";
       } else if (destination.index === 3) {
         projectSection2.style.marginTop = -80 + "rem";
-        projectSection3.style.marginTop = 0 + "rem";
+        projectSection3.style.marginTop = 4 + "rem";
       } else if (destination.index === 4) {
         projectSection3.style.marginTop = -80 + "rem";
       } else {
@@ -99,4 +96,13 @@ if (windowWidth > 800) {
 
 }
 
-/*Scroll icon*/
+
+
+
+/*Heroline animation*/
+
+let t1 = gsap.timeline({defaults:{duration: .5}});
+
+t1.from('.sphere-cover', {scale:0, delay:1.6, })
+.from('.heroline',{opacity:0, x:-50}, "-=0.2")
+.from('.scrollicon',{opacity:0, y:20}, "-=0.5")

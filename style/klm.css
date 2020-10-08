@@ -48,6 +48,79 @@ li {
   list-style: none;
 }
 
+/*Page transition*/
+.loading-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0a0a0a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading-logo {
+  position: relative;
+  margin-top: 3px;
+  margin-right: 2px;
+  width: 3.5rem;
+  overflow: none;
+  z-index: 100;
+}
+
+.loading-sphere {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.loading-sphere::after {
+  content: '';
+  width: 9rem;
+  height: 9rem;
+  display: block;
+  background-color: #e0e0e0;
+  position: absolute;
+  border-radius: 45%;
+  bottom: -20%;
+  left: -20%;
+  -webkit-animation: spin 4s ease-in-out forwards;
+          animation: spin 4s ease-in-out forwards;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translateY(100%) rotate(0deg);
+            transform: translateY(100%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(500deg);
+            transform: translateY(0) rotate(500deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: translateY(100%) rotate(0deg);
+            transform: translateY(100%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(500deg);
+            transform: translateY(0) rotate(500deg);
+  }
+}
+
 /*Cursor*/
 .cursor {
   height: 10px;
@@ -113,14 +186,14 @@ li {
       -ms-flex-align: end;
           align-items: flex-end;
   z-index: 999;
-  padding: 1rem 5rem 0.5rem 1rem;
+  padding: 2rem 6rem 0.5rem 3rem;
   background-color: transparent;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 .header .logo {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -128,8 +201,6 @@ li {
 
 .header a {
   display: inline-block;
-  font-size: 1rem;
-  letter-spacing: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
@@ -149,8 +220,8 @@ li {
 
 /*Side-bar*/
 .sidebar {
-  top: 4rem;
-  width: 5rem;
+  top: 5rem;
+  width: 9rem;
   height: 100vh;
   position: fixed;
   z-index: 800;
@@ -176,9 +247,9 @@ li {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -203,9 +274,9 @@ li {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -218,7 +289,7 @@ li {
 }
 
 .sidebar .nav3 ul {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .sidebar .nav3 .icon {
@@ -249,8 +320,8 @@ li {
   border: 3px solid #0a0a0a;
   border-radius: 25px;
   margin-bottom: 3rem;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .scrollicon:before {
@@ -259,7 +330,7 @@ li {
   position: relative;
   top: 6px;
   display: block;
-  width: 3px;
+  width: 2px;
   height: 12px;
   border-radius: 25%;
   background-color: #0a0a0a;
@@ -499,7 +570,7 @@ li {
   }
   /*Responsive header*/
   .header {
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0 0.5rem 1rem;
   }
   .header .logo {
     width: 2.5rem;
@@ -590,6 +661,11 @@ li {
   }
   .sidebar .nav2 .bar {
     display: none;
+  }
+  .sidebar .nav3 {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .handler {
     display: none;
@@ -889,7 +965,7 @@ a {
 
 /*Scroll Icon*/
 .scrollicon {
-  border: 3px solid #0a0a0a;
+  border: 2px solid #0a0a0a;
 }
 
 .scrollicon:before {

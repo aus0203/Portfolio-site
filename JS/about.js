@@ -3,6 +3,13 @@ const backIntro = document.querySelectorAll(".backintro");
 const frontIntro = document.querySelectorAll(".frontintro");
 const farFrontIntro = document.querySelectorAll(".farfrontintro");
 
+/*loading*/
+
+let aboutT1 = gsap.timeline({defaults:{duration:0.2}});
+
+aboutT1.from('.hero-line', {opacity:0, x:-50, delay:1.4})
+.from('.intro-main', {y:150}, "-=0.2")
+
 /*Fullpage*/
 
 if(windowMedia.matches){

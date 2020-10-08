@@ -547,30 +547,24 @@ li {
   /*Scroll Icon*/
 
   .scrollicon {
-    width: 24px;
-    height: 48px;
+    width: 20px;
+    height: 42px;
   }
 
   .scrollicon:before {
+    top:28px;
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: map-get($color, dark);
-    transform-origin: center bottom;
     animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-name: scroll;
   }
 
   @keyframes scroll {
     0% {
-      opacity: 0;
-    }
-    25% {
-      opacity: 1;
+      transform: translateY(0);
     }
     100% {
-      transform: translateY(22px);
+      transform: translateY(-22px);
       opacity: 0;
     }
   }

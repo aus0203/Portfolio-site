@@ -572,7 +572,7 @@ li {
   }
   /*Responsive header*/
   .header {
-    padding: 0.5rem 0 0.5rem 1rem;
+    padding: 0.5rem 4.5rem 0.5rem 1rem;
   }
   .header .logo {
     width: 2.5rem;
@@ -678,18 +678,10 @@ li {
     height: 48px;
   }
   .scrollicon:before {
+    top: 20px;
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: #0a0a0a;
-    -webkit-transform-origin: center bottom;
-            transform-origin: center bottom;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-name: scroll;
-            animation-name: scroll;
   }
   @-webkit-keyframes scroll {
     0% {

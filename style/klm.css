@@ -572,7 +572,7 @@ li {
   }
   /*Responsive header*/
   .header {
-    padding: 0.5rem 0 0.5rem 1rem;
+    padding: 0.5rem 4.5rem 0.5rem 1rem;
   }
   .header .logo {
     width: 2.5rem;
@@ -674,46 +674,36 @@ li {
   }
   /*Scroll Icon*/
   .scrollicon {
-    width: 24px;
-    height: 48px;
+    width: 20px;
+    height: 42px;
   }
   .scrollicon:before {
+    top: 28px;
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: #0a0a0a;
-    -webkit-transform-origin: center bottom;
-            transform-origin: center bottom;
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-name: scroll;
-            animation-name: scroll;
   }
   @-webkit-keyframes scroll {
     0% {
-      opacity: 0;
-    }
-    25% {
-      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
     }
     100% {
-      -webkit-transform: translateY(22px);
-              transform: translateY(22px);
+      -webkit-transform: translateY(-22px);
+              transform: translateY(-22px);
       opacity: 0;
     }
   }
   @keyframes scroll {
     0% {
-      opacity: 0;
-    }
-    25% {
-      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
     }
     100% {
-      -webkit-transform: translateY(22px);
-              transform: translateY(22px);
+      -webkit-transform: translateY(-22px);
+              transform: translateY(-22px);
       opacity: 0;
     }
   }

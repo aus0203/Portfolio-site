@@ -1421,4 +1421,50 @@ a {
     font-size: 1.2rem;
   }
 }
-/*# sourceMappingURL=project.css.map */
+
+.left-button:hover > .nav-button-col2 > a > p {
+  right: 0rem;
+  margin-top: 3rem;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.left-button:hover > .nav-button-col2 > a > p span {
+  display: none;
+}
+
+.left-button:hover > .nav-button-col2 > a > p::after {
+  content: "VX";
+  font-size: 1.2rem;
+}
+
+.right-button:hover > .nav-button-col1 > a > p {
+  right: 0rem;
+  margin-top: 3rem;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.right-button:hover > .nav-button-col1 > a > p span {
+  display: none;
+}
+
+.right-button:hover > .nav-button-col1 > a > p::after {
+  content: "Ultimaker";
+  font-size: 1.2rem;
+}
+
+/*Scroll Icon*/
+.scrollicon {
+  border: 2px solid #e0e0e0;
+}
+
+.scrollicon:before {
+  background-color: #e0e0e0;
+}
+
+/*Main-content*/
+.top-screen {
+  background-image: url(../img/project-04.jpg);
+}
+/*# sourceMappingURL=philips.css.map */

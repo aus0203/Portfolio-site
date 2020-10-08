@@ -1,0 +1,43 @@
+@import 'project';
+
+.left-button:hover > .nav-button-col2 > a > p {
+    right: 0rem;
+    margin-top: 3rem;
+    transform: rotate(0deg);
+    span {
+        display: none;
+    }
+    &::after {
+        content: "VX";
+        font-size: 1.2rem;
+    }
+}
+
+.right-button:hover > .nav-button-col1 > a > p {
+    right: 0rem;
+    margin-top: 3rem;
+    transform: rotate(0deg);
+    span {
+        display: none;
+    }
+    &::after {
+        content: "Ultimaker";
+        font-size: 1.2rem;
+    }
+}
+
+/*Scroll Icon*/
+.scrollicon {
+    border: 2px solid map-get($color, universal);
+  }
+  
+  .scrollicon:before {
+    background-color: map-get($color, universal);
+  }
+
+
+/*Main-content*/
+
+.top-screen {
+    background-image: url(../img/project-04.jpg);
+}

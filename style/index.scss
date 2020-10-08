@@ -423,3 +423,10 @@ a {
     display: none;
   }
 }
+
+@media screen and (max-height: 600px){
+  /*Scroll icon*/
+  .scrollicon {
+    bottom: -1%;
+  }
+}

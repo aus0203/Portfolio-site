@@ -86,6 +86,7 @@ li {
   height:7rem;
   border:2px solid map-get($color, universal);
   border-radius: 50%;
+  -webkit-overflow: hidden;
   overflow: hidden;
 }
 

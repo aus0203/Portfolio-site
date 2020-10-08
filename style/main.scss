@@ -88,6 +88,7 @@ li {
   border-radius: 50%;
   -webkit-overflow: hidden;
   overflow: hidden;
+  z-index: 2;
 }
 
 .loading-sphere::after{
@@ -99,6 +100,7 @@ li {
   position: relative;
   border-radius: 45%;
   left: -20%;
+  z-index: 1;
   animation: spin 1.5s ease-in-out forwards;
 }
 

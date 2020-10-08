@@ -93,9 +93,8 @@ li {
   height: 9rem;
   display: block;
   background-color: #e0e0e0;
-  position: absolute;
+  position: relative;
   border-radius: 45%;
-  bottom: -20%;
   left: -20%;
   -webkit-animation: spin 1.5s ease-in-out forwards;
           animation: spin 1.5s ease-in-out forwards;

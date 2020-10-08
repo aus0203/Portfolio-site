@@ -95,9 +95,8 @@ li {
   height: 9rem;
   display: block;
   background-color:map-get($color, universal);
-  position: absolute;
+  position: relative;
   border-radius: 45%;
-  bottom: -20%;
   left: -20%;
   animation: spin 1.5s ease-in-out forwards;
 }

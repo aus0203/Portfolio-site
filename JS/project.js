@@ -9,7 +9,7 @@ const elevaSec = document.querySelector(".eleva-sec");
 const videoStrip = document.querySelector(".video-strip");
 
 
-
+/*Scroll event*/
 function onScroll(event) {
   if (window.pageYOffset > 0) {
     header.style.backgroundColor = "#0a0a0a";
@@ -18,7 +18,7 @@ function onScroll(event) {
     });
     if(windowMedia.matches){
       menu.forEach(x => {
-        x.style.color = "#e0e0e0";
+        x.classList.add("menu-scroll");
       });
     };
     if(touchMedia.matches){
@@ -28,6 +28,9 @@ function onScroll(event) {
     }
     if (window.pageYOffset > 100) {
       scrollIcon.style.opacity = 0;
+      if (window.pageYOffset > 700) {
+        header.style.backgroundColor = "transparent";
+      };
     };
   } else {
     header.style.backgroundColor = "transparent";
@@ -36,7 +39,7 @@ function onScroll(event) {
     });
     if(windowMedia.matches){
       menu.forEach(x => {
-        x.style.color = "#0a0a0a";
+        x.classList.remove("menu-scroll");
       });
     };
     if(touchMedia.matches){
@@ -68,10 +71,11 @@ const topScreenObserver = new IntersectionObserver(function (
   topScreenOptions);
 topScreenObserver.observe(topScreen);
 
-/*Scroll up*/
+/*Scroll up in the footer*/
 
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
+/*Scroll up bar*/

@@ -476,7 +476,7 @@ li {
 
 .footer .footer-line {
   border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-  width: 70vw;
+  width: 100%;
 }
 
 .footer .footer-claim {
@@ -815,6 +815,10 @@ a {
 
 .menu {
   color: #0a0a0a;
+}
+
+.menu-scroll {
+  color: #e0e0e0;
 }
 
 .work-state:hover {
@@ -1498,7 +1502,7 @@ a {
 }
 
 .video-strip {
-  background-color: #e0e0e0;
+  background-color: white;
 }
 
 #communication_journey {
@@ -1507,7 +1511,7 @@ a {
 }
 
 .eleva-sec {
-  background-color: #e0e0e0;
+  background-color: white;
   color: #0a0a0a;
 }
 

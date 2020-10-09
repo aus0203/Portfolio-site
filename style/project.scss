@@ -49,6 +49,10 @@ a {
   color: map-get($color, dark);
 }
 
+.menu-scroll{
+  color: map-get($color, universal)
+}
+
 .work-state:hover {
   transform: scale(1.2);
 }
@@ -56,6 +60,7 @@ a {
 .about-state:hover {
   transform: scale(1.2);
 }
+
 /*Project nav*/
 
 .project-nav {
@@ -408,6 +413,7 @@ a {
 .footer {
   padding-top: 4rem;
   width: 75vw;
+  
 }
 
 /*Reponsive*/

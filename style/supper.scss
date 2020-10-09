@@ -1,6 +1,5 @@
 @import "project";
 
-
 /*Project nav*/
 
 .left-button:hover > .nav-button-col2 > a > p {
@@ -62,7 +61,7 @@
 }
 
 .video-strip {
-  background-color: map-get($color, universal);
+  background-color: white;
 }
 
 #communication_journey {
@@ -71,7 +70,7 @@
 }
 
 .eleva-sec {
-  background-color: map-get($color, universal);
+  background-color: white;
   color: map-get($color, dark);
   #titleLine {
     background-color: map-get($color, dark);

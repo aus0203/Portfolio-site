@@ -1,4 +1,4 @@
-@import 'project';
+@import "project";
 
 .left-button:hover > .nav-button-col2 > a > p {
     right: 0rem;
@@ -21,23 +21,146 @@
         display: none;
     }
     &::after {
+        position: relative;
+        right: 3rem;
         content: "Ultimaker";
         font-size: 1.2rem;
     }
 }
 
+.right-button:hover > .nav-button-col2 {
+    position: relative;
+    right: 3rem;
+}
+
 /*Scroll Icon*/
 .scrollicon {
     border: 2px solid map-get($color, universal);
-  }
-  
-  .scrollicon:before {
-    background-color: map-get($color, universal);
-  }
+}
 
+.scrollicon:before {
+    background-color: map-get($color, universal);
+}
 
 /*Main-content*/
 
 .top-screen {
     background-image: url(../img/project-04.jpg);
 }
+
+.video-strip,
+.discover-sec, 
+.execution-sec {
+    color: map-get($color, universal);
+    background-color: map-get($color, philips);
+}
+
+.discover-sec, 
+.execution-sec {
+    padding-bottom: 5rem;
+    margin-bottom: 3rem;
+}
+
+#text-left-photo-right {
+    width: 30vw;
+    margin: 3rem 8rem 0;
+}
+
+#text-right-photo-left {
+    margin: 0 4rem;
+}
+
+#MHJCJ {
+    width: 75vw;
+    margin-bottom: 4rem;
+}
+
+.statement-sec {
+    position: relative;
+    margin: 4rem auto;
+    z-index: 2;
+    &::after {
+        content: "";
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.4;
+        position: absolute;
+        background-image: url(../img/Project/Philips/strip.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+    .quote {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+        opacity: 3;
+        p {
+            width: 40vw;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.execution-sec{
+    .text-with-photo{
+        .text-sec{
+            h2{
+                width: 70vw;
+            }
+        }
+    }
+}
+
+.demo-strip{
+    h3{
+      line-height: 3rem;
+    }
+}
+
+#demo-MHJ{
+    width: 30vw;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 800px) {
+    .text-with-photo{
+        padding: 1rem 0;
+        .photo-sec{
+        margin-bottom: 2rem;
+        }
+    }
+    #text-left-photo-right, #text-right-photo-left{
+        width: 95%;
+        margin: 2rem auto 2rem;
+    }
+    #MHJCJ{
+        margin-bottom: 1rem;
+    }
+
+    .statement-sec {
+        margin: 2rem 0;
+        .quote {
+            width: 70vw;
+            p {
+                width: 70vw;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .demo-strip{
+        padding: 2rem 0;
+    }
+    #demo-MHJ{
+        width: 100%;
+    }
+  }

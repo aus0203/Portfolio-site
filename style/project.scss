@@ -53,12 +53,20 @@ a {
   color: map-get($color, universal)
 }
 
-.work-state:hover {
-  transform: scale(1.2);
+.menu-hover{
+  background-color: map-get($color, universal);
 }
 
-.about-state:hover {
-  transform: scale(1.2);
+.work-state:hover > .menu-hover {
+  width: 4rem;
+  margin-left: 5px;
+  transform: scaleX(1);
+}
+
+.about-state:hover > .menu-hover {
+  width: 4rem;
+  margin-left: 5px;
+  transform: scaleX(1);
 }
 
 /*Project nav*/

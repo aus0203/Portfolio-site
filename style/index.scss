@@ -2,11 +2,13 @@
 
 body {
   color: map-get($color, universal);
-  background-color: map-get($color, dark);
+  background: rgb(29, 29, 29);
+  background: radial-gradient(circle, rgba(29, 29, 29, 1) 0%, rgba(10, 10, 10, 1) 43%);
 }
 a {
   color: map-get($color, universal);
 }
+
 /*Header*/
 .logo {
   circle {
@@ -24,12 +26,18 @@ a {
   cursor: none;
 }
 
-.about-state:hover {
-  transform: scale(1.2);
-}
-
 .current {
   background-color: map-get($color, universal);
+}
+
+.menu-hover{
+  background-color: map-get($color, universal);
+}
+
+.about-state:hover > .menu-hover {
+  width: 4rem;
+  margin-left: 5px;
+  transform: scaleX(1);
 }
 
 /*Side Bar*/
@@ -44,15 +52,39 @@ a {
 
 .handler {
   background-color: map-get($color, universal);
-  height: 40px;
-  width: 4px;
-  margin-top: -10rem;
+  height: 5rem;
+  width: 3px;
+  margin-top: -16rem;
+}
+/*Scroll bar*/
+
+.scroll-sidebar {
+  position: fixed;
+  right: 0;
+  margin-top: 8.5rem;
+  margin-right: 5rem;
+  width: 20rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  .scrollarrow {
+    position: relative;
+    background-color: map-get($color, universal);
+    height: 67vh;
+    width: 1px;
+    margin-right: .5rem;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-weight: 400;
+  }
 }
 
 /*Project background*/
 
 .section-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -96,18 +128,7 @@ a {
   }
 }
 
-.objectback {
-  margin-top: 100rem;
-  transition: 1s ease-in-out;
-}
-.objectfront {
-  margin-top: 150rem;
-  transition: 1s ease-in-out;
-}
-.objectfarfront {
-  margin-top: 200rem;
-  transition: 1s ease-in-out;
-}
+
 
 /*Section01*/
 
@@ -160,17 +181,20 @@ a {
 /*Scroll down Call of action*/
 /*Scroll Icon*/
 
-.scrollicon {
-  position: absolute;
-  left: 50%;
-  bottom: -2%;
-  border: 2px solid map-get($color, universal);
-  z-index: 5;
-}
+// .scrollicon {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   margin: 0 auto;
+//   bottom: 6%;
+//   border: 2px solid map-get($color, universal);
+//   z-index: 5;
+// }
 
-.scrollicon:before {
-  background-color: map-get($color, universal);
-}
+// .scrollicon:before {
+//   background-color: map-get($color, universal);
+// }
+
 
 /*Project intro numbering*/
 .intro-number {
@@ -223,12 +247,6 @@ a {
 
 /*Project section*/
 
-.section2,
-.section3,
-.section4 {
-  background-color: map-get($color, dark);
-  z-index: 7;
-}
 
 .project-section {
   margin-top: 100rem;
@@ -238,7 +256,7 @@ a {
 .project-strip {
   width: 70vw;
   height: 32vh;
-  margin: 2rem auto 3rem;
+  margin: 0 auto 3rem;
   display: flex;
   flex-basis: content;
   .intro {
@@ -401,6 +419,10 @@ a {
   /*Landing section*/
   .heroline {
     margin-bottom: 3rem;
+    text-align: center;
+    h1 {
+      font-size: 2rem;
+    }
   }
 
   .sphere-cover {
@@ -415,7 +437,6 @@ a {
     line-height: 2.2rem;
     margin: 0.5rem 0;
   }
-  
 
   /*Contact Section*/
 
@@ -424,7 +445,7 @@ a {
   }
 }
 
-@media screen and (max-height: 600px){
+@media screen and (max-height: 600px) {
   /*Scroll icon*/
   .scrollicon {
     bottom: -1%;

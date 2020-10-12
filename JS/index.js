@@ -19,43 +19,43 @@ if (windowMedia.matches) {
       var loadedSection = this;
 
       /*Handler*/
-      handler.style.marginTop = -10 + destination.index * 5 + "rem";
+      handler.style.marginTop = -16 + destination.index * 8 + "rem";
 
-      /*Intro section*/
-      front.forEach((x) => {
-        x.style.bottom = 0 - destination.index * 1250 + "px";
-      });
-      back.forEach((x) => {
-        x.style.bottom = 0 - destination.index * 1050 + "px";
-      });
-      farBack.forEach((x) => {
-        x.style.bottom = 0 - destination.index * 850 + "px";
-      });
+      // /*Intro section*/
+      // front.forEach((x) => {
+      //   x.style.bottom = 0 - destination.index * 1250 + "px";
+      // });
+      // back.forEach((x) => {
+      //   x.style.bottom = 0 - destination.index * 1050 + "px";
+      // });
+      // farBack.forEach((x) => {
+      //   x.style.bottom = 0 - destination.index * 850 + "px";
+      // });
 
-      /*Project section background*/
-      if (destination.index >= 1 && destination.index <= 3) {
-        scrollIcon.style.opacity = 0;
-        sectionObjectBack.forEach((x) => {
-          x.style.marginTop = 0;
-        });
-        sectionObjectFront.forEach((x) => {
-          x.style.marginTop = 0;
-        });
-        sectionObjectFarFront.forEach((x) => {
-          x.style.marginTop = 0;
-        });
-      } else {
-        scrollIcon.style.opacity = 1;
-        sectionObjectBack.forEach((x) => {
-          x.style.marginTop = 100 + "rem";
-        });
-        sectionObjectFront.forEach((x) => {
-          x.style.marginTop = 150 + "rem";
-        });
-        sectionObjectFarFront.forEach((x) => {
-          x.style.marginTop = 200 + "rem";
-        });
-      }
+      // /*Project section background*/
+      // if (destination.index >= 1 && destination.index <= 3) {
+      //   scrollIcon.style.opacity = 0;
+      //   sectionObjectBack.forEach((x) => {
+      //     x.style.marginTop = 0;
+      //   });
+      //   sectionObjectFront.forEach((x) => {
+      //     x.style.marginTop = 0;
+      //   });
+      //   sectionObjectFarFront.forEach((x) => {
+      //     x.style.marginTop = 0;
+      //   });
+      // } else {
+      //   scrollIcon.style.opacity = 1;
+      //   sectionObjectBack.forEach((x) => {
+      //     x.style.marginTop = 100 + "rem";
+      //   });
+      //   sectionObjectFront.forEach((x) => {
+      //     x.style.marginTop = 150 + "rem";
+      //   });
+      //   sectionObjectFarFront.forEach((x) => {
+      //     x.style.marginTop = 200 + "rem";
+      //   });
+      // }
 
       /*Project section content*/
       if (destination.index === 1) {
@@ -77,21 +77,21 @@ if (windowMedia.matches) {
       }
 
       /*Footer section background*/
-      if (destination.index === 4) {
-        backFooterObject.forEach((x) => {
-          x.style.marginBottom = 0;
-        });
-        frontFooterObject.style.marginBottom = 0;
-        farFrontFooterObject.style.marginBottom = 0;
-        footerLine.style.marginTop = 0;
-      } else {
-        backFooterObject.forEach((x) => {
-          x.style.marginBottom = -150 + "rem";
-        });
-        frontFooterObject.style.marginBottom = -200 + "rem";
-        farFrontFooterObject.style.marginBottom = -300 + "rem";
-        footerLine.style.marginTop = 300 + "rem";
-      }
+      // if (destination.index === 4) {
+      //   backFooterObject.forEach((x) => {
+      //     x.style.marginBottom = 0;
+      //   });
+      //   frontFooterObject.style.marginBottom = 0;
+      //   farFrontFooterObject.style.marginBottom = 0;
+      //   footerLine.style.marginTop = 0;
+      // } else {
+      //   backFooterObject.forEach((x) => {
+      //     x.style.marginBottom = -150 + "rem";
+      //   });
+      //   frontFooterObject.style.marginBottom = -200 + "rem";
+      //   farFrontFooterObject.style.marginBottom = -300 + "rem";
+      //   footerLine.style.marginTop = 300 + "rem";
+      // }
     },
 
   });

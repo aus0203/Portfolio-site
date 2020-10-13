@@ -19,7 +19,6 @@ const front = document.querySelectorAll(".front");
 const back = document.querySelectorAll(".back");
 const farBack = document.querySelectorAll(".farback");
 const mainCharactor = document.querySelector(".maincharactor");
-const handler = document.querySelector(".handler");
 const footerLine = document.querySelector(".contact-line");
 const callOfAction = document.querySelector(".call-of-action");
 const backFooterObject = document.querySelectorAll(".backfooterobject");
@@ -73,49 +72,6 @@ hamburger.addEventListener('click', ()=>{
   hamburgerLine1.classList.toggle("hamburger-line1-toggle");
   hamburgerLine2.classList.toggle("hamburger-line2-toggle");
 })
-
-
-/*parallax effect*/
-
-document.addEventListener("mousemove", parallax);
-
-function parallax(e) {
-  this.querySelectorAll(".layer").forEach((layer) => {
-    const speed = layer.getAttribute("data-speed");
-
-    const x = (window.innerWidth - e.pageX * speed) / 100;
-    const y = (window.innerHeight - e.pageY * speed) / 100;
-
-    layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  });
-  this.querySelectorAll(".background-object").forEach((backgroundObject) => {
-    const speed = backgroundObject.getAttribute("data-speed");
-
-    const x = (window.innerWidth - e.pageX * speed) / 70;
-    const y = (window.innerHeight - e.pageY * speed) / 70;
-
-    backgroundObject.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  });
-  this.querySelectorAll(".footerBackgroundObject").forEach(
-    (footerBackgroundObject) => {
-      const speed = footerBackgroundObject.getAttribute("data-speed");
-
-      const x = (window.innerWidth - e.pageX * speed) / 70;
-      const y = (window.innerHeight - e.pageY * speed) / 70;
-
-      footerBackgroundObject.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    }
-  );
-  this.querySelectorAll(".intro-object").forEach((introObjects) => {
-    const speed = introObjects.getAttribute("data-speed");
-
-    const x = (window.innerWidth - e.pageX * speed) / 70;
-    const y = (window.innerHeight - e.pageY * speed) / 70;
-
-    introObjects.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  });
-}
-
 
 
 /*Page transition*/

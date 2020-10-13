@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Wei@Visualist</title>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
+    <link rel="stylesheet" href="./style/about.css">
+</head>
+
+<body>
+    <!--Gloabl html-->
+    <!--loading effect-->
+    <div class="loading-wrapper">
+        <svg class="loading-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.21 350">
+            <title>Main logo</title>
+            <path
+                d="M-692.55,294.24s143.19-80.34,168.72,22.15l41.2,165.35s20.23,111.59,77.76,93c-140.41,45.48-159.44-66.5-159.44-66.5l-41.2-165.35C-620.49,282.71-692.55,294.24-692.55,294.24Z"
+                transform="translate(700.53 -256.3)" fill="#0a0a0a" stroke="#0a0a0a" stroke-linejoin="round"
+                stroke-width="15.97" />
+            <path
+                d="M-501.24,294.24s143.19-80.34,168.72,22.15l41.2,165.35s20.23,111.59,77.76,93C-354,620.17-373,508.19-373,508.19l-41.2-165.35C-429.18,282.71-501.24,294.24-501.24,294.24Z"
+                transform="translate(700.53 -256.3)" fill="#0a0a0a" stroke="#0a0a0a" stroke-linejoin="round"
+                stroke-width="15.97" />
+            <circle class="logo-circle" cx="490.36" cy="71.43" r="63.45" fill="#0a0a0a" stroke="#0a0a0a"
+                stroke-linejoin="round" stroke-width="15.97" />
+        </svg>
+        <div class="loading-sphere">
+
+        </div>
+    </div>
+
+    <div class="cursor"></div>
+
+    <!--Header-->
+    <div class="header">
+        <a class="anchor" href="/index.html">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.21 337.24">
+                <title>Main logo</title>
+                <path
+                    d="M-692.55,294.24s143.19-80.34,168.72,22.15l41.2,165.35s20.23,111.59,77.76,93c-140.41,45.48-159.44-66.5-159.44-66.5l-41.2-165.35C-620.49,282.71-692.55,294.24-692.55,294.24Z"
+                    transform="translate(700.53 -256.3)" fill="#0a0a0a" stroke="#0a0a0a" stroke-linejoin="round"
+                    stroke-width="15.97" />
+                <path
+                    d="M-501.24,294.24s143.19-80.34,168.72,22.15l41.2,165.35s20.23,111.59,77.76,93C-354,620.17-373,508.19-373,508.19l-41.2-165.35C-429.18,282.71-501.24,294.24-501.24,294.24Z"
+                    transform="translate(700.53 -256.3)" fill="#0a0a0a" stroke="#0a0a0a" stroke-linejoin="round"
+                    stroke-width="15.97" />
+                <circle class="logo-circle" cx="490.36" cy="71.43" r="63.45" fill="#0a0a0a" stroke="#0a0a0a"
+                    stroke-linejoin="round" stroke-width="15.97" />
+
+            </svg>
+        </a>
+        <nav>
+            <div class="hamburger">
+                <div class="hamburger-line hamburger-line1"></div>
+                <div class="hamburger-line hamburger-line2"></div>
+            </div>
+            <ul class="nav-link">
+                <li><a onclick="shiftToIndex()" class="anchor menu work-state" href="#">Work</a></li>
+                <li>
+                    <a class="menu about-state" href="#">
+                        <div class="current"></div>About
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--Sidebar section-->
+    <div class="sidebar">
+        <div class="nav1"></div>
+        <div class="nav2">
+            <div class="bar"></div>
+            <div class="handler"></div>
+        </div>
+        <div class="nav3">
+            <ul>
+                <li>
+                    <a class="anchor" target="_blank" href="https://www.linkedin.com/in/wei-lun-chen/">
+                        <svg class="icon linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <title>linkedin</title>
+                            <path
+                                d="M511.9,512h.1V324.2c0-91.9-19.8-162.6-127.2-162.6-51.6,0-86.3,28.3-100.4,55.2h-1.5V170.2H181.1V512h106V342.7c0-44.6,8.4-87.7,63.6-87.7,54.4,0,55.2,50.9,55.2,90.5V512ZM8.4,170.2H114.6V512H8.4ZM61.5,0A61.46,61.46,0,0,0,0,61.5c0,34,27.5,62.1,61.5,62.1S123,95.4,123,61.5A61.58,61.58,0,0,0,61.5,0Z" />
+                        </svg>
+
+                    </a></li>
+                <li>
+                    <a class="anchor" target="_blank" href="./img/WeiLunChen_Resume.pdf">
+                        <svg class="icon resume" data-name="resume" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <title>resume</title>
+                            <path
+                                d="M501.29,120.43,391.57,10.71A36.58,36.58,0,0,0,365.71,0H36.57A36.57,36.57,0,0,0,0,36.57V475.43A36.56,36.56,0,0,0,36.57,512H475.43A36.56,36.56,0,0,0,512,475.43V146.29a36.58,36.58,0,0,0-10.72-25.86ZM256,146.29a73.14,73.14,0,1,1-73.14,73.14A73.21,73.21,0,0,1,256,146.29Zm128,256H128V365.71c0-25.34,17.57-47.36,47-58.91,47.32-18.61,114.63-18.61,162,0,29.43,11.55,47,33.57,47,58.91v36.57Zm18.29-256a36.57,36.57,0,0,1-36.57-36.57V36.57L475.43,146.29Z"
+                                transform="translate(0 0)" />
+                        </svg>
+
+                        </svg>
+
+                    </a></li>
+                <li>
+                    <a class="anchor" href="mailto:aus0203@gmail.com" subject="subject text">
+                        <svg class="icon email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <title>email</title>
+                            <path
+                                d="M512,0,0,288l163.63,60.6L416,112,224,371l.16.06L224,371V512l91.76-107.05L432,448Z" />
+                        </svg>
+                    </a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!--Main content section-->
+    <div id="fullpage">
+        <section class="section section1">
+            <div class="hero-line">
+                <div class="smalltitle">
+                    <h4>About me</h4>
+                    <div class="titleLine"></div>
+                </div>
+                <h1 class="title">
+                    Wei Lun Chen<h1>
+                        <p class="subtitle">I apply design and code as a boundless form of language which can help
+                            people communicate and connect with one another.</p>
+            </div>
+
+            <a class="anchor" href="#cv">
+                <div class="scrollicon"></div>
+            </a>
+
+            <div class="intro-background">
+                <img class="intro-main" src="./img/About/Main.png" alt="">
+                <img class="intro-object backintro" data-speed="-3" src="./img/Single-object/single-ob1.png"
+                    alt="intro_Object">
+                <img class="intro-object backintro" data-speed="-2" src="./img/Single-object/single-ob1.png"
+                    alt="intro_Object">
+                <img class="intro-object backintro" data-speed="-1" src="./img/Single-object/single-ob4.png"
+                    alt="intro_Object">
+                <img class="intro-object frontintro" data-speed="1" src="./img/Single-object/single-ob2.png"
+                    alt="intro_Object">
+                <img class="intro-object frontintro" data-speed="1.2" src="./img/Single-object/single-ob4.png"
+                    alt="intro_Object">
+                <img class="intro-object farfrontintro" data-speed="1.5" src="./img/Single-object/single-ob3.png"
+                    alt="intro_Object">
+                <img class="intro-object farfrontintro" data-speed="2" src="./img/Single-object/single-ob6.png"
+                    alt="intro_Object">
+            </div>
+
+        </section>
+        <!--Main section-->
+        <!--Experience/Education section-->
+
+        <section class="section section2">
+            <div class="cv-section">
+                <div class="cv-sec-col">
+                    <div class="cv-col-title">
+                        <div class="smalltitle">
+                            <h4>Experience</h4>
+                            <div class="titleLine"></div>
+                        </div>
+                    </div>
+                    <div class="cv-col-content">
+                        <div class="cv-col-list">
+                            <div class="cv-list-img">
+                                <img class="dark-logo" src="./img/About/WDF-logo.png" alt="">
+                            </div>
+
+                            <div class="cv-list-info">
+                                <h4>WeDesignFood</h4>
+                                <p>Amsterdam, Netherlands</p>
+                                <p>Graduation intern</p>
+                                <p>Sep. 2019 - Apr. 2020</p>
+                            </div>
+                        </div>
+                        <div class="cv-col-list">
+                            <div class="cv-list-img">
+                                <img src="./img/About/KLM-logo.png" alt="">
+                            </div>
+                            <div class="cv-list-info">
+                                <h4>KLM Royal Dutch Airlines</h4>
+                                <p>Amsterdam, Netherlands</p>
+                                <p>Service design intern</p>
+                                <p>Mar. 2019 - Aug. 2019</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-col-list">
+                            <div class="cv-list-img">
+                                <img src="./img/About/DFI-logo.png" alt="">
+                            </div>
+                            <div class="cv-list-info">
+                                <h4>DFI-ITOX</h4>
+                                <p>Taipei, Taiwan</p>
+                                <p>Design & Marketing intern</p>
+                                <p>Sep. 2017 – Nov. 2017</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-col-list">
+                            <div class="cv-list-img">
+                                <img src="./img/About/Moai-lofo.png" alt="">
+                            </div>
+                            <div class="cv-list-info">
+                                <h4>MOAI Electronics Corp</h4>
+                                <p>Taipei, Taiwan</p>
+                                <p>Product designer</p>
+                                <p>Dec. 2015 – Dec. 2016</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="cv-sec-col">
+                    <div class="cv-col-title">
+                        <div class="smalltitle">
+                            <h4>Education</h4>
+                            <div class="titleLine"></div>
+                        </div>
+                    </div>
+                    <div class="cv-col-content">
+                        <div class="cv-col-list">
+                            <div class="cv-list-img">
+                                <img class="dark-logo" src="./img/About/TUD-logo.png" alt="">
+                            </div>
+
+                            <div class="cv-list-info">
+                                <h4>Delft University of Technology</h4>
+                                <p>Master of Science, Strategic Product Design</p>
+                                <p>Feb. 2018 - Apr. 2020</p>
+                            </div>
+                        </div>
+                        <div class="cv-col-list">
+                            <div class="cv-list-img">
+                                <img class="dark-logo" src="./img/About/TUA-logo.png" alt="">
+                            </div>
+                            <div class="cv-list-info">
+                                <h4>National Taiwan University of Arts</h4>
+                                <p>Bachelor of Fine Arts, Crafts and Design</p>
+                                <p>Sep. 2010 - Jun. 2014</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-sec-col">
+                    <div class="cv-col-title">
+                        <div class="smalltitle">
+                            <h4>Capabilities</h4>
+                            <div class="titleLine"></div>
+                        </div>
+                    </div>
+                    <div class="cv-col-content">
+                        <div class="cv-col-list">
+                            <div class="cv-list-info">
+                                <p>Market/User research</p>
+                                <p>Brand strategy</p>
+                                <p>Strategy design</p>
+                                <p>UX/UI Design</p>
+                                <p>Visual communication</p>
+                                <p>Front-end Development</p>
+                            </div>
+                        </div>
+                        <div class="cv-col-list">
+                            <div class="cv-list-info">
+                                <p>Adobe Creative Suite</p>
+                                <p>Sketch/Figma</p>
+                                <p>Invision</p>
+                                <p>HTML5/CSS3</p>
+                                <p>Javascript/React.js</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--Contact Section-->
+
+        <section class="section section5">
+            <div id="contact-line" class="contact-line">
+                <h1 class="title">
+                    Need more <br>
+                    information?<h1>
+                        <p class="subtitle">
+                            Let's get in touch.
+                        </p>
+                        <div class="page-cta">
+                            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.83 8.96">
+                                <title>Arrow</title>
+                                <line y1="4.48" x2="96" y2="4.48" fill="none" stroke="#0a0a0a" stroke-miterlimit="10"
+                                    stroke-width="0.98" />
+                                <rect x="92.35" y="21.33" width="6.33" height="6.33"
+                                    transform="translate(45.14 -80.39) rotate(45)" fill="#0a0a0a" />
+                            </svg>
+                            <a class="anchor" href="./index.html">
+                                <p>Check my works</p>
+                            </a>
+                        </div>
+            </div>
+            <div class="footer">
+                <div class="footer-link">
+                    <ul>
+                        <li><a class="anchor" target="_blank" href="https://www.linkedin.com/in/wei-lun-chen/">
+                                <p>Linkedin</p>
+                            </a></li>
+                        <li><a class="anchor" target="_blank" href="./img/WeiLunChen_Resume.pdf">
+                                <p>Resume</p>
+                            </a></li>
+                        <li><a class="anchor" href="mailto:aus0203@gmail.com" subject="subject text">
+                                <p>Contact</p>
+                            </a></li>
+                    </ul>
+                </div>
+                <hr class="footer-line">
+                </hr>
+                <p class="footer-claim">
+                    © 2020 created by Wei Lun Chen
+                </p>
+            </div>
+            <div class="footerBackground">
+                <img class="footerBackgroundObject backfooterobject" data-speed="-5"
+                    src="./img/Single-object/single-ob2.png" alt="object">
+                <img class="footerBackgroundObject backfooterobject" data-speed="-2"
+                    src="./img/Single-object/single-ob1.png" alt="object">
+                <img class="footerBackgroundObject frontfooterobject" data-speed="1"
+                    src="./img/Single-object/single-ob4.png" alt="object">
+                <img class="footerBackgroundObject farfrontfooterobject" data-speed="4"
+                    src="./img/Single-object/single-ob5.png" alt="object">
+            </div>
+        </section>
+    </div>
+
+
+    <!--Javascripts-->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/about.js"></script>
+</body>
+
+</html>

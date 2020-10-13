@@ -7,6 +7,7 @@ body {
 a {
   color: map-get($color, universal);
 }
+
 /*Header*/
 .logo {
   circle {
@@ -172,7 +173,7 @@ a {
   background-color: map-get($color, universal);
 }
 
-/*Project intro numbering*/
+  /*Project intro numbering*/
 .intro-number {
   display: flex;
   align-items: center;
@@ -184,7 +185,7 @@ a {
   margin: 0 0.5rem;
 }
 
-/*Project Photo with hover effect*/
+  /*Project Photo with hover effect*/
 .project-photo {
   width: 100%;
   height: inherit;

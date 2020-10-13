@@ -76,7 +76,6 @@ li {
   width: 3.5rem;
   overflow: none;
   z-index: 100;
-  mix-blend-mode: difference;
 }
 
 .loading-sphere {
@@ -187,71 +186,47 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   z-index: 999;
-  padding: 2.5rem 5rem 0 4rem;
+  padding: 2rem 6rem 0.5rem 3rem;
   background-color: transparent;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 .header .logo {
+  margin-top: 1.5rem;
   width: 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 .header a {
+  display: inline-block;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 .header li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.work-state {
-  margin-top: .6rem;
-  margin-bottom: 1.2rem;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0px 10px;
 }
 
 .current {
-  display: inline-block;
-  width: 1rem;
-  height: 1px;
-  margin-left: 5px;
-  background-color: #e0e0e0;
-}
-
-.menu-hover {
-  width: 0;
-  height: 1px;
-  margin-bottom: 0.3rem;
-  background-color: #e0e0e0;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  margin: 0 auto 0.3rem;
 }
 
 /*Side-bar*/
 .sidebar {
-  width: 3rem;
+  top: 5rem;
+  width: 9rem;
   height: 100vh;
-  margin: 5rem 0 0 4rem;
   position: fixed;
   z-index: 800;
   display: -webkit-box;
@@ -267,14 +242,18 @@ li {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  height: 5%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .sidebar .nav2 {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  height: 50%;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -289,7 +268,7 @@ li {
 .sidebar .nav2 .bar {
   position: relative;
   width: 1px;
-  height: 90%;
+  height: 12rem;
   border-radius: 50px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -299,7 +278,9 @@ li {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  height: 40%;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -413,6 +394,7 @@ li {
 
 /*Contact Section*/
 .section5 {
+  background-color: #0a0a0a;
   z-index: 8;
 }
 
@@ -494,7 +476,7 @@ li {
 
 .footer .footer-line {
   border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-  width: 100%;
+  width: 75vw;
 }
 
 .footer .footer-claim {
@@ -595,9 +577,7 @@ li {
     padding: 0.5rem 4.5rem 0.5rem 1rem;
   }
   .header .logo {
-    position: relative;
     width: 2.5rem;
-    z-index: 1200;
   }
   nav {
     position: relative;
@@ -643,7 +623,7 @@ li {
             align-items: center;
     top: 0;
     right: -100rem;
-    width: 100vw;
+    width: 85vw;
     height: 100vh;
     -webkit-transition: all 0.6s ease-out;
     transition: all 0.6s ease-out;
@@ -676,9 +656,7 @@ li {
   }
   /*SideBar*/
   .sidebar {
-    margin-left: 0;
     width: 4rem;
-    z-index: 1000;
   }
   .sidebar .nav2 {
     -webkit-box-flex: 2;
@@ -843,22 +821,14 @@ a {
   color: #e0e0e0;
 }
 
-.menu-hover {
-  background-color: #e0e0e0;
+.work-state:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
-.work-state:hover > .menu-hover {
-  width: 4rem;
-  margin-left: 5px;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-.about-state:hover > .menu-hover {
-  width: 4rem;
-  margin-left: 5px;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+.about-state:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /*Project nav*/

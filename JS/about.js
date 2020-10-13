@@ -20,7 +20,7 @@ if(windowMedia.matches){
 
     onLeave: function (origin, destination, direction) {
   
-      handler.style.marginTop = -13 + destination.index * 13 + "rem";
+      handler.style.marginTop = -8 + destination.index * 8 + "rem";
   
       if (destination.index === 1) {
         scrollIcon.style.opacity = 0;

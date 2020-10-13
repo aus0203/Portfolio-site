@@ -31,18 +31,12 @@ p {
   cursor: none;
 }
 
+.work-state:hover {
+  transform: scale(1.2);
+}
+
 .current {
   background-color: map-get($color, dark);
-}
-
-.menu-hover{
-  background-color: map-get($color, dark);
-}
-
-.work-state:hover > .menu-hover {
-  width: 4rem;
-  margin-left: 5px;
-  transform: scaleX(1);
 }
 
 /*Side Bar*/
@@ -56,9 +50,9 @@ p {
 
 .handler {
   background-color: map-get($color, dark);
-  height: 8rem;
+  height: 80px;
   width: 4px;
-  margin-top: -13rem;
+  margin-top: -8rem;
 }
 
 /*Main section*/
@@ -203,8 +197,8 @@ p {
 .cv-col-list {
   display: flex;
   flex-direction: row;
-  width: 18rem;
-  margin: 0 5rem 2rem 0;
+  width: 21rem;
+  margin: 0 4rem 2rem 0;
   .cv-list-img {
     margin-right: 2rem;
     img {

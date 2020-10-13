@@ -37,7 +37,7 @@ h4 {
 p {
   font-weight: 300;
   line-height: 1.8rem;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 a {
@@ -64,8 +64,8 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   pointer-events: none;
 }
 
@@ -76,6 +76,7 @@ li {
   width: 3.5rem;
   overflow: none;
   z-index: 100;
+  mix-blend-mode: difference;
 }
 
 .loading-sphere {
@@ -90,7 +91,7 @@ li {
 }
 
 .loading-sphere::after {
-  content: '';
+  content: "";
   width: 9rem;
   height: 9rem;
   display: block;
@@ -201,6 +202,7 @@ li {
   width: 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  z-index: 1000;
 }
 
 .header a {
@@ -220,6 +222,43 @@ li {
   height: 0.3rem;
   border-radius: 50%;
   margin: 0 auto 0.3rem;
+}
+
+/*Side-Bar*/
+.side-bar {
+  position: fixed;
+  width: 3rem;
+  height: 60vh;
+  margin: 8rem 0 0 6.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+}
+
+.side-bar .bar {
+  position: relative;
+  width: 1px;
+  height: 10rem;
+  background-color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.handler {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  margin-bottom: 10rem;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
 }
 
 /*Footer Bar*/
@@ -242,7 +281,7 @@ li {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
-  z-index: 800;
+  z-index: 1000;
 }
 
 .footerbar li {
@@ -290,45 +329,6 @@ li {
   bottom: -5px;
 }
 
-/*Side-Bar*/
-.side-bar {
-  position: fixed;
-  width: 3rem;
-  height: 60vh;
-  margin: 8rem 0 0 6.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  z-index: 500;
-}
-
-.side-bar .bar {
-  width: 1px;
-  height: 10rem;
-  background-color: #e0e0e0;
-  margin-bottom: 1rem;
-}
-
-.side-bar .handler {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #e0e0e0;
-  margin-bottom: 10rem;
-  -webkit-transition: .5 ease;
-  transition: .5 ease;
-}
-
 /*Contact Section*/
 @media screen and (max-width: 1280px) {
   h1 {
@@ -352,22 +352,9 @@ li {
   .cursor {
     display: none;
   }
-  /*Customize Scrollbar*/
-  /* width */
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #292929;
-  }
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #58bfd3;
-  }
   /*Responsive header*/
   .header {
-    padding: 0.5rem 4.5rem 0.5rem 1rem;
+    padding: 0.5rem 3rem 0.5rem 1rem;
   }
   .header .logo {
     width: 2.5rem;
@@ -416,7 +403,7 @@ li {
             align-items: center;
     top: 0;
     right: -100rem;
-    width: 85vw;
+    width: 100%;
     height: 100vh;
     -webkit-transition: all 0.6s ease-out;
     transition: all 0.6s ease-out;
@@ -447,93 +434,9 @@ li {
   .nav-link-scroll {
     right: 0;
   }
-  /*SideBar*/
-  .sidebar {
-    width: 4rem;
-  }
-  .sidebar .nav2 {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-  }
-  .sidebar .nav2 .bar {
-    display: none;
-  }
-  .sidebar .nav3 {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-  .handler {
-    display: none;
-  }
-  /*Scroll Icon*/
-  .scrollicon {
-    width: 20px;
-    height: 42px;
-  }
-  .scrollicon:before {
-    top: 28px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-  }
-  @-webkit-keyframes scroll {
-    0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-    100% {
-      -webkit-transform: translateY(-22px);
-              transform: translateY(-22px);
-      opacity: 0;
-    }
-  }
-  @keyframes scroll {
-    0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-    100% {
-      -webkit-transform: translateY(-22px);
-              transform: translateY(-22px);
-      opacity: 0;
-    }
-  }
-  /*Contect section*/
-  .page-cta {
-    width: 100%;
-  }
-  .footer .footer-link ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .footer .footer-link li {
-    margin-bottom: 1rem;
-  }
-  /*Contact section*/
-  .section5 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .footerBackground {
-    display: none;
-  }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   /*Gloabal style*/
   h1 {
     font-size: 2.5rem;
@@ -552,14 +455,29 @@ li {
   .header .logo {
     width: 2rem;
   }
-  /*Main section*/
-  /*Footer*/
-  .contact-line {
-    top: 4rem;
+  /*SideBar*/
+  .side-bar {
+    display: none;
   }
-  .contact-line .title {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
+  /*FooterBar*/
+  .footerbar {
+    padding: 1.2rem 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #0a0a0a;
+  }
+  .footerbar .icon-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footerbar .icon {
+    margin-right: 0;
+    margin: 0 3rem;
+  }
+  .page-action {
+    display: none;
   }
 }
 

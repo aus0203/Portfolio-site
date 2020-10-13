@@ -257,8 +257,8 @@ li {
   border-radius: 50%;
   background-color: #e0e0e0;
   margin-bottom: 10rem;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 /*Footer Bar*/
@@ -327,6 +327,18 @@ li {
   border-radius: 50%;
   z-index: 10;
   bottom: -5px;
+}
+
+.guilding-line::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  bottom: -5px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  z-index: 15;
 }
 
 /*Contact Section*/
@@ -465,7 +477,6 @@ li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #0a0a0a;
   }
   .footerbar .icon-bar {
     display: -webkit-box;
@@ -544,6 +555,11 @@ a {
 
 .guilding-line::before {
   background-color: #e0e0e0;
+}
+
+.guilding-line::after {
+  right: 0;
+  border-left: 9px solid #e0e0e0;
 }
 
 /*Landing Section*/
@@ -691,7 +707,7 @@ a {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   .project-strip {
     width: 60vw;
@@ -730,8 +746,17 @@ a {
     font-size: 1.5rem;
     line-height: 2.5rem;
   }
-  .section1 .project-shpere .project-pop, .section2 .project-shpere .project-pop, .section3 .project-shpere .project-pop {
+  .section1 .project-shpere .project-pop,
+  .section2 .project-shpere .project-pop,
+  .section3 .project-shpere .project-pop {
     margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*Footer bar*/
+  .footerbar {
+    background-color: #0a0a0a;
   }
 }
 /*# sourceMappingURL=new.css.map */

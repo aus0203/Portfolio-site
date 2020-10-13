@@ -257,8 +257,8 @@ li {
   border-radius: 50%;
   background-color: #e0e0e0;
   margin-bottom: 10rem;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 /*Footer Bar*/
@@ -327,6 +327,18 @@ li {
   border-radius: 50%;
   z-index: 10;
   bottom: -5px;
+}
+
+.guilding-line::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  bottom: -5px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  z-index: 15;
 }
 
 /*Contact Section*/
@@ -465,7 +477,6 @@ li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #0a0a0a;
   }
   .footerbar .icon-bar {
     display: -webkit-box;

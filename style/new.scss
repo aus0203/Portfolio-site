@@ -15,28 +15,27 @@ a {
 /*Header*/
 .logo {
     circle {
-      transition: 0.5s ease;
+        transition: 0.5s ease;
     }
-  }
-  
-  .logo:hover {
-    circle {
-      fill: map-get($color, accent);
-      stroke: map-get($color, accent);
-    }
-  }
-  .work-state {
-    cursor: none;
-  }
-  
-  .about-state:hover {
-    transform: scale(1.2);
-  }
-  
-  .current {
-    background-color: map-get($color, universal);
-  }
+}
 
+.logo:hover {
+    circle {
+        fill: map-get($color, accent);
+        stroke: map-get($color, accent);
+    }
+}
+.work-state {
+    cursor: none;
+}
+
+.about-state:hover {
+    transform: scale(1.2);
+}
+
+.current {
+    background-color: map-get($color, universal);
+}
 
 /*Side bar*/
 
@@ -49,7 +48,7 @@ a {
     }
 }
 
-.handler::before{
+.handler::before {
     content: attr(data-text);
     display: block;
     position: relative;
@@ -68,12 +67,15 @@ a {
     background-color: map-get($color, universal);
 }
 
+.guilding-line::after {
+    right: 0;
+    border-left: 9px solid map-get($color, universal);
+}
 
 /*Landing Section*/
 .intro-strip {
     width: 65vw;
     margin: 0 auto;
-
 }
 
 /*Project Section*/
@@ -179,47 +181,45 @@ a {
     }
 }
 
-
-@media screen and (max-width: 800px){
-
+@media screen and (max-width: 800px) {
     /*Header*/
-  .hamburger-line {
-    background-color: map-get($color, universal);
-  }
-  .nav-link {
-    background-color: map-get($color, dark);
-  }
+    .hamburger-line {
+        background-color: map-get($color, universal);
+    }
+    .nav-link {
+        background-color: map-get($color, dark);
+    }
 
-  /*side bar*/
+    /*side bar*/
 
-  /*Main section*/
-    .section0{
-        height:100vh
+    /*Main section*/
+    .section0 {
+        height: 100vh;
     }
 
     .intro-number {
         justify-content: flex-start;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
-  
-    .project-strip{
+
+    .project-strip {
         width: 60vw;
         flex-wrap: wrap;
         padding-bottom: 2rem;
-        .project-title{
+        .project-title {
             width: 100%;
             text-align: start;
         }
-        .project-img{
+        .project-img {
             width: 100%;
             padding: 3rem 0;
         }
-        .project-info{
+        .project-info {
             width: 100%;
             text-align: center;
             margin: 0;
-            .project-intro{
-            width: 100%;
+            .project-intro {
+                width: 100%;
             }
         }
     }
@@ -239,12 +239,21 @@ a {
         line-height: 2.5rem;
     }
 
-    .section1, .section2, .section3{
-        .project-shpere{
-            .project-pop{
+    .section1,
+    .section2,
+    .section3 {
+        .project-shpere {
+            .project-pop {
                 margin-top: 1rem;
             }
-        } 
+        }
     }
-    
+}
+
+@media screen and (max-width: 600px) {
+
+    /*Footer bar*/
+    .footerbar {
+        background-color: map-get($color, dark);
+    }
 }

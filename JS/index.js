@@ -18,9 +18,6 @@ if (windowMedia.matches) {
     onLeave: function (origin, destination, direction) {
       var loadedSection = this;
 
-      /*Handler*/
-      handler.style.marginTop = -10 + destination.index * 5 + "rem";
-
       /*Intro section*/
       front.forEach((x) => {
         x.style.bottom = 0 - destination.index * 1250 + "px";
@@ -97,6 +94,49 @@ if (windowMedia.matches) {
   });
 
 }
+
+/*parallax effect*/
+
+document.addEventListener("mousemove", parallax);
+
+function parallax(e) {
+  this.querySelectorAll(".layer").forEach((layer) => {
+    const speed = layer.getAttribute("data-speed");
+
+    const x = (window.innerWidth - e.pageX * speed) / 100;
+    const y = (window.innerHeight - e.pageY * speed) / 100;
+
+    layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  });
+  this.querySelectorAll(".background-object").forEach((backgroundObject) => {
+    const speed = backgroundObject.getAttribute("data-speed");
+
+    const x = (window.innerWidth - e.pageX * speed) / 70;
+    const y = (window.innerHeight - e.pageY * speed) / 70;
+
+    backgroundObject.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  });
+  this.querySelectorAll(".footerBackgroundObject").forEach(
+    (footerBackgroundObject) => {
+      const speed = footerBackgroundObject.getAttribute("data-speed");
+
+      const x = (window.innerWidth - e.pageX * speed) / 70;
+      const y = (window.innerHeight - e.pageY * speed) / 70;
+
+      footerBackgroundObject.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    }
+  );
+  this.querySelectorAll(".intro-object").forEach((introObjects) => {
+    const speed = introObjects.getAttribute("data-speed");
+
+    const x = (window.innerWidth - e.pageX * speed) / 70;
+    const y = (window.innerHeight - e.pageY * speed) / 70;
+
+    introObjects.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  });
+}
+
+
 
 
 

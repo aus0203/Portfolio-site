@@ -7,7 +7,8 @@ $color: (
   dark: #0a0a0a,
   seconddark: #292929,
   supper: #0f1e31,
-  supperAccent:#49b7b5,
+  supperAccent: #49b7b5,
+  klm: #4b9aaa,
   philips: #002952,
 );
 
@@ -47,7 +48,7 @@ h4 {
 p {
   font-weight: 300;
   line-height: 1.8rem;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 a {
@@ -69,36 +70,37 @@ li {
   z-index: 2000;
   justify-content: center;
   align-items: center;
-  transition: .3s ease;
+  transition: 0.3s ease;
   pointer-events: none;
 }
 
-.loading-logo{
+.loading-logo {
   position: relative;
   margin-top: 3px;
   margin-right: 2px;
-  width:3.5rem;
+  width: 3.5rem;
   overflow: none;
   z-index: 100;
+  mix-blend-mode: difference;
 }
 
-.loading-sphere{
+.loading-sphere {
   position: absolute;
-  width:7rem;
-  height:7rem;
-  border:2px solid map-get($color, universal);
+  width: 7rem;
+  height: 7rem;
+  border: 2px solid map-get($color, universal);
   border-radius: 50%;
   -webkit-overflow: hidden;
   overflow: hidden;
   z-index: 2;
 }
 
-.loading-sphere::after{
-  content: '';
+.loading-sphere::after {
+  content: "";
   width: 9rem;
   height: 9rem;
   display: block;
-  background-color:map-get($color, universal);
+  background-color: map-get($color, universal);
   position: relative;
   border-radius: 45%;
   left: -20%;
@@ -107,10 +109,10 @@ li {
 }
 
 @keyframes spin {
-  0%{
+  0% {
     transform: translateY(100%) rotate(0deg);
   }
-  100%{
+  100% {
     transform: translateY(0) rotate(500deg);
   }
 }
@@ -165,7 +167,7 @@ li {
   justify-content: space-between;
   align-items: flex-end;
   z-index: 999;
-  padding: 2rem 6rem 0.5rem 3rem;
+  padding: 2rem 6.5rem 0.5rem;
   background-color: transparent;
   transition: 0.5s ease;
 
@@ -173,6 +175,7 @@ li {
     margin-top: 1.5rem;
     width: 3rem;
     transition: 0.5s ease;
+    z-index: 1000;
   }
 
   a {
@@ -183,7 +186,7 @@ li {
   li {
     display: inline-block;
     margin-bottom: 0;
-    padding: 0px 10px;
+    padding-left: 1rem;
   }
 }
 
@@ -194,230 +197,252 @@ li {
   margin: 0 auto 0.3rem;
 }
 
-/*Side-bar*/
+/*Side-Bar*/
 
-.sidebar {
-  top: 5rem;
-  width: 9rem;
-  height: 100vh;
+.side-bar {
   position: fixed;
-  z-index: 800;
+  width: 3rem;
+  height: 60vh;
+  margin: 8rem 0 0 6.5rem;
   display: flex;
-  flex-direction: column;
-  .nav1 {
-    order: 1;
-    flex-grow: 1;
-  }
-
-  .nav2 {
-    order: 2;
-    flex-grow: 2;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    .bar {
-      position: relative;
-      width: 1px;
-      height: 12rem;
-      border-radius: 50px;
-      transition: 0.5s ease;
-    }
-  }
-
-  .nav3 {
-    order: 3;
-    flex-grow: 2;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    ul {
-      margin-bottom: 3rem;
-    }
-
-    .icon {
-      width: 1rem;
-      height: 100%;
-      margin: 1.2rem 0px;
-      transition: 0.3s ease;
-      &:hover {
-        fill: map-get($color, accent);
-        transform: scale(1.5);
-      }
-    }
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  .bar {
+    position: relative;
+    width: 1px;
+    height: 10rem;
+    background-color: map-get($color, universal);
+    margin-bottom: 1rem;
   }
 }
 
 .handler {
   position: absolute;
-  z-index: 10;
-  transition: 0.3s ease;
-}
-
-/*Scroll Icon*/
-.scrollicon {
-  width: 32px;
-  height: 54px;
-  border: 3px solid map-get($color, dark);
-  border-radius: 25px;
-  margin-bottom: 3rem;
-  transition: 0.5s ease;
-}
-
-.scrollicon:before {
-  content: "";
-  margin: 0 auto;
-  position: relative;
-  top: 6px;
-  display: block;
-  width: 3px;
+  width: 12px;
   height: 12px;
-  border-radius: 25%;
-
-  background-color: map-get($color, dark);
-  transform-origin: center bottom;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: scroll;
+  border-radius: 50%;
+  background-color: map-get($color, universal);
+  margin-bottom: 10rem;
+  transition: .4s ease;
 }
 
-@keyframes scroll {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    height: 22px;
-  }
-  75% {
-    top: 20px;
-  }
-  100% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
-}
+/*Footer Bar*/
 
-.scrollicon:hover {
-  margin-bottom: 2rem;
-}
-
-/*Contact Section*/
-.section5 {
-  background-color: map-get($color, dark);
-  z-index: 8;
-}
-
-.contact-line {
-  position: relative;
-  width: 70vw;
-  margin: 0 auto;
-  transition: 1.2s ease;
-  z-index: 100;
-  .title {
-    font-family: "Gordita", sans-serif;
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 72px;
-  }
-  .subtitle {
-    font-family: "Gordita", sans-serif;
-    font-size: 1.5rem;
-    line-height: 35px;
-    margin-top: 1rem;
-  }
-}
-
-.page-cta {
-  margin-top: 1.5rem;
-  height: 2rem;
-  width: 20rem;
+.footerbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 7rem 3rem;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  z-index: 1000;
+  li {
+    display: inline;
+  }
+  .icon {
+    width: 1.2rem;
+    margin-right: 3rem;
+  }
+}
+
+.page-action {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  .arrow {
-    width: 100px;
-    transition: 0.4s ease;
+  .guilding-line {
+    position: relative;
+    width: 9rem;
+    height: 1px;
+    margin-right: 1rem;
+    z-index: 2;
   }
   p {
     font-weight: 500;
   }
 }
 
-.footer {
-  position: relative;
-  bottom: calc(-10% - 80px);
-  width: 70vw;
-  margin: 0 auto;
-  padding-bottom: 3rem;
-  z-index: 100;
-  .footer-link {
-    margin-bottom: 0.8rem;
-    li {
-      display: inline-block;
-      margin-right: 2rem;
-      p {
-        font-size: 1.2rem;
-        font-weight: 400;
-        transition: 0.5s ease;
-      }
-      p:hover {
-        color: map-get($color, accent);
-        transform: scale(1.1);
-      }
-    }
-  }
-  .footer-line {
-    border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-    width: 100%;
-  }
-  .footer-claim {
-    font-size: 0.8rem;
-    margin-top: 1rem;
-  }
-}
-
-.footerBackground {
+.guilding-line::before {
+  content: "";
+  display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-
-  .footerBackgroundObject {
-    position: relative;
-    transition: 1s ease;
-    &:nth-child(1) {
-      width: 7rem;
-      bottom: 10rem;
-      margin-bottom: -150rem;
-      left: 25rem;
-    }
-    &:nth-child(2) {
-      width: 4rem;
-      left: 10rem;
-      margin-bottom: -150rem;
-    }
-    &:nth-child(3) {
-      width: 0.8rem;
-      bottom: 15rem;
-      left: 3rem;
-      margin-bottom: -200rem;
-    }
-    &:nth-child(4) {
-      position: absolute;
-      bottom: -5rem;
-      right: -5rem;
-      transform: rotate(-20deg);
-      margin-bottom: -300rem;
-    }
-  }
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  z-index: 10;
+  bottom: -5px;
 }
+
+
+
+// /*Scroll Icon*/
+// .scrollicon {
+//   width: 32px;
+//   height: 54px;
+//   border: 3px solid map-get($color, dark);
+//   border-radius: 25px;
+//   margin-bottom: 3rem;
+//   transition: 0.5s ease;
+// }
+
+// .scrollicon:before {
+//   content: "";
+//   margin: 0 auto;
+//   position: relative;
+//   top: 6px;
+//   display: block;
+//   width: 3px;
+//   height: 12px;
+//   border-radius: 25%;
+
+//   background-color: map-get($color, dark);
+//   transform-origin: center bottom;
+//   animation-duration: 2s;
+//   animation-iteration-count: infinite;
+//   animation-name: scroll;
+// }
+
+// @keyframes scroll {
+//   0% {
+//     opacity: 0;
+//   }
+//   25% {
+//     opacity: 1;
+//   }
+//   50% {
+//     height: 22px;
+//   }
+//   75% {
+//     top: 20px;
+//   }
+//   100% {
+//     transform: scaleY(0);
+//     opacity: 0;
+//   }
+// }
+
+// .scrollicon:hover {
+//   margin-bottom: 2rem;
+// }
+
+/*Contact Section*/
+// .section5 {
+//   background-color: map-get($color, dark);
+//   z-index: 8;
+// }
+
+// .contact-line {
+//   position: relative;
+//   width: 70vw;
+//   margin: 0 auto;
+//   transition: 1.2s ease;
+//   z-index: 100;
+//   .title {
+//     font-family: "Gordita", sans-serif;
+//     font-size: 3rem;
+//     font-weight: 500;
+//     line-height: 72px;
+//   }
+//   .subtitle {
+//     font-family: "Gordita", sans-serif;
+//     font-size: 1.5rem;
+//     line-height: 35px;
+//     margin-top: 1rem;
+//   }
+// }
+
+// .page-cta {
+//   margin-top: 1.5rem;
+//   height: 2rem;
+//   width: 20rem;
+//   display: flex;
+//   align-items: center;
+//   .arrow {
+//     width: 100px;
+//     transition: 0.4s ease;
+//   }
+//   p {
+//     font-weight: 500;
+//   }
+// }
+
+// .footer {
+//   position: relative;
+//   bottom: calc(-10% - 80px);
+//   width: 70vw;
+//   margin: 0 auto;
+//   padding-bottom: 3rem;
+//   z-index: 100;
+//   .footer-link {
+//     margin-bottom: 0.8rem;
+//     li {
+//       display: inline-block;
+//       margin-right: 2rem;
+//       p {
+//         font-size: 1.2rem;
+//         font-weight: 400;
+//         transition: 0.5s ease;
+//       }
+//       p:hover {
+//         color: map-get($color, accent);
+//         transform: scale(1.1);
+//       }
+//     }
+//   }
+//   .footer-line {
+//     border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
+//     width: 100%;
+//   }
+//   .footer-claim {
+//     font-size: 0.8rem;
+//     margin-top: 1rem;
+//   }
+// }
+
+// .footerBackground {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 9;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   width: 100%;
+
+//   .footerBackgroundObject {
+//     position: relative;
+//     transition: 1s ease;
+//     &:nth-child(1) {
+//       width: 7rem;
+//       bottom: 10rem;
+//       margin-bottom: -150rem;
+//       left: 25rem;
+//     }
+//     &:nth-child(2) {
+//       width: 4rem;
+//       left: 10rem;
+//       margin-bottom: -150rem;
+//     }
+//     &:nth-child(3) {
+//       width: 0.8rem;
+//       bottom: 15rem;
+//       left: 3rem;
+//       margin-bottom: -200rem;
+//     }
+//     &:nth-child(4) {
+//       position: absolute;
+//       bottom: -5rem;
+//       right: -5rem;
+//       transform: rotate(-20deg);
+//       margin-bottom: -300rem;
+//     }
+//   }
+// }
 
 @media screen and (max-width: 1280px) {
   h1 {
@@ -445,25 +470,9 @@ li {
     display: none;
   }
 
-  /*Customize Scrollbar*/
-  /* width */
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: map-get($color, seconddark);
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: map-get($color, accent);
-  }
-
   /*Responsive header*/
   .header {
-    padding: 0.5rem 4.5rem 0.5rem 1rem;
+    padding: 0.5rem 3rem 0.5rem 1rem;
     .logo {
       width: 2.5rem;
     }
@@ -503,7 +512,7 @@ li {
     align-items: center;
     top: 0;
     right: -100rem;
-    width: 85vw;
+    width: 100%;
     height: 100vh;
     transition: all 0.6s ease-out;
 
@@ -530,77 +539,10 @@ li {
   .nav-link-scroll {
     right: 0;
   }
-
-  /*SideBar*/
-  .sidebar {
-    width: 4rem;
-    .nav2 {
-      flex-grow: 2;
-      .bar {
-        display: none;
-      }
-    }
-    .nav3 {
-      flex-grow: 1;
-    }
-  }
-  .handler {
-    display: none;
-  }
-
-  /*Scroll Icon*/
-
-  .scrollicon {
-    width: 20px;
-    height: 42px;
-  }
-
-  .scrollicon:before {
-    top:28px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    animation-duration: 1.5s;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-22px);
-      opacity: 0;
-    }
-  }
-
-  /*Contect section*/
-  .page-cta {
-    width: 100%;
-  }
-
-  .footer {
-    .footer-link {
-      ul {
-        display: flex;
-        flex-direction: column;
-      }
-      li {
-        margin-bottom: 1rem;
-      }
-    }
-  }
-
-  /*Contact section*/
-  .section5 {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .footerBackground {
-    display: none;
-  }
+  
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   /*Gloabal style*/
   h1 {
     font-size: 2.5rem;
@@ -623,16 +565,25 @@ li {
     }
   }
 
-  /*Main section*/
+  /*SideBar*/
+  .side-bar {
+    display: none;
+  }
 
-  /*Footer*/
-  .contact-line {
-    top: 4rem;
-    .title {
-      font-size: 2.5rem;
-      line-height: 3.5rem;
+  /*FooterBar*/
+  .footerbar{
+    padding: 1.2rem 0;
+    justify-content: center;
+    background-color: map-get($color, dark);
+    .icon-bar{
+      display: flex;
+    }
+    .icon{
+      margin-right: 0;
+      margin: 0 3rem ;
     }
   }
+  .page-action{
+    display: none;
+  }
 }
-
-

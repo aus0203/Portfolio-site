@@ -215,7 +215,6 @@ li {
     width: 1px;
     height: 10rem;
     background-color: map-get($color, universal);
-    margin-bottom: 1rem;
   }
 }
 
@@ -227,6 +226,14 @@ li {
   background-color: map-get($color, universal);
   margin-bottom: 10rem;
   transition: 0.4s ease;
+}
+
+.handler::before {
+  content: attr(data-text);
+  display: block;
+  position: relative;
+  font-size: 12px;
+  left: 1.5rem;
 }
 
 /*Footer Bar*/

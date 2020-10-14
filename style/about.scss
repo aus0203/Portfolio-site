@@ -40,11 +40,21 @@ p {
 
 .side-bar {
   .bar {
+    height: 7rem;
     background-color: map-get($color, dark);
   }
-  .handler {
-    background-color: map-get($color, dark);
-  }
+}
+.handler {
+  margin-bottom: 6rem;
+  background-color: map-get($color, dark);
+}
+.handler::before {
+  content: attr(data-text);
+  color:map-get($color, dark);
+  display: block;
+  position: relative;
+  font-size: 12px;
+  left: 1.5rem;
 }
 /*Footer bar*/
 .icon {

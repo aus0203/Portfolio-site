@@ -18,10 +18,13 @@ if (windowMedia.matches) {
     });
 };
 
-const tilt = $('.js-tilt').tilt();
-tilt.on('change');  // parameters: event, transforms
-tilt.on('tilt.mouseLeave'); // parameters: event
-tilt.on('tilt.mouseEnter'); // parameters: event
+if(windowMedia.matches){
+    const tilt = $('.js-tilt').tilt();
+    tilt.on('change');  // parameters: event, transforms
+    tilt.on('tilt.mouseLeave'); // parameters: event
+    tilt.on('tilt.mouseEnter'); // parameters: event
+}
+
 
 
 

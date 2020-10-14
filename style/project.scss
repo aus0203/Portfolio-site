@@ -63,7 +63,9 @@ a {
 
 
 /*FooterBar*/
-
+.footerbar{
+  visibility: hidden;
+}
 
 /*Project nav*/
 
@@ -202,7 +204,6 @@ a {
 }
 
 
-
 /*Top Screen*/
 
 .top-screen {
@@ -217,15 +218,6 @@ a {
   justify-content: center;
   align-items: flex-end;
   transition: 0.5s ease;
-}
-
-/*Scroll Icon*/
-.scrollicon {
-  border: 2px solid map-get($color, dark);
-}
-
-.scrollicon:before {
-  background-color: map-get($color, dark);
 }
 
 /*Project Intro*/
@@ -599,7 +591,7 @@ a {
   
   /*Footer Contact for Project*/
   .contact-footer {
-    margin: 3rem auto;
+    margin: 3rem auto 6rem;
     .circle-divider {
       width:100%;
       .circle {
@@ -629,6 +621,27 @@ a {
     position: relative;
     left: 9px;
   }
+  /*FooterBar*/
+  .footerbar {
+    visibility: visible;
+    padding: 1.2rem 0;
+    justify-content: center;
+    background-color: map-get($color, dark);
+
+    .icon-bar {
+      display: flex;
+    }
+    .icon {
+      fill:map-get($color, universal);
+      margin-right: 0;
+      margin: 0 3rem;
+    }
+  }
+
+  .scrollicon {
+    margin-bottom: 6rem;
+  }
+
 }
 
 @media screen and (max-width: 320px) {

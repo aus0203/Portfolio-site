@@ -7,7 +7,7 @@ const projectNav = document.querySelector(".project-nav");
 const menu = document.querySelectorAll(".menu");
 const elevaSec = document.querySelector(".eleva-sec");
 const videoStrip = document.querySelector(".video-strip");
-
+const footerbar = document.querySelector(".footerbar");
 
 /*Scroll event*/
 function onScroll(event) {
@@ -16,13 +16,13 @@ function onScroll(event) {
     logoG.forEach(x => {
       x.classList.add("log-g-scroll");
     });
-    if(windowMedia.matches){
+    if (windowMedia.matches) {
       menu.forEach(x => {
         x.classList.add("menu-scroll");
       });
     };
-    if(touchMedia.matches){
-      hamburgurLine.forEach(x=>{
+    if (touchMedia.matches) {
+      hamburgurLine.forEach(x => {
         x.classList.add('hamburger-line-scroll');
       })
     }
@@ -37,13 +37,13 @@ function onScroll(event) {
     logoG.forEach(x => {
       x.classList.remove("log-g-scroll");
     });
-    if(windowMedia.matches){
+    if (windowMedia.matches) {
       menu.forEach(x => {
         x.classList.remove("menu-scroll");
       });
     };
-    if(touchMedia.matches){
-      hamburgurLine.forEach(x=>{
+    if (touchMedia.matches) {
+      hamburgurLine.forEach(x => {
         x.classList.remove('hamburger-line-scroll');
       })
     }

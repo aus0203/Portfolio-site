@@ -29,7 +29,7 @@ const farFrontFooterObject = document.querySelector(".farfrontfooterobject");
 const windowMedia = window.matchMedia('(min-width: 800px)');
 /*Touch media responsive*/
 const touchMedia = window.matchMedia('(max-width:800px)')
-
+const mobileMedia = window.matchMedia('(max-width:450px)')
 
 /*Loading Screen*/
 

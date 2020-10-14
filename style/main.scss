@@ -483,11 +483,11 @@ li {
   }
 
   .current {
-    width: 2rem;
-    height: 1px;
-    border-radius: 0;
-    margin-left: -2.5rem;
-    margin-right: 0.5rem;
+    position: relative;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    right: .5rem;
   }
 
   .nav-link-scroll {
@@ -508,7 +508,7 @@ li {
       flex-direction: column;
       p {
         font-size: 14px;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
     }
   }

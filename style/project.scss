@@ -10,9 +10,8 @@ h1 {
   font-size: 3rem;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 500;
+h2{
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -26,6 +25,7 @@ a {
 }
 
 /*Header*/
+
 
 .logo-g {
   fill: map-get($color, dark);
@@ -60,6 +60,10 @@ a {
 .about-state:hover {
   transform: scale(1.2);
 }
+
+
+/*FooterBar*/
+
 
 /*Project nav*/
 
@@ -146,6 +150,59 @@ a {
 }
 
 /*Main-content*/
+
+/*Scroll Icon*/
+.scrollicon {
+  width: 32px;
+  height: 54px;
+  border: 3px solid map-get($color, dark);
+  border-radius: 25px;
+  margin-bottom: 3rem;
+  transition: 0.5s ease;
+}
+
+.scrollicon:before {
+  content: "";
+  margin: 0 auto;
+  position: relative;
+  top: 6px;
+  display: block;
+  width: 3px;
+  height: 12px;
+  border-radius: 25%;
+
+  background-color: map-get($color, dark);
+  transform-origin: center bottom;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    height: 22px;
+  }
+  75% {
+    top: 20px;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+
+.scrollicon:hover {
+  margin-bottom: 2rem;
+}
+
+
+
 /*Top Screen*/
 
 .top-screen {
@@ -409,11 +466,25 @@ a {
   }
 }
 
-/*Footer*/
-.footer {
-  padding-top: 4rem;
-  width: 75vw;
-  
+/*Footer Contact for Project*/
+.contact-footer {
+  width: 70vw;
+  margin: 3rem auto;
+  .circle-divider {
+    .circle {
+      background-color: map-get($color, universal);
+    }
+  }
+  .contact-bar {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    p {
+      font-size: 1.2rem;
+      margin-right: 2rem;
+      font-weight: 400;
+    }
+  }
 }
 
 /*Reponsive*/
@@ -426,7 +497,7 @@ a {
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 
   /*Header*/
@@ -523,6 +594,26 @@ a {
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+  
+  /*Footer Contact for Project*/
+  .contact-footer {
+    margin: 3rem auto;
+    .circle-divider {
+      width:100%;
+      .circle {
+        width: 8px;
+        height: 8px;
+      }
+    }
+    .contact-bar {
+      margin-top: 2rem;
+      flex-direction: column;
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 }

@@ -1,8 +1,10 @@
 @import "main";
 
+/*Global Style*/
 body {
-  background-color: map-get($color, universal);
   color: map-get($color, dark);
+  background: rgb(238, 238, 238);
+  background: radial-gradient(circle, rgba(238, 238, 238, 1) 0%, rgba(224, 224, 224, 1) 100%);
 }
 
 a {
@@ -31,174 +33,101 @@ p {
   cursor: none;
 }
 
-.work-state:hover {
-  transform: scale(1.2);
-}
-
 .current {
   background-color: map-get($color, dark);
 }
+/*Side bar*/
 
-/*Side Bar*/
-
-.icon {
-  fill: map-get($color, dark);
-}
-.bar {
-  background: map-get($color, dark);
-}
-
-.handler {
-  background-color: map-get($color, dark);
-  height: 80px;
-  width: 4px;
-  margin-top: -8rem;
-}
-
-/*Main section*/
-.section1,
-.section2,
-.section5 {
-  background-color: map-get($color, universal);
-}
-.section1 {
-  z-index: 2;
-}
-.section2 {
-  z-index: 20;
-}
-
-/*Section1*/
-
-.smalltitle {
-  display: flex;
-  align-items: center;
-  padding-bottom: 1rem;
-  .titleLine {
-    margin-left: 0.5rem;
-    height: 1px;
-    width: 5rem;
+.side-bar {
+  .bar {
+    background-color: map-get($color, dark);
+  }
+  .handler {
     background-color: map-get($color, dark);
   }
 }
-
-.hero-line {
-  position: relative;
-  width: 70vw;
-  margin: 0 auto;
-  color: map-get($color, dark);
-  transition: 1s ease;
-  z-index: 10;
-  .title {
-    color: map-get($color, dark);
-    font-size: 4rem;
-    letter-spacing: 0;
-    font-weight: 700;
-  }
-  .subtitle {
-    width: 28rem;
-  }
+/*Footer bar*/
+.icon {
+  fill: map-get($color, dark);
 }
-
-.intro-background {
-  position: absolute;
-  display: flex;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-
-  img {
-    transition: 1s ease;
-  }
-
-  .intro-main {
-    position: absolute;
-    width: auto;
-    height: auto;
-    right: 10rem;
-    bottom: 0;
-    object-fit: cover;
-    object-position: center;
-    z-index: 5;
-    filter: grayscale(1);
-  }
-  .intro-object {
-    position: relative;
-    &:nth-child(2) {
-      width: 4rem;
-      bottom: 13rem;
-      left: 9rem;
-    }
-    &:nth-child(3) {
-      width: 10rem;
-      bottom: -15rem;
-      left: 43rem;
-      z-index: 6;
-    }
-    &:nth-child(4) {
-      width: 1rem;
-      bottom: -4rem;
-      right: -20rem;
-    }
-    &:nth-child(5) {
-      bottom: 22rem;
-      left: -25rem;
-    }
-    &:nth-child(6) {
-      bottom: 18rem;
-      left: -20rem;
-    }
-    &:nth-child(7) {
-      width: 5rem;
-      bottom: 8rem;
-      left: 7rem;
-    }
-    &:nth-child(8) {
-      width: 10rem;
-      bottom: 4rem;
-      left: -15rem;
-      z-index: 6;
-    }
-  }
-}
-
-/*Scroll Icon*/
-
-.scrollicon {
-  position: absolute;
-  left: 50%;
-  bottom:-2%;
-  border: 2px solid map-get($color, dark);
-  z-index: 10;
-}
-
-.scrollicon:before {
+.guilding-line {
   background-color: map-get($color, dark);
 }
-
+.guilding-line::before {
+  right: 0;
+  background-color: map-get($color, dark);
+}
+.guilding-line::after {
+  left: 0;
+  border-right: 9px solid map-get($color, dark);
+}
 
 /*Main section*/
 
-.cv-section {
+.shift-section{
+  position: relative;
+  z-index: 100;
+}
+
+/*Intro section*/
+
+.intro-strip {
+  position: relative;
   width: 70vw;
+  top: 20rem;
+  margin: 0 auto;
+  z-index: 100;
+}
+
+.intro-img {
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  .intro-circle {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: map-get($color, seconddark);
+  }
+  .intro-main {
+    position: absolute;
+    width: 25rem;
+    height: 27rem;
+    border-bottom-left-radius: 12.5rem;
+    border-bottom-right-radius: 12.5rem;
+    overflow: hidden;
+    text-align: right;
+    img {
+      width: 18rem;
+    }
+  }
+}
+
+.scroll-line {
+  background-color: map-get($color, thirddark);
+}
+
+/*CV-section*/
+
+.cv-section {
+  width: 68vw;
   margin: 1.5rem auto 0;
   display: flex;
   flex-direction: row;
 }
 
 .cv-col-title {
-  margin-bottom: .5rem;
+  margin-bottom: 0.8rem;
 }
 
 .cv-col-list {
   display: flex;
   flex-direction: row;
-  width: 21rem;
-  margin: 0 4rem 2rem 0;
+  width: 18rem;
+  margin: 0 6rem 2rem 0;
   .cv-list-img {
     margin-right: 2rem;
     img {
@@ -211,8 +140,11 @@ p {
       }
     }
   }
-  p {
-    font-size: 14px;
+  .cv-list-info {
+    h4 {
+      font-size: 14px;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -222,20 +154,20 @@ p {
 
 /*Contact section*/
 
-.section5 {
-  background-color: map-get($color, universal);
+.finishing-line {
+  background-color: map-get($color, thirddark);
 }
 
-.arrow {
-  padding-left: 1rem;
-  transform: rotate(180deg);
+.contact-Title, .contact-bar{
+  position: relative;
+  z-index: 300;
 }
 
-.page-cta:hover > .arrow {
-  transform: rotate(180deg) translateX(10px);
+.contact-sphere {
+  background-image: url(../img/silk.gif);
 }
 
-/*Responsive*/
+/* ================ Responsive===================== */
 
 @media screen and (max-width: 1280px) {
   .cv-col-list {
@@ -259,70 +191,51 @@ p {
     background-color: map-get($color, universal);
   }
 
-  /*Main-section*/
-
-  .section {
-    width: 100%;
-    display: flex;
-  }
-
-  .section1,
-  .section5 {
-    height: 100vh;
-    align-items: center;
-  }
-  .section2 {
-    padding-bottom: 2rem;
-  }
   /*Intro*/
-
-  .hero-line {
-    width: 65vw;
-    .title {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .subtitle {
-      width: 50vw;
-    }
-  }
-
-  /*Intro background*/
-
-  .intro-background {
-    display: none;
-  }
 
   /*Main CV Section*/
 
   .cv-section {
-    margin-top: 3rem;
+    margin: 3rem auto;
     width: 60vw;
     flex-direction: column;
   }
-  
+  .cv-col-title {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
+  /*Main section*/
   /*Landing section*/
-  .hero-line {
-    margin-bottom: 4rem;
+  .intro-img {
+    .intro-circle {
+      width: 15rem;
+      height: 15rem;
+    }
+    .intro-main {
+      width: 15rem;
+      height: 18rem;
+      border-bottom-left-radius: 7.5rem;
+      border-bottom-right-radius: 7.5rem;
+      img {
+        width: 12rem;
+      }
+    }
   }
+
+  /*CV-section*/
 
   .cv-col-list {
     width: 15rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   p {
-    font-size: 12px;
     line-height: 1.5rem;
   }
-}
-
-@media screen and (max-height: 600px){
-  /*Scroll icon*/
-  .scrollicon {
-    bottom: -1%;
+  /*Footer bar*/
+  .footerbar {
+    background-color: map-get($color, universal);
   }
 }

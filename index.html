@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Wei@Visualist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
-    <link rel="stylesheet" href="./style/new.css">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 
 <body>
@@ -76,6 +76,7 @@
     <!--Footer bar-->
 
     <div class="footerbar">
+        <!--Icon bar-->
         <div class="icon-bar">
             <ul>
                 <li>
@@ -111,28 +112,35 @@
             </ul>
         </div>
 
+        <!--Page cta-->
         <div class="page-action">
             <div class="guilding-line">
             </div>
-            <a class="anchor" href="./about.html">
+            <a class="anchor guilding-title" href="./about.html">
                 <p>Check more about me</p>
             </a>
         </div>
 
-
     </div>
+
     <!--Main content-->
 
     <div id="fullpage">
         <div class="section section0">
+            <div class="scroll-line">
+            </div>
             <div class="workSectionShift">
                 <div class="intro-strip">
-                    <h1 class="hero-line">Creating meaningful expereince</h1>
+                    <div class="hero-line">
+                    </div>
                 </div>
+                <div class="intro-sphere"></div>
             </div>
 
         </div>
+
         <div class="section section1">
+            <div class="leadingLine"></div>
             <div class="workSectionShift">
                 <div class="project-strip">
 
@@ -144,7 +152,9 @@
                             </div>
                             <p>01</p>
                         </div>
-                        <h1>SUPPER</h1>
+                        <a class="anchor-project" href="./supper.html">
+                            <h1>SUPPER</h1>
+                        </a>
                         <p class="project-tag">Brand strategy | Website design</p>
 
                     </div>
@@ -170,6 +180,7 @@
 
 
         <div class="section section2">
+            <div class="leadingLine"></div>
             <div class="workSectionShift">
                 <div class="project-strip">
 
@@ -181,7 +192,9 @@
                             </div>
                             <p>02</p>
                         </div>
-                        <h2 id="pro-title">WE BRING EUROPE TO YOU</h2>
+                        <a class="anchor-project" href="./klm.html">
+                            <h2 id="pro-title">WE BRING EUROPE TO YOU</h2>
+                        </a>
                         <p class="project-tag">Brand strategy | Business strategy</p>
 
                     </div>
@@ -208,6 +221,7 @@
 
 
         <div class="section section3">
+            <div class="leadingLine"></div>
             <div class="workSectionShift">
 
                 <div class="project-strip">
@@ -220,17 +234,21 @@
                             </div>
                             <p>03</p>
                         </div>
-                        <h1>VX</h1>
+                        <a class="anchor-project" href="./vx.html">
+                            <h1>VX</h1>
+                        </a>
                         <p class="project-tag">Organization design | Business strategy</p>
 
                     </div>
 
                     <div data-tilt class="project-img">
-                        <div class="project-shpere">
-                            <div class="project-pop">
-                                <img src="./img/Project-pop-up-03.png" alt="">
+                        <a class="anchor-project" href="./vx.html">
+                            <div class="project-shpere">
+                                <div class="project-pop">
+                                    <img src="./img/Project-pop-up-03.png" alt="">
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="project-info">
@@ -242,6 +260,7 @@
         </div>
 
         <div class="section section4">
+            <div class="leadingLine"></div>
             <div class="workSectionShift">
 
                 <div class="project-strip">
@@ -254,38 +273,67 @@
                             </div>
                             <p>04</p>
                         </div>
-                        <h2 id="pro-title">MY HEALTH JOURNEY</h2>
+                        <a class="anchor-project" href="./philips.html">
+                            <h2 id="pro-title">MY HEALTH JOURNEY</h2>
+                        </a>
+
                         <p class="project-tag">Brand strategy | Motion design</p>
 
                     </div>
 
                     <div data-tilt class="project-img">
-                        <div class="project-shpere">
-                        </div>
+                        <a class="anchor-project" href="./philips.html">
+                            <div class="project-shpere">
+                            </div>
+                        </a>
                     </div>
 
                     <div class="project-info">
-                        <p class="project-intro">Created new brand positioning and marketing executions for a brand new
+                        <p class="project-intro">Formulated new brand positioning and marketing executions for a brand
+                            new
                             health-surveillance platform</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="section contact-section">
+            <div class="finishing-line"></div>
+            <div class="workSectionShift">
+                <div class="contact-strip">
+                    <div class="contact-Title">
+                        <h2>Need more infomation?</h2>
+                        <h3>Let's talk.</h3>
+                    </div>
+                    <div class="circle-divider">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="contact-bar">
+                        <p>Linkedin</p>
+                        <p>Resume</p>
+                        <p>Contact</p>
+                    </div>
+                    <div class="contact-sphere">
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-    <!--Javascript-->
-    <!--Jquery/Tilt 3D-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
-    <!--GSAP-->
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
-    <!--Fullpage-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
-    <!--Customize JS-->
-    <script src="JS/main.js"></script>
-    <script src="JS/work.js"></script>
+        <!--Javascript-->
+        <!--Jquery/Tilt 3D-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+        <!--GSAP-->
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+        <!--Fullpage-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+        <!--Customize JS-->
+        <script src="JS/main.js"></script>
+        <script src="JS/index.js"></script>
 </body>
 
 </html>

@@ -1,433 +1,348 @@
 @import "main";
 
+/*Global Style*/
+
 body {
-  color: map-get($color, universal);
-  background-color: map-get($color, dark);
+    color: map-get($color, universal);
+    background: rgb(40, 40, 40);
+    background: radial-gradient(circle, rgba(40, 40, 40, 1) 0%, rgba(10, 10, 10, 1) 43%);
 }
+
 a {
-  color: map-get($color, universal);
+    color: map-get($color, universal);
 }
 
 /*Header*/
 .logo {
-  circle {
-    transition: 0.5s ease;
-  }
+    circle {
+        transition: 0.5s ease;
+    }
 }
 
 .logo:hover {
-  circle {
-    fill: map-get($color, accent);
-    stroke: map-get($color, accent);
-  }
+    circle {
+        fill: map-get($color, accent);
+        stroke: map-get($color, accent);
+    }
 }
 .work-state {
-  cursor: none;
+    cursor: none;
 }
 
 .about-state:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .current {
-  background-color: map-get($color, universal);
+    background-color: map-get($color, universal);
 }
 
-/*Side Bar*/
+/*Side bar*/
 
+.side-bar {
+    .bar {
+        background-color: map-get($color, universal);
+    }
+    .handler {
+        background-color: map-get($color, universal);
+    }
+}
+
+.handler::before {
+    content: attr(data-text);
+    display: block;
+    position: relative;
+    font-size: 12px;
+    left: 1.5rem;
+}
+
+/*Footer bar*/
 .icon {
-  fill: map-get($color, universal);
+    fill: map-get($color, universal);
+}
+.guilding-line {
+    background-color: map-get($color, universal);
+}
+.guilding-line::before {
+    background-color: map-get($color, universal);
+}
+.guilding-line::after {
+    right: 0;
+    border-left: 9px solid map-get($color, universal);
 }
 
-.bar {
-  background: map-get($color, universal);
+.guilding-title {
+    transition: 0.5s ease;
 }
 
-.handler {
-  background-color: map-get($color, universal);
-  height: 40px;
-  width: 4px;
-  margin-top: -10rem;
+.guilding-title:hover {
+    position: relative;
+    left: 1rem;
 }
 
-/*Project background*/
-
-.section-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.background-object {
-  position: relative;
-  &:nth-of-type(1) {
-    width: 6rem;
-    top: -16rem;
-    left: 6rem;
-  }
-  &:nth-of-type(2) {
-    width: 7rem;
-    bottom: -2rem;
-    left: 15rem;
-  }
-  &:nth-of-type(3) {
-    width: 8rem;
-    right: 30rem;
-    bottom: 3rem;
-  }
-  &:nth-of-type(4) {
-    width: 0.8rem;
-    left: 26rem;
-    top: 10rem;
-  }
-  &:nth-of-type(5) {
-    width: 3rem;
-    left: 16rem;
-    top: 16rem;
-  }
-  &:nth-of-type(6) {
-    width: 0.8rem;
-    right: 47rem;
-    bottom: 13rem;
-  }
+/*Main section*/
+.workSectionShift {
+    position: relative;
+    z-index: 100;
 }
 
-.objectback {
-  margin-top: 100rem;
-  transition: 1s ease-in-out;
-}
-.objectfront {
-  margin-top: 150rem;
-  transition: 1s ease-in-out;
-}
-.objectfarfront {
-  margin-top: 200rem;
-  transition: 1s ease-in-out;
+/*Landing Section*/
+/*Section 0*/
+
+.intro-strip {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
-/*Section01*/
+.hero-line {
+    position: relative;
+}
 
-.section1 {
-  z-index: 2;
-  /*Section01 title*/
-
-  /*Parallex effect*/
-  .layer {
+.intro-sphere {
     position: absolute;
-    width: auto;
-    height: auto;
+    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    object-fit: cover;
-    object-position: center;
-    transition: 1s ease;
-    z-index: 3;
-  }
+    margin: auto;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-image: url(../img/uni.gif);
+    mix-blend-mode: difference;
+    z-index: 100;
 }
 
-/*Cover-pic*/
-
-.heroline {
-  position: relative;
-  z-index: 5;
-  margin: 0 auto;
-  width: 70vw;
-  h1 {
-    width: 670px;
-    margin-left: 3rem;
-  }
+.scroll-line {
+    background-color: map-get($color, seconddark);
 }
 
-.sphere-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 22rem;
-  height: 22rem;
-  border-radius: 50%;
-  background-color: map-get($color, universal);
-  mix-blend-mode: difference;
-  z-index: 6;
+/*Project Section*/
+.leadingLine {
+    width: 2px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: map-get($color, seconddark);
 }
 
-/*Scroll down Call of action*/
-/*Scroll Icon*/
+/*Project intro numbering*/
 
-.scrollicon {
-  position: absolute;
-  left: 50%;
-  bottom: -2%;
-  border: 2px solid map-get($color, universal);
-  z-index: 5;
-}
-
-.scrollicon:before {
-  background-color: map-get($color, universal);
-}
-
-  /*Project intro numbering*/
 .intro-number {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
 }
 .number-line {
-  border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-  width: 10rem;
-  margin: 0 0.5rem;
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
+    width: 8rem;
+    margin: 0 0.5rem;
 }
 
-  /*Project Photo with hover effect*/
-.project-photo {
-  width: 100%;
-  height: inherit;
-  object-fit: cover;
-}
-
-.photo-zoom {
-  transform: scale(1);
-  transition: 0.3s ease-in-out;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: 0.4s ease;
-  p {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-}
-
-.photo:hover > .photo-zoom {
-  transform: scale(1.2);
-}
-.photo:hover > a > .overlay {
-  opacity: 1;
-}
-
-/*Project section*/
-
-.section2,
-.section3,
-.section4 {
-  background-color: map-get($color, dark);
-  z-index: 7;
-}
-
-.project-section {
-  margin-top: 100rem;
-  transition: 1s ease;
-}
+/*Project part*/
 
 .project-strip {
-  width: 70vw;
-  height: 32vh;
-  margin: 2rem auto 3rem;
-  display: flex;
-  flex-basis: content;
-  .intro {
-    width: 45%;
-    height: inherit;
-    margin: 1.5rem 3rem;
-  }
-  .photo {
-    width: 55%;
-    height: inherit;
-    overflow: hidden;
-    position: relative;
-  }
-}
-
-.project-strip2 {
-  justify-content: flex-end;
-  .intro {
-    text-align: right;
-    .intro-number {
-      justify-content: flex-end;
-    }
-  }
-}
-
-/*Project title size*/
-
-.project-title1 {
-  font-size: 5rem;
-}
-.project-title2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.project-title4 {
-  font-size: 3rem;
-  line-height: 3.5rem;
-  margin-bottom: 1rem;
-}
-/*Contact section*/
-
-.arrow {
-  padding-right: 1rem;
-}
-
-.page-cta:hover > .arrow {
-  transform: translateX(10px);
-}
-
-/*Responsive*/
-
-@media screen and (max-width: 1280px) {
-  .sphere-cover {
-    width: 18rem;
-    height: 18rem;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  /*Header*/
-  .hamburger-line {
-    background-color: map-get($color, universal);
-  }
-  .nav-link {
-    background-color: map-get($color, dark);
-  }
-
-  /*All section*/
-
-  .section1,
-  .section5 {
-    width: 100%;
-    height: 100vh;
+    width: 72vw;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .section2 {
-    padding-top: 5rem;
-  }
-  .section4 {
-    padding-bottom: 2rem;
-  }
-  /*Landing section*/
-
-  .heroline {
-    width: 67vw;
-    h1 {
-      font-size: 2.3rem;
-      width: 100%;
-      margin-left: 0rem;
+    margin-bottom: 3rem;
+    .project-title {
+        width: 33%;
+        text-align: end;
+        .project-tag {
+            font-weight: 400;
+        }
     }
-  }
-
-  /*Project Section*/
-
-  .project-section {
-    margin-top: 0;
-  }
-
-  .project-strip {
-    flex-wrap: wrap;
-    margin: 0 auto 5rem;
-    .photo {
-      width: 100%;
-      height: 130px;
+    .project-img {
+        width: 33%;
+        margin: 0 4rem;
     }
-    .intro {
-      width: 100%;
-      height: 50%;
-      margin: 1.5rem 0;
+    .project-info {
+        width: 33%;
+        .project-intro {
+            width: 90%;
+        }
     }
-  }
-  .intro-number {
-    margin-bottom: 0;
-  }
-
-  .project-strip2 {
-    justify-content: flex-start;
-    .photo {
-      order: 1;
-    }
-    .intro {
-      order: 2;
-      text-align: left;
-      .intro-number {
-        justify-content: flex-start;
-      }
-    }
-  }
-
-  .project-title1 {
-    font-size: 2.2rem;
-    line-height: 2.2rem;
-    margin: 0.5rem 0;
-  }
-  .project-title2,
-  .project-title4 {
-    font-size: 1.8rem;
-    margin: 0.3rem 0;
-  }
-
-  .klm-strip {
-    margin-bottom: 8rem;
-  }
-
-  /*Contact Section*/
-
-  .section-background {
-    display: none;
-  }
-
-  .layer {
-    display: none;
-  }
 }
 
-@media screen and (max-width: 450px) {
-  /*Landing section*/
-  .heroline {
-    margin-bottom: 3rem;
-  }
+.project-shpere {
+    width: 22rem;
+    height: 22rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
 
-  .sphere-cover {
-    width: 20rem;
-    height: 20rem;
-  }
+.project-pop {
+    transform: translateZ(20px);
+    img {
+        width: 25rem;
+    }
+}
 
-  /*Main section*/
-  .project-title2,
-  .project-title4 {
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    margin: 0.5rem 0;
-  }
+#pro-title {
+    font-size: 2.4rem;
+}
+
+/*Each project section*/
+
+/*Section1*/
+.section1 {
+    .project-shpere {
+        background-color: map-get($color, universal);
+        .project-pop {
+            margin-top: 5rem;
+        }
+    }
+}
+
+.section2 {
+    .project-shpere {
+        background-color: map-get($color, klm);
+        .project-pop {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.section3 {
+    .project-shpere {
+        background-color: #e0be53;
+        .project-pop {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.section4 {
+    .project-shpere {
+        background-image: url(../img/project-04.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .project-pop {
+            margin-top: 3rem;
+        }
+    }
+}
+
+/*Contact section*/
+
+.finishing-line {
+    background-color: map-get($color, seconddark);
+}
+
+.contact-sphere {
+    background-image: url(../img/uni.gif);
+    mix-blend-mode: difference;
+    z-index: 100;
+}
   
 
-  /*Contact Section*/
+/* ================ Responsive===================== */
 
-  .footerBackground {
-    display: none;
-  }
+@media screen and (max-width: 800px) {
+    /*Header*/
+    .hamburger-line {
+        background-color: map-get($color, universal);
+    }
+    .nav-link {
+        background-color: map-get($color, dark);
+    }
+
+    /*Main section*/
+
+    /*Intro section*/
+
+    .intro-sphere {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    /*Project Section*/
+
+    .leadingLine {
+        display: none;
+    }
+
+    .intro-number {
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+    }
+
+    /*Project part*/
+
+    .project-strip {
+        width: 65vw;
+        flex-wrap: wrap;
+        padding-bottom: 2rem;
+        .project-title {
+            order:2;
+            width: 100%;
+            text-align: start;
+            margin-bottom: 1rem;
+        }
+        .project-img {
+            order:1;
+            width: 100%;
+            padding: 0 0 3rem;
+        }
+        .project-info {
+            order:3;
+            width: 100%;
+            margin: 0;
+            .project-intro {
+                width: 100%;
+            }
+        }
+    }
+    .project-shpere {
+        width: 50vw;
+        height: 50vw;
+    }
+    .project-pop {
+        transform: translateZ(20px);
+        img {
+            width: 15rem;
+        }
+    }
+
+    #pro-title {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .section1,
+    .section2,
+    .section3 {
+        .project-shpere {
+            .project-pop {
+                margin-top: 0.5rem;
+            }
+        }
+    }
 }
 
-@media screen and (max-height: 600px){
-  /*Scroll icon*/
-  .scrollicon {
-    bottom: -1%;
-  }
+@media screen and (max-width: 600px) {
+    .scroll-line {
+        display: none;
+    }
+
+    /*Project section*/
+
+    /*Footer bar*/
+    .footerbar {
+        background-color: map-get($color, dark);
+    }
 }

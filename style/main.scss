@@ -6,6 +6,7 @@ $color: (
   universal: #e0e0e0,
   dark: #0a0a0a,
   seconddark: #292929,
+  thirddark: #a3a3a3,
   supper: #0f1e31,
   supperAccent: #49b7b5,
   klm: #4b9aaa,
@@ -26,7 +27,7 @@ $color: (
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 h2 {
@@ -37,18 +38,18 @@ h2 {
 h3 {
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 2.5rem;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
 p {
   font-weight: 300;
   line-height: 1.8rem;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 a {
@@ -167,11 +168,12 @@ li {
   justify-content: space-between;
   align-items: flex-end;
   z-index: 999;
-  padding: 2rem 6.5rem 0.5rem;
+  padding: 1.2rem 4rem 0.5rem;
   background-color: transparent;
   transition: 0.5s ease;
 
   .logo {
+    position: relative;
     margin-top: 1.5rem;
     width: 3rem;
     transition: 0.5s ease;
@@ -186,13 +188,13 @@ li {
   li {
     display: inline-block;
     margin-bottom: 0;
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
 }
 
 .current {
-  width: 0.3rem;
-  height: 0.3rem;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   margin: 0 auto 0.3rem;
 }
@@ -203,7 +205,7 @@ li {
   position: fixed;
   width: 3rem;
   height: 60vh;
-  margin: 8rem 0 0 6.5rem;
+  margin: 8rem 0 0 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,7 +237,7 @@ li {
   left: 0;
   right: 0;
   width: 100%;
-  padding: 0 7rem 3rem;
+  padding: 0 4rem 3rem 5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -247,6 +249,11 @@ li {
   .icon {
     width: 1.2rem;
     margin-right: 3rem;
+    transition: 0.5s ease;
+    &:hover {
+      fill: map-get($color, accent);
+      transform: scale(1.5);
+    }
   }
 }
 
@@ -289,174 +296,111 @@ li {
   z-index: 15;
 }
 
-// /*Scroll Icon*/
-// .scrollicon {
-//   width: 32px;
-//   height: 54px;
-//   border: 3px solid map-get($color, dark);
-//   border-radius: 25px;
-//   margin-bottom: 3rem;
-//   transition: 0.5s ease;
-// }
+/*Scroll guilding line*/
+.scroll-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto 0;
+  width: 2px;
+  height: 20rem;
+  background-color: map-get($color, seconddark);
+}
 
-// .scrollicon:before {
-//   content: "";
-//   margin: 0 auto;
-//   position: relative;
-//   top: 6px;
-//   display: block;
-//   width: 3px;
-//   height: 12px;
-//   border-radius: 25%;
+.scroll-line::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 3rem;
+  background-color: map-get($color, accent);
+  position: relative;
+  animation-timing-function: ease-in-out;
+  animation-name: scrollLine;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 
-//   background-color: map-get($color, dark);
-//   transform-origin: center bottom;
-//   animation-duration: 2s;
-//   animation-iteration-count: infinite;
-//   animation-name: scroll;
-// }
+@keyframes scrollLine {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(17rem);
+  }
+}
 
-// @keyframes scroll {
-//   0% {
-//     opacity: 0;
-//   }
-//   25% {
-//     opacity: 1;
-//   }
-//   50% {
-//     height: 22px;
-//   }
-//   75% {
-//     top: 20px;
-//   }
-//   100% {
-//     transform: scaleY(0);
-//     opacity: 0;
-//   }
-// }
+/*Contact section*/
 
-// .scrollicon:hover {
-//   margin-bottom: 2rem;
-// }
+.finishing-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 2px;
+  height: 20rem;
+}
 
-/*Contact Section*/
-// .section5 {
-//   background-color: map-get($color, dark);
-//   z-index: 8;
-// }
+.contact-strip {
+  width: 55vw;
+  margin: 0 auto;
+  .contact-Title {
+    width: 50%;
+    h2 {
+      margin-bottom: 1rem;
+    }
+    h3 {
+      margin-bottom: 2rem;
+    }
+  }
+  .contact-bar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-right: 3rem;
+    }
+  }
+}
 
-// .contact-line {
-//   position: relative;
-//   width: 70vw;
-//   margin: 0 auto;
-//   transition: 1.2s ease;
-//   z-index: 100;
-//   .title {
-//     font-family: "Gordita", sans-serif;
-//     font-size: 3rem;
-//     font-weight: 500;
-//     line-height: 72px;
-//   }
-//   .subtitle {
-//     font-family: "Gordita", sans-serif;
-//     font-size: 1.5rem;
-//     line-height: 35px;
-//     margin-top: 1rem;
-//   }
-// }
+.circle-divider {
+  position: relative;
+  z-index: 100;
+  .circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: map-get($color, seconddark);
+    margin: 0 1rem 0 0.5rem;
+  }
+}
 
-// .page-cta {
-//   margin-top: 1.5rem;
-//   height: 2rem;
-//   width: 20rem;
-//   display: flex;
-//   align-items: center;
-//   .arrow {
-//     width: 100px;
-//     transition: 0.4s ease;
-//   }
-//   p {
-//     font-weight: 500;
-//   }
-// }
+.contact-sphere {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 23rem;
+  height: 23rem;
+  border-radius: 50%;
+}
 
-// .footer {
-//   position: relative;
-//   bottom: calc(-10% - 80px);
-//   width: 70vw;
-//   margin: 0 auto;
-//   padding-bottom: 3rem;
-//   z-index: 100;
-//   .footer-link {
-//     margin-bottom: 0.8rem;
-//     li {
-//       display: inline-block;
-//       margin-right: 2rem;
-//       p {
-//         font-size: 1.2rem;
-//         font-weight: 400;
-//         transition: 0.5s ease;
-//       }
-//       p:hover {
-//         color: map-get($color, accent);
-//         transform: scale(1.1);
-//       }
-//     }
-//   }
-//   .footer-line {
-//     border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
-//     width: 100%;
-//   }
-//   .footer-claim {
-//     font-size: 0.8rem;
-//     margin-top: 1rem;
-//   }
-// }
-
-// .footerBackground {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: 9;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-//   width: 100%;
-
-//   .footerBackgroundObject {
-//     position: relative;
-//     transition: 1s ease;
-//     &:nth-child(1) {
-//       width: 7rem;
-//       bottom: 10rem;
-//       margin-bottom: -150rem;
-//       left: 25rem;
-//     }
-//     &:nth-child(2) {
-//       width: 4rem;
-//       left: 10rem;
-//       margin-bottom: -150rem;
-//     }
-//     &:nth-child(3) {
-//       width: 0.8rem;
-//       bottom: 15rem;
-//       left: 3rem;
-//       margin-bottom: -200rem;
-//     }
-//     &:nth-child(4) {
-//       position: absolute;
-//       bottom: -5rem;
-//       right: -5rem;
-//       transform: rotate(-20deg);
-//       margin-bottom: -300rem;
-//     }
-//   }
-// }
+/* ================ Responsive===================== */
 
 @media screen and (max-width: 1280px) {
   h1 {
     font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 
   h3 {
@@ -473,16 +417,16 @@ li {
 }
 
 @media screen and (max-width: 800px) {
-  body {
-    overflow-x: hidden;
-  }
   .cursor {
     display: none;
   }
 
   /*Responsive header*/
   .header {
-    padding: 0.5rem 3rem 0.5rem 1rem;
+    padding: 0.5rem 6rem 0.5rem 3.5rem;
+    li {
+      padding: 0;
+    }
     .logo {
       width: 2.5rem;
     }
@@ -527,8 +471,8 @@ li {
     transition: all 0.6s ease-out;
 
     .work-state {
-      margin-top: 10rem;
-      margin-bottom: 2rem;
+      margin-top: 13rem;
+      margin-bottom: 3rem;
     }
     a {
       display: flex;
@@ -549,16 +493,44 @@ li {
   .nav-link-scroll {
     right: 0;
   }
+
+  /*Contact Section*/
+  .finishing-line {
+    display: none;
+  }
+
+  .contact-strip {
+    width: 70vw;
+    .contact-Title {
+      width: 100%;
+    }
+    .contact-bar {
+      flex-direction: column;
+      p {
+        font-size: 14px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .contact-sphere {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
   /*Gloabal style*/
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
   }
 
   h4 {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   p {
@@ -568,7 +540,7 @@ li {
 
   /*Header*/
   .header {
-    padding-right: 4rem;
+    padding: 0.5rem 4.5rem 0.5rem 1.5rem;
     .logo {
       width: 2rem;
     }
@@ -595,4 +567,20 @@ li {
   .page-action {
     display: none;
   }
+
+  /*Scroll guilding line*/
+  .scroll-line {
+    display: none;
+  }
+
+  /*Shared section*/
+
+  .section0,
+  .contact-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 }

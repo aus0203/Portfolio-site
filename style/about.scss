@@ -159,10 +159,36 @@ p {
 }
 
 .scroll-line {
-  background-color: map-get($color, thirddark);
+  background-color: map-get($color, secondUniversal);
 }
 
 /*CV-section*/
+
+.leadingLine {
+  width: 2px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: map-get($color, secondUniversal);
+}
+
+.cv-sphere{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: map-get($color, secondUniversal);
+  z-index: -1;
+}
 
 .cv-section {
   width: 68vw;
@@ -207,7 +233,7 @@ p {
 /*Contact section*/
 
 .finishing-line {
-  background-color: map-get($color, thirddark);
+  background-color: map-get($color, secondUniversal);
 }
 
 .contact-Title,
@@ -296,6 +322,11 @@ p {
   }
 
   /*CV-section*/
+
+  .leadingLine, .cv-sphere{
+    display: none;
+  }
+  
 
   .cv-col-list {
     width: 15rem;

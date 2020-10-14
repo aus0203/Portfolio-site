@@ -860,10 +860,36 @@ p {
 }
 
 .scroll-line {
-  background-color: #a3a3a3;
+  background-color: #F5F5F5;
 }
 
 /*CV-section*/
+.leadingLine {
+  width: 2px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #F5F5F5;
+}
+
+.cv-sphere {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: #F5F5F5;
+  z-index: -1;
+}
+
 .cv-section {
   width: 68vw;
   margin: 1.5rem auto 0;
@@ -921,7 +947,7 @@ p {
 
 /*Contact section*/
 .finishing-line {
-  background-color: #a3a3a3;
+  background-color: #F5F5F5;
 }
 
 .contact-Title,
@@ -1008,6 +1034,9 @@ p {
     display: none;
   }
   /*CV-section*/
+  .leadingLine, .cv-sphere {
+    display: none;
+  }
   .cv-col-list {
     width: 15rem;
     margin-bottom: 3rem;

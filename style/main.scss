@@ -344,6 +344,7 @@ li {
 }
 
 .contact-strip {
+  position: relative;
   width: 55vw;
   margin: 0 auto;
   .contact-Title {
@@ -390,6 +391,7 @@ li {
   width: 23rem;
   height: 23rem;
   border-radius: 50%;
+  z-index: -1;
 }
 
 /* ================ Responsive===================== */
@@ -507,7 +509,7 @@ li {
     .contact-bar {
       flex-direction: column;
       p {
-        font-size: 14px;
+        font-size: 1rem;
         margin-bottom: 1rem;
       }
     }

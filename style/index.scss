@@ -72,7 +72,8 @@ a {
 }
 
 .guilding-title {
-    transition: 0.5s ease;
+    left: 0rem;
+    transition: 0.5s ease-in-out;
 }
 
 .guilding-title:hover {
@@ -245,8 +246,6 @@ a {
 
 .contact-sphere {
     background-image: url(../img/uni.gif);
-    mix-blend-mode: difference;
-    z-index: 100;
 }
   
 

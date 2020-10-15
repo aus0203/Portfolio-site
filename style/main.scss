@@ -406,7 +406,7 @@ li {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: map-get($color, seconddark);
+    background-color: map-get($color, secondUniversal);
     margin: 0 1rem 0 0.5rem;
   }
 }
@@ -558,7 +558,7 @@ li {
   }
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   h4 {

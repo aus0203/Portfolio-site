@@ -121,29 +121,23 @@ p {
   }
 }
 
+.intro-skill{
+  display: flex;
+  flex-direction: row;
+}
+
 .intro-list {
   position: relative;
-  display: inline-block;
   width: 3.5rem;
   height: 3.5rem;
   margin-left: 2rem;
   border-radius: 50%;
   background-color: map-get($color, accent);
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-
-.intro-list{
-  img{
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    margin-bottom: .2rem;
-    height:60px;
-  }
-}
 
 .intro-img {
   width: 70vw;
@@ -171,7 +165,6 @@ p {
     }
   }
 }
-
 
 .scroll-line {
   background-color: map-get($color, secondUniversal);
@@ -255,6 +248,12 @@ p {
 .contact-bar {
   position: relative;
   z-index: 300;
+}
+
+.circle-divider {
+  .circle {
+    background-color: map-get($color, seconddark);
+  }
 }
 
 .contact-sphere {

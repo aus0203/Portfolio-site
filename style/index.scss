@@ -81,7 +81,6 @@ a {
     left: 1rem;
 }
 
-
 /*Main section*/
 .workSectionShift {
     position: relative;
@@ -94,12 +93,7 @@ a {
 .intro-strip {
     width: 70vw;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-line {
-    position: relative;
+    text-align: center;
 }
 
 .intro-sphere {
@@ -245,10 +239,15 @@ a {
     background-color: map-get($color, seconddark);
 }
 
-.contact-sphere {
-    background-image: url(../img/uni.gif);
+.circle-divider {
+    .circle {
+        background-color: map-get($color, secondUniversal);
+    }
 }
-  
+
+.contact-sphere {
+    background-color: map-get($color, seconddark);
+}
 
 /* ================ Responsive===================== */
 
@@ -288,18 +287,18 @@ a {
         flex-wrap: wrap;
         padding-bottom: 2rem;
         .project-title {
-            order:2;
+            order: 2;
             width: 100%;
             text-align: start;
             margin-bottom: 1rem;
         }
         .project-img {
-            order:1;
+            order: 1;
             width: 100%;
             padding: 0 0 3rem;
         }
         .project-info {
-            order:3;
+            order: 3;
             width: 100%;
             margin: 0;
             .project-intro {
@@ -340,6 +339,15 @@ a {
     }
 
     /*Project section*/
+    .intro-strip {
+        width: 80vw;
+    }
+
+    .hero-line {
+        h2 {
+            font-size: 1rem;
+        }
+    }
 
     /*Footer bar*/
     .footerbar {

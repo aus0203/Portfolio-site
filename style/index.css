@@ -488,7 +488,7 @@ li {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #292929;
+  background-color: #F5F5F5;
   margin: 0 1rem 0 0.5rem;
 }
 
@@ -645,7 +645,7 @@ li {
     font-size: 2.2rem;
   }
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   h4 {
     font-size: 14px;
@@ -800,16 +800,7 @@ a {
 .intro-strip {
   width: 70vw;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.hero-line {
-  position: relative;
+  text-align: center;
 }
 
 .intro-sphere {
@@ -972,8 +963,12 @@ a {
   background-color: #292929;
 }
 
+.circle-divider .circle {
+  background-color: #F5F5F5;
+}
+
 .contact-sphere {
-  background-image: url(../img/uni.gif);
+  background-color: #292929;
 }
 
 /* ================ Responsive===================== */
@@ -1060,6 +1055,12 @@ a {
     display: none;
   }
   /*Project section*/
+  .intro-strip {
+    width: 80vw;
+  }
+  .hero-line h2 {
+    font-size: 1rem;
+  }
   /*Footer bar*/
   .footerbar {
     background-color: #0a0a0a;

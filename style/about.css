@@ -488,7 +488,7 @@ li {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #292929;
+  background-color: #F5F5F5;
   margin: 0 1rem 0 0.5rem;
 }
 
@@ -840,25 +840,30 @@ p {
   width: 27vw;
 }
 
+.intro-skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .intro-list {
   position: relative;
-  display: inline-block;
   width: 3.5rem;
   height: 3.5rem;
   margin-left: 2rem;
   border-radius: 50%;
   background-color: #58bfd3;
-}
-
-.intro-list img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  margin-bottom: .2rem;
-  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 .intro-img {
@@ -992,6 +997,10 @@ p {
 .contact-bar {
   position: relative;
   z-index: 300;
+}
+
+.circle-divider .circle {
+  background-color: #292929;
 }
 
 .contact-sphere {

@@ -15,13 +15,13 @@ if (windowMedia.matches) {
             /*Project shift*/
             projectShift();
 
-            if(destination.index >0 && destination.index <5){
+            if (destination.index > 0 && destination.index < 5) {
                 sectionNav.innerHTML = "Touch the image";
                 sectionNav.style.opacity = 1;
-            }else if (destination.index >= 5){
+            } else if (destination.index >= 5) {
                 sectionNav.style.opacity = 0;
             }
-            else{
+            else {
                 sectionNav.innerHTML = "Scroll down";
                 sectionNav.style.opacity = 1;
             }
@@ -29,17 +29,26 @@ if (windowMedia.matches) {
     });
 };
 
-if(windowMedia.matches){
+
+
+
+
+
+
+if (windowMedia.matches) {
+    /*3D tilt animation*/
     const tilt = $('.js-tilt').tilt();
     tilt.on('change');  // parameters: event, transforms
     tilt.on('tilt.mouseLeave'); // parameters: event
     tilt.on('tilt.mouseEnter'); // parameters: event
+    /*Landing animation*/
+    let landingT1 = gsap.timeline({ defaults: { duration: 1 } });
+    landingT1.from(".intro-sphere", { scale: 0, delay: 1.5 })
+        .from('.intro-strip', { y: 50, opacity: 0 }, "-=0.5");
 }
 
 
-
-
-
+/*Project shift animation*/
 function projectShift() {
     let t1 = gsap.timeline({ defaults: { duration: .5 } })
 
@@ -50,9 +59,12 @@ function projectShift() {
         .from('.handler', { ease: "back.out(1.7)", scale: .5 }, '-=1.3')
 };
 
+
+/*Page cta animation*/
 var rule = CSSRulePlugin.getRule(".guilding-line::before");
 
 let t1 = gsap.timeline({ defaults: { duration: 1 }, repeat: -1 })
 t1.from(rule, { cssRule: { scale: 0, transformOrigin: "center center" } })
     .to(rule, { cssRule: { scale: 1.5, x: 130 } }, "-=0.8")
     .to(rule, { cssRule: { scale: 0 } }, "-=0.5")
+

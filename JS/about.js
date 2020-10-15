@@ -7,15 +7,22 @@ if(windowMedia.matches){
     new fullpage ('#fullpage', {
         scrollingSpeed: 1200,
         onLeave:function(origin, destination, direction){
+
             handler.style.marginBottom = 6 - (destination.index * 5.5) + "rem";
-            $('.handler').attr('data-text', destination.index)
+            $('.handler').attr('data-text', destination.index);
+
             /*Section shift*/
-            aboutShift()
+            aboutShift();
+
+            /*Section nav*/
+            if(destination.index > 0){
+                sectionNav.style.opacity = 0
+            }else{
+                sectionNav.style.opacity = 1
+            }
         },
     })
 }
-
-
 
 
 function aboutShift() {

@@ -48,7 +48,13 @@ a {
     }
 }
 
-
+.handler::before {
+    content: attr(data-text);
+    display: block;
+    position: relative;
+    font-size: 12px;
+    left: 1.5rem;
+}
 
 /*Footer bar*/
 .icon {
@@ -74,6 +80,7 @@ a {
     position: relative;
     left: 1rem;
 }
+
 
 /*Main section*/
 .workSectionShift {

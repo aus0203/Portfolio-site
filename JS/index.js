@@ -11,9 +11,20 @@ if (windowMedia.matches) {
         onLeave: function (origin, destination, direction) {
 
             handler.style.marginBottom = 10 - (destination.index * 3.5) + "rem";
-            $('.handler').attr('data-text', destination.index)
+            $('.handler').attr('data-text', destination.index);
             /*Project shift*/
             projectShift();
+
+            if(destination.index >0 && destination.index <5){
+                sectionNav.innerHTML = "Touch the image";
+                sectionNav.style.opacity = 1;
+            }else if (destination.index >= 5){
+                sectionNav.style.opacity = 0;
+            }
+            else{
+                sectionNav.innerHTML = "Scroll down";
+                sectionNav.style.opacity = 1;
+            }
         }
     });
 };

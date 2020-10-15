@@ -309,7 +309,12 @@ li {
           transform: scale(1.5);
 }
 
+.icon-bar {
+  width: 33%;
+}
+
 .page-action {
+  width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,6 +322,9 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -355,6 +363,21 @@ li {
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
   z-index: 15;
+}
+
+.section-nav {
+  text-align: center;
+  position: fixed;
+  width: 15rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  font-weight: 500;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: 20;
 }
 
 /*Scroll guilding line*/
@@ -650,6 +673,7 @@ li {
             justify-content: center;
   }
   .footerbar .icon-bar {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -659,6 +683,9 @@ li {
     margin: 0 3rem;
   }
   .page-action {
+    display: none;
+  }
+  .section-nav {
     display: none;
   }
   /*Scroll guilding line*/

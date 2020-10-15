@@ -78,4 +78,3 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-/*Scroll up bar*/

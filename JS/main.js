@@ -8,22 +8,13 @@ const hamburgerLine2 = document.querySelector(".hamburger-line2");
 const navLinks = document.querySelector('.nav-link');
 const anchors = document.querySelectorAll(".anchor");
 const anchorsProject = document.querySelectorAll(".anchor-project");
+const sectionNav = document.querySelector(".section-nav")
 const scrollIcon = document.querySelector(".scrollicon");
 
 /*Page link*/
 const loadingWrapper = document.querySelector(".loading-wrapper")
 const workLink = document.querySelector(".work-state");
 const aboutLink = document.querySelector(".about-state");
-/*Variables for background*/
-const front = document.querySelectorAll(".front");
-const back = document.querySelectorAll(".back");
-const farBack = document.querySelectorAll(".farback");
-const mainCharactor = document.querySelector(".maincharactor");
-const footerLine = document.querySelector(".contact-line");
-const callOfAction = document.querySelector(".call-of-action");
-const backFooterObject = document.querySelectorAll(".backfooterobject");
-const frontFooterObject = document.querySelector(".frontfooterobject");
-const farFrontFooterObject = document.querySelector(".farfrontfooterobject");
 
 /*Window media responsive*/
 const windowMedia = window.matchMedia('(min-width: 800px)');

@@ -624,25 +624,29 @@ a {
     position: relative;
     left: 9px;
   }
+
   /*FooterBar*/
   .footerbar {
-    visibility: visible;
     padding: 1.2rem 0;
     justify-content: center;
-    background-color: map-get($color, dark);
 
     .icon-bar {
+      width: 100%;
       display: flex;
     }
     .icon {
-      fill:map-get($color, universal);
       margin-right: 0;
       margin: 0 3rem;
     }
   }
+  .page-action {
+    display: none;
+  }
+
+  /*Main section*/
 
   .scrollicon {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
   }
 
 }

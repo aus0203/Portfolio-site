@@ -82,7 +82,24 @@
   padding-bottom: 2rem;
 }
 
-
+/*===================Responsive==================*/
+@media screen and (min-width: 1500px){
+  .visual-sec {
+    .logo {
+      width: 20rem;
+      margin-bottom: 4rem;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 3rem;
+      width: 55vw;
+    }
+  }
+  #Evaluation {
+    width: 30rem;
+    padding-bottom: 2rem;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .visual-sec {

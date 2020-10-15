@@ -373,8 +373,8 @@ li {
   margin: 0 auto;
   padding-bottom: 3rem;
   font-weight: 500;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
   z-index: 20;
 }
 
@@ -474,8 +474,8 @@ li {
   font-size: 1.2rem;
   font-weight: 400;
   margin-right: 3rem;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .contact-strip .contact-bar p:hover {
@@ -494,7 +494,7 @@ li {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   margin: 0 1rem 0 0.5rem;
 }
 
@@ -512,7 +512,105 @@ li {
 }
 
 /* ================ Responsive===================== */
+@media screen and (min-width: 1500px) {
+  /*Global style*/
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 4rem;
+    line-height: 5.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 2.2rem;
+  }
+  /*Page transition*/
+  .loading-logo {
+    width: 5rem;
+  }
+  .loading-sphere {
+    width: 10rem;
+    height: 10rem;
+  }
+  .loading-sphere::after {
+    width: 12rem;
+    height: 12rem;
+  }
+  /*Header*/
+  .header .logo {
+    width: 4rem;
+  }
+  .header a {
+    font-size: 1.5rem;
+  }
+  .header li {
+    padding-left: 3rem;
+  }
+  .current {
+    width: 8px;
+    height: 8px;
+  }
+  /*Footer Bar*/
+  .footerbar .icon {
+    width: 1.8rem;
+    margin-right: 5rem;
+  }
+  /*Scroll guilding line*/
+  .scroll-line {
+    height: 25rem;
+  }
+  @-webkit-keyframes scrollLine {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(22rem);
+              transform: translateY(22rem);
+    }
+  }
+  @keyframes scrollLine {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(22rem);
+              transform: translateY(22rem);
+    }
+  }
+  /*Contact section*/
+  .finishing-line {
+    height: 25rem;
+  }
+  .contact-strip .contact-Title {
+    width: 50%;
+  }
+  .contact-strip .contact-Title h2 {
+    margin-bottom: 2.5rem;
+  }
+  .contact-strip .contact-Title h3 {
+    margin-bottom: 2.5rem;
+  }
+  .contact-strip .contact-bar p {
+    font-size: 1.5rem;
+    margin-right: 5rem;
+  }
+  .contact-sphere {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
 @media screen and (max-width: 1280px) {
+  /*Global style*/
   h1 {
     font-size: 2.5rem;
   }
@@ -531,6 +629,7 @@ li {
 }
 
 @media screen and (max-width: 800px) {
+  /*Global style*/
   .cursor {
     display: none;
   }
@@ -614,7 +713,7 @@ li {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    right: .5rem;
+    right: 0.5rem;
   }
   .nav-link-scroll {
     right: 0;
@@ -1341,7 +1440,134 @@ a {
   font-weight: 400;
 }
 
-/*Reponsive*/
+/*===================Responsive==================*/
+@media screen and (min-width: 1500px) {
+  /*Global style*/
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 3.2rem;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 3.2rem;
+  }
+  /*Main-content*/
+  /*Project Intro*/
+  .project-brief {
+    padding: 7rem 0;
+  }
+  .project-content {
+    padding-right: 6rem;
+  }
+  .project-content .content-col {
+    width: 18rem;
+    padding-right: 4rem;
+  }
+  .project-content .content-row {
+    height: 10rem;
+  }
+  .project-intro p {
+    width: 50rem;
+  }
+  /*Content Section*/
+  .seperate-section {
+    padding: 4rem 0;
+    margin: 6rem 0;
+  }
+  /*text*/
+  .smalltitle .titleLine {
+    margin-left: 1rem;
+    width: 10rem;
+  }
+  .text-with-photo {
+    padding: 6rem 0 2rem;
+  }
+  .text-with-photo .text-sec {
+    width: 42rem;
+  }
+  .text-with-photo .photo-sec {
+    width: 40rem;
+    height: 100%;
+    margin: 0 2rem;
+  }
+  .text-with-photo p {
+    margin-bottom: 1rem;
+  }
+  .text-with-photo-2 {
+    padding: 6rem 0 2rem;
+  }
+  .text-with-photo-2 .photo-sec {
+    width: 70vw;
+  }
+  .text-with-photo-2 .text-sec {
+    width: 60rem;
+  }
+  .quote-sec .quote p {
+    font-size: 20px;
+  }
+  .thumbnail-sec .thumbnail {
+    max-width: 20rem;
+  }
+  .thumbnail-sec .thumbnail img {
+    max-width: 15rem;
+    max-height: 17rem;
+    margin-bottom: 3rem;
+  }
+  .thumbnail-sec .thumbnail p {
+    width: 15rem;
+    line-height: 2rem;
+  }
+  /*Media sec*/
+  .demo-strip {
+    width: 75vw;
+  }
+  .demo-strip .demo-title {
+    width: 35rem;
+  }
+  .demo-strip .demo-title h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .demo-strip .demo-title p {
+    margin-bottom: 1rem;
+  }
+  .demo-strip img {
+    width: 60%;
+  }
+  .poster-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 75vw;
+    margin: 0 auto;
+  }
+  .poster-sec img {
+    max-height: 40rem;
+  }
+  /*Footer Contact for Project*/
+  .contact-footer {
+    width: 75vw;
+    margin: 5rem auto;
+  }
+  .contact-footer .contact-bar {
+    margin-top: 2rem;
+  }
+  .contact-footer .contact-bar p {
+    font-size: 1.5rem;
+    margin-right: 4rem;
+  }
+}
+
 @media screen and (max-width: 800px) {
   /*Global*/
   h1 {
@@ -1619,6 +1845,30 @@ a {
 
 .mockup img {
   width: 30rem;
+}
+
+/*===================Responsive==================*/
+@media screen and (min-width: 1500px) {
+  /*Main-content*/
+  .photo-sec .thumbnail {
+    width: 14rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  .photo-sec .thumbnail img {
+    margin: 0 auto 2rem;
+    max-width: 12rem;
+    height: 9rem;
+  }
+  .photo-sec .thumbnail p {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 800px) {

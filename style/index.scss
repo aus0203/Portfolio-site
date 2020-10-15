@@ -31,7 +31,7 @@ a {
 
 .about-state:hover {
     transform: scale(1.2);
-    color:map-get($color, accent);
+    color: map-get($color, accent);
 }
 
 .current {
@@ -251,6 +251,44 @@ a {
 }
 
 /* ================ Responsive===================== */
+
+@media screen and (min-width: 1500px) {
+    /*Landing Section*/
+    /*Section 0*/
+    .intro-sphere {
+        width: 30rem;
+        height: 30rem;
+    }
+    /*Project intro numbering*/
+    .number-line {
+        width: 12rem;
+    }
+    /*Project part*/
+    .project-strip {
+        width: 80vw;
+        .project-img {
+            margin: 0 5.5rem;
+        }
+        .project-info {
+            .project-intro {
+                width: 100%;
+            }
+        }
+    }
+    .project-shpere {
+        width: 30rem;
+        height: 30rem;
+    }
+    .project-pop {
+        img {
+            width: 33rem;
+        }
+    }
+    #pro-title {
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+}
 
 @media screen and (max-width: 800px) {
     /*Header*/

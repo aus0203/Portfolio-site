@@ -56,6 +56,12 @@
   padding-bottom: 5rem;
 }
 
+@media screen and (min-width: 1500px){
+  /*Main-content*/
+  #why{
+    width: 42rem;
+  }
+}
 
 @media screen and (max-width: 800px) {
   #why {

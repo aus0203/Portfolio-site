@@ -78,47 +78,66 @@
     }
 }
 
-#roadmap{
+#roadmap {
     width: 70vw;
     margin-top: 2rem;
 }
 
-.mockup{
+.mockup {
     width: 70vw;
     margin-bottom: 2rem;
-    img{
-    width: 30rem;
+    img {
+        width: 30rem;
     }
 }
-@media screen and (max-width: 800px) {
 
+/*===================Responsive==================*/
+@media screen and (min-width: 1500px) {
+    /*Main-content*/
+    .photo-sec {
+        .thumbnail {
+            width: 14rem;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+    
+            img {
+                margin: 0 auto 2rem;
+                max-width: 12rem;
+                height: 9rem;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
     .thumbnail-sec {
-      .thumbnail {
-        margin-bottom: 2rem;
-      }
+        .thumbnail {
+            margin-bottom: 2rem;
+        }
     }
     .poster-sec {
-      flex-direction: column;
-      img{
-        width: 100%;
-      }
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
     }
-  }
-  
-@media screen and (max-width: 450px) {
+}
 
-    .photo-sec{
-        .thumbnail{
+@media screen and (max-width: 450px) {
+    .photo-sec {
+        .thumbnail {
             width: 8rem;
         }
-        .problem-thumbnail-1{
+        .problem-thumbnail-1 {
             width: 12rem;
-            img{
+            img {
                 width: 12rem;
                 height: auto;
             }
- 
         }
     }
-    
-  }
+}

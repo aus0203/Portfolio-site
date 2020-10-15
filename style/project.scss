@@ -57,7 +57,6 @@ a {
   color: map-get($color, universal);
 }
 
-
 /*FooterBar*/
 .footerbar {
   visibility: hidden;
@@ -474,7 +473,141 @@ a {
   }
 }
 
-/*Reponsive*/
+/*===================Responsive==================*/
+
+@media screen and (min-width: 1500px) {
+  /*Global style*/
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 3.2rem;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 3.2rem;
+  }
+  /*Main-content*/
+  /*Project Intro*/
+  .project-brief {
+    padding: 7rem 0;
+  }
+  .project-content {
+    padding-right: 6rem;
+    .content-col {
+      width: 18rem;
+      padding-right: 4rem;
+    }
+    .content-row {
+      height: 10rem;
+    }
+  }
+  .project-intro {
+    p {
+      width: 50rem;
+    }
+  }
+  /*Content Section*/
+  .seperate-section {
+    padding: 4rem 0;
+    margin: 6rem 0;
+  }
+  /*text*/
+  .smalltitle {
+    .titleLine {
+      margin-left: 1rem;
+      width: 10rem;
+    }
+  }
+  .text-with-photo {
+    padding: 6rem 0 2rem;
+    .text-sec {
+      width: 42rem;
+    }
+    .photo-sec {
+      width: 40rem;
+      height: 100%;
+      margin: 0 2rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  .text-with-photo-2 {
+    padding: 6rem 0 2rem;
+    .photo-sec {
+      width: 70vw;
+    }
+    .text-sec {
+      width: 60rem;
+    }
+  }
+  .quote-sec {
+    .quote {
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+  .thumbnail-sec {
+    .thumbnail {
+      max-width: 20rem;
+      img {
+        max-width: 15rem;
+        max-height: 17rem;
+        margin-bottom: 3rem;
+      }
+      p {
+        width: 15rem;
+        line-height: 2rem;
+      }
+    }
+  }
+  /*Media sec*/
+  .demo-strip {
+    width: 75vw;
+    .demo-title {
+      width: 35rem;
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+    img {
+      width: 60%;
+    }
+  }
+
+  .poster-sec {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 75vw;
+    margin: 0 auto;
+    img {
+      max-height: 40rem;
+    }
+  }
+
+  /*Footer Contact for Project*/
+  .contact-footer {
+    width: 75vw;
+    margin: 5rem auto;
+    .contact-bar {
+      margin-top: 2rem;
+      p {
+        font-size: 1.5rem;
+        margin-right: 4rem;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 800px) {
   /*Global*/

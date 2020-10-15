@@ -18,7 +18,6 @@ $color: (
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gordita", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -28,32 +27,35 @@ $color: (
 }
 
 h1 {
+  font-family: 'Gordita Bold';
   font-size: 3.5rem;
 }
 
 h2 {
+  font-family: 'Gordita Bold';
   font-size: 3rem;
-  font-weight: 600;
 }
 
 h3 {
+  font-family: 'Gordita Medium';
   font-size: 1.5rem;
-  font-weight: 400;
   line-height: 2.5rem;
 }
 
 h4 {
+  font-family: 'Gordita Medium';
   font-size: 0.875rem;
   font-weight: 500;
 }
 
 p {
-  font-weight: 300;
+  font-family: 'Gordita Light';
   line-height: 1.8rem;
   font-size: 0.875rem;
 }
 
 a {
+  font-family: 'Gordita Regular';
   text-decoration: none;
 }
 
@@ -232,6 +234,7 @@ li {
   content: attr(data-text);
   display: block;
   position: relative;
+  font-family: 'Gordita Light';
   font-size: 12px;
   left: 1.5rem;
 }
@@ -282,7 +285,7 @@ li {
     z-index: 2;
   }
   p {
-    font-weight: 500;
+    font-family: 'Gordita Medium';
   }
 }
 
@@ -318,7 +321,7 @@ li {
   bottom: 0;
   margin: 0 auto;
   padding-bottom: 3rem;
-  font-weight: 500;
+  font-family: 'Gordita Medium';
   transition: opacity 0.5s;
   z-index: 20;
 }
@@ -388,8 +391,8 @@ li {
     flex-direction: row;
     margin-top: 2rem;
     p {
+      font-family: 'Gordita Medium';
       font-size: 1.2rem;
-      font-weight: 400;
       margin-right: 3rem;
       transition: 0.5s ease;
       &:hover {
@@ -466,7 +469,7 @@ li {
       width: 4rem;
     }
     a {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
     li{
       padding-left: 3rem;

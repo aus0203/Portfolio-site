@@ -17,7 +17,6 @@ h2 {
 h3 {
   font-size: 1rem;
   line-height: 2.2rem;
-  font-weight: 500;
 }
 
 a {
@@ -227,10 +226,10 @@ a {
 .project-content {
   display: flex;
   flex-direction: row;
-  padding-right: 6.5rem;
+  padding-right: 5.5rem;
   .content-col {
-    width: 12rem;
-    padding-right: 1rem;
+    width: 15rem;
+    padding-right: 3rem;
   }
   .content-row {
     height: 10rem;
@@ -329,7 +328,7 @@ a {
     }
     p {
       font-size: 0.8rem;
-      font-weight: 500;
+      font-family: 'Gordita Medium';
     }
   }
 }
@@ -468,7 +467,7 @@ a {
     p {
       font-size: 1.2rem;
       margin-right: 2rem;
-      font-weight: 400;
+  font-family: 'Gordita Medium';
     }
   }
 }

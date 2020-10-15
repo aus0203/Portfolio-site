@@ -33,6 +33,11 @@ p {
   cursor: none;
 }
 
+.work-state:hover{
+  transform: scale(1.2);
+  color:map-get($color, accent);
+}
+
 .current {
   background-color: map-get($color, dark);
 }

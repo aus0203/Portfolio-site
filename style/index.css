@@ -443,7 +443,7 @@ li {
 
 .contact-strip {
   position: relative;
-  width: 55vw;
+  width: 50vw;
   margin: 0 auto;
 }
 
@@ -474,6 +474,14 @@ li {
   font-size: 1.2rem;
   font-weight: 400;
   margin-right: 3rem;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.contact-strip .contact-bar p:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #58bfd3;
 }
 
 .circle-divider {
@@ -735,6 +743,7 @@ a {
 .about-state:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  color: #58bfd3;
 }
 
 .current {
@@ -811,8 +820,8 @@ a {
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
-  background-image: url(../img/uni.gif);
   mix-blend-mode: difference;
+  overflow: hidden;
   z-index: 100;
 }
 

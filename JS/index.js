@@ -1,4 +1,4 @@
-
+const introVideo = document.getElementById("introVideo");
 const handler = document.querySelector(".handler");
 
 $('.handler').attr('data-text', '0');
@@ -10,7 +10,7 @@ if (windowMedia.matches) {
         anchors: ['Home', 'SUPPER', 'KLM', 'VX', 'MHJ', 'Contact'],
         onLeave: function (origin, destination, direction) {
 
-            handler.style.marginBottom = 10 - (destination.index * 3.5) + "rem";
+            handler.style.marginBottom = 10 - (destination.index * 3.9) + "rem";
             $('.handler').attr('data-text', destination.index);
             /*Project shift*/
             projectShift();
@@ -30,6 +30,7 @@ if (windowMedia.matches) {
 };
 
 
+
 if (windowMedia.matches) {
     /*3D tilt animation*/
     const tilt = $('.js-tilt').tilt();
@@ -38,7 +39,7 @@ if (windowMedia.matches) {
     tilt.on('tilt.mouseEnter'); // parameters: event
     /*Landing animation*/
     let landingT1 = gsap.timeline({ defaults: { duration: 1 } });
-    landingT1.from(".intro-sphere", { scale: 0, delay: 1.5 })
+    landingT1.from(".intro-sphere", { scale: 0, delay: 1.3 })
         .from('.intro-strip', { y: 50, opacity: 0 }, "-=0.5");
 }
 

@@ -10,7 +10,7 @@ h1 {
   font-size: 3rem;
 }
 
-h2{
+h2 {
   font-size: 1.5rem;
 }
 
@@ -25,7 +25,6 @@ a {
 }
 
 /*Header*/
-
 
 .logo-g {
   fill: map-get($color, dark);
@@ -49,21 +48,18 @@ a {
   color: map-get($color, dark);
 }
 
-.menu-scroll{
-  color: map-get($color, universal)
+.menu:hover {
+  transform: scale(1.2);
+  color: map-get($color, accent);
 }
 
-.work-state:hover {
-  transform: scale(1.2);
-}
-
-.about-state:hover {
-  transform: scale(1.2);
+.menu-scroll {
+  color: map-get($color, universal);
 }
 
 
 /*FooterBar*/
-.footerbar{
+.footerbar {
   visibility: hidden;
 }
 
@@ -202,7 +198,6 @@ a {
 .scrollicon:hover {
   margin-bottom: 2rem;
 }
-
 
 /*Top Screen*/
 
@@ -522,7 +517,7 @@ a {
 
   /*Main section*/
   /*Intro section*/
-  .top-screen{
+  .top-screen {
     background-attachment: scroll;
   }
   .project-brief {
@@ -591,12 +586,12 @@ a {
       height: 100%;
     }
   }
-  
+
   /*Footer Contact for Project*/
   .contact-footer {
     margin: 3rem auto 6rem;
     .circle-divider {
-      width:100%;
+      width: 100%;
       .circle {
         width: 8px;
         height: 8px;
@@ -648,7 +643,6 @@ a {
   .scrollicon {
     margin-bottom: 8rem;
   }
-
 }
 
 @media screen and (max-width: 320px) {

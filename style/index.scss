@@ -31,6 +31,7 @@ a {
 
 .about-state:hover {
     transform: scale(1.2);
+    color:map-get($color, accent);
 }
 
 .current {
@@ -106,8 +107,8 @@ a {
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
-    background-image: url(../img/uni.gif);
     mix-blend-mode: difference;
+    overflow: hidden;
     z-index: 100;
 }
 

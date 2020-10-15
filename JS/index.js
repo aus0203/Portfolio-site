@@ -30,11 +30,6 @@ if (windowMedia.matches) {
 };
 
 
-
-
-
-
-
 if (windowMedia.matches) {
     /*3D tilt animation*/
     const tilt = $('.js-tilt').tilt();
@@ -46,7 +41,6 @@ if (windowMedia.matches) {
     landingT1.from(".intro-sphere", { scale: 0, delay: 1.5 })
         .from('.intro-strip', { y: 50, opacity: 0 }, "-=0.5");
 }
-
 
 /*Project shift animation*/
 function projectShift() {

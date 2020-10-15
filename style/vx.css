@@ -248,7 +248,6 @@ li {
   width: 1px;
   height: 10rem;
   background-color: #e0e0e0;
-  margin-bottom: 1rem;
 }
 
 .handler {
@@ -260,6 +259,14 @@ li {
   margin-bottom: 10rem;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+}
+
+.handler::before {
+  content: attr(data-text);
+  display: block;
+  position: relative;
+  font-size: 12px;
+  left: 1.5rem;
 }
 
 /*Footer Bar*/
@@ -414,6 +421,7 @@ li {
 }
 
 .contact-strip {
+  position: relative;
   width: 55vw;
   margin: 0 auto;
 }
@@ -471,6 +479,7 @@ li {
   width: 23rem;
   height: 23rem;
   border-radius: 50%;
+  z-index: -1;
 }
 
 /* ================ Responsive===================== */
@@ -598,7 +607,7 @@ li {
             flex-direction: column;
   }
   .contact-strip .contact-bar p {
-    font-size: 14px;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
   .contact-sphere {
@@ -926,7 +935,6 @@ a {
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;

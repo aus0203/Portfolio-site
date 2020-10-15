@@ -375,8 +375,8 @@ li {
   margin: 0 auto;
   padding-bottom: 3rem;
   font-weight: 500;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
   z-index: 20;
 }
 

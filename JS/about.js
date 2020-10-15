@@ -8,7 +8,7 @@ if(windowMedia.matches){
         scrollingSpeed: 1200,
         onLeave:function(origin, destination, direction){
 
-            handler.style.marginBottom = 6 - (destination.index * 5.5) + "rem";
+            handler.style.marginBottom = 6 - (destination.index * 6) + "rem";
             $('.handler').attr('data-text', destination.index);
 
             /*Section shift*/
@@ -23,6 +23,7 @@ if(windowMedia.matches){
         },
     })
 }
+
 
 
 function aboutShift() {

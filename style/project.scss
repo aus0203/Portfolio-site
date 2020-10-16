@@ -760,10 +760,10 @@ a {
     .icon-bar {
       width: 100%;
       display: flex;
+      justify-content: space-evenly;
     }
     .icon {
       margin-right: 0;
-      margin: 0 3rem;
     }
   }
   .page-action {

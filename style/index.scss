@@ -61,6 +61,7 @@ a {
 }
 
 /*Footer bar*/
+
 .icon {
     fill: map-get($color, universal);
 }
@@ -449,6 +450,10 @@ a {
 
     .project-list-bar{
         display: none;
+    }
+    .project-list-screen{
+        display: none;
+
     }
     /*Main section*/
 

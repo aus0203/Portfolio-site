@@ -1471,7 +1471,7 @@ a {
   font-family: 'Gordita Medium';
 }
 
-/*===================Responsive==================*/
+/*===============================Responsive============================*/
 @media screen and (min-width: 1500px) {
   /*Global style*/
   h1 {
@@ -1730,6 +1730,7 @@ a {
   }
   /*FooterBar*/
   .footerbar {
+    visibility: visible;
     padding: 1.2rem 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;

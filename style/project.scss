@@ -472,7 +472,7 @@ a {
   }
 }
 
-/*===================Responsive==================*/
+/*===============================Responsive============================*/
 
 @media screen and (min-width: 1500px) {
   /*Global style*/
@@ -754,6 +754,7 @@ a {
 
   /*FooterBar*/
   .footerbar {
+    visibility: visible;
     padding: 1.2rem 0;
     justify-content: center;
 

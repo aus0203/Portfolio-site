@@ -1735,6 +1735,7 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background-color: #0a0a0a;
   }
   .footerbar .icon-bar {
     width: 100%;
@@ -1747,6 +1748,7 @@ a {
   }
   .footerbar .icon {
     margin-right: 0;
+    fill: #e0e0e0;
   }
   .page-action {
     display: none;

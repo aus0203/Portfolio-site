@@ -757,6 +757,7 @@ a {
     visibility: visible;
     padding: 1.2rem 0;
     justify-content: center;
+    background-color: map-get($color, dark);
 
     .icon-bar {
       width: 100%;
@@ -765,6 +766,7 @@ a {
     }
     .icon {
       margin-right: 0;
+      fill: map-get($color, universal)
     }
   }
   .page-action {

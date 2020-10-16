@@ -1231,7 +1231,7 @@ p {
   }
   .cv-col-list {
     width: 30rem;
-    margin: 0 6rem 3rem 0;
+    margin: 0 6rem 2rem 0;
   }
   .cv-col-list .cv-list-img {
     margin-right: 3rem;
@@ -1241,7 +1241,7 @@ p {
   }
   .cv-col-list .cv-list-info h4 {
     font-size: 20px;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
 }
 

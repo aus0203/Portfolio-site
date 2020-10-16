@@ -25,6 +25,17 @@ const mobileMedia = window.matchMedia('(max-width:450px)')
 
 const warningScreen = document.querySelector(".resize-warning")
 
+
+/*Warming screen*/
+
+// function resizeWarning(){
+//   if(window.innerWidth<800){
+//     warningScreen.classList.add('resize-warning-resize');
+//   }else{
+//     warningScreen.classList.remove('resize-warning-resize');
+//   }
+// }
+
 /*Loading Screen*/
 
 window.onload = (e) =>{
@@ -91,10 +102,3 @@ function jumpToIndex(){
   window.location.href = "index.html";
 };
 
-function resizeWarning(){
-  if(window.innerWidth<800){
-    warningScreen.classList.add('resize-warning-resize');
-  }else{
-    warningScreen.classList.remove('resize-warning-resize');
-  }
-}

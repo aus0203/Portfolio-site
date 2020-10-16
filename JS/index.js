@@ -1,5 +1,8 @@
 const introVideo = document.getElementById("introVideo");
 const handler = document.querySelector(".handler");
+const listButton = document.querySelector(".list-button");
+const projectList = document.querySelector(".project-list-screen")
+const listItems = document.querySelectorAll(".list-item")
 
 $('.handler').attr('data-text', '0');
 
@@ -10,17 +13,17 @@ if (windowMedia.matches) {
         scrollingSpeed: 1200,
         anchors: ['Home', 'SUPPER', 'KLM', 'VX', 'MHJ', 'Contact'],
         onLeave: function (origin, destination, direction) {
-            
+
             /*Side bar handler*/
             $('.handler').attr('data-text', destination.index);
 
-            if(windowMedia.matches){
+            if (windowMedia.matches) {
                 handler.style.marginBottom = 10 - (destination.index * 3.9) + "rem";
-                if(bigwindowMedia.matches){
+                if (bigwindowMedia.matches) {
                     handler.style.marginBottom = 20 - (destination.index * 7.8) + "rem";
                 }
             }
-        
+
 
             /*Project shift*/
             projectShift();
@@ -61,7 +64,7 @@ function projectShift() {
         .to('.project-pop', { scale: .8 }, '-=0.3')
         .to('.workSectionShift', { scale: 1 })
         .to('.project-pop', { scale: 1 }, '-=0.3')
-        .from('.handler', { ease: "back.out(1.7)", scale: .5 }, '-=1.3')
+        .from('.handler', { ease: "back.out(1.7)", scale: .5 }, '-=1.3');
 };
 
 
@@ -71,5 +74,15 @@ var rule = CSSRulePlugin.getRule(".guilding-line::before");
 let t1 = gsap.timeline({ defaults: { duration: 1 }, repeat: -1 })
 t1.from(rule, { cssRule: { scale: 0, transformOrigin: "center center" } })
     .to(rule, { cssRule: { scale: 1.5, x: 130 } }, "-=0.8")
-    .to(rule, { cssRule: { scale: 0 } }, "-=0.5")
+    .to(rule, { cssRule: { scale: 0 } }, "-=0.5");
 
+
+listButton.addEventListener('click', () => {
+    projectList.classList.toggle("project-list-screen-clicked");
+})
+
+listItems.forEach( x => {
+    x.addEventListener('click', ()=>{
+        projectList.classList.remove("project-list-screen-clicked");
+    })
+})

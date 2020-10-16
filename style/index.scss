@@ -85,7 +85,98 @@ a {
     left: 1rem;
 }
 
-/*Main section*/
+/*Project list bar*/
+
+.project-list-bar {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    right: 0;
+    align-items: center;
+    margin-right: 4rem;
+    z-index: 1250;
+    pointer-events: none;
+}
+
+.list-button {
+    position: relative;
+    right: -3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10rem;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    margin-bottom: 3rem;
+    pointer-events: auto;
+    cursor: pointer;
+    p {
+        margin-bottom: 0.3rem;
+        font-family: "Gordita Medium";
+        transition: 0.5s ease;
+        bottom: 0;
+    }
+}
+
+.list-button:hover > p {
+    position: relative;
+    bottom: 0.8rem;
+}
+
+.list-line {
+    width: 90%;
+    height: 1px;
+    background-color: map-get($color, universal);
+}
+
+.project-list-screen {
+    position: absolute;
+    z-index: 1200;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 95%;
+    height: 95vh;
+    background: rgb(40, 40, 40);
+    background: radial-gradient(circle, rgba(40, 40, 40, 1) 0%, rgba(10, 10, 10, 1) 43%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.project-list-screen-clicked {
+    opacity: 0.9;
+    visibility: visible;
+}
+
+.project-list {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    margin-right: 6rem;
+    h3 {
+        margin-left: 2rem;
+    }
+    h2 {
+        width: 28rem;
+        text-align: center;
+        transition: 0.4s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+/*===========================Main section=====================*/
 .workSectionShift {
     position: relative;
     z-index: 100;
@@ -325,6 +416,10 @@ a {
         background-color: map-get($color, dark);
     }
 
+
+    .project-list-bar{
+        display: none;
+    }
     /*Main section*/
 
     /*Intro section*/
@@ -399,6 +494,7 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+
     .scroll-line {
         display: none;
     }
@@ -418,4 +514,5 @@ a {
     .footerbar {
         background-color: map-get($color, dark);
     }
+    
 }

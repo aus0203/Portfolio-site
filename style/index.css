@@ -965,7 +965,136 @@ a {
   left: 1rem;
 }
 
-/*Main section*/
+/*Project list bar*/
+.project-list-bar {
+  position: fixed;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 4rem;
+  z-index: 1250;
+  pointer-events: none;
+}
+
+.list-button {
+  position: relative;
+  right: -3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10rem;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-bottom: 3rem;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.list-button p {
+  margin-bottom: 0.3rem;
+  font-family: "Gordita Medium";
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  bottom: 0;
+}
+
+.list-button:hover > p {
+  position: relative;
+  bottom: 0.8rem;
+}
+
+.list-line {
+  width: 90%;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.project-list-screen {
+  position: absolute;
+  z-index: 1200;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 95%;
+  height: 95vh;
+  background: #282828;
+  background: radial-gradient(circle, #282828 0%, #0a0a0a 43%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.project-list-screen-clicked {
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.project-list {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5rem;
+  margin-right: 6rem;
+}
+
+.project-list h3 {
+  margin-left: 2rem;
+}
+
+.project-list h2 {
+  width: 28rem;
+  text-align: center;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.project-list h2:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/*===========================Main section=====================*/
 .workSectionShift {
   position: relative;
   z-index: 100;
@@ -1202,6 +1331,9 @@ a {
   }
   .nav-link {
     background-color: #0a0a0a;
+  }
+  .project-list-bar {
+    display: none;
   }
   /*Main section*/
   /*Intro section*/

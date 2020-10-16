@@ -28,13 +28,13 @@ const warningScreen = document.querySelector(".resize-warning")
 
 /*Warming screen*/
 
-// function resizeWarning(){
-//   if(window.innerWidth<800){
-//     warningScreen.classList.add('resize-warning-resize');
-//   }else{
-//     warningScreen.classList.remove('resize-warning-resize');
-//   }
-// }
+function resizeWarning(){
+  if(window.innerWidth<800){
+    warningScreen.classList.add('resize-warning-resize');
+  }else{
+    warningScreen.classList.remove('resize-warning-resize');
+  }
+}
 
 /*Loading Screen*/
 

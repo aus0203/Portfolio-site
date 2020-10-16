@@ -1,6 +1,9 @@
 const introVideo = document.getElementById("introVideo");
 const handler = document.querySelector(".handler");
 const listButton = document.querySelector(".list-button");
+const listLine = document.querySelectorAll(".list-line")
+const listLine1 = document. querySelector(".list-line1");
+const listLine2 = document. querySelector(".list-line2");
 const projectList = document.querySelector(".project-list-screen")
 const listItems = document.querySelectorAll(".list-item")
 
@@ -78,8 +81,18 @@ t1.from(rule, { cssRule: { scale: 0, transformOrigin: "center center" } })
 
 
 listButton.addEventListener('click', () => {
+    listButton.classList.toggle("list-button-clicked")
     projectList.classList.toggle("project-list-screen-clicked");
-})
+    listLine1.classList.toggle('list-line1-clicked');
+    listLine2.classList.toggle('list-line2-clicked');
+});
+
+projectList.addEventListener('click', ()=>{
+    listButton.classList.remove("list-button-clicked")
+    projectList.classList.remove("project-list-screen-clicked");
+    listLine1.classList.remove('list-line1-clicked');
+    listLine2.classList.remove('list-line2-clicked');
+});
 
 listItems.forEach( x => {
     x.addEventListener('click', ()=>{

@@ -118,15 +118,35 @@ a {
     }
 }
 
+.list-button-clicked{
+    p{
+        position: relative;
+        bottom: .6rem;
+    }
+}
+
 .list-button:hover > p {
-    position: relative;
-    bottom: 0.8rem;
+    transform: scale(1.2);
 }
 
 .list-line {
     width: 90%;
     height: 1px;
     background-color: map-get($color, universal);
+    transition: .5s ease;
+}
+.list-line2{
+    visibility: hidden;
+}
+
+.list-line1-clicked{
+    width: 15%;
+    transform: rotate(45deg);
+}
+.list-line2-clicked{
+    width: 15%;
+    visibility: visible;
+    transform: rotate(-45deg);
 }
 
 .project-list-screen {
@@ -151,7 +171,7 @@ a {
 }
 
 .project-list-screen-clicked {
-    opacity: 0.9;
+    opacity: 1;
     visibility: visible;
 }
 
@@ -381,6 +401,16 @@ a {
 }
 
 @media screen and (max-width: 1280px) {
+    /*Project list bar*/
+    .project-list {
+        width: 35vw;
+        h3 {
+            margin-left: 1rem;
+        }
+        h2 {
+            width: 20rem;
+        }
+    }
     /*Project part*/
     .project-strip {
         .project-img {

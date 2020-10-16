@@ -967,7 +967,8 @@ p {
   transition: 0.5s ease-in-out;
 }
 
-.guilding-title:hover {
+.page-action:hover >
+.guilding-title {
   right: 1rem;
 }
 

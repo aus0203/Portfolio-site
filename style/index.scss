@@ -42,11 +42,14 @@ a {
 
 .side-bar {
     .bar {
+        height: 10rem;
         background-color: map-get($color, universal);
     }
-    .handler {
-        background-color: map-get($color, universal);
-    }
+}
+
+.handler {
+    margin-bottom: 10rem;
+    background-color: map-get($color, universal);
 }
 
 .handler::before {
@@ -97,21 +100,6 @@ a {
     text-align: center;
 }
 
-.intro-sphere {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-    mix-blend-mode: difference;
-    overflow: hidden;
-    z-index: 100;
-}
-
 .scroll-line {
     background-color: map-get($color, seconddark);
 }
@@ -156,7 +144,7 @@ a {
         width: 33%;
         text-align: end;
         .project-tag {
-            font-family: 'Gordita Regular';
+            font-family: "Gordita Regular";
         }
     }
     .project-img {
@@ -253,6 +241,17 @@ a {
 /* ================ Responsive===================== */
 
 @media screen and (min-width: 1500px) {
+    /*Side bar*/
+    .side-bar {
+        .bar {
+            height: 20rem;
+        }
+    }
+
+    .handler {
+        margin-bottom: 20rem;
+    }
+
     /*Landing Section*/
     /*Section 0*/
     .intro-sphere {
@@ -287,6 +286,33 @@ a {
     #pro-title {
         font-size: 3rem;
         line-height: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    /*Project part*/
+    .project-strip {
+        .project-img {
+            margin: 0 5.5rem;
+        }
+        .project-info {
+            .project-intro {
+                width: 100%;
+            }
+        }
+    }
+    .project-shpere {
+        width: 20rem;
+        height: 20rem;
+    }
+    .project-pop {
+        img {
+            width: 23rem;
+        }
+    }
+    #pro-title {
+        font-size: 2.2rem;
+        line-height: 3rem;
     }
 }
 

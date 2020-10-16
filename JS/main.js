@@ -17,10 +17,13 @@ const workLink = document.querySelector(".work-state");
 const aboutLink = document.querySelector(".about-state");
 
 /*Window media responsive*/
+const bigwindowMedia = window.matchMedia('(min-width: 1500px)');
 const windowMedia = window.matchMedia('(min-width: 800px)');
 /*Touch media responsive*/
 const touchMedia = window.matchMedia('(max-width:800px)')
 const mobileMedia = window.matchMedia('(max-width:450px)')
+
+const warningScreen = document.querySelector(".resize-warning")
 
 /*Loading Screen*/
 
@@ -82,9 +85,16 @@ function jumpToAbout(){
 function shiftToIndex(){
   let t1 =gsap.timeline({defaults:{duration:.5, onComplete:jumpToIndex}});
   t1.to('body', {opacity:0})
-}
+};
 
 function jumpToIndex(){
   window.location.href = "index.html";
-}
+};
 
+function resizeWarning(){
+  if(window.innerWidth<800){
+    warningScreen.classList.add('resize-warning-resize');
+  }else{
+    warningScreen.classList.remove('resize-warning-resize');
+  }
+}

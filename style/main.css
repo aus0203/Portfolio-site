@@ -14,40 +14,78 @@
 }
 
 h1 {
-  font-family: 'Gordita Bold';
+  font-family: "Gordita Bold";
   font-size: 3.5rem;
 }
 
 h2 {
-  font-family: 'Gordita Bold';
+  font-family: "Gordita Bold";
   font-size: 3rem;
 }
 
 h3 {
-  font-family: 'Gordita Medium';
+  font-family: "Gordita Medium";
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
 
 h4 {
-  font-family: 'Gordita Medium';
+  font-family: "Gordita Medium";
   font-size: 0.875rem;
   font-weight: 500;
 }
 
 p {
-  font-family: 'Gordita Light';
+  font-family: "Gordita Light";
   line-height: 1.8rem;
   font-size: 0.875rem;
 }
 
 a {
-  font-family: 'Gordita Regular';
+  font-family: "Gordita Regular";
   text-decoration: none;
 }
 
 li {
   list-style: none;
+}
+
+/*Resize-warning*/
+.resize-warning {
+  position: absolute;
+  z-index: 1500;
+  width: 100%;
+  height: 100vh;
+  background: #282828;
+  background: radial-gradient(circle, #282828 0%, #0a0a0a 43%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  color: #e0e0e0;
+}
+
+.warning-screen {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.warning-screen h1 {
+  margin-bottom: 2rem;
+}
+
+.warning-screen p {
+  font-family: 'Gordita Regular';
+}
+
+.resize-warning-resize {
+  visibility: visible;
 }
 
 /*Page transition*/
@@ -173,6 +211,7 @@ li {
 .expand-project::after {
   content: "+Read";
   font-size: 0.8rem;
+  font-family: 'Gordita Medium';
   color: #0a0a0a;
 }
 
@@ -246,7 +285,6 @@ li {
 .side-bar .bar {
   position: relative;
   width: 1px;
-  height: 10rem;
   background-color: #e0e0e0;
 }
 
@@ -256,7 +294,6 @@ li {
   height: 12px;
   border-radius: 50%;
   background-color: #e0e0e0;
-  margin-bottom: 10rem;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
@@ -265,7 +302,7 @@ li {
   content: attr(data-text);
   display: block;
   position: relative;
-  font-family: 'Gordita Light';
+  font-family: "Gordita Light";
   font-size: 12px;
   left: 1.5rem;
 }
@@ -340,7 +377,7 @@ li {
 }
 
 .page-action p {
-  font-family: 'Gordita Medium';
+  font-family: "Gordita Medium";
 }
 
 .guilding-line::before {
@@ -375,7 +412,7 @@ li {
   bottom: 0;
   margin: 0 auto;
   padding-bottom: 3rem;
-  font-family: 'Gordita Medium';
+  font-family: "Gordita Medium";
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   z-index: 20;
@@ -474,7 +511,7 @@ li {
 }
 
 .contact-strip .contact-bar p {
-  font-family: 'Gordita Medium';
+  font-family: "Gordita Medium";
   font-size: 1.2rem;
   margin-right: 3rem;
   -webkit-transition: 0.5s ease;
@@ -514,6 +551,22 @@ li {
   z-index: -1;
 }
 
+/*Share compoenet*/
+.intro-sphere {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  overflow: hidden;
+  z-index: 100;
+}
+
 /* ================ Responsive===================== */
 @media screen and (min-width: 1500px) {
   /*Global style*/
@@ -528,10 +581,10 @@ li {
     font-size: 3rem;
   }
   h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
   p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 2.2rem;
   }
   /*Page transition*/
@@ -559,6 +612,18 @@ li {
   .current {
     width: 8px;
     height: 8px;
+  }
+  /*Side-Bar*/
+  .handler {
+    width: 1rem;
+    height: 1rem;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+  .handler::before {
+    content: attr(data-text);
+    font-size: 1rem;
+    left: 2rem;
   }
   /*Footer Bar*/
   .footerbar .icon {
@@ -747,7 +812,7 @@ li {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   /*Gloabal style*/
   h1 {
     font-size: 2.2rem;

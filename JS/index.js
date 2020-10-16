@@ -4,19 +4,29 @@ const handler = document.querySelector(".handler");
 $('.handler').attr('data-text', '0');
 
 
+/*fullpage*/
 if (windowMedia.matches) {
     new fullpage("#fullpage", {
         scrollingSpeed: 1200,
         anchors: ['Home', 'SUPPER', 'KLM', 'VX', 'MHJ', 'Contact'],
         onLeave: function (origin, destination, direction) {
-
-            handler.style.marginBottom = 10 - (destination.index * 3.9) + "rem";
+            
+            /*Side bar handler*/
             $('.handler').attr('data-text', destination.index);
+
+            if(windowMedia.matches){
+                handler.style.marginBottom = 10 - (destination.index * 3.9) + "rem";
+                if(bigwindowMedia.matches){
+                    handler.style.marginBottom = 20 - (destination.index * 7.8) + "rem";
+                }
+            }
+        
+
             /*Project shift*/
             projectShift();
 
             if (destination.index > 0 && destination.index < 5) {
-                sectionNav.innerHTML = "Touch the image";
+                sectionNav.innerHTML = "Touch the image or title";
                 sectionNav.style.opacity = 1;
             } else if (destination.index >= 5) {
                 sectionNav.style.opacity = 0;

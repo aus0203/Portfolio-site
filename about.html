@@ -11,7 +11,17 @@
     <link rel="stylesheet" href="./style/about.css">
 </head>
 
-<body>
+<body onresize="resizeWarning(event)">
+    <!--Resize warning -->
+    <div class="resize-warning">
+        <div class="warning-screen">
+            <h1>Browser window is too small.</h1>
+            <p>Please expand the size of your browser window to have a better desktop experience, or you can check my website on your mobile device.</p>
+        </div>
+        <div class="intro-sphere">
+            <video id="introVideo" playsinline autoplay loop muted src="./img/Intro.mp4"></video>
+        </div>
+    </div>
     <!--loading effect-->
     <div class="loading-wrapper">
         <svg class="loading-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.21 350">

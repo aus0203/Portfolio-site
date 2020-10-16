@@ -53,6 +53,7 @@ p {
   margin-bottom: 6rem;
   background-color: map-get($color, dark);
 }
+
 .handler::before {
   content: attr(data-text);
   color: map-get($color, dark);

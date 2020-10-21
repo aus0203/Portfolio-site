@@ -328,7 +328,7 @@ a {
     }
     p {
       font-size: 0.8rem;
-      font-family: 'Gordita Medium';
+      font-family: "Gordita Medium";
     }
   }
 }
@@ -467,14 +467,19 @@ a {
     p {
       font-size: 1.2rem;
       margin-right: 2rem;
-  font-family: 'Gordita Medium';
+      font-family: "Gordita Medium";
+      transition: .4s ease;
+      &:hover{
+        transform:scale(1.2);
+        color:map-get($color, accent)
+      }
     }
   }
 }
 
 /*===============================Responsive============================*/
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1920px) {
   /*Global style*/
   h1 {
     font-size: 4rem;
@@ -766,7 +771,7 @@ a {
     }
     .icon {
       margin-right: 0;
-      fill: map-get($color, universal)
+      fill: map-get($color, universal);
     }
   }
   .page-action {

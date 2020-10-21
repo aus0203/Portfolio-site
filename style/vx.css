@@ -37,7 +37,7 @@ h4 {
 
 p {
   font-family: "Gordita Light";
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   font-size: 0.875rem;
 }
 
@@ -142,10 +142,16 @@ li {
           transform: translate(-50%, -50%);
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-duration: ease-out;
+          transition-duration: ease-out;
   pointer-events: none;
 }
 
 .expand {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   background: transparent;
   border-color: #58bfd3;
   height: 50px;
@@ -173,7 +179,7 @@ li {
 .expand-project::after {
   content: "+Read";
   font-size: 0.8rem;
-  font-family: 'Gordita Medium';
+  font-family: "Gordita Medium";
   color: #0a0a0a;
 }
 
@@ -289,7 +295,7 @@ li {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
-  z-index: 1000;
+  z-index: 1100;
 }
 
 .footerbar li {
@@ -311,58 +317,6 @@ li {
 
 .icon-bar {
   width: 33%;
-}
-
-.page-action {
-  width: 33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.page-action .guilding-line {
-  position: relative;
-  width: 9rem;
-  height: 1px;
-  margin-right: 1rem;
-  z-index: 2;
-}
-
-.page-action p {
-  font-family: "Gordita Medium";
-}
-
-.guilding-line::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  z-index: 10;
-  bottom: -5px;
-}
-
-.guilding-line::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  bottom: -5px;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  z-index: 15;
 }
 
 .section-nav {
@@ -500,6 +454,14 @@ li {
   margin: 0 1rem 0 0.5rem;
 }
 
+.declare {
+  margin: 1rem 0;
+}
+
+.declare p {
+  font-size: 14px;
+}
+
 .contact-sphere {
   position: absolute;
   top: 0;
@@ -530,7 +492,7 @@ li {
 }
 
 /* ================ Responsive===================== */
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1920px) {
   /*Global style*/
   h1 {
     font-size: 5rem;
@@ -543,11 +505,11 @@ li {
     font-size: 3rem;
   }
   h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
   p {
-    font-size: 18px;
-    line-height: 2.2rem;
+    font-size: 16px;
+    line-height: 2rem;
   }
   /*Page transition*/
   .loading-logo {
@@ -639,6 +601,13 @@ li {
   }
 }
 
+@media screen and (min-width: 1500px) {
+  p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   /*Global style*/
   h1 {
@@ -651,10 +620,10 @@ li {
     font-size: 1.2rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 12px;
   }
   p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -818,9 +787,6 @@ li {
   }
   .footerbar .icon {
     margin-right: 0;
-  }
-  .page-action {
-    display: none;
   }
   .section-nav {
     display: none;
@@ -1272,7 +1238,7 @@ a {
 
 .quote-sec .quote p {
   font-size: 0.8rem;
-  font-family: 'Gordita Medium';
+  font-family: "Gordita Medium";
 }
 
 .thumbnail-sec {
@@ -1468,11 +1434,19 @@ a {
 .contact-footer .contact-bar p {
   font-size: 1.2rem;
   margin-right: 2rem;
-  font-family: 'Gordita Medium';
+  font-family: "Gordita Medium";
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.contact-footer .contact-bar p:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #58bfd3;
 }
 
 /*===============================Responsive============================*/
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1920px) {
   /*Global style*/
   h1 {
     font-size: 4rem;
@@ -1884,7 +1858,7 @@ a {
 }
 
 /*===================Responsive==================*/
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1920px) {
   /*Main-content*/
   .photo-sec .thumbnail {
     width: 14rem;

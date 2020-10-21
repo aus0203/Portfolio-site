@@ -17,7 +17,7 @@ const workLink = document.querySelector(".work-state");
 const aboutLink = document.querySelector(".about-state");
 
 /*Window media responsive*/
-const bigwindowMedia = window.matchMedia('(min-width: 1500px)');
+const bigwindowMedia = window.matchMedia('(min-width: 1920px)');
 const windowMedia = window.matchMedia('(min-width: 800px)');
 /*Touch media responsive*/
 const touchMedia = window.matchMedia('(max-width:800px)')
@@ -86,6 +86,7 @@ function shiftToIndex(){
 };
 
 function jumpToIndex(){
-  window.location.href = "index.html";
+  window.location.href = "/";
 };
+
 

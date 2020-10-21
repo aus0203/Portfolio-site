@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property='og:title' content='Home | Wei@Visualist' />
+    <meta property='og:image' content='preview.jpg' />
+    <meta property='og:description' content='I apply design and code as a boundless form of the language which can help people communicate and connect with one another.' />
+    <meta property='og:url' content='www.weivisualist.com' />
     <title>Home | Wei@Visualist</title>
     <link rel="icon" type="image/png" href="/favicon-16x16.png" />
     <link title="fonts" rel="stylesheet" href="./style/fonts/style.css">
@@ -37,7 +41,7 @@
 
     <!--Header-->
     <div class="header">
-        <a class="anchor" href="/index.html">
+        <a class="anchor" onclick="shiftToIndex()" href="#">
             <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.21 350">
                 <title>Main logo</title>
                 <path
@@ -100,62 +104,63 @@
             <a href="mailto:aus0203@gmail.com" subject="subject text">
                 <svg class="icon anchor email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <title>email</title>
-                    <path
-                        d="M512,0,0,288l163.63,60.6L416,112,224,371l.16.06L224,371V512l91.76-107.05L432,448Z" />
+                    <path d="M512,0,0,288l163.63,60.6L416,112,224,371l.16.06L224,371V512l91.76-107.05L432,448Z" />
                 </svg>
             </a>
         </div>
 
-        <!--Page cta-->
-        <div class="page-action">
-            <div class="guilding-line">
+        <div class="project-list-button anchor">
+            <div class="list-button">
+                <div class="list-line list-line1"></div>
+                <div class="list-line list-line2"></div>
             </div>
-            <a class="anchor guilding-title" href="./about.html">
-                <p>Check more about me</p>
-            </a>
+            <p class="list-button-title">Project list</p>
         </div>
+    </div>
+
+    <div class="project-list-screen">
+        <a href="#SUPPER">
+            <div class="list-item">
+                <div class="list-numbering">
+                    <h3>01</h3>
+                    <div class="list-numbering-line"></div>
+                </div>
+                <h2>SUPPER</h2>
+            </div>
+        </a>
+        <a href="#WBETU">
+            <div class="list-item">
+                <div class="list-numbering">
+                    <h3>02</h3>
+                    <div class="list-numbering-line"></div>
+                </div>
+                <h2>WE BRING EUROPE TO YOU</h2>
+            </div>
+        </a>
+
+        <a href="#VX">
+            <div class="list-item">
+                <div class="list-numbering">
+                    <h3>03</h3>
+                    <div class="list-numbering-line"></div>
+                </div>
+                <h2>VX</h2>
+            </div>
+        </a>
+        <a href="#MHJ">
+            <div class="list-item">
+                <div class="list-numbering">
+                    <h3>04</h3>
+                    <div class="list-numbering-line"></div>
+                </div>
+                <h2>MY HEALTH JOURNEY</h2>
+            </div>
+        </a>
 
     </div>
 
     <!--Page section navigation-->
     <p class="section-nav">Scroll down</p>
-
-    <!--Project list bar-->
-
-    <div class="project-list-bar">
-        <div class="anchor list-button">
-            <p>Project list</p>
-            <div class="list-line list-line1"></div>
-            <div class="list-line list-line2"></div>
-        </div>
-    </div>
-
-    <div class="project-list-screen">
-        <div class="project-list">
-            <h3>01</h3>
-            <a class="list-item" href="#SUPPER">
-                <h2>SUPPER</h2>
-            </a>
-        </div>
-        <div class="project-list">
-            <h3>02</h3>
-            <a class="list-item" href="#KLM">
-                <h2>WE BRING EUROPE TO YOU</h2>
-            </a>
-        </div>
-        <div class="project-list">
-            <h3>03</h3>
-            <a class="list-item" href="#VX">
-                <h2>VX</h2>
-            </a>
-        </div>
-        <div class="project-list">
-            <h3>04</h3>
-            <a class="list-item" href="#MHJ">
-                <h2>MY HEALTH JOURNEY</h2>
-            </a>
-        </div>
-    </div>
 
     <!--Main content-->
 
@@ -171,7 +176,8 @@
                     <h2>based in Rotterdam.</h2>
                 </div>
                 <div class="intro-sphere">
-                    <video id="introVideo" playsinline autoplay loop muted src="./img/Intro.mp4"></video>
+                    <video data-keepplaying id="introVideo" playsinline autoplay loop muted
+                        src="./img/Intro.mp4"></video>
                 </div>
             </div>
 
@@ -241,7 +247,7 @@
                         <div class="project-shpere">
                             <div class="project-pop">
                                 <a class="anchor-project" href="./klm.html">
-                                    <img src="./img/Project-pop-up-02.png" alt="">
+                                    <img src="./img/Project-pop-up-02.png" alt="klm">
                                 </a>
 
                             </div>
@@ -283,7 +289,7 @@
                         <a class="anchor-project" href="./vx.html">
                             <div class="project-shpere">
                                 <div class="project-pop">
-                                    <img src="./img/Project-pop-up-03.png" alt="">
+                                    <img src="./img/Project-pop-up-03.png" alt="vx">
                                 </div>
                             </div>
                         </a>
@@ -358,8 +364,10 @@
                             <p>Contact</p>
                         </a>
                     </div>
+                    <div class="declare">
+                        <p>© This website is proudly designed and coded by Wei Lun Chen</p>
+                    </div>
                     <div class="contact-sphere">
-
                     </div>
                 </div>
             </div>
@@ -368,16 +376,16 @@
 
         <!--Javascript-->
         <!--Jquery/Tilt 3D-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
         <!--GSAP-->
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+        <script defer src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+        <script defer src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
         <!--Fullpage-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
         <!--Customize JS-->
-        <script src="JS/main.js"></script>
-        <script src="JS/index.js"></script>
+        <script defer src="JS/main.js"></script>
+        <script defer src="JS/index.js"></script>
 </body>
 
 </html>

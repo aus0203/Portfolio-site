@@ -1,10 +1,11 @@
 const introVideo = document.getElementById("introVideo");
 const handler = document.querySelector(".handler");
-const listButton = document.querySelector(".list-button");
-const listLine = document.querySelectorAll(".list-line")
-const listLine1 = document. querySelector(".list-line1");
-const listLine2 = document. querySelector(".list-line2");
-const projectList = document.querySelector(".project-list-screen")
+const projectListButton = document.querySelector(".project-list-button");
+const projectListTitle = document.querySelector(".list-button-title");
+const listLine = document.querySelectorAll(".list-line");
+const listLine1 = document.querySelector(".list-line1");
+const listLine2 = document.querySelector(".list-line2");
+const projectListScreen = document.querySelector(".project-list-screen")
 const listItems = document.querySelectorAll(".list-item")
 
 $('.handler').attr('data-text', '0');
@@ -13,8 +14,9 @@ $('.handler').attr('data-text', '0');
 /*fullpage*/
 if (windowMedia.matches) {
     new fullpage("#fullpage", {
+        licenseKey: 'rJt@#oW@z8',
         scrollingSpeed: 1200,
-        anchors: ['Home', 'SUPPER', 'KLM', 'VX', 'MHJ', 'Contact'],
+        anchors: ['Home', 'SUPPER', 'WBETU', 'VX', 'MHJ', 'Contact'],
         onLeave: function (origin, destination, direction) {
 
             /*Side bar handler*/
@@ -45,7 +47,29 @@ if (windowMedia.matches) {
     });
 };
 
+/*Project-list-button*/
 
+projectListButton.addEventListener('click', () => {
+    projectListScreen.classList.toggle('project-list-screen-clicked');
+    listLine1.classList.toggle("list-line1-clicked");
+    listLine2.classList.toggle("list-line2-clicked");
+    if (projectListTitle.innerHTML === "Project list") {
+        projectListTitle.innerHTML = "Close list"
+    } else if (projectListTitle.innerHTML === "Close list") {
+        projectListTitle.innerHTML = "Project list"
+    } else {
+        projectListTitle.innerHTML = "Project list"
+    }
+});
+
+listItems.forEach(x => {
+    x.addEventListener('click', () => {
+        projectListScreen.classList.remove('project-list-screen-clicked')
+        listLine1.classList.remove("list-line1-clicked");
+        listLine2.classList.remove("list-line2-clicked");
+        projectListTitle.innerHTML = "Project list"
+    })
+})
 
 if (windowMedia.matches) {
     /*3D tilt animation*/
@@ -71,31 +95,3 @@ function projectShift() {
 };
 
 
-/*Page cta animation*/
-var rule = CSSRulePlugin.getRule(".guilding-line::before");
-
-let t1 = gsap.timeline({ defaults: { duration: 1 }, repeat: -1 })
-t1.from(rule, { cssRule: { scale: 0, transformOrigin: "center center" } })
-    .to(rule, { cssRule: { scale: 1.5, x: 130 } }, "-=0.8")
-    .to(rule, { cssRule: { scale: 0 } }, "-=0.5");
-
-
-listButton.addEventListener('click', () => {
-    listButton.classList.toggle("list-button-clicked")
-    projectList.classList.toggle("project-list-screen-clicked");
-    listLine1.classList.toggle('list-line1-clicked');
-    listLine2.classList.toggle('list-line2-clicked');
-});
-
-projectList.addEventListener('click', ()=>{
-    listButton.classList.remove("list-button-clicked")
-    projectList.classList.remove("project-list-screen-clicked");
-    listLine1.classList.remove('list-line1-clicked');
-    listLine2.classList.remove('list-line2-clicked');
-});
-
-listItems.forEach( x => {
-    x.addEventListener('click', ()=>{
-        projectList.classList.remove("project-list-screen-clicked");
-    })
-})

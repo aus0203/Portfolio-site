@@ -66,26 +66,7 @@ p {
 .icon {
   fill: map-get($color, dark);
 }
-.guilding-line {
-  background-color: map-get($color, dark);
-}
-.guilding-line::before {
-  right: 0;
-  background-color: map-get($color, dark);
-}
-.guilding-line::after {
-  left: 0;
-  border-right: 9px solid map-get($color, dark);
-}
-.guilding-title {
-  position: relative;
-  right: 0;
-  transition: 0.5s ease-in-out;
-}
-.page-action:hover > 
-.guilding-title{
-  right: 1rem;
-}
+
 
 /*Main section*/
 
@@ -233,7 +214,6 @@ p {
   }
   .cv-list-info {
     h4 {
-      font-size: 14px;
       margin-bottom: 0.5rem;
     }
   }
@@ -267,7 +247,7 @@ p {
 
 /* ================ Responsive===================== */
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1920px) {
   /*Global Style*/
   p {
     line-height: 2.2rem;
@@ -326,7 +306,6 @@ p {
     }
     .cv-list-info {
       h4 {
-        font-size: 20px;
         margin-bottom: .5rem;
       }
     }

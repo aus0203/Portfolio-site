@@ -50,7 +50,7 @@ h4 {
 
 p {
   font-family: "Gordita Light";
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   font-size: 0.875rem;
 }
 
@@ -62,9 +62,6 @@ a {
 li {
   list-style: none;
 }
-
-
-
 
 /*Page transition*/
 
@@ -136,10 +133,13 @@ li {
   z-index: 1000;
   transform: translate(-50%, -50%);
   transform-origin: 100% 100%;
+  transition-duration: 100ms;
+  transition-duration: ease-out;
   pointer-events: none;
 }
 
 .expand {
+  transition: 0.3s ease;
   background: transparent;
   border-color: map-get($color, accent);
   height: 50px;
@@ -159,7 +159,7 @@ li {
   &::after {
     content: "+Read";
     font-size: 0.8rem;
-    font-family: 'Gordita Medium';
+    font-family: "Gordita Medium";
     color: map-get($color, dark);
   }
 }
@@ -254,7 +254,7 @@ li {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  z-index: 1000;
+  z-index: 1100;
   li {
     display: inline;
   }
@@ -271,47 +271,6 @@ li {
 
 .icon-bar {
   width: 33%;
-}
-
-.page-action {
-  width: 33%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  .guilding-line {
-    position: relative;
-    width: 9rem;
-    height: 1px;
-    margin-right: 1rem;
-    z-index: 2;
-  }
-  p {
-    font-family: "Gordita Medium";
-  }
-}
-
-.guilding-line::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  z-index: 10;
-  bottom: -5px;
-}
-
-.guilding-line::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  bottom: -5px;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  z-index: 15;
 }
 
 .section-nav {
@@ -418,6 +377,14 @@ li {
   }
 }
 
+.declare {
+  margin: 1rem 0;
+
+  p {
+    font-size: 14px;
+  }
+}
+
 .contact-sphere {
   position: absolute;
   top: 0;
@@ -450,7 +417,7 @@ li {
 
 /* ================ Responsive===================== */
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1920px) {
   /*Global style*/
 
   h1 {
@@ -467,12 +434,12 @@ li {
   }
 
   h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   p {
-    font-size: 18px;
-    line-height: 2.2rem;
+    font-size: 16px;
+    line-height: 2rem;
   }
 
   /*Page transition*/
@@ -490,7 +457,7 @@ li {
     width: 12rem;
     height: 12rem;
   }
-  
+
   /*Header*/
   .header {
     .logo {
@@ -569,6 +536,13 @@ li {
   }
 }
 
+@media screen and (min-width: 1500px){
+  p{
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   /*Global style*/
 
@@ -585,11 +559,11 @@ li {
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 12px;
   }
 
   p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -743,9 +717,6 @@ li {
     .icon {
       margin-right: 0;
     }
-  }
-  .page-action {
-    display: none;
   }
 
   .section-nav {

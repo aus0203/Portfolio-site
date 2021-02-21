@@ -602,6 +602,9 @@ li {
 }
 
 @media screen and (min-width: 1500px) {
+  h4 {
+    font-size: 1rem;
+  }
   p {
     font-size: 1rem;
     line-height: 2rem;
@@ -1755,7 +1758,7 @@ a {
 }
 
 .left-button:hover > .nav-button-col2 > a > p::after {
-  content: "GMC";
+  content: "Philips";
   font-size: 1.2rem;
 }
 
